@@ -1,0 +1,554 @@
+configVersion: 1.0.0
+componentName: core
+coreVersion: 5.8.2
+device: PIC32CM6408PL10048
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: core
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.24.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: core
+          x: '328'
+          y: '158'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    EIC_CLOCK_ENABLE:
+      attributes:
+        id: EIC_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: eic
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EIC_CLOCK_FREQUENCY:
+      attributes:
+        id: EIC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '24000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    EVSYS_0_CLOCK_ENABLE:
+      attributes:
+        id: EVSYS_0_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_0_CLOCK_FREQUENCY:
+      attributes:
+        id: EVSYS_0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '24000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    EVSYS_3_CLOCK_ENABLE:
+      attributes:
+        id: EVSYS_3_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: evsys
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EVSYS_3_CLOCK_FREQUENCY:
+      attributes:
+        id: EVSYS_3_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    GCLK_ID_0_CHEN:
+      attributes:
+        id: GCLK_ID_0_CHEN
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    GCLK_ID_0_FREQ:
+      attributes:
+        id: GCLK_ID_0_FREQ
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '24000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    GCLK_ID_1_CHEN:
+      attributes:
+        id: GCLK_ID_1_CHEN
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    GCLK_ID_1_FREQ:
+      attributes:
+        id: GCLK_ID_1_FREQ
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '24000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    GCLK_ID_4_CHEN:
+      attributes:
+        id: GCLK_ID_4_CHEN
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    GCLK_ID_4_FREQ:
+      attributes:
+        id: GCLK_ID_4_FREQ
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCLK_APBA_INITIAL_VALUE:
+      attributes:
+        id: MCLK_APBA_INITIAL_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x7ff'
+          type: Dynamic
+        type: Values
+      type: String
+    MCLK_APBC_INITIAL_VALUE:
+      attributes:
+        id: MCLK_APBC_INITIAL_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x801'
+          type: Dynamic
+        type: Values
+      type: String
+    PIN_7_FUNCTION_TYPE:
+      attributes:
+        id: PIN_7_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: EIC_EXTINT3
+          type: User
+        type: Values
+      type: String
+    PIN_7_MODE:
+      attributes:
+        id: PIN_7_MODE
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_7_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_7_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: A
+          type: User
+        type: Values
+      type: String
+    PORT_GROUP_1_PAD_3:
+      attributes:
+        id: PORT_GROUP_1_PAD_3
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: PB03
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_GROUP_1_PINCFG3:
+      attributes:
+        id: PORT_GROUP_1_PINCFG3
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x5'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_GROUP_1_PIN_3_USED:
+      attributes:
+        id: PORT_GROUP_1_PIN_3_USED
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PORT_GROUP_1_PMUX1:
+      attributes:
+        id: PORT_GROUP_1_PMUX1
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    EIC_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: EIC_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_3_0_ENABLE:
+      attributes:
+        id: NVIC_3_0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EIC_INTERRUPT_ENABLE:
+      attributes:
+        id: EIC_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: eic
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_3_0_HANDLER_LOCK:
+      attributes:
+        id: NVIC_3_0_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    EIC_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: EIC_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: eic
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_3_0_HANDLER:
+      attributes:
+        id: NVIC_3_0_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: EIC_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    EIC_INTERRUPT_HANDLER:
+      attributes:
+        id: EIC_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: eic
+            value: EIC_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_GROUP_1_EVCTRL:
+      attributes:
+        id: PORT_GROUP_1_EVCTRL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0xe2'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_1_EVACT0_ENABLE:
+      attributes:
+        id: PORT_1_EVACT0_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    PORT_1_EVACT0_PIN:
+      attributes:
+        id: PORT_1_EVACT0_PIN
+      children:
+      - children:
+        - attributes:
+            value: '2'
+          type: User
+        type: Values
+      type: KeyValueSet
+    PORT_1_EVACT0_ACTION:
+      attributes:
+        id: PORT_1_EVACT0_ACTION
+      children:
+      - children:
+        - attributes:
+            value: '3'
+          type: User
+        type: Values
+      type: KeyValueSet
+    PORT_GROUP_1_DIR:
+      attributes:
+        id: PORT_GROUP_1_DIR
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x4'
+          type: Dynamic
+        type: Values
+      type: String
+    PIN_7_DIR:
+      attributes:
+        id: PIN_7_DIR
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PORT_GROUP_1_OUT:
+      attributes:
+        id: PORT_GROUP_1_OUT
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0xc'
+          type: Dynamic
+        type: Values
+      type: String
+    PIN_7_LAT:
+      attributes:
+        id: PIN_7_LAT
+      children:
+      - children:
+        - attributes:
+            value: High
+          type: User
+        type: Values
+      type: String
+    PIN_7_PULLEN:
+      attributes:
+        id: PIN_7_PULLEN
+      children:
+      - children:
+        - attributes:
+            value: 'True'
+          type: User
+        type: Values
+      type: String
+    PIN_7_INEN:
+      attributes:
+        id: PIN_7_INEN
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_6_MODE:
+      attributes:
+        id: PIN_6_MODE
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_6_FUNCTION_TYPE:
+      attributes:
+        id: PIN_6_FUNCTION_TYPE
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PORT_GROUP_1_PINCFG2:
+      attributes:
+        id: PORT_GROUP_1_PINCFG2
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_GROUP_1_PIN_2_USED:
+      attributes:
+        id: PORT_GROUP_1_PIN_2_USED
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIN_6_INEN:
+      attributes:
+        id: PIN_6_INEN
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PIN_6_DIR:
+      attributes:
+        id: PIN_6_DIR
+      children:
+      - children:
+        - attributes:
+            value: Out
+          type: User
+        type: Values
+      type: String
+    PORT_GROUP_1_PAD_2:
+      attributes:
+        id: PORT_GROUP_1_PAD_2
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: PB02
+          type: Dynamic
+        type: Values
+      type: String
+    PIN_6_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_6_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: GPIO
+          type: User
+        type: Values
+      type: String
+    PIN_6_FUNCTION_NAME:
+      attributes:
+        id: PIN_6_FUNCTION_NAME
+      children:
+      - children:
+        - attributes:
+            value: LED
+          type: User
+        type: Values
+      type: String
+    PIN_6_LAT:
+      attributes:
+        id: PIN_6_LAT
+      children:
+      - children:
+        - attributes:
+            value: High
+          type: User
+        type: Values
+      type: String
+  userData:
+    children:
+    - attributes:
+        canvasHeight: '0'
+        canvasWidth: '0'
+      type: GraphSettings
+    - children:
+      - attributes:
+          id: profile0
+          name: Main
+        type: Profile
+      type: PowerProfiles
+    type: UserData
