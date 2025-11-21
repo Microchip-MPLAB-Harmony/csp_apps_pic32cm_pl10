@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Pranjal/ATLAS/adc/bench_testing/adc_sample/_build/adc_sample/default/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

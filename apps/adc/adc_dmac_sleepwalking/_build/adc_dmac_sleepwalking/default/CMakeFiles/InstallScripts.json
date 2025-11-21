@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Pranjal/ATLAS/adc/bench_testing/adc_dmac_sleepwalking/_build/adc_dmac_sleepwalking/default/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

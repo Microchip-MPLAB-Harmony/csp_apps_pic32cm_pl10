@@ -1,0 +1,119 @@
+configVersion: 1.0.0
+componentName: adc0
+coreVersion: 5.8.2
+device: PIC32CM6408PL10048
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: adc0
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.26.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: adc0
+          x: '5'
+          y: '262'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    ADC_COMMAND_OPMODE:
+      attributes:
+        id: ADC_COMMAND_OPMODE
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    ADC_CTRLB_PRESCALER:
+      attributes:
+        id: ADC_CTRLB_PRESCALER
+      children:
+      - children:
+        - attributes:
+            value: '14'
+          type: User
+        type: Values
+      type: KeyValueSet
+    ADC_CTRLE_SAMPLEN:
+      attributes:
+        id: ADC_CTRLE_SAMPLEN
+      children:
+      - children:
+        - attributes:
+            value: '33'
+          type: User
+        type: Values
+      type: Integer
+    ADC_CONV_TRIGGER:
+      attributes:
+        id: ADC_CONV_TRIGGER
+      children:
+      - children:
+        - attributes:
+            value: HW Event Trigger
+          type: User
+        type: Values
+      type: Combo
+    ADC_EVCTRL_START:
+      attributes:
+        id: ADC_EVCTRL_START
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    ADC_COMMAND_CTRLCONV:
+      attributes:
+        id: ADC_COMMAND_CTRLCONV
+      children:
+      - children:
+        - attributes:
+            value: '3'
+          type: User
+        type: Values
+      type: KeyValueSet
+    ADC_INPUTCTRL_MUXPOS:
+      attributes:
+        id: ADC_INPUTCTRL_MUXPOS
+      children:
+      - children:
+        - attributes:
+            value: '19'
+          type: User
+        type: Values
+      type: KeyValueSet
+    ADC_CTRLA_RUNSTDBY:
+      attributes:
+        id: ADC_CTRLA_RUNSTDBY
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+  userData: {}
