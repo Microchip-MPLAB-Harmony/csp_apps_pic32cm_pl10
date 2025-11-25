@@ -1,5 +1,0 @@
-C:/Pranjal/ATLAS/adc/bench_testing/adc_dmac_sleepwalking/_build/adc_dmac_sleepwalking/default/CMakeFiles/adc_dmac_sleepwalking_default_default_XC32_compile.dir
-C:/Pranjal/ATLAS/adc/bench_testing/adc_dmac_sleepwalking/_build/adc_dmac_sleepwalking/default/CMakeFiles/adc_dmac_sleepwalking_default_image_xVzwFORf.dir
-C:/Pranjal/ATLAS/adc/bench_testing/adc_dmac_sleepwalking/_build/adc_dmac_sleepwalking/default/CMakeFiles/adc_dmac_sleepwalking_default_Bin2Hex.dir
-C:/Pranjal/ATLAS/adc/bench_testing/adc_dmac_sleepwalking/_build/adc_dmac_sleepwalking/default/CMakeFiles/edit_cache.dir
-C:/Pranjal/ATLAS/adc/bench_testing/adc_dmac_sleepwalking/_build/adc_dmac_sleepwalking/default/CMakeFiles/rebuild_cache.dir
