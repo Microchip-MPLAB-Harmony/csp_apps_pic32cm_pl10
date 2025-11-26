@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>i2c_eeprom_pic32cm_pl10_cnano</name>
+            <name>i2c_eeprom_pic32cm_pl10_curiosity_nano</name>
             <creation-uuid>fe2a5f79-a786-41ef-95b9-2e04b86c4cca</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>

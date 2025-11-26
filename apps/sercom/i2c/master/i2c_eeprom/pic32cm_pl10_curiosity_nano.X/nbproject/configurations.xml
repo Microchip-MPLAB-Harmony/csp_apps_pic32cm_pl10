@@ -10,9 +10,6 @@
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
               <itemPath>../src/config/default/peripheral/clock/plib_clock.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="eic" displayName="eic" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/eic/plib_eic.h</itemPath>
-            </logicalFolder>
             <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/default/peripheral/evsys/plib_evsys.h</itemPath>
             </logicalFolder>
@@ -22,13 +19,19 @@
             <logicalFolder name="port" displayName="port" projectFiles="true">
               <itemPath>../src/config/default/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
+              <logicalFolder name="i2c_master" displayName="i2c_master" projectFiles="true">
+                <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom_i2c_master_common.h</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom0_i2c_master.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
           </logicalFolder>
+          <itemPath>../src/config/default/device.h</itemPath>
           <itemPath>../src/config/default/device_cache.h</itemPath>
           <itemPath>../src/config/default/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/default/definitions.h</itemPath>
           <itemPath>../src/config/default/interrupts.h</itemPath>
           <itemPath>../src/config/default/device_vectors.h</itemPath>
-          <itemPath>../src/config/default/device.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -124,17 +127,17 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
-      <logicalFolder name="pic32cm_pl_curiosity_nano_default"
-                     displayName="pic32cm_pl_curiosity_nano_default"
+      <logicalFolder name="pic32cm_pl10_cnano_default"
+                     displayName="pic32cm_pl10_cnano_default"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
-          <itemPath>pic32cm_pl_curiosity_nano_default/components/evsys.yml</itemPath>
-          <itemPath>pic32cm_pl_curiosity_nano_default/components/core.yml</itemPath>
-          <itemPath>pic32cm_pl_curiosity_nano_default/components/dfp.yml</itemPath>
-          <itemPath>pic32cm_pl_curiosity_nano_default/components/cmsis.yml</itemPath>
-          <itemPath>pic32cm_pl_curiosity_nano_default/components/eic.yml</itemPath>
+          <itemPath>pic32cm_pl10_cnano_default/components/evsys.yml</itemPath>
+          <itemPath>pic32cm_pl10_cnano_default/components/sercom0.yml</itemPath>
+          <itemPath>pic32cm_pl10_cnano_default/components/dfp.yml</itemPath>
+          <itemPath>pic32cm_pl10_cnano_default/components/core.yml</itemPath>
+          <itemPath>pic32cm_pl10_cnano_default/components/cmsis.yml</itemPath>
         </logicalFolder>
-        <itemPath>pic32cm_pl_curiosity_nano_default/mcc-config.mc4</itemPath>
+        <itemPath>pic32cm_pl10_cnano_default/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
@@ -161,9 +164,6 @@
             <logicalFolder name="clock" displayName="clock" projectFiles="true">
               <itemPath>../src/config/default/peripheral/clock/plib_clock.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="eic" displayName="eic" projectFiles="true">
-              <itemPath>../src/config/default/peripheral/eic/plib_eic.c</itemPath>
-            </logicalFolder>
             <logicalFolder name="evsys" displayName="evsys" projectFiles="true">
               <itemPath>../src/config/default/peripheral/evsys/plib_evsys.c</itemPath>
             </logicalFolder>
@@ -172,6 +172,11 @@
             </logicalFolder>
             <logicalFolder name="port" displayName="port" projectFiles="true">
               <itemPath>../src/config/default/peripheral/port/plib_port.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
+              <logicalFolder name="i2c_master" displayName="i2c_master" projectFiles="true">
+                <itemPath>../src/config/default/peripheral/sercom/i2c_master/plib_sercom0_i2c_master.c</itemPath>
+              </logicalFolder>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
@@ -197,7 +202,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>5.00</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>

@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>usart_ring_buffer_interrupt_pic32cm_pl10_cnano</name>
-            <creation-uuid>2b52d63c-d391-403b-a99e-accc08b329ce</creation-uuid>
+            <name>nvmctrl_write_read_pic32cm_pl10_curiosity_nano</name>
+            <creation-uuid>041b2504-a285-4a93-9f13-b490dee5a375</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
