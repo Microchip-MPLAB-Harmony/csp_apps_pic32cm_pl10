@@ -131,18 +131,13 @@
                      displayName="i2c_eeprom_emulation_pic32cm_pl10_curiosity_nano_default"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
-          <itemPath>i2c_eeprom_emulation_pic32cm_pl10_curiosity_nano_default/components/sercom0.yml</itemPath>
-          <itemPath>i2c_eeprom_emulation_pic32cm_pl10_curiosity_nano_default/components/dfp.yml</itemPath>
-          <itemPath>i2c_eeprom_emulation_pic32cm_pl10_curiosity_nano_default/components/core.yml</itemPath>
           <itemPath>i2c_eeprom_emulation_pic32cm_pl10_curiosity_nano_default/components/cmsis.yml</itemPath>
+          <itemPath>i2c_eeprom_emulation_pic32cm_pl10_curiosity_nano_default/components/dfp.yml</itemPath>
+          <itemPath>i2c_eeprom_emulation_pic32cm_pl10_curiosity_nano_default/components/sercom0.yml</itemPath>
+          <itemPath>i2c_eeprom_emulation_pic32cm_pl10_curiosity_nano_default/components/core.yml</itemPath>
           <itemPath>i2c_eeprom_emulation_pic32cm_pl10_curiosity_nano_default/components/evsys.yml</itemPath>
         </logicalFolder>
         <itemPath>i2c_eeprom_emulation_pic32cm_pl10_curiosity_nano_default/mcc-config.mc4</itemPath>
-      </logicalFolder>
-      <logicalFolder name="pic32cm_pl10_cnano_default"
-                     displayName="pic32cm_pl10_cnano_default"
-                     projectFiles="true">
-        <itemPath>pic32cm_pl10_cnano_default/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
@@ -244,6 +239,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -322,6 +318,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -367,6 +364,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>

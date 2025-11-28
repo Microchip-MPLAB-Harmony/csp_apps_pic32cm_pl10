@@ -124,17 +124,17 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
-      <logicalFolder name="pic32cm_pl_curiosity_nano_default"
-                     displayName="pic32cm_pl_curiosity_nano_default"
+      <logicalFolder name="evsys_trigger_pic32cm_pl10_curiosity_nano_default"
+                     displayName="evsys_trigger_pic32cm_pl10_curiosity_nano_default"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
-          <itemPath>pic32cm_pl_curiosity_nano_default/components/evsys.yml</itemPath>
-          <itemPath>pic32cm_pl_curiosity_nano_default/components/core.yml</itemPath>
-          <itemPath>pic32cm_pl_curiosity_nano_default/components/dfp.yml</itemPath>
-          <itemPath>pic32cm_pl_curiosity_nano_default/components/cmsis.yml</itemPath>
-          <itemPath>pic32cm_pl_curiosity_nano_default/components/eic.yml</itemPath>
+          <itemPath>evsys_trigger_pic32cm_pl10_curiosity_nano_default/components/dfp.yml</itemPath>
+          <itemPath>evsys_trigger_pic32cm_pl10_curiosity_nano_default/components/evsys.yml</itemPath>
+          <itemPath>evsys_trigger_pic32cm_pl10_curiosity_nano_default/components/eic.yml</itemPath>
+          <itemPath>evsys_trigger_pic32cm_pl10_curiosity_nano_default/components/cmsis.yml</itemPath>
+          <itemPath>evsys_trigger_pic32cm_pl10_curiosity_nano_default/components/core.yml</itemPath>
         </logicalFolder>
-        <itemPath>pic32cm_pl_curiosity_nano_default/mcc-config.mc4</itemPath>
+        <itemPath>evsys_trigger_pic32cm_pl10_curiosity_nano_default/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
@@ -187,6 +187,9 @@
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>evsys_trigger_pic32cm_pl10_curiosity_nano_default</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">

@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: i2c_eeprom_emulation_pic32cm_pl10_curiosity_nano
-creation_date: 2025-11-25T17:33:13.083+05:30[Asia/Calcutta]
+creation_date: 2025-11-28T14:41:46.299+05:30[Asia/Calcutta]
 operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
