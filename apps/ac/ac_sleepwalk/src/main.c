@@ -52,9 +52,6 @@
 #include <string.h>
 #include <stdio.h>
 
-/* Value of RTC_COMPARE_VAL defines the interval at which AC is triggered
- * by the RTC
- */
 
 uintptr_t comparator_context;
 volatile bool change_detect = false;
@@ -90,7 +87,7 @@ int main ( void )
 
     while ( true )
     {
-        //PM_StandbyModeEnter();
+        PM_StandbyModeEnter();
 
         /* Maintain state machines of all polled MPLAB Harmony modules. */
         SYS_Tasks ( );
