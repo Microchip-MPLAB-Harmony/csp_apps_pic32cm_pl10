@@ -18,7 +18,7 @@
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2020 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -54,26 +54,9 @@
 #include "definitions.h"                // SYS function prototypes
 
 #define ADC_VREF                (3.3f)
-#define DAC_COUNT_INCREMENT     (31U)  // equivalent to 0.1V(0.1 / (3.3 / ((2^10) - 1))) 
-#define DAC_COUNT_MAX           (1023U)
 
 uint16_t adc_count;
 float input_voltage;
-/* Initial value of dac count which is midpoint = 1.65 V*/
-uint16_t dac_count = 0x200;   
-
-#if 0
-void switch_handler(uintptr_t context )
-{
-    /* Write next data sample */
-    dac_count = dac_count + DAC_COUNT_INCREMENT;
-    
-    if (dac_count > DAC_COUNT_MAX)
-            dac_count=0;    
-    
-    DAC_DataWrite(dac_count);
-}
-#endif
 
 // *****************************************************************************
 // *****************************************************************************
@@ -91,11 +74,8 @@ int main ( void )
     printf("\n\r---------------------------------------------------------\n\r");
     
     ADC0_Enable();
-    uint32_t value = *((volatile uint32_t*)0x42001C48);
-    printf("\n\rValue : %lx\n\r",value);
     SYSTICK_TimerStart();
-    //EIC_CallbackRegister(EIC_PIN_13, switch_handler, (uintptr_t) NULL);
-    //DAC_DataWrite(dac_count);
+
     while (1)
     {
         /* Start ADC conversion */
