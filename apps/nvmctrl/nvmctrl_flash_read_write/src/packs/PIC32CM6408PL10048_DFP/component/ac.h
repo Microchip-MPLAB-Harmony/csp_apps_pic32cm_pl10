@@ -44,12 +44,12 @@
 #define AC_COMPCTRLA_INTSEL_Pos               _UINT32_(4)                                          /* (AC_COMPCTRLA) Interrupt Selection Position */
 #define AC_COMPCTRLA_INTSEL_Msk               (_UINT32_(0x3) << AC_COMPCTRLA_INTSEL_Pos)           /* (AC_COMPCTRLA) Interrupt Selection Mask */
 #define AC_COMPCTRLA_INTSEL(value)            (AC_COMPCTRLA_INTSEL_Msk & (_UINT32_(value) << AC_COMPCTRLA_INTSEL_Pos)) /* Assignment of value for INTSEL in the AC_COMPCTRLA register */
-#define   AC_COMPCTRLA_INTSEL_TOGGLE_Val      _UINT32_(0x0)                                        /* (AC_COMPCTRLA) Comparator n output is toggling  */
-#define   AC_COMPCTRLA_INTSEL_RISING_Val      _UINT32_(0x1)                                        /* (AC_COMPCTRLA) Comparator n output is rising  */
-#define   AC_COMPCTRLA_INTSEL_FALLING_Val     _UINT32_(0x2)                                        /* (AC_COMPCTRLA) Comparator n output is falling  */
-#define AC_COMPCTRLA_INTSEL_TOGGLE            (AC_COMPCTRLA_INTSEL_TOGGLE_Val << AC_COMPCTRLA_INTSEL_Pos) /* (AC_COMPCTRLA) Comparator n output is toggling Position */
-#define AC_COMPCTRLA_INTSEL_RISING            (AC_COMPCTRLA_INTSEL_RISING_Val << AC_COMPCTRLA_INTSEL_Pos) /* (AC_COMPCTRLA) Comparator n output is rising Position */
-#define AC_COMPCTRLA_INTSEL_FALLING           (AC_COMPCTRLA_INTSEL_FALLING_Val << AC_COMPCTRLA_INTSEL_Pos) /* (AC_COMPCTRLA) Comparator n output is falling Position */
+#define   AC_COMPCTRLA_INTSEL_TOGGLE_Val      _UINT32_(0x0)                                        /* (AC_COMPCTRLA) Interrupt on comparator n output toggle  */
+#define   AC_COMPCTRLA_INTSEL_RISING_Val      _UINT32_(0x1)                                        /* (AC_COMPCTRLA) Interrupt on comparator n output rising edge  */
+#define   AC_COMPCTRLA_INTSEL_FALLING_Val     _UINT32_(0x2)                                        /* (AC_COMPCTRLA) Interrupt on comparator n output falling edge  */
+#define AC_COMPCTRLA_INTSEL_TOGGLE            (AC_COMPCTRLA_INTSEL_TOGGLE_Val << AC_COMPCTRLA_INTSEL_Pos) /* (AC_COMPCTRLA) Interrupt on comparator n output toggle Position */
+#define AC_COMPCTRLA_INTSEL_RISING            (AC_COMPCTRLA_INTSEL_RISING_Val << AC_COMPCTRLA_INTSEL_Pos) /* (AC_COMPCTRLA) Interrupt on comparator n output rising edge Position */
+#define AC_COMPCTRLA_INTSEL_FALLING           (AC_COMPCTRLA_INTSEL_FALLING_Val << AC_COMPCTRLA_INTSEL_Pos) /* (AC_COMPCTRLA) Interrupt on comparator n output falling edge Position */
 #define AC_COMPCTRLA_RUNSTDBY_Pos             _UINT32_(6)                                          /* (AC_COMPCTRLA) Run in Standby Position */
 #define AC_COMPCTRLA_RUNSTDBY_Msk             (_UINT32_(0x1) << AC_COMPCTRLA_RUNSTDBY_Pos)         /* (AC_COMPCTRLA) Run in Standby Mask */
 #define AC_COMPCTRLA_RUNSTDBY(value)          (AC_COMPCTRLA_RUNSTDBY_Msk & (_UINT32_(value) << AC_COMPCTRLA_RUNSTDBY_Pos)) /* Assignment of value for RUNSTDBY in the AC_COMPCTRLA register */
@@ -87,15 +87,15 @@
 /* -------- AC_COMPCTRLB : (AC Offset: 0x04) (R/W 32) Comparator # Comparator Control B -------- */
 #define AC_COMPCTRLB_RESETVALUE               _UINT32_(0x00)                                       /*  (AC_COMPCTRLB) Comparator # Comparator Control B  Reset Value */
 
-#define AC_COMPCTRLB_REFSEL_Pos               _UINT32_(0)                                          /* (AC_COMPCTRLB) Reference Select Position */
-#define AC_COMPCTRLB_REFSEL_Msk               (_UINT32_(0x3) << AC_COMPCTRLB_REFSEL_Pos)           /* (AC_COMPCTRLB) Reference Select Mask */
+#define AC_COMPCTRLB_REFSEL_Pos               _UINT32_(0)                                          /* (AC_COMPCTRLB) Reference Selection Position */
+#define AC_COMPCTRLB_REFSEL_Msk               (_UINT32_(0x3) << AC_COMPCTRLB_REFSEL_Pos)           /* (AC_COMPCTRLB) Reference Selection Mask */
 #define AC_COMPCTRLB_REFSEL(value)            (AC_COMPCTRLB_REFSEL_Msk & (_UINT32_(value) << AC_COMPCTRLB_REFSEL_Pos)) /* Assignment of value for REFSEL in the AC_COMPCTRLB register */
 #define   AC_COMPCTRLB_REFSEL_VDD_Val         _UINT32_(0x0)                                        /* (AC_COMPCTRLB) VDD  */
-#define   AC_COMPCTRLB_REFSEL_INTVREF_Val     _UINT32_(0x1)                                        /* (AC_COMPCTRLB) Internal Voltage Reference, defined by the Internal Reference Selection (INTREF) bit field in the Control B (CTRLB) register  */
-#define   AC_COMPCTRLB_REFSEL_EXTVREF_Val     _UINT32_(0x2)                                        /* (AC_COMPCTRLB) External Reference Pin  */
+#define   AC_COMPCTRLB_REFSEL_INTVREF_Val     _UINT32_(0x1)                                        /* (AC_COMPCTRLB) Internal reference voltage, as defined by the Internal Reference Selection bit field in the Control B register (CTRLB.INTREF)  */
+#define   AC_COMPCTRLB_REFSEL_EXTVREF_Val     _UINT32_(0x2)                                        /* (AC_COMPCTRLB) External reference pin  */
 #define AC_COMPCTRLB_REFSEL_VDD               (AC_COMPCTRLB_REFSEL_VDD_Val << AC_COMPCTRLB_REFSEL_Pos) /* (AC_COMPCTRLB) VDD Position */
-#define AC_COMPCTRLB_REFSEL_INTVREF           (AC_COMPCTRLB_REFSEL_INTVREF_Val << AC_COMPCTRLB_REFSEL_Pos) /* (AC_COMPCTRLB) Internal Voltage Reference, defined by the Internal Reference Selection (INTREF) bit field in the Control B (CTRLB) register Position */
-#define AC_COMPCTRLB_REFSEL_EXTVREF           (AC_COMPCTRLB_REFSEL_EXTVREF_Val << AC_COMPCTRLB_REFSEL_Pos) /* (AC_COMPCTRLB) External Reference Pin Position */
+#define AC_COMPCTRLB_REFSEL_INTVREF           (AC_COMPCTRLB_REFSEL_INTVREF_Val << AC_COMPCTRLB_REFSEL_Pos) /* (AC_COMPCTRLB) Internal reference voltage, as defined by the Internal Reference Selection bit field in the Control B register (CTRLB.INTREF) Position */
+#define AC_COMPCTRLB_REFSEL_EXTVREF           (AC_COMPCTRLB_REFSEL_EXTVREF_Val << AC_COMPCTRLB_REFSEL_Pos) /* (AC_COMPCTRLB) External reference pin Position */
 #define AC_COMPCTRLB_Msk                      _UINT32_(0x00000003)                                 /* (AC_COMPCTRLB) Register Mask  */
 
 
@@ -146,14 +146,14 @@
 #define AC_WINCTRL_WINTSEL0_Pos               _UINT32_(1)                                          /* (AC_WINCTRL) Window 0 Interrupt Selection Position */
 #define AC_WINCTRL_WINTSEL0_Msk               (_UINT32_(0x3) << AC_WINCTRL_WINTSEL0_Pos)           /* (AC_WINCTRL) Window 0 Interrupt Selection Mask */
 #define AC_WINCTRL_WINTSEL0(value)            (AC_WINCTRL_WINTSEL0_Msk & (_UINT32_(value) << AC_WINCTRL_WINTSEL0_Pos)) /* Assignment of value for WINTSEL0 in the AC_WINCTRL register */
-#define   AC_WINCTRL_WINTSEL0_ABOVE_Val       _UINT32_(0x0)                                        /* (AC_WINCTRL) Interrupt on signal above window  */
-#define   AC_WINCTRL_WINTSEL0_INSIDE_Val      _UINT32_(0x1)                                        /* (AC_WINCTRL) Interrupt on signal inside window  */
-#define   AC_WINCTRL_WINTSEL0_BELOW_Val       _UINT32_(0x2)                                        /* (AC_WINCTRL) Interrupt on signal below window  */
-#define   AC_WINCTRL_WINTSEL0_OUTSIDE_Val     _UINT32_(0x3)                                        /* (AC_WINCTRL) Interrupt on signal outside window  */
-#define AC_WINCTRL_WINTSEL0_ABOVE             (AC_WINCTRL_WINTSEL0_ABOVE_Val << AC_WINCTRL_WINTSEL0_Pos) /* (AC_WINCTRL) Interrupt on signal above window Position */
-#define AC_WINCTRL_WINTSEL0_INSIDE            (AC_WINCTRL_WINTSEL0_INSIDE_Val << AC_WINCTRL_WINTSEL0_Pos) /* (AC_WINCTRL) Interrupt on signal inside window Position */
-#define AC_WINCTRL_WINTSEL0_BELOW             (AC_WINCTRL_WINTSEL0_BELOW_Val << AC_WINCTRL_WINTSEL0_Pos) /* (AC_WINCTRL) Interrupt on signal below window Position */
-#define AC_WINCTRL_WINTSEL0_OUTSIDE           (AC_WINCTRL_WINTSEL0_OUTSIDE_Val << AC_WINCTRL_WINTSEL0_Pos) /* (AC_WINCTRL) Interrupt on signal outside window Position */
+#define   AC_WINCTRL_WINTSEL0_ABOVE_Val       _UINT32_(0x0)                                        /* (AC_WINCTRL) Interrupt when the signal goes above the window  */
+#define   AC_WINCTRL_WINTSEL0_INSIDE_Val      _UINT32_(0x1)                                        /* (AC_WINCTRL) Interrupt when the signal goes inside the window  */
+#define   AC_WINCTRL_WINTSEL0_BELOW_Val       _UINT32_(0x2)                                        /* (AC_WINCTRL) Interrupt when the signal goes below the window  */
+#define   AC_WINCTRL_WINTSEL0_OUTSIDE_Val     _UINT32_(0x3)                                        /* (AC_WINCTRL) Interrupt when the signal goes outside the window  */
+#define AC_WINCTRL_WINTSEL0_ABOVE             (AC_WINCTRL_WINTSEL0_ABOVE_Val << AC_WINCTRL_WINTSEL0_Pos) /* (AC_WINCTRL) Interrupt when the signal goes above the window Position */
+#define AC_WINCTRL_WINTSEL0_INSIDE            (AC_WINCTRL_WINTSEL0_INSIDE_Val << AC_WINCTRL_WINTSEL0_Pos) /* (AC_WINCTRL) Interrupt when the signal goes inside the window Position */
+#define AC_WINCTRL_WINTSEL0_BELOW             (AC_WINCTRL_WINTSEL0_BELOW_Val << AC_WINCTRL_WINTSEL0_Pos) /* (AC_WINCTRL) Interrupt when the signal goes below the window Position */
+#define AC_WINCTRL_WINTSEL0_OUTSIDE           (AC_WINCTRL_WINTSEL0_OUTSIDE_Val << AC_WINCTRL_WINTSEL0_Pos) /* (AC_WINCTRL) Interrupt when the signal goes outside the window Position */
 #define AC_WINCTRL_Msk                        _UINT32_(0x00000007)                                 /* (AC_WINCTRL) Register Mask  */
 
 #define AC_WINCTRL_WEN_Pos                    _UINT32_(0)                                          /* (AC_WINCTRL Position) Window x Enable */
@@ -163,131 +163,131 @@
 /* -------- AC_EVCTRL : (AC Offset: 0x20) (R/W 32) Event Control -------- */
 #define AC_EVCTRL_RESETVALUE                  _UINT32_(0x00)                                       /*  (AC_EVCTRL) Event Control  Reset Value */
 
-#define AC_EVCTRL_COMPEO0_Pos                 _UINT32_(0)                                          /* (AC_EVCTRL) Comparator # Event Output Enable Position */
-#define AC_EVCTRL_COMPEO0_Msk                 (_UINT32_(0x1) << AC_EVCTRL_COMPEO0_Pos)             /* (AC_EVCTRL) Comparator # Event Output Enable Mask */
+#define AC_EVCTRL_COMPEO0_Pos                 _UINT32_(0)                                          /* (AC_EVCTRL) Comparator 0 Event Output Enable Position */
+#define AC_EVCTRL_COMPEO0_Msk                 (_UINT32_(0x1) << AC_EVCTRL_COMPEO0_Pos)             /* (AC_EVCTRL) Comparator 0 Event Output Enable Mask */
 #define AC_EVCTRL_COMPEO0(value)              (AC_EVCTRL_COMPEO0_Msk & (_UINT32_(value) << AC_EVCTRL_COMPEO0_Pos)) /* Assignment of value for COMPEO0 in the AC_EVCTRL register */
-#define AC_EVCTRL_COMPEO1_Pos                 _UINT32_(1)                                          /* (AC_EVCTRL) Comparator # Event Output Enable Position */
-#define AC_EVCTRL_COMPEO1_Msk                 (_UINT32_(0x1) << AC_EVCTRL_COMPEO1_Pos)             /* (AC_EVCTRL) Comparator # Event Output Enable Mask */
+#define AC_EVCTRL_COMPEO1_Pos                 _UINT32_(1)                                          /* (AC_EVCTRL) Comparator 1 Event Output Enable Position */
+#define AC_EVCTRL_COMPEO1_Msk                 (_UINT32_(0x1) << AC_EVCTRL_COMPEO1_Pos)             /* (AC_EVCTRL) Comparator 1 Event Output Enable Mask */
 #define AC_EVCTRL_COMPEO1(value)              (AC_EVCTRL_COMPEO1_Msk & (_UINT32_(value) << AC_EVCTRL_COMPEO1_Pos)) /* Assignment of value for COMPEO1 in the AC_EVCTRL register */
-#define AC_EVCTRL_WINEO0_Pos                  _UINT32_(4)                                          /* (AC_EVCTRL) Window # Event Output Enable Position */
-#define AC_EVCTRL_WINEO0_Msk                  (_UINT32_(0x1) << AC_EVCTRL_WINEO0_Pos)              /* (AC_EVCTRL) Window # Event Output Enable Mask */
+#define AC_EVCTRL_WINEO0_Pos                  _UINT32_(4)                                          /* (AC_EVCTRL) Window 0 Event Output Enable Position */
+#define AC_EVCTRL_WINEO0_Msk                  (_UINT32_(0x1) << AC_EVCTRL_WINEO0_Pos)              /* (AC_EVCTRL) Window 0 Event Output Enable Mask */
 #define AC_EVCTRL_WINEO0(value)               (AC_EVCTRL_WINEO0_Msk & (_UINT32_(value) << AC_EVCTRL_WINEO0_Pos)) /* Assignment of value for WINEO0 in the AC_EVCTRL register */
 #define AC_EVCTRL_Msk                         _UINT32_(0x00000013)                                 /* (AC_EVCTRL) Register Mask  */
 
-#define AC_EVCTRL_COMPEO_Pos                  _UINT32_(0)                                          /* (AC_EVCTRL Position) Comparator # Event Output Enable */
+#define AC_EVCTRL_COMPEO_Pos                  _UINT32_(0)                                          /* (AC_EVCTRL Position) Comparator x Event Output Enable */
 #define AC_EVCTRL_COMPEO_Msk                  (_UINT32_(0x3) << AC_EVCTRL_COMPEO_Pos)              /* (AC_EVCTRL Mask) COMPEO */
 #define AC_EVCTRL_COMPEO(value)               (AC_EVCTRL_COMPEO_Msk & (_UINT32_(value) << AC_EVCTRL_COMPEO_Pos)) 
-#define AC_EVCTRL_WINEO_Pos                   _UINT32_(4)                                          /* (AC_EVCTRL Position) Window # Event Output Enable */
+#define AC_EVCTRL_WINEO_Pos                   _UINT32_(4)                                          /* (AC_EVCTRL Position) Window x Event Output Enable */
 #define AC_EVCTRL_WINEO_Msk                   (_UINT32_(0x1) << AC_EVCTRL_WINEO_Pos)               /* (AC_EVCTRL Mask) WINEO */
 #define AC_EVCTRL_WINEO(value)                (AC_EVCTRL_WINEO_Msk & (_UINT32_(value) << AC_EVCTRL_WINEO_Pos)) 
 
 /* -------- AC_INTENCLR : (AC Offset: 0x24) (R/W 32) Interrupt Enable Clear -------- */
 #define AC_INTENCLR_RESETVALUE                _UINT32_(0x00)                                       /*  (AC_INTENCLR) Interrupt Enable Clear  Reset Value */
 
-#define AC_INTENCLR_COMP0_Pos                 _UINT32_(0)                                          /* (AC_INTENCLR) Comparator # Interrupt Enable Position */
-#define AC_INTENCLR_COMP0_Msk                 (_UINT32_(0x1) << AC_INTENCLR_COMP0_Pos)             /* (AC_INTENCLR) Comparator # Interrupt Enable Mask */
+#define AC_INTENCLR_COMP0_Pos                 _UINT32_(0)                                          /* (AC_INTENCLR) Comparator 0 Interrupt Enable Position */
+#define AC_INTENCLR_COMP0_Msk                 (_UINT32_(0x1) << AC_INTENCLR_COMP0_Pos)             /* (AC_INTENCLR) Comparator 0 Interrupt Enable Mask */
 #define AC_INTENCLR_COMP0(value)              (AC_INTENCLR_COMP0_Msk & (_UINT32_(value) << AC_INTENCLR_COMP0_Pos)) /* Assignment of value for COMP0 in the AC_INTENCLR register */
-#define AC_INTENCLR_COMP1_Pos                 _UINT32_(1)                                          /* (AC_INTENCLR) Comparator # Interrupt Enable Position */
-#define AC_INTENCLR_COMP1_Msk                 (_UINT32_(0x1) << AC_INTENCLR_COMP1_Pos)             /* (AC_INTENCLR) Comparator # Interrupt Enable Mask */
+#define AC_INTENCLR_COMP1_Pos                 _UINT32_(1)                                          /* (AC_INTENCLR) Comparator 1 Interrupt Enable Position */
+#define AC_INTENCLR_COMP1_Msk                 (_UINT32_(0x1) << AC_INTENCLR_COMP1_Pos)             /* (AC_INTENCLR) Comparator 1 Interrupt Enable Mask */
 #define AC_INTENCLR_COMP1(value)              (AC_INTENCLR_COMP1_Msk & (_UINT32_(value) << AC_INTENCLR_COMP1_Pos)) /* Assignment of value for COMP1 in the AC_INTENCLR register */
-#define AC_INTENCLR_WIN0_Pos                  _UINT32_(4)                                          /* (AC_INTENCLR) Window # Interrupt Enable Position */
-#define AC_INTENCLR_WIN0_Msk                  (_UINT32_(0x1) << AC_INTENCLR_WIN0_Pos)              /* (AC_INTENCLR) Window # Interrupt Enable Mask */
+#define AC_INTENCLR_WIN0_Pos                  _UINT32_(4)                                          /* (AC_INTENCLR) Window 0 Interrupt Enable Position */
+#define AC_INTENCLR_WIN0_Msk                  (_UINT32_(0x1) << AC_INTENCLR_WIN0_Pos)              /* (AC_INTENCLR) Window 0 Interrupt Enable Mask */
 #define AC_INTENCLR_WIN0(value)               (AC_INTENCLR_WIN0_Msk & (_UINT32_(value) << AC_INTENCLR_WIN0_Pos)) /* Assignment of value for WIN0 in the AC_INTENCLR register */
 #define AC_INTENCLR_Msk                       _UINT32_(0x00000013)                                 /* (AC_INTENCLR) Register Mask  */
 
-#define AC_INTENCLR_COMP_Pos                  _UINT32_(0)                                          /* (AC_INTENCLR Position) Comparator # Interrupt Enable */
+#define AC_INTENCLR_COMP_Pos                  _UINT32_(0)                                          /* (AC_INTENCLR Position) Comparator x Interrupt Enable */
 #define AC_INTENCLR_COMP_Msk                  (_UINT32_(0x3) << AC_INTENCLR_COMP_Pos)              /* (AC_INTENCLR Mask) COMP */
 #define AC_INTENCLR_COMP(value)               (AC_INTENCLR_COMP_Msk & (_UINT32_(value) << AC_INTENCLR_COMP_Pos)) 
-#define AC_INTENCLR_WIN_Pos                   _UINT32_(4)                                          /* (AC_INTENCLR Position) Window # Interrupt Enable */
+#define AC_INTENCLR_WIN_Pos                   _UINT32_(4)                                          /* (AC_INTENCLR Position) Window x Interrupt Enable */
 #define AC_INTENCLR_WIN_Msk                   (_UINT32_(0x1) << AC_INTENCLR_WIN_Pos)               /* (AC_INTENCLR Mask) WIN */
 #define AC_INTENCLR_WIN(value)                (AC_INTENCLR_WIN_Msk & (_UINT32_(value) << AC_INTENCLR_WIN_Pos)) 
 
 /* -------- AC_INTENSET : (AC Offset: 0x28) (R/W 32) Interrupt Enable Set -------- */
 #define AC_INTENSET_RESETVALUE                _UINT32_(0x00)                                       /*  (AC_INTENSET) Interrupt Enable Set  Reset Value */
 
-#define AC_INTENSET_COMP0_Pos                 _UINT32_(0)                                          /* (AC_INTENSET) Comparator # Interrupt Enable Position */
-#define AC_INTENSET_COMP0_Msk                 (_UINT32_(0x1) << AC_INTENSET_COMP0_Pos)             /* (AC_INTENSET) Comparator # Interrupt Enable Mask */
+#define AC_INTENSET_COMP0_Pos                 _UINT32_(0)                                          /* (AC_INTENSET) Comparator 0 Interrupt Enable Position */
+#define AC_INTENSET_COMP0_Msk                 (_UINT32_(0x1) << AC_INTENSET_COMP0_Pos)             /* (AC_INTENSET) Comparator 0 Interrupt Enable Mask */
 #define AC_INTENSET_COMP0(value)              (AC_INTENSET_COMP0_Msk & (_UINT32_(value) << AC_INTENSET_COMP0_Pos)) /* Assignment of value for COMP0 in the AC_INTENSET register */
-#define AC_INTENSET_COMP1_Pos                 _UINT32_(1)                                          /* (AC_INTENSET) Comparator # Interrupt Enable Position */
-#define AC_INTENSET_COMP1_Msk                 (_UINT32_(0x1) << AC_INTENSET_COMP1_Pos)             /* (AC_INTENSET) Comparator # Interrupt Enable Mask */
+#define AC_INTENSET_COMP1_Pos                 _UINT32_(1)                                          /* (AC_INTENSET) Comparator 1 Interrupt Enable Position */
+#define AC_INTENSET_COMP1_Msk                 (_UINT32_(0x1) << AC_INTENSET_COMP1_Pos)             /* (AC_INTENSET) Comparator 1 Interrupt Enable Mask */
 #define AC_INTENSET_COMP1(value)              (AC_INTENSET_COMP1_Msk & (_UINT32_(value) << AC_INTENSET_COMP1_Pos)) /* Assignment of value for COMP1 in the AC_INTENSET register */
-#define AC_INTENSET_WIN0_Pos                  _UINT32_(4)                                          /* (AC_INTENSET) Window # Interrupt Enable Position */
-#define AC_INTENSET_WIN0_Msk                  (_UINT32_(0x1) << AC_INTENSET_WIN0_Pos)              /* (AC_INTENSET) Window # Interrupt Enable Mask */
+#define AC_INTENSET_WIN0_Pos                  _UINT32_(4)                                          /* (AC_INTENSET) Window 0 Interrupt Enable Position */
+#define AC_INTENSET_WIN0_Msk                  (_UINT32_(0x1) << AC_INTENSET_WIN0_Pos)              /* (AC_INTENSET) Window 0 Interrupt Enable Mask */
 #define AC_INTENSET_WIN0(value)               (AC_INTENSET_WIN0_Msk & (_UINT32_(value) << AC_INTENSET_WIN0_Pos)) /* Assignment of value for WIN0 in the AC_INTENSET register */
 #define AC_INTENSET_Msk                       _UINT32_(0x00000013)                                 /* (AC_INTENSET) Register Mask  */
 
-#define AC_INTENSET_COMP_Pos                  _UINT32_(0)                                          /* (AC_INTENSET Position) Comparator # Interrupt Enable */
+#define AC_INTENSET_COMP_Pos                  _UINT32_(0)                                          /* (AC_INTENSET Position) Comparator x Interrupt Enable */
 #define AC_INTENSET_COMP_Msk                  (_UINT32_(0x3) << AC_INTENSET_COMP_Pos)              /* (AC_INTENSET Mask) COMP */
 #define AC_INTENSET_COMP(value)               (AC_INTENSET_COMP_Msk & (_UINT32_(value) << AC_INTENSET_COMP_Pos)) 
-#define AC_INTENSET_WIN_Pos                   _UINT32_(4)                                          /* (AC_INTENSET Position) Window # Interrupt Enable */
+#define AC_INTENSET_WIN_Pos                   _UINT32_(4)                                          /* (AC_INTENSET Position) Window x Interrupt Enable */
 #define AC_INTENSET_WIN_Msk                   (_UINT32_(0x1) << AC_INTENSET_WIN_Pos)               /* (AC_INTENSET Mask) WIN */
 #define AC_INTENSET_WIN(value)                (AC_INTENSET_WIN_Msk & (_UINT32_(value) << AC_INTENSET_WIN_Pos)) 
 
 /* -------- AC_INTFLAG : (AC Offset: 0x2C) (R/W 32) Interrupt Flag Status and Clear -------- */
 #define AC_INTFLAG_RESETVALUE                 _UINT32_(0x00)                                       /*  (AC_INTFLAG) Interrupt Flag Status and Clear  Reset Value */
 
-#define AC_INTFLAG_COMP0_Pos                  _UINT32_(0)                                          /* (AC_INTFLAG) Comparator # Interrupt Flag Position */
-#define AC_INTFLAG_COMP0_Msk                  (_UINT32_(0x1) << AC_INTFLAG_COMP0_Pos)              /* (AC_INTFLAG) Comparator # Interrupt Flag Mask */
+#define AC_INTFLAG_COMP0_Pos                  _UINT32_(0)                                          /* (AC_INTFLAG) Comparator 0 Interrupt Flag Position */
+#define AC_INTFLAG_COMP0_Msk                  (_UINT32_(0x1) << AC_INTFLAG_COMP0_Pos)              /* (AC_INTFLAG) Comparator 0 Interrupt Flag Mask */
 #define AC_INTFLAG_COMP0(value)               (AC_INTFLAG_COMP0_Msk & (_UINT32_(value) << AC_INTFLAG_COMP0_Pos)) /* Assignment of value for COMP0 in the AC_INTFLAG register */
-#define AC_INTFLAG_COMP1_Pos                  _UINT32_(1)                                          /* (AC_INTFLAG) Comparator # Interrupt Flag Position */
-#define AC_INTFLAG_COMP1_Msk                  (_UINT32_(0x1) << AC_INTFLAG_COMP1_Pos)              /* (AC_INTFLAG) Comparator # Interrupt Flag Mask */
+#define AC_INTFLAG_COMP1_Pos                  _UINT32_(1)                                          /* (AC_INTFLAG) Comparator 1 Interrupt Flag Position */
+#define AC_INTFLAG_COMP1_Msk                  (_UINT32_(0x1) << AC_INTFLAG_COMP1_Pos)              /* (AC_INTFLAG) Comparator 1 Interrupt Flag Mask */
 #define AC_INTFLAG_COMP1(value)               (AC_INTFLAG_COMP1_Msk & (_UINT32_(value) << AC_INTFLAG_COMP1_Pos)) /* Assignment of value for COMP1 in the AC_INTFLAG register */
-#define AC_INTFLAG_WIN0_Pos                   _UINT32_(4)                                          /* (AC_INTFLAG) Window # Interrupt Flag Position */
-#define AC_INTFLAG_WIN0_Msk                   (_UINT32_(0x1) << AC_INTFLAG_WIN0_Pos)               /* (AC_INTFLAG) Window # Interrupt Flag Mask */
+#define AC_INTFLAG_WIN0_Pos                   _UINT32_(4)                                          /* (AC_INTFLAG) Window 0 Interrupt Flag Position */
+#define AC_INTFLAG_WIN0_Msk                   (_UINT32_(0x1) << AC_INTFLAG_WIN0_Pos)               /* (AC_INTFLAG) Window 0 Interrupt Flag Mask */
 #define AC_INTFLAG_WIN0(value)                (AC_INTFLAG_WIN0_Msk & (_UINT32_(value) << AC_INTFLAG_WIN0_Pos)) /* Assignment of value for WIN0 in the AC_INTFLAG register */
 #define AC_INTFLAG_Msk                        _UINT32_(0x00000013)                                 /* (AC_INTFLAG) Register Mask  */
 
-#define AC_INTFLAG_COMP_Pos                   _UINT32_(0)                                          /* (AC_INTFLAG Position) Comparator # Interrupt Flag */
+#define AC_INTFLAG_COMP_Pos                   _UINT32_(0)                                          /* (AC_INTFLAG Position) Comparator x Interrupt Flag */
 #define AC_INTFLAG_COMP_Msk                   (_UINT32_(0x3) << AC_INTFLAG_COMP_Pos)               /* (AC_INTFLAG Mask) COMP */
 #define AC_INTFLAG_COMP(value)                (AC_INTFLAG_COMP_Msk & (_UINT32_(value) << AC_INTFLAG_COMP_Pos)) 
-#define AC_INTFLAG_WIN_Pos                    _UINT32_(4)                                          /* (AC_INTFLAG Position) Window # Interrupt Flag */
+#define AC_INTFLAG_WIN_Pos                    _UINT32_(4)                                          /* (AC_INTFLAG Position) Window x Interrupt Flag */
 #define AC_INTFLAG_WIN_Msk                    (_UINT32_(0x1) << AC_INTFLAG_WIN_Pos)                /* (AC_INTFLAG Mask) WIN */
 #define AC_INTFLAG_WIN(value)                 (AC_INTFLAG_WIN_Msk & (_UINT32_(value) << AC_INTFLAG_WIN_Pos)) 
 
 /* -------- AC_INTFLAGSET : (AC Offset: 0x30) (R/W 32) Interrupt Flag Set -------- */
 #define AC_INTFLAGSET_RESETVALUE              _UINT32_(0x00)                                       /*  (AC_INTFLAGSET) Interrupt Flag Set  Reset Value */
 
-#define AC_INTFLAGSET_COMP0_Pos               _UINT32_(0)                                          /* (AC_INTFLAGSET) Comparator # Interrupt Flag Position */
-#define AC_INTFLAGSET_COMP0_Msk               (_UINT32_(0x1) << AC_INTFLAGSET_COMP0_Pos)           /* (AC_INTFLAGSET) Comparator # Interrupt Flag Mask */
+#define AC_INTFLAGSET_COMP0_Pos               _UINT32_(0)                                          /* (AC_INTFLAGSET) Comparator 0 Interrupt Flag Position */
+#define AC_INTFLAGSET_COMP0_Msk               (_UINT32_(0x1) << AC_INTFLAGSET_COMP0_Pos)           /* (AC_INTFLAGSET) Comparator 0 Interrupt Flag Mask */
 #define AC_INTFLAGSET_COMP0(value)            (AC_INTFLAGSET_COMP0_Msk & (_UINT32_(value) << AC_INTFLAGSET_COMP0_Pos)) /* Assignment of value for COMP0 in the AC_INTFLAGSET register */
-#define AC_INTFLAGSET_COMP1_Pos               _UINT32_(1)                                          /* (AC_INTFLAGSET) Comparator # Interrupt Flag Position */
-#define AC_INTFLAGSET_COMP1_Msk               (_UINT32_(0x1) << AC_INTFLAGSET_COMP1_Pos)           /* (AC_INTFLAGSET) Comparator # Interrupt Flag Mask */
+#define AC_INTFLAGSET_COMP1_Pos               _UINT32_(1)                                          /* (AC_INTFLAGSET) Comparator 1 Interrupt Flag Position */
+#define AC_INTFLAGSET_COMP1_Msk               (_UINT32_(0x1) << AC_INTFLAGSET_COMP1_Pos)           /* (AC_INTFLAGSET) Comparator 1 Interrupt Flag Mask */
 #define AC_INTFLAGSET_COMP1(value)            (AC_INTFLAGSET_COMP1_Msk & (_UINT32_(value) << AC_INTFLAGSET_COMP1_Pos)) /* Assignment of value for COMP1 in the AC_INTFLAGSET register */
-#define AC_INTFLAGSET_WIN0_Pos                _UINT32_(4)                                          /* (AC_INTFLAGSET) Window # Interrupt Flag Position */
-#define AC_INTFLAGSET_WIN0_Msk                (_UINT32_(0x1) << AC_INTFLAGSET_WIN0_Pos)            /* (AC_INTFLAGSET) Window # Interrupt Flag Mask */
+#define AC_INTFLAGSET_WIN0_Pos                _UINT32_(4)                                          /* (AC_INTFLAGSET) Window 0 Interrupt Flag Position */
+#define AC_INTFLAGSET_WIN0_Msk                (_UINT32_(0x1) << AC_INTFLAGSET_WIN0_Pos)            /* (AC_INTFLAGSET) Window 0 Interrupt Flag Mask */
 #define AC_INTFLAGSET_WIN0(value)             (AC_INTFLAGSET_WIN0_Msk & (_UINT32_(value) << AC_INTFLAGSET_WIN0_Pos)) /* Assignment of value for WIN0 in the AC_INTFLAGSET register */
 #define AC_INTFLAGSET_Msk                     _UINT32_(0x00000013)                                 /* (AC_INTFLAGSET) Register Mask  */
 
-#define AC_INTFLAGSET_COMP_Pos                _UINT32_(0)                                          /* (AC_INTFLAGSET Position) Comparator # Interrupt Flag */
+#define AC_INTFLAGSET_COMP_Pos                _UINT32_(0)                                          /* (AC_INTFLAGSET Position) Comparator x Interrupt Flag */
 #define AC_INTFLAGSET_COMP_Msk                (_UINT32_(0x3) << AC_INTFLAGSET_COMP_Pos)            /* (AC_INTFLAGSET Mask) COMP */
 #define AC_INTFLAGSET_COMP(value)             (AC_INTFLAGSET_COMP_Msk & (_UINT32_(value) << AC_INTFLAGSET_COMP_Pos)) 
-#define AC_INTFLAGSET_WIN_Pos                 _UINT32_(4)                                          /* (AC_INTFLAGSET Position) Window # Interrupt Flag */
+#define AC_INTFLAGSET_WIN_Pos                 _UINT32_(4)                                          /* (AC_INTFLAGSET Position) Window x Interrupt Flag */
 #define AC_INTFLAGSET_WIN_Msk                 (_UINT32_(0x1) << AC_INTFLAGSET_WIN_Pos)             /* (AC_INTFLAGSET Mask) WIN */
 #define AC_INTFLAGSET_WIN(value)              (AC_INTFLAGSET_WIN_Msk & (_UINT32_(value) << AC_INTFLAGSET_WIN_Pos)) 
 
 /* -------- AC_STATUS : (AC Offset: 0x34) ( R/ 32) Status -------- */
 #define AC_STATUS_RESETVALUE                  _UINT32_(0x00)                                       /*  (AC_STATUS) Status  Reset Value */
 
-#define AC_STATUS_STATE0_Pos                  _UINT32_(0)                                          /* (AC_STATUS) Comparator # State Position */
-#define AC_STATUS_STATE0_Msk                  (_UINT32_(0x1) << AC_STATUS_STATE0_Pos)              /* (AC_STATUS) Comparator # State Mask */
-#define AC_STATUS_STATE0(value)               (AC_STATUS_STATE0_Msk & (_UINT32_(value) << AC_STATUS_STATE0_Pos)) /* Assignment of value for STATE0 in the AC_STATUS register */
-#define AC_STATUS_STATE1_Pos                  _UINT32_(1)                                          /* (AC_STATUS) Comparator # State Position */
-#define AC_STATUS_STATE1_Msk                  (_UINT32_(0x1) << AC_STATUS_STATE1_Pos)              /* (AC_STATUS) Comparator # State Mask */
-#define AC_STATUS_STATE1(value)               (AC_STATUS_STATE1_Msk & (_UINT32_(value) << AC_STATUS_STATE1_Pos)) /* Assignment of value for STATE1 in the AC_STATUS register */
-#define AC_STATUS_WSTATE0_Pos                 _UINT32_(4)                                          /* (AC_STATUS) Window # State Position */
-#define AC_STATUS_WSTATE0_Msk                 (_UINT32_(0x3) << AC_STATUS_WSTATE0_Pos)             /* (AC_STATUS) Window # State Mask */
-#define AC_STATUS_WSTATE0(value)              (AC_STATUS_WSTATE0_Msk & (_UINT32_(value) << AC_STATUS_WSTATE0_Pos)) /* Assignment of value for WSTATE0 in the AC_STATUS register */
-#define   AC_STATUS_WSTATE0_ABOVE_Val         _UINT32_(0x0)                                        /* (AC_STATUS) Signal is above window  */
-#define   AC_STATUS_WSTATE0_INSIDE_Val        _UINT32_(0x1)                                        /* (AC_STATUS) Signal is inside window  */
-#define   AC_STATUS_WSTATE0_BELOW_Val         _UINT32_(0x2)                                        /* (AC_STATUS) Signal is below window  */
-#define AC_STATUS_WSTATE0_ABOVE               (AC_STATUS_WSTATE0_ABOVE_Val << AC_STATUS_WSTATE0_Pos) /* (AC_STATUS) Signal is above window Position */
-#define AC_STATUS_WSTATE0_INSIDE              (AC_STATUS_WSTATE0_INSIDE_Val << AC_STATUS_WSTATE0_Pos) /* (AC_STATUS) Signal is inside window Position */
-#define AC_STATUS_WSTATE0_BELOW               (AC_STATUS_WSTATE0_BELOW_Val << AC_STATUS_WSTATE0_Pos) /* (AC_STATUS) Signal is below window Position */
+#define AC_STATUS_COMPSTATE0_Pos              _UINT32_(0)                                          /* (AC_STATUS) Comparator 0 State Position */
+#define AC_STATUS_COMPSTATE0_Msk              (_UINT32_(0x1) << AC_STATUS_COMPSTATE0_Pos)          /* (AC_STATUS) Comparator 0 State Mask */
+#define AC_STATUS_COMPSTATE0(value)           (AC_STATUS_COMPSTATE0_Msk & (_UINT32_(value) << AC_STATUS_COMPSTATE0_Pos)) /* Assignment of value for COMPSTATE0 in the AC_STATUS register */
+#define AC_STATUS_COMPSTATE1_Pos              _UINT32_(1)                                          /* (AC_STATUS) Comparator 1 State Position */
+#define AC_STATUS_COMPSTATE1_Msk              (_UINT32_(0x1) << AC_STATUS_COMPSTATE1_Pos)          /* (AC_STATUS) Comparator 1 State Mask */
+#define AC_STATUS_COMPSTATE1(value)           (AC_STATUS_COMPSTATE1_Msk & (_UINT32_(value) << AC_STATUS_COMPSTATE1_Pos)) /* Assignment of value for COMPSTATE1 in the AC_STATUS register */
+#define AC_STATUS_WINSTATE0_Pos               _UINT32_(4)                                          /* (AC_STATUS) Window 0 State Position */
+#define AC_STATUS_WINSTATE0_Msk               (_UINT32_(0x3) << AC_STATUS_WINSTATE0_Pos)           /* (AC_STATUS) Window 0 State Mask */
+#define AC_STATUS_WINSTATE0(value)            (AC_STATUS_WINSTATE0_Msk & (_UINT32_(value) << AC_STATUS_WINSTATE0_Pos)) /* Assignment of value for WINSTATE0 in the AC_STATUS register */
+#define   AC_STATUS_WINSTATE0_ABOVE_Val       _UINT32_(0x0)                                        /* (AC_STATUS) The input signal is above window n  */
+#define   AC_STATUS_WINSTATE0_INSIDE_Val      _UINT32_(0x1)                                        /* (AC_STATUS) The input signal is inside window n  */
+#define   AC_STATUS_WINSTATE0_BELOW_Val       _UINT32_(0x2)                                        /* (AC_STATUS) The input signal is below window n  */
+#define AC_STATUS_WINSTATE0_ABOVE             (AC_STATUS_WINSTATE0_ABOVE_Val << AC_STATUS_WINSTATE0_Pos) /* (AC_STATUS) The input signal is above window n Position */
+#define AC_STATUS_WINSTATE0_INSIDE            (AC_STATUS_WINSTATE0_INSIDE_Val << AC_STATUS_WINSTATE0_Pos) /* (AC_STATUS) The input signal is inside window n Position */
+#define AC_STATUS_WINSTATE0_BELOW             (AC_STATUS_WINSTATE0_BELOW_Val << AC_STATUS_WINSTATE0_Pos) /* (AC_STATUS) The input signal is below window n Position */
 #define AC_STATUS_Msk                         _UINT32_(0x00000033)                                 /* (AC_STATUS) Register Mask  */
 
-#define AC_STATUS_STATE_Pos                   _UINT32_(0)                                          /* (AC_STATUS Position) Comparator # State */
-#define AC_STATUS_STATE_Msk                   (_UINT32_(0x3) << AC_STATUS_STATE_Pos)               /* (AC_STATUS Mask) STATE */
-#define AC_STATUS_STATE(value)                (AC_STATUS_STATE_Msk & (_UINT32_(value) << AC_STATUS_STATE_Pos)) 
+#define AC_STATUS_COMPSTATE_Pos               _UINT32_(0)                                          /* (AC_STATUS Position) Comparator x State */
+#define AC_STATUS_COMPSTATE_Msk               (_UINT32_(0x3) << AC_STATUS_COMPSTATE_Pos)           /* (AC_STATUS Mask) COMPSTATE */
+#define AC_STATUS_COMPSTATE(value)            (AC_STATUS_COMPSTATE_Msk & (_UINT32_(value) << AC_STATUS_COMPSTATE_Pos)) 
 
 /* -------- AC_WPCTRL : (AC Offset: 0x80) (R/W 32) Write Protection Control -------- */
 #define AC_WPCTRL_RESETVALUE                  _UINT32_(0x00)                                       /*  (AC_WPCTRL) Write Protection Control  Reset Value */
@@ -295,14 +295,14 @@
 #define AC_WPCTRL_WPEN_Pos                    _UINT32_(0)                                          /* (AC_WPCTRL) Write Protection Enable Position */
 #define AC_WPCTRL_WPEN_Msk                    (_UINT32_(0x1) << AC_WPCTRL_WPEN_Pos)                /* (AC_WPCTRL) Write Protection Enable Mask */
 #define AC_WPCTRL_WPEN(value)                 (AC_WPCTRL_WPEN_Msk & (_UINT32_(value) << AC_WPCTRL_WPEN_Pos)) /* Assignment of value for WPEN in the AC_WPCTRL register */
-#define AC_WPCTRL_WPLCK_Pos                   _UINT32_(1)                                          /* (AC_WPCTRL) WPCTRL Write Lock Position */
-#define AC_WPCTRL_WPLCK_Msk                   (_UINT32_(0x1) << AC_WPCTRL_WPLCK_Pos)               /* (AC_WPCTRL) WPCTRL Write Lock Mask */
+#define AC_WPCTRL_WPLCK_Pos                   _UINT32_(1)                                          /* (AC_WPCTRL) Write Protection Lock Position */
+#define AC_WPCTRL_WPLCK_Msk                   (_UINT32_(0x1) << AC_WPCTRL_WPLCK_Pos)               /* (AC_WPCTRL) Write Protection Lock Mask */
 #define AC_WPCTRL_WPLCK(value)                (AC_WPCTRL_WPLCK_Msk & (_UINT32_(value) << AC_WPCTRL_WPLCK_Pos)) /* Assignment of value for WPLCK in the AC_WPCTRL register */
 #define AC_WPCTRL_WPKEY_Pos                   _UINT32_(8)                                          /* (AC_WPCTRL) Write Protection Key Position */
 #define AC_WPCTRL_WPKEY_Msk                   (_UINT32_(0xFFFFFF) << AC_WPCTRL_WPKEY_Pos)          /* (AC_WPCTRL) Write Protection Key Mask */
 #define AC_WPCTRL_WPKEY(value)                (AC_WPCTRL_WPKEY_Msk & (_UINT32_(value) << AC_WPCTRL_WPKEY_Pos)) /* Assignment of value for WPKEY in the AC_WPCTRL register */
-#define   AC_WPCTRL_WPKEY_KEY_Val             _UINT32_(0x414320)                                   /* (AC_WPCTRL) Allow writes to the WPCTRL register.  */
-#define AC_WPCTRL_WPKEY_KEY                   (AC_WPCTRL_WPKEY_KEY_Val << AC_WPCTRL_WPKEY_Pos)     /* (AC_WPCTRL) Allow writes to the WPCTRL register. Position */
+#define   AC_WPCTRL_WPKEY_KEY_Val             _UINT32_(0x414320)                                   /* (AC_WPCTRL) Allow writes to the WPCTRL register  */
+#define AC_WPCTRL_WPKEY_KEY                   (AC_WPCTRL_WPKEY_KEY_Val << AC_WPCTRL_WPKEY_Pos)     /* (AC_WPCTRL) Allow writes to the WPCTRL register Position */
 #define AC_WPCTRL_Msk                         _UINT32_(0xFFFFFF03)                                 /* (AC_WPCTRL) Register Mask  */
 
 

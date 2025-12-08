@@ -78,7 +78,7 @@
 /* NVMCTRL lock error */
 #define   NVMCTRL_ERROR_LOCK     ( 0x8U )
 
-typedef uint16_t NVMCTRL_ERROR;
+typedef uint32_t NVMCTRL_ERROR;
 
 
 typedef enum

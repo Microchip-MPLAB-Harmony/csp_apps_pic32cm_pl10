@@ -33,7 +33,7 @@
 
 // Define a constant array in Flash.
 // It must be aligned to row boundary and size has to be in multiple of rows
-const uint8_t nvm_user_start_address[NVMCTRL_FLASH_ROWSIZE] __attribute__((aligned(NVMCTRL_FLASH_ROWSIZE),keep,externally_visible,space(prog)))= {0};
+const uint8_t nvm_user_start_address[NVMCTRL_FLASH_PAGESIZE] __attribute__((aligned(NVMCTRL_FLASH_PAGESIZE),keep,externally_visible,space(prog)))= {0};
 
 void populate_buffer(uint8_t* data)
 {
