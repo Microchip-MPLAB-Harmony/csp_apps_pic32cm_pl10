@@ -29,41 +29,79 @@
 /*                    SOFTWARE API DEFINITION FOR SYSCTRL                     */
 /* ************************************************************************** */
 
-/* -------- SYSCTRL_CTRLA : (SYSCTRL Offset: 0x00) (R/W 32) Control A -------- */
-#define SYSCTRL_CTRLA_RESETVALUE              _UINT32_(0x00)                                       /*  (SYSCTRL_CTRLA) Control A  Reset Value */
+/* -------- SYSCTRL_BOOTCTRL : (SYSCTRL Offset: 0x80) (R/W 32) Boot Control -------- */
+#define SYSCTRL_BOOTCTRL_RESETVALUE           _UINT32_(0x00)                                       /*  (SYSCTRL_BOOTCTRL) Boot Control  Reset Value */
 
-#define SYSCTRL_CTRLA_PRIV_Pos                _UINT32_(2)                                          /* (SYSCTRL_CTRLA) Priveleged Access Position */
-#define SYSCTRL_CTRLA_PRIV_Msk                (_UINT32_(0x1) << SYSCTRL_CTRLA_PRIV_Pos)            /* (SYSCTRL_CTRLA) Priveleged Access Mask */
-#define SYSCTRL_CTRLA_PRIV(value)             (SYSCTRL_CTRLA_PRIV_Msk & (_UINT32_(value) << SYSCTRL_CTRLA_PRIV_Pos)) /* Assignment of value for PRIV in the SYSCTRL_CTRLA register */
-#define SYSCTRL_CTRLA_Msk                     _UINT32_(0x00000004)                                 /* (SYSCTRL_CTRLA) Register Mask  */
+#define SYSCTRL_BOOTCTRL_SYSINIT_Pos          _UINT32_(0)                                          /* (SYSCTRL_BOOTCTRL) System Initialization Ongoing Position */
+#define SYSCTRL_BOOTCTRL_SYSINIT_Msk          (_UINT32_(0x1) << SYSCTRL_BOOTCTRL_SYSINIT_Pos)      /* (SYSCTRL_BOOTCTRL) System Initialization Ongoing Mask */
+#define SYSCTRL_BOOTCTRL_SYSINIT(value)       (SYSCTRL_BOOTCTRL_SYSINIT_Msk & (_UINT32_(value) << SYSCTRL_BOOTCTRL_SYSINIT_Pos)) /* Assignment of value for SYSINIT in the SYSCTRL_BOOTCTRL register */
+#define SYSCTRL_BOOTCTRL_BREXTEN_Pos          _UINT32_(1)                                          /* (SYSCTRL_BOOTCTRL) BREXT Enable Position */
+#define SYSCTRL_BOOTCTRL_BREXTEN_Msk          (_UINT32_(0x1) << SYSCTRL_BOOTCTRL_BREXTEN_Pos)      /* (SYSCTRL_BOOTCTRL) BREXT Enable Mask */
+#define SYSCTRL_BOOTCTRL_BREXTEN(value)       (SYSCTRL_BOOTCTRL_BREXTEN_Msk & (_UINT32_(value) << SYSCTRL_BOOTCTRL_BREXTEN_Pos)) /* Assignment of value for BREXTEN in the SYSCTRL_BOOTCTRL register */
+#define SYSCTRL_BOOTCTRL_FORCEPARK_Pos        _UINT32_(2)                                          /* (SYSCTRL_BOOTCTRL) Force Park Mode Entry Position */
+#define SYSCTRL_BOOTCTRL_FORCEPARK_Msk        (_UINT32_(0x1) << SYSCTRL_BOOTCTRL_FORCEPARK_Pos)    /* (SYSCTRL_BOOTCTRL) Force Park Mode Entry Mask */
+#define SYSCTRL_BOOTCTRL_FORCEPARK(value)     (SYSCTRL_BOOTCTRL_FORCEPARK_Msk & (_UINT32_(value) << SYSCTRL_BOOTCTRL_FORCEPARK_Pos)) /* Assignment of value for FORCEPARK in the SYSCTRL_BOOTCTRL register */
+#define SYSCTRL_BOOTCTRL_Msk                  _UINT32_(0x00000007)                                 /* (SYSCTRL_BOOTCTRL) Register Mask  */
 
 
-/* -------- SYSCTRL_WPCTRL : (SYSCTRL Offset: 0x0C) (R/W 32) Write Protection Control -------- */
-#define SYSCTRL_WPCTRL_RESETVALUE             _UINT32_(0x00)                                       /*  (SYSCTRL_WPCTRL) Write Protection Control  Reset Value */
+/* -------- SYSCTRL_USERCFG : (SYSCTRL Offset: 0x84) (R/W 32) User Configuration -------- */
+#define SYSCTRL_USERCFG_RESETVALUE            _UINT32_(0x00)                                       /*  (SYSCTRL_USERCFG) User Configuration  Reset Value */
 
-#define SYSCTRL_WPCTRL_WPEN_Pos               _UINT32_(0)                                          /* (SYSCTRL_WPCTRL) Write Protection Enable Position */
-#define SYSCTRL_WPCTRL_WPEN_Msk               (_UINT32_(0x1) << SYSCTRL_WPCTRL_WPEN_Pos)           /* (SYSCTRL_WPCTRL) Write Protection Enable Mask */
-#define SYSCTRL_WPCTRL_WPEN(value)            (SYSCTRL_WPCTRL_WPEN_Msk & (_UINT32_(value) << SYSCTRL_WPCTRL_WPEN_Pos)) /* Assignment of value for WPEN in the SYSCTRL_WPCTRL register */
-#define SYSCTRL_WPCTRL_WPLCK_Pos              _UINT32_(1)                                          /* (SYSCTRL_WPCTRL) Write Lock Bit Position */
-#define SYSCTRL_WPCTRL_WPLCK_Msk              (_UINT32_(0x1) << SYSCTRL_WPCTRL_WPLCK_Pos)          /* (SYSCTRL_WPCTRL) Write Lock Bit Mask */
-#define SYSCTRL_WPCTRL_WPLCK(value)           (SYSCTRL_WPCTRL_WPLCK_Msk & (_UINT32_(value) << SYSCTRL_WPCTRL_WPLCK_Pos)) /* Assignment of value for WPLCK in the SYSCTRL_WPCTRL register */
-#define SYSCTRL_WPCTRL_WPKEY_Pos              _UINT32_(8)                                          /* (SYSCTRL_WPCTRL) Write Protection Key Position */
-#define SYSCTRL_WPCTRL_WPKEY_Msk              (_UINT32_(0xFFFFFF) << SYSCTRL_WPCTRL_WPKEY_Pos)     /* (SYSCTRL_WPCTRL) Write Protection Key Mask */
-#define SYSCTRL_WPCTRL_WPKEY(value)           (SYSCTRL_WPCTRL_WPKEY_Msk & (_UINT32_(value) << SYSCTRL_WPCTRL_WPKEY_Pos)) /* Assignment of value for WPKEY in the SYSCTRL_WPCTRL register */
-#define SYSCTRL_WPCTRL_Msk                    _UINT32_(0xFFFFFF03)                                 /* (SYSCTRL_WPCTRL) Register Mask  */
+#define SYSCTRL_USERCFG_CRCSEL_Pos            _UINT32_(6)                                          /* (SYSCTRL_USERCFG) CRC Polynomial Selection Position */
+#define SYSCTRL_USERCFG_CRCSEL_Msk            (_UINT32_(0x1) << SYSCTRL_USERCFG_CRCSEL_Pos)        /* (SYSCTRL_USERCFG) CRC Polynomial Selection Mask */
+#define SYSCTRL_USERCFG_CRCSEL(value)         (SYSCTRL_USERCFG_CRCSEL_Msk & (_UINT32_(value) << SYSCTRL_USERCFG_CRCSEL_Pos)) /* Assignment of value for CRCSEL in the SYSCTRL_USERCFG register */
+#define   SYSCTRL_USERCFG_CRCSEL_CRC16_Val    _UINT32_(0x0)                                        /* (SYSCTRL_USERCFG) CRC-16-CCITT  */
+#define   SYSCTRL_USERCFG_CRCSEL_CRC32_Val    _UINT32_(0x1)                                        /* (SYSCTRL_USERCFG) CRC-32 (IEEE 802.3)  */
+#define SYSCTRL_USERCFG_CRCSEL_CRC16          (SYSCTRL_USERCFG_CRCSEL_CRC16_Val << SYSCTRL_USERCFG_CRCSEL_Pos) /* (SYSCTRL_USERCFG) CRC-16-CCITT Position */
+#define SYSCTRL_USERCFG_CRCSEL_CRC32          (SYSCTRL_USERCFG_CRCSEL_CRC32_Val << SYSCTRL_USERCFG_CRCSEL_Pos) /* (SYSCTRL_USERCFG) CRC-32 (IEEE 802.3) Position */
+#define SYSCTRL_USERCFG_CRCBOOT_Pos           _UINT32_(7)                                          /* (SYSCTRL_USERCFG) CRC Boot Position */
+#define SYSCTRL_USERCFG_CRCBOOT_Msk           (_UINT32_(0x1) << SYSCTRL_USERCFG_CRCBOOT_Pos)       /* (SYSCTRL_USERCFG) CRC Boot Mask */
+#define SYSCTRL_USERCFG_CRCBOOT(value)        (SYSCTRL_USERCFG_CRCBOOT_Msk & (_UINT32_(value) << SYSCTRL_USERCFG_CRCBOOT_Pos)) /* Assignment of value for CRCBOOT in the SYSCTRL_USERCFG register */
+#define SYSCTRL_USERCFG_SUT_Pos               _UINT32_(8)                                          /* (SYSCTRL_USERCFG) Start-up Time Position */
+#define SYSCTRL_USERCFG_SUT_Msk               (_UINT32_(0x7) << SYSCTRL_USERCFG_SUT_Pos)           /* (SYSCTRL_USERCFG) Start-up Time Mask */
+#define SYSCTRL_USERCFG_SUT(value)            (SYSCTRL_USERCFG_SUT_Msk & (_UINT32_(value) << SYSCTRL_USERCFG_SUT_Pos)) /* Assignment of value for SUT in the SYSCTRL_USERCFG register */
+#define   SYSCTRL_USERCFG_SUT_0MS_Val         _UINT32_(0x0)                                        /* (SYSCTRL_USERCFG) 0 ms  */
+#define   SYSCTRL_USERCFG_SUT_1MS_Val         _UINT32_(0x1)                                        /* (SYSCTRL_USERCFG) 1 ms  */
+#define   SYSCTRL_USERCFG_SUT_2MS_Val         _UINT32_(0x2)                                        /* (SYSCTRL_USERCFG) 2 ms  */
+#define   SYSCTRL_USERCFG_SUT_4MS_Val         _UINT32_(0x3)                                        /* (SYSCTRL_USERCFG) 4 ms  */
+#define   SYSCTRL_USERCFG_SUT_8MS_Val         _UINT32_(0x4)                                        /* (SYSCTRL_USERCFG) 8 ms  */
+#define   SYSCTRL_USERCFG_SUT_16MS_Val        _UINT32_(0x5)                                        /* (SYSCTRL_USERCFG) 16 ms  */
+#define   SYSCTRL_USERCFG_SUT_32MS_Val        _UINT32_(0x6)                                        /* (SYSCTRL_USERCFG) 32 ms  */
+#define   SYSCTRL_USERCFG_SUT_64MS_Val        _UINT32_(0x7)                                        /* (SYSCTRL_USERCFG) 64 ms  */
+#define SYSCTRL_USERCFG_SUT_0MS               (SYSCTRL_USERCFG_SUT_0MS_Val << SYSCTRL_USERCFG_SUT_Pos) /* (SYSCTRL_USERCFG) 0 ms Position */
+#define SYSCTRL_USERCFG_SUT_1MS               (SYSCTRL_USERCFG_SUT_1MS_Val << SYSCTRL_USERCFG_SUT_Pos) /* (SYSCTRL_USERCFG) 1 ms Position */
+#define SYSCTRL_USERCFG_SUT_2MS               (SYSCTRL_USERCFG_SUT_2MS_Val << SYSCTRL_USERCFG_SUT_Pos) /* (SYSCTRL_USERCFG) 2 ms Position */
+#define SYSCTRL_USERCFG_SUT_4MS               (SYSCTRL_USERCFG_SUT_4MS_Val << SYSCTRL_USERCFG_SUT_Pos) /* (SYSCTRL_USERCFG) 4 ms Position */
+#define SYSCTRL_USERCFG_SUT_8MS               (SYSCTRL_USERCFG_SUT_8MS_Val << SYSCTRL_USERCFG_SUT_Pos) /* (SYSCTRL_USERCFG) 8 ms Position */
+#define SYSCTRL_USERCFG_SUT_16MS              (SYSCTRL_USERCFG_SUT_16MS_Val << SYSCTRL_USERCFG_SUT_Pos) /* (SYSCTRL_USERCFG) 16 ms Position */
+#define SYSCTRL_USERCFG_SUT_32MS              (SYSCTRL_USERCFG_SUT_32MS_Val << SYSCTRL_USERCFG_SUT_Pos) /* (SYSCTRL_USERCFG) 32 ms Position */
+#define SYSCTRL_USERCFG_SUT_64MS              (SYSCTRL_USERCFG_SUT_64MS_Val << SYSCTRL_USERCFG_SUT_Pos) /* (SYSCTRL_USERCFG) 64 ms Position */
+#define SYSCTRL_USERCFG_Msk                   _UINT32_(0x000007C0)                                 /* (SYSCTRL_USERCFG) Register Mask  */
+
+
+/* -------- SYSCTRL_TEMPSENSE : (SYSCTRL Offset: 0x88) ( R/ 32) Temperature Sensor Calibration -------- */
+#define SYSCTRL_TEMPSENSE_TEMPSENSE0_Pos      _UINT32_(0)                                          /* (SYSCTRL_TEMPSENSE) Temperature Sensor Calibration Slope Position */
+#define SYSCTRL_TEMPSENSE_TEMPSENSE0_Msk      (_UINT32_(0xFFFF) << SYSCTRL_TEMPSENSE_TEMPSENSE0_Pos) /* (SYSCTRL_TEMPSENSE) Temperature Sensor Calibration Slope Mask */
+#define SYSCTRL_TEMPSENSE_TEMPSENSE0(value)   (SYSCTRL_TEMPSENSE_TEMPSENSE0_Msk & (_UINT32_(value) << SYSCTRL_TEMPSENSE_TEMPSENSE0_Pos)) /* Assignment of value for TEMPSENSE0 in the SYSCTRL_TEMPSENSE register */
+#define SYSCTRL_TEMPSENSE_TEMPSENSE1_Pos      _UINT32_(16)                                         /* (SYSCTRL_TEMPSENSE) Temperature Sensor Calibration Offset Position */
+#define SYSCTRL_TEMPSENSE_TEMPSENSE1_Msk      (_UINT32_(0xFFFF) << SYSCTRL_TEMPSENSE_TEMPSENSE1_Pos) /* (SYSCTRL_TEMPSENSE) Temperature Sensor Calibration Offset Mask */
+#define SYSCTRL_TEMPSENSE_TEMPSENSE1(value)   (SYSCTRL_TEMPSENSE_TEMPSENSE1_Msk & (_UINT32_(value) << SYSCTRL_TEMPSENSE_TEMPSENSE1_Pos)) /* Assignment of value for TEMPSENSE1 in the SYSCTRL_TEMPSENSE register */
+#define SYSCTRL_TEMPSENSE_Msk                 _UINT32_(0xFFFFFFFF)                                 /* (SYSCTRL_TEMPSENSE) Register Mask  */
 
 
 /* SYSCTRL register offsets definitions */
-#define SYSCTRL_CTRLA_REG_OFST         _UINT32_(0x00)      /* (SYSCTRL_CTRLA) Control A Offset */
-#define SYSCTRL_WPCTRL_REG_OFST        _UINT32_(0x0C)      /* (SYSCTRL_WPCTRL) Write Protection Control Offset */
+#define SYSCTRL_BOOTCTRL_REG_OFST      _UINT32_(0x80)      /* (SYSCTRL_BOOTCTRL) Boot Control Offset */
+#define SYSCTRL_USERCFG_REG_OFST       _UINT32_(0x84)      /* (SYSCTRL_USERCFG) User Configuration Offset */
+#define SYSCTRL_TEMPSENSE_REG_OFST     _UINT32_(0x88)      /* (SYSCTRL_TEMPSENSE) Temperature Sensor Calibration Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /* SYSCTRL register API structure */
 typedef struct
-{  /* System  Controller */
-  __IO  uint32_t                       SYSCTRL_CTRLA;      /* Offset: 0x00 (R/W  32) Control A */
-  __I   uint8_t                        Reserved1[0x08];
-  __IO  uint32_t                       SYSCTRL_WPCTRL;     /* Offset: 0x0C (R/W  32) Write Protection Control */
+{  /* System Controller */
+  __I   uint8_t                        Reserved1[0x80];
+  __IO  uint32_t                       SYSCTRL_BOOTCTRL;   /* Offset: 0x80 (R/W  32) Boot Control */
+  __IO  uint32_t                       SYSCTRL_USERCFG;    /* Offset: 0x84 (R/W  32) User Configuration */
+  __I   uint32_t                       SYSCTRL_TEMPSENSE;  /* Offset: 0x88 (R/   32) Temperature Sensor Calibration */
 } sysctrl_registers_t;
 
 
