@@ -65,7 +65,7 @@ void ac_callBack(uint8_t int_flag, uintptr_t ac_context)
     LED_Toggle();
     
     /* Check the comparator output state */
-    if(int_flag & AC_STATUS_STATE0_Msk)
+    if(int_flag & AC_STATUS_COMPSTATE0_Msk)
     {
         change_detect  = true;
     }
