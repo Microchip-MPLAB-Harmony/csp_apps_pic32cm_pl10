@@ -9,8 +9,6 @@
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>../../../../../wdt/bench_testing/Converting_app/wdt_timeout/pic32cm_pl10_curiosity_nano.X/wdt_timeout_pic32cm_pl10_curiosity_nano_default</sourceRootElem>
-                <sourceRootElem>eic_led_on_off_pic32cm_pl10_curiosity_nano</sourceRootElem>
                 <sourceRootElem>eic_led_on_off_pic32cm_pl10_curiosity_nano_default</sourceRootElem>
             </sourceRootList>
             <confList>

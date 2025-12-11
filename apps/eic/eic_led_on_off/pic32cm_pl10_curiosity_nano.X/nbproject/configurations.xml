@@ -188,8 +188,6 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>../../../../../wdt/bench_testing/Converting_app/wdt_timeout/pic32cm_pl10_curiosity_nano.X/wdt_timeout_pic32cm_pl10_curiosity_nano_default</Elem>
-    <Elem>eic_led_on_off_pic32cm_pl10_curiosity_nano</Elem>
     <Elem>eic_led_on_off_pic32cm_pl10_curiosity_nano_default</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
@@ -206,7 +204,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CM-PL_DFP" vendor="Microchip" version="0.0.279"/>
+        <pack name="PIC32CM-PL_DFP" vendor="Microchip" version="1.0.313"/>
         <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
       </packs>
       <ScriptingSettings>
