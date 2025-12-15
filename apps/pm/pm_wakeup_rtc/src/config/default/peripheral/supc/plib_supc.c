@@ -85,7 +85,7 @@ void SUPC_MVIOVDDIO2ConfigSet(MVIO_VDDIO2CFG_CONFIG mvioVddio2Config)
 {
     if ((SUPC_REGS->SUPC_MVIO & SUPC_MVIO_MODE_Msk) == SUPC_MVIO_MODE_DUAL)
     {
-        SUPC_REGS->SUPC_MVIO = mvioVddio2Config;
+        SUPC_REGS->SUPC_MVIO = (uint32_t)mvioVddio2Config;
     }
 }
 

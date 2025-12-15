@@ -154,7 +154,7 @@ uint32_t RTC_Timer32PeriodGet ( void )
 {
     /* Get 32Bit Compare Value */
              /*lint -e{9048} PC lint incorrectly reports a missing 'U' Suffix */
-    return (RTC_MODE0_COUNT_Msk);
+    return (RTC_MODE0_COUNT_COUNT_Msk);
 }
 
 uint32_t RTC_Timer32FrequencyGet ( void )
