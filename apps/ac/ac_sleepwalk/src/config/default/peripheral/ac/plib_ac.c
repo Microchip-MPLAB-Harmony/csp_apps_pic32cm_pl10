@@ -98,7 +98,7 @@ bool AC_StatusGet (AC_CHANNEL channel)
 {
     bool breturnVal = false;
 
-    if((AC_REGS->AC_STATUS & (AC_STATUS_STATE0_Msk << (uint8_t)channel)) == (AC_STATUS_STATE0_Msk << (uint8_t)channel))
+    if((AC_REGS->AC_STATUS & (AC_STATUS_COMPSTATE0_Msk << (uint8_t)channel)) == (AC_STATUS_COMPSTATE0_Msk << (uint8_t)channel))
     {
         breturnVal = true;
     }
@@ -123,7 +123,7 @@ void __attribute__((used)) AC_InterruptHandler( void )
     uint8_t status;
     context = acObj.context;
     /* Copy the status to use inside the callback */
-    acObj.status = AC_REGS->AC_STATUS;
+    acObj.status = (uint8_t)AC_REGS->AC_STATUS;
     status = acObj.status;
     /* Clear the interrupt flags*/
     AC_REGS->AC_INTFLAG = (uint8_t)AC_INTFLAG_Msk;

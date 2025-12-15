@@ -108,8 +108,6 @@ void AC_Initialize (void);
 
 void AC_Start( AC_CHANNEL channel_id );
 
-void AC_SwapInputs( AC_CHANNEL channel_id );
-
 bool AC_StatusGet (AC_CHANNEL channel);
 
 void AC_CallbackRegister (AC_CALLBACK callback, uintptr_t context);
