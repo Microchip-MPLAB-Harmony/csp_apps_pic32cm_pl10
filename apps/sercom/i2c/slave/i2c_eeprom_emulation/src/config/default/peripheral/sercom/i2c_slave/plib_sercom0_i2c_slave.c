@@ -43,6 +43,7 @@
 // DOM-IGNORE-END
 
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
@@ -100,7 +101,7 @@ void SERCOM0_I2C_Initialize(void)
 
 
     /* Set the slave address */
-    SERCOM0_REGS->I2CS.SERCOM_ADDR = SERCOM_I2CS_ADDR_ADDR(0x54UL) ;
+    SERCOM0_REGS->I2CS.SERCOM_ADDR = SERCOM_I2CS_ADDR_SEVENBIT_ADDR(0x54UL) ;
 
 
     /* Enable all I2C slave Interrupts */
