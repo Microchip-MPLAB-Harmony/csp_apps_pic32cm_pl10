@@ -237,8 +237,8 @@
 #define SUPC_WPCTRL_WPKEY_Pos                 _UINT32_(8)                                          /* (SUPC_WPCTRL) Write Protection Key Position */
 #define SUPC_WPCTRL_WPKEY_Msk                 (_UINT32_(0xFFFFFF) << SUPC_WPCTRL_WPKEY_Pos)        /* (SUPC_WPCTRL) Write Protection Key Mask */
 #define SUPC_WPCTRL_WPKEY(value)              (SUPC_WPCTRL_WPKEY_Msk & (_UINT32_(value) << SUPC_WPCTRL_WPKEY_Pos)) /* Assignment of value for WPKEY in the SUPC_WPCTRL register */
-#define   SUPC_WPCTRL_WPKEY_KEY_Val           _UINT32_(0x535550)                                   /* (SUPC_WPCTRL) Allow writes to the WPCTRL register  */
-#define SUPC_WPCTRL_WPKEY_KEY                 (SUPC_WPCTRL_WPKEY_KEY_Val << SUPC_WPCTRL_WPKEY_Pos) /* (SUPC_WPCTRL) Allow writes to the WPCTRL register Position */
+#define   SUPC_WPCTRL_WPKEY_KEY_Val           _UINT32_(0x535550)                                   /* (SUPC_WPCTRL) Allows writes to the WPCTRL register  */
+#define SUPC_WPCTRL_WPKEY_KEY                 (SUPC_WPCTRL_WPKEY_KEY_Val << SUPC_WPCTRL_WPKEY_Pos) /* (SUPC_WPCTRL) Allows writes to the WPCTRL register Position */
 #define SUPC_WPCTRL_Msk                       _UINT32_(0xFFFFFF03)                                 /* (SUPC_WPCTRL) Register Mask  */
 
 
