@@ -44,13 +44,13 @@
 #define   NVMCTRL_CTRLB_CMD_FLMPER8_Val       _UINT32_(0xB)                                        /* (NVMCTRL_CTRLB) Flash 8-page Erase Enable  */
 #define   NVMCTRL_CTRLB_CMD_FLMPER16_Val      _UINT32_(0xC)                                        /* (NVMCTRL_CTRLB) Flash 16-page Erase Enable  */
 #define   NVMCTRL_CTRLB_CMD_FLMPER32_Val      _UINT32_(0xD)                                        /* (NVMCTRL_CTRLB) Flash 32-page Erase Enable  */
-#define   NVMCTRL_CTRLB_CMD_LR_Val            _UINT32_(0xE)                                        /* (NVMCTRL_CTRLB) Lock Region. Sets the bit in the Region n Lock Bits bit field in the Lock Section register (NVMCTRL.LOCK) corresponding to the address location in the ADDR register  */
-#define   NVMCTRL_CTRLB_CMD_UR_Val            _UINT32_(0xF)                                        /* (NVMCTRL_CTRLB) Unlock Region. Clears the bit in NVMCTRL.LOCK corresponding to the address location in the ADDR register  */
+#define   NVMCTRL_CTRLB_CMD_LR_Val            _UINT32_(0xE)                                        /* (NVMCTRL_CTRLB) Lock Region. Sets the bit in the Region n Lock Bits bit field in the Lock Section register (NVMCTRL.LOCK) corresponding to the address location in the ADDR register.  */
+#define   NVMCTRL_CTRLB_CMD_UR_Val            _UINT32_(0xF)                                        /* (NVMCTRL_CTRLB) Unlock Region. Clears the bit in NVMCTRL.LOCK corresponding to the address location in the ADDR register.  */
 #define   NVMCTRL_CTRLB_CMD_EBOOTCFG_Val      _UINT32_(0x10)                                       /* (NVMCTRL_CTRLB) Erase BOOTCFG Page Enable  */
 #define   NVMCTRL_CTRLB_CMD_WBOOTCFG_Val      _UINT32_(0x11)                                       /* (NVMCTRL_CTRLB) Write BOOTCFG Page Enable  */
-#define   NVMCTRL_CTRLB_CMD_WLOCKREGION_Val   _UINT32_(0x12)                                       /* (NVMCTRL_CTRLB) Write Enable to ROMCFG.NVMLOCKREGION. Writes to other addresses shall cause STATUS.PROGE to be set  */
-#define   NVMCTRL_CTRLB_CMD_WROMCFG_Val       _UINT32_(0x20)                                       /* (NVMCTRL_CTRLB) Write ROMCFG Page Enable. The ROMCFG Page is used by the boot ROM to store Debug Access Level (DAL) bits and other security/protection bits for e.g. CEHL and Immutable boot  */
-#define   NVMCTRL_CTRLB_CMD_CHER_Val          _UINT32_(0x21)                                       /* (NVMCTRL_CTRLB) Erases the flash and lock row.  */
+#define   NVMCTRL_CTRLB_CMD_WLOCKREGION_Val   _UINT32_(0x12)                                       /* (NVMCTRL_CTRLB) Write Enable to ROMCFG.NVMLOCKREGION. Writes to other addresses will cause STATUS.PROGE to be set.  */
+#define   NVMCTRL_CTRLB_CMD_WROMCFG_Val       _UINT32_(0x20)                                       /* (NVMCTRL_CTRLB) Write ROMCFG Page Enable. The ROMCFG Page is used by the boot ROM to store Debug Access Level (DAL) bits and other security or protection bits for such as CEHL and Immutable boot.  */
+#define   NVMCTRL_CTRLB_CMD_CHER_Val          _UINT32_(0x21)                                       /* (NVMCTRL_CTRLB) Erase FlashRequires DAL == 2 or SYSINT privileges  */
 #define NVMCTRL_CTRLB_CMD_NOCMD               (NVMCTRL_CTRLB_CMD_NOCMD_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) No command Position */
 #define NVMCTRL_CTRLB_CMD_NOOP                (NVMCTRL_CTRLB_CMD_NOOP_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) No operation Position */
 #define NVMCTRL_CTRLB_CMD_FLWR                (NVMCTRL_CTRLB_CMD_FLWR_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) Flash Write Enable Position */
@@ -60,13 +60,13 @@
 #define NVMCTRL_CTRLB_CMD_FLMPER8             (NVMCTRL_CTRLB_CMD_FLMPER8_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) Flash 8-page Erase Enable Position */
 #define NVMCTRL_CTRLB_CMD_FLMPER16            (NVMCTRL_CTRLB_CMD_FLMPER16_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) Flash 16-page Erase Enable Position */
 #define NVMCTRL_CTRLB_CMD_FLMPER32            (NVMCTRL_CTRLB_CMD_FLMPER32_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) Flash 32-page Erase Enable Position */
-#define NVMCTRL_CTRLB_CMD_LR                  (NVMCTRL_CTRLB_CMD_LR_Val << NVMCTRL_CTRLB_CMD_Pos)  /* (NVMCTRL_CTRLB) Lock Region. Sets the bit in the Region n Lock Bits bit field in the Lock Section register (NVMCTRL.LOCK) corresponding to the address location in the ADDR register Position */
-#define NVMCTRL_CTRLB_CMD_UR                  (NVMCTRL_CTRLB_CMD_UR_Val << NVMCTRL_CTRLB_CMD_Pos)  /* (NVMCTRL_CTRLB) Unlock Region. Clears the bit in NVMCTRL.LOCK corresponding to the address location in the ADDR register Position */
+#define NVMCTRL_CTRLB_CMD_LR                  (NVMCTRL_CTRLB_CMD_LR_Val << NVMCTRL_CTRLB_CMD_Pos)  /* (NVMCTRL_CTRLB) Lock Region. Sets the bit in the Region n Lock Bits bit field in the Lock Section register (NVMCTRL.LOCK) corresponding to the address location in the ADDR register. Position */
+#define NVMCTRL_CTRLB_CMD_UR                  (NVMCTRL_CTRLB_CMD_UR_Val << NVMCTRL_CTRLB_CMD_Pos)  /* (NVMCTRL_CTRLB) Unlock Region. Clears the bit in NVMCTRL.LOCK corresponding to the address location in the ADDR register. Position */
 #define NVMCTRL_CTRLB_CMD_EBOOTCFG            (NVMCTRL_CTRLB_CMD_EBOOTCFG_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) Erase BOOTCFG Page Enable Position */
 #define NVMCTRL_CTRLB_CMD_WBOOTCFG            (NVMCTRL_CTRLB_CMD_WBOOTCFG_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) Write BOOTCFG Page Enable Position */
-#define NVMCTRL_CTRLB_CMD_WLOCKREGION         (NVMCTRL_CTRLB_CMD_WLOCKREGION_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) Write Enable to ROMCFG.NVMLOCKREGION. Writes to other addresses shall cause STATUS.PROGE to be set Position */
-#define NVMCTRL_CTRLB_CMD_WROMCFG             (NVMCTRL_CTRLB_CMD_WROMCFG_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) Write ROMCFG Page Enable. The ROMCFG Page is used by the boot ROM to store Debug Access Level (DAL) bits and other security/protection bits for e.g. CEHL and Immutable boot Position */
-#define NVMCTRL_CTRLB_CMD_CHER                (NVMCTRL_CTRLB_CMD_CHER_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) Erases the flash and lock row. Position */
+#define NVMCTRL_CTRLB_CMD_WLOCKREGION         (NVMCTRL_CTRLB_CMD_WLOCKREGION_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) Write Enable to ROMCFG.NVMLOCKREGION. Writes to other addresses will cause STATUS.PROGE to be set. Position */
+#define NVMCTRL_CTRLB_CMD_WROMCFG             (NVMCTRL_CTRLB_CMD_WROMCFG_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) Write ROMCFG Page Enable. The ROMCFG Page is used by the boot ROM to store Debug Access Level (DAL) bits and other security or protection bits for such as CEHL and Immutable boot. Position */
+#define NVMCTRL_CTRLB_CMD_CHER                (NVMCTRL_CTRLB_CMD_CHER_Val << NVMCTRL_CTRLB_CMD_Pos) /* (NVMCTRL_CTRLB) Erase FlashRequires DAL == 2 or SYSINT privileges Position */
 #define NVMCTRL_CTRLB_CMDEX_Pos               _UINT32_(8)                                          /* (NVMCTRL_CTRLB) Command Execution Position */
 #define NVMCTRL_CTRLB_CMDEX_Msk               (_UINT32_(0xFF) << NVMCTRL_CTRLB_CMDEX_Pos)          /* (NVMCTRL_CTRLB) Command Execution Mask */
 #define NVMCTRL_CTRLB_CMDEX(value)            (NVMCTRL_CTRLB_CMDEX_Msk & (_UINT32_(value) << NVMCTRL_CTRLB_CMDEX_Pos)) /* Assignment of value for CMDEX in the NVMCTRL_CTRLB register */
@@ -190,57 +190,57 @@
 
 
 /* -------- NVMCTRL_LOCK : (NVMCTRL Offset: 0x24) ( R/ 32) Lock Section -------- */
-#define NVMCTRL_LOCK_LOCK0_Pos                _UINT32_(0)                                          /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK0_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK0_Pos)            /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK0_Pos                _UINT32_(0)                                          /* (NVMCTRL_LOCK) Region 0 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK0_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK0_Pos)            /* (NVMCTRL_LOCK) Region 0 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK0(value)             (NVMCTRL_LOCK_LOCK0_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK0_Pos)) /* Assignment of value for LOCK0 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK1_Pos                _UINT32_(1)                                          /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK1_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK1_Pos)            /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK1_Pos                _UINT32_(1)                                          /* (NVMCTRL_LOCK) Region 1 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK1_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK1_Pos)            /* (NVMCTRL_LOCK) Region 1 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK1(value)             (NVMCTRL_LOCK_LOCK1_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK1_Pos)) /* Assignment of value for LOCK1 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK2_Pos                _UINT32_(2)                                          /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK2_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK2_Pos)            /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK2_Pos                _UINT32_(2)                                          /* (NVMCTRL_LOCK) Region 2 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK2_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK2_Pos)            /* (NVMCTRL_LOCK) Region 2 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK2(value)             (NVMCTRL_LOCK_LOCK2_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK2_Pos)) /* Assignment of value for LOCK2 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK3_Pos                _UINT32_(3)                                          /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK3_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK3_Pos)            /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK3_Pos                _UINT32_(3)                                          /* (NVMCTRL_LOCK) Region 3 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK3_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK3_Pos)            /* (NVMCTRL_LOCK) Region 3 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK3(value)             (NVMCTRL_LOCK_LOCK3_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK3_Pos)) /* Assignment of value for LOCK3 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK4_Pos                _UINT32_(4)                                          /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK4_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK4_Pos)            /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK4_Pos                _UINT32_(4)                                          /* (NVMCTRL_LOCK) Region 4 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK4_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK4_Pos)            /* (NVMCTRL_LOCK) Region 4 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK4(value)             (NVMCTRL_LOCK_LOCK4_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK4_Pos)) /* Assignment of value for LOCK4 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK5_Pos                _UINT32_(5)                                          /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK5_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK5_Pos)            /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK5_Pos                _UINT32_(5)                                          /* (NVMCTRL_LOCK) Region 5 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK5_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK5_Pos)            /* (NVMCTRL_LOCK) Region 5 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK5(value)             (NVMCTRL_LOCK_LOCK5_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK5_Pos)) /* Assignment of value for LOCK5 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK6_Pos                _UINT32_(6)                                          /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK6_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK6_Pos)            /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK6_Pos                _UINT32_(6)                                          /* (NVMCTRL_LOCK) Region 6 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK6_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK6_Pos)            /* (NVMCTRL_LOCK) Region 6 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK6(value)             (NVMCTRL_LOCK_LOCK6_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK6_Pos)) /* Assignment of value for LOCK6 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK7_Pos                _UINT32_(7)                                          /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK7_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK7_Pos)            /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK7_Pos                _UINT32_(7)                                          /* (NVMCTRL_LOCK) Region 7 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK7_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK7_Pos)            /* (NVMCTRL_LOCK) Region 7 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK7(value)             (NVMCTRL_LOCK_LOCK7_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK7_Pos)) /* Assignment of value for LOCK7 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK8_Pos                _UINT32_(8)                                          /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK8_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK8_Pos)            /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK8_Pos                _UINT32_(8)                                          /* (NVMCTRL_LOCK) Region 8 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK8_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK8_Pos)            /* (NVMCTRL_LOCK) Region 8 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK8(value)             (NVMCTRL_LOCK_LOCK8_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK8_Pos)) /* Assignment of value for LOCK8 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK9_Pos                _UINT32_(9)                                          /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK9_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK9_Pos)            /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK9_Pos                _UINT32_(9)                                          /* (NVMCTRL_LOCK) Region 9 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK9_Msk                (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK9_Pos)            /* (NVMCTRL_LOCK) Region 9 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK9(value)             (NVMCTRL_LOCK_LOCK9_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK9_Pos)) /* Assignment of value for LOCK9 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK10_Pos               _UINT32_(10)                                         /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK10_Msk               (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK10_Pos)           /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK10_Pos               _UINT32_(10)                                         /* (NVMCTRL_LOCK) Region 10 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK10_Msk               (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK10_Pos)           /* (NVMCTRL_LOCK) Region 10 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK10(value)            (NVMCTRL_LOCK_LOCK10_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK10_Pos)) /* Assignment of value for LOCK10 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK11_Pos               _UINT32_(11)                                         /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK11_Msk               (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK11_Pos)           /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK11_Pos               _UINT32_(11)                                         /* (NVMCTRL_LOCK) Region 11 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK11_Msk               (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK11_Pos)           /* (NVMCTRL_LOCK) Region 11 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK11(value)            (NVMCTRL_LOCK_LOCK11_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK11_Pos)) /* Assignment of value for LOCK11 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK12_Pos               _UINT32_(12)                                         /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK12_Msk               (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK12_Pos)           /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK12_Pos               _UINT32_(12)                                         /* (NVMCTRL_LOCK) Region 12 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK12_Msk               (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK12_Pos)           /* (NVMCTRL_LOCK) Region 12 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK12(value)            (NVMCTRL_LOCK_LOCK12_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK12_Pos)) /* Assignment of value for LOCK12 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK13_Pos               _UINT32_(13)                                         /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK13_Msk               (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK13_Pos)           /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK13_Pos               _UINT32_(13)                                         /* (NVMCTRL_LOCK) Region 13 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK13_Msk               (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK13_Pos)           /* (NVMCTRL_LOCK) Region 13 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK13(value)            (NVMCTRL_LOCK_LOCK13_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK13_Pos)) /* Assignment of value for LOCK13 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK14_Pos               _UINT32_(14)                                         /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK14_Msk               (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK14_Pos)           /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK14_Pos               _UINT32_(14)                                         /* (NVMCTRL_LOCK) Region 14 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK14_Msk               (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK14_Pos)           /* (NVMCTRL_LOCK) Region 14 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK14(value)            (NVMCTRL_LOCK_LOCK14_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK14_Pos)) /* Assignment of value for LOCK14 in the NVMCTRL_LOCK register */
-#define NVMCTRL_LOCK_LOCK15_Pos               _UINT32_(15)                                         /* (NVMCTRL_LOCK) Region n Lock Bit Position */
-#define NVMCTRL_LOCK_LOCK15_Msk               (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK15_Pos)           /* (NVMCTRL_LOCK) Region n Lock Bit Mask */
+#define NVMCTRL_LOCK_LOCK15_Pos               _UINT32_(15)                                         /* (NVMCTRL_LOCK) Region 15 Lock Bit Position */
+#define NVMCTRL_LOCK_LOCK15_Msk               (_UINT32_(0x1) << NVMCTRL_LOCK_LOCK15_Pos)           /* (NVMCTRL_LOCK) Region 15 Lock Bit Mask */
 #define NVMCTRL_LOCK_LOCK15(value)            (NVMCTRL_LOCK_LOCK15_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK15_Pos)) /* Assignment of value for LOCK15 in the NVMCTRL_LOCK register */
 #define NVMCTRL_LOCK_Msk                      _UINT32_(0x0000FFFF)                                 /* (NVMCTRL_LOCK) Register Mask  */
 
-#define NVMCTRL_LOCK_LOCK_Pos                 _UINT32_(0)                                          /* (NVMCTRL_LOCK Position) Region n Lock Bit */
+#define NVMCTRL_LOCK_LOCK_Pos                 _UINT32_(0)                                          /* (NVMCTRL_LOCK Position) Region x5 Lock Bit */
 #define NVMCTRL_LOCK_LOCK_Msk                 (_UINT32_(0xFFFF) << NVMCTRL_LOCK_LOCK_Pos)          /* (NVMCTRL_LOCK Mask) LOCK */
 #define NVMCTRL_LOCK_LOCK(value)              (NVMCTRL_LOCK_LOCK_Msk & (_UINT32_(value) << NVMCTRL_LOCK_LOCK_Pos)) 
 

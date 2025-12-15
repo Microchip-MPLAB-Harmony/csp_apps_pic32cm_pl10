@@ -50,71 +50,71 @@
 /* -------- ADC_CTRLB : (ADC Offset: 0x04) (R/W 32) Control B -------- */
 #define ADC_CTRLB_RESETVALUE                  _UINT32_(0x00)                                       /*  (ADC_CTRLB) Control B  Reset Value */
 
-#define ADC_CTRLB_PRESC_Pos                   _UINT32_(0)                                          /* (ADC_CTRLB) ADC Prescaler Position */
-#define ADC_CTRLB_PRESC_Msk                   (_UINT32_(0x1F) << ADC_CTRLB_PRESC_Pos)              /* (ADC_CTRLB) ADC Prescaler Mask */
-#define ADC_CTRLB_PRESC(value)                (ADC_CTRLB_PRESC_Msk & (_UINT32_(value) << ADC_CTRLB_PRESC_Pos)) /* Assignment of value for PRESC in the ADC_CTRLB register */
-#define   ADC_CTRLB_PRESC_DIV2_Val            _UINT32_(0x0)                                        /* (ADC_CTRLB) APB clock divided by 2  */
-#define   ADC_CTRLB_PRESC_DIV3_Val            _UINT32_(0x1)                                        /* (ADC_CTRLB) APB clock divided by 3  */
-#define   ADC_CTRLB_PRESC_DIV4_Val            _UINT32_(0x2)                                        /* (ADC_CTRLB) APB clock divided by 4  */
-#define   ADC_CTRLB_PRESC_DIV5_Val            _UINT32_(0x3)                                        /* (ADC_CTRLB) APB clock divided by 5  */
-#define   ADC_CTRLB_PRESC_DIV6_Val            _UINT32_(0x4)                                        /* (ADC_CTRLB) APB clock divided by 6  */
-#define   ADC_CTRLB_PRESC_DIV7_Val            _UINT32_(0x5)                                        /* (ADC_CTRLB) APB clock divided by 7  */
-#define   ADC_CTRLB_PRESC_DIV8_Val            _UINT32_(0x6)                                        /* (ADC_CTRLB) APB clock divided by 8  */
-#define   ADC_CTRLB_PRESC_DIV9_Val            _UINT32_(0x7)                                        /* (ADC_CTRLB) APB clock divided by 9  */
-#define   ADC_CTRLB_PRESC_DIV10_Val           _UINT32_(0x8)                                        /* (ADC_CTRLB) APB clock divided by 10  */
-#define   ADC_CTRLB_PRESC_DIV11_Val           _UINT32_(0x9)                                        /* (ADC_CTRLB) APB clock divided by 11  */
-#define   ADC_CTRLB_PRESC_DIV12_Val           _UINT32_(0xA)                                        /* (ADC_CTRLB) APB clock divided by 12  */
-#define   ADC_CTRLB_PRESC_DIV13_Val           _UINT32_(0xB)                                        /* (ADC_CTRLB) APB clock divided by 13  */
-#define   ADC_CTRLB_PRESC_DIV14_Val           _UINT32_(0xC)                                        /* (ADC_CTRLB) APB clock divided by 14  */
-#define   ADC_CTRLB_PRESC_DIV15_Val           _UINT32_(0xD)                                        /* (ADC_CTRLB) APB clock divided by 15  */
-#define   ADC_CTRLB_PRESC_DIV16_Val           _UINT32_(0xE)                                        /* (ADC_CTRLB) APB clock divided by 16  */
-#define   ADC_CTRLB_PRESC_DIV17_Val           _UINT32_(0xF)                                        /* (ADC_CTRLB) APB clock divided by 17  */
-#define   ADC_CTRLB_PRESC_DIV18_Val           _UINT32_(0x10)                                       /* (ADC_CTRLB) APB clock divided by 18  */
-#define   ADC_CTRLB_PRESC_DIV19_Val           _UINT32_(0x11)                                       /* (ADC_CTRLB) APB clock divided by 19  */
-#define   ADC_CTRLB_PRESC_DIV20_Val           _UINT32_(0x12)                                       /* (ADC_CTRLB) APB clock divided by 20  */
-#define   ADC_CTRLB_PRESC_DIV21_Val           _UINT32_(0x13)                                       /* (ADC_CTRLB) APB clock divided by 21  */
-#define   ADC_CTRLB_PRESC_DIV22_Val           _UINT32_(0x14)                                       /* (ADC_CTRLB) APB clock divided by 22  */
-#define   ADC_CTRLB_PRESC_DIV23_Val           _UINT32_(0x15)                                       /* (ADC_CTRLB) APB clock divided by 23  */
-#define   ADC_CTRLB_PRESC_DIV24_Val           _UINT32_(0x16)                                       /* (ADC_CTRLB) APB clock divided by 24  */
-#define   ADC_CTRLB_PRESC_DIV25_Val           _UINT32_(0x17)                                       /* (ADC_CTRLB) APB clock divided by 25  */
-#define   ADC_CTRLB_PRESC_DIV26_Val           _UINT32_(0x18)                                       /* (ADC_CTRLB) APB clock divided by 26  */
-#define   ADC_CTRLB_PRESC_DIV27_Val           _UINT32_(0x19)                                       /* (ADC_CTRLB) APB clock divided by 27  */
-#define   ADC_CTRLB_PRESC_DIV28_Val           _UINT32_(0x1A)                                       /* (ADC_CTRLB) APB clock divided by 28  */
-#define   ADC_CTRLB_PRESC_DIV29_Val           _UINT32_(0x1B)                                       /* (ADC_CTRLB) APB clock divided by 29  */
-#define   ADC_CTRLB_PRESC_DIV30_Val           _UINT32_(0x1C)                                       /* (ADC_CTRLB) APB clock divided by 30  */
-#define   ADC_CTRLB_PRESC_DIV31_Val           _UINT32_(0x1D)                                       /* (ADC_CTRLB) APB clock divided by 31  */
-#define   ADC_CTRLB_PRESC_DIV32_Val           _UINT32_(0x1E)                                       /* (ADC_CTRLB) APB clock divided by 32  */
-#define ADC_CTRLB_PRESC_DIV2                  (ADC_CTRLB_PRESC_DIV2_Val << ADC_CTRLB_PRESC_Pos)    /* (ADC_CTRLB) APB clock divided by 2 Position */
-#define ADC_CTRLB_PRESC_DIV3                  (ADC_CTRLB_PRESC_DIV3_Val << ADC_CTRLB_PRESC_Pos)    /* (ADC_CTRLB) APB clock divided by 3 Position */
-#define ADC_CTRLB_PRESC_DIV4                  (ADC_CTRLB_PRESC_DIV4_Val << ADC_CTRLB_PRESC_Pos)    /* (ADC_CTRLB) APB clock divided by 4 Position */
-#define ADC_CTRLB_PRESC_DIV5                  (ADC_CTRLB_PRESC_DIV5_Val << ADC_CTRLB_PRESC_Pos)    /* (ADC_CTRLB) APB clock divided by 5 Position */
-#define ADC_CTRLB_PRESC_DIV6                  (ADC_CTRLB_PRESC_DIV6_Val << ADC_CTRLB_PRESC_Pos)    /* (ADC_CTRLB) APB clock divided by 6 Position */
-#define ADC_CTRLB_PRESC_DIV7                  (ADC_CTRLB_PRESC_DIV7_Val << ADC_CTRLB_PRESC_Pos)    /* (ADC_CTRLB) APB clock divided by 7 Position */
-#define ADC_CTRLB_PRESC_DIV8                  (ADC_CTRLB_PRESC_DIV8_Val << ADC_CTRLB_PRESC_Pos)    /* (ADC_CTRLB) APB clock divided by 8 Position */
-#define ADC_CTRLB_PRESC_DIV9                  (ADC_CTRLB_PRESC_DIV9_Val << ADC_CTRLB_PRESC_Pos)    /* (ADC_CTRLB) APB clock divided by 9 Position */
-#define ADC_CTRLB_PRESC_DIV10                 (ADC_CTRLB_PRESC_DIV10_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 10 Position */
-#define ADC_CTRLB_PRESC_DIV11                 (ADC_CTRLB_PRESC_DIV11_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 11 Position */
-#define ADC_CTRLB_PRESC_DIV12                 (ADC_CTRLB_PRESC_DIV12_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 12 Position */
-#define ADC_CTRLB_PRESC_DIV13                 (ADC_CTRLB_PRESC_DIV13_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 13 Position */
-#define ADC_CTRLB_PRESC_DIV14                 (ADC_CTRLB_PRESC_DIV14_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 14 Position */
-#define ADC_CTRLB_PRESC_DIV15                 (ADC_CTRLB_PRESC_DIV15_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 15 Position */
-#define ADC_CTRLB_PRESC_DIV16                 (ADC_CTRLB_PRESC_DIV16_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 16 Position */
-#define ADC_CTRLB_PRESC_DIV17                 (ADC_CTRLB_PRESC_DIV17_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 17 Position */
-#define ADC_CTRLB_PRESC_DIV18                 (ADC_CTRLB_PRESC_DIV18_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 18 Position */
-#define ADC_CTRLB_PRESC_DIV19                 (ADC_CTRLB_PRESC_DIV19_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 19 Position */
-#define ADC_CTRLB_PRESC_DIV20                 (ADC_CTRLB_PRESC_DIV20_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 20 Position */
-#define ADC_CTRLB_PRESC_DIV21                 (ADC_CTRLB_PRESC_DIV21_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 21 Position */
-#define ADC_CTRLB_PRESC_DIV22                 (ADC_CTRLB_PRESC_DIV22_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 22 Position */
-#define ADC_CTRLB_PRESC_DIV23                 (ADC_CTRLB_PRESC_DIV23_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 23 Position */
-#define ADC_CTRLB_PRESC_DIV24                 (ADC_CTRLB_PRESC_DIV24_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 24 Position */
-#define ADC_CTRLB_PRESC_DIV25                 (ADC_CTRLB_PRESC_DIV25_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 25 Position */
-#define ADC_CTRLB_PRESC_DIV26                 (ADC_CTRLB_PRESC_DIV26_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 26 Position */
-#define ADC_CTRLB_PRESC_DIV27                 (ADC_CTRLB_PRESC_DIV27_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 27 Position */
-#define ADC_CTRLB_PRESC_DIV28                 (ADC_CTRLB_PRESC_DIV28_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 28 Position */
-#define ADC_CTRLB_PRESC_DIV29                 (ADC_CTRLB_PRESC_DIV29_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 29 Position */
-#define ADC_CTRLB_PRESC_DIV30                 (ADC_CTRLB_PRESC_DIV30_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 30 Position */
-#define ADC_CTRLB_PRESC_DIV31                 (ADC_CTRLB_PRESC_DIV31_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 31 Position */
-#define ADC_CTRLB_PRESC_DIV32                 (ADC_CTRLB_PRESC_DIV32_Val << ADC_CTRLB_PRESC_Pos)   /* (ADC_CTRLB) APB clock divided by 32 Position */
+#define ADC_CTRLB_PRESCALER_Pos               _UINT32_(0)                                          /* (ADC_CTRLB) Prescaler Position */
+#define ADC_CTRLB_PRESCALER_Msk               (_UINT32_(0x1F) << ADC_CTRLB_PRESCALER_Pos)          /* (ADC_CTRLB) Prescaler Mask */
+#define ADC_CTRLB_PRESCALER(value)            (ADC_CTRLB_PRESCALER_Msk & (_UINT32_(value) << ADC_CTRLB_PRESCALER_Pos)) /* Assignment of value for PRESCALER in the ADC_CTRLB register */
+#define   ADC_CTRLB_PRESCALER_DIV2_Val        _UINT32_(0x0)                                        /* (ADC_CTRLB) APB clock divided by 2  */
+#define   ADC_CTRLB_PRESCALER_DIV3_Val        _UINT32_(0x1)                                        /* (ADC_CTRLB) APB clock divided by 3  */
+#define   ADC_CTRLB_PRESCALER_DIV4_Val        _UINT32_(0x2)                                        /* (ADC_CTRLB) APB clock divided by 4  */
+#define   ADC_CTRLB_PRESCALER_DIV5_Val        _UINT32_(0x3)                                        /* (ADC_CTRLB) APB clock divided by 5  */
+#define   ADC_CTRLB_PRESCALER_DIV6_Val        _UINT32_(0x4)                                        /* (ADC_CTRLB) APB clock divided by 6  */
+#define   ADC_CTRLB_PRESCALER_DIV7_Val        _UINT32_(0x5)                                        /* (ADC_CTRLB) APB clock divided by 7  */
+#define   ADC_CTRLB_PRESCALER_DIV8_Val        _UINT32_(0x6)                                        /* (ADC_CTRLB) APB clock divided by 8  */
+#define   ADC_CTRLB_PRESCALER_DIV9_Val        _UINT32_(0x7)                                        /* (ADC_CTRLB) APB clock divided by 9  */
+#define   ADC_CTRLB_PRESCALER_DIV10_Val       _UINT32_(0x8)                                        /* (ADC_CTRLB) APB clock divided by 10  */
+#define   ADC_CTRLB_PRESCALER_DIV11_Val       _UINT32_(0x9)                                        /* (ADC_CTRLB) APB clock divided by 11  */
+#define   ADC_CTRLB_PRESCALER_DIV12_Val       _UINT32_(0xA)                                        /* (ADC_CTRLB) APB clock divided by 12  */
+#define   ADC_CTRLB_PRESCALER_DIV13_Val       _UINT32_(0xB)                                        /* (ADC_CTRLB) APB clock divided by 13  */
+#define   ADC_CTRLB_PRESCALER_DIV14_Val       _UINT32_(0xC)                                        /* (ADC_CTRLB) APB clock divided by 14  */
+#define   ADC_CTRLB_PRESCALER_DIV15_Val       _UINT32_(0xD)                                        /* (ADC_CTRLB) APB clock divided by 15  */
+#define   ADC_CTRLB_PRESCALER_DIV16_Val       _UINT32_(0xE)                                        /* (ADC_CTRLB) APB clock divided by 16  */
+#define   ADC_CTRLB_PRESCALER_DIV17_Val       _UINT32_(0xF)                                        /* (ADC_CTRLB) APB clock divided by 17  */
+#define   ADC_CTRLB_PRESCALER_DIV18_Val       _UINT32_(0x10)                                       /* (ADC_CTRLB) APB clock divided by 18  */
+#define   ADC_CTRLB_PRESCALER_DIV19_Val       _UINT32_(0x11)                                       /* (ADC_CTRLB) APB clock divided by 19  */
+#define   ADC_CTRLB_PRESCALER_DIV20_Val       _UINT32_(0x12)                                       /* (ADC_CTRLB) APB clock divided by 20  */
+#define   ADC_CTRLB_PRESCALER_DIV21_Val       _UINT32_(0x13)                                       /* (ADC_CTRLB) APB clock divided by 21  */
+#define   ADC_CTRLB_PRESCALER_DIV22_Val       _UINT32_(0x14)                                       /* (ADC_CTRLB) APB clock divided by 22  */
+#define   ADC_CTRLB_PRESCALER_DIV23_Val       _UINT32_(0x15)                                       /* (ADC_CTRLB) APB clock divided by 23  */
+#define   ADC_CTRLB_PRESCALER_DIV24_Val       _UINT32_(0x16)                                       /* (ADC_CTRLB) APB clock divided by 24  */
+#define   ADC_CTRLB_PRESCALER_DIV25_Val       _UINT32_(0x17)                                       /* (ADC_CTRLB) APB clock divided by 25  */
+#define   ADC_CTRLB_PRESCALER_DIV26_Val       _UINT32_(0x18)                                       /* (ADC_CTRLB) APB clock divided by 26  */
+#define   ADC_CTRLB_PRESCALER_DIV27_Val       _UINT32_(0x19)                                       /* (ADC_CTRLB) APB clock divided by 27  */
+#define   ADC_CTRLB_PRESCALER_DIV28_Val       _UINT32_(0x1A)                                       /* (ADC_CTRLB) APB clock divided by 28  */
+#define   ADC_CTRLB_PRESCALER_DIV29_Val       _UINT32_(0x1B)                                       /* (ADC_CTRLB) APB clock divided by 29  */
+#define   ADC_CTRLB_PRESCALER_DIV30_Val       _UINT32_(0x1C)                                       /* (ADC_CTRLB) APB clock divided by 30  */
+#define   ADC_CTRLB_PRESCALER_DIV31_Val       _UINT32_(0x1D)                                       /* (ADC_CTRLB) APB clock divided by 31  */
+#define   ADC_CTRLB_PRESCALER_DIV32_Val       _UINT32_(0x1E)                                       /* (ADC_CTRLB) APB clock divided by 32  */
+#define ADC_CTRLB_PRESCALER_DIV2              (ADC_CTRLB_PRESCALER_DIV2_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 2 Position */
+#define ADC_CTRLB_PRESCALER_DIV3              (ADC_CTRLB_PRESCALER_DIV3_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 3 Position */
+#define ADC_CTRLB_PRESCALER_DIV4              (ADC_CTRLB_PRESCALER_DIV4_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 4 Position */
+#define ADC_CTRLB_PRESCALER_DIV5              (ADC_CTRLB_PRESCALER_DIV5_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 5 Position */
+#define ADC_CTRLB_PRESCALER_DIV6              (ADC_CTRLB_PRESCALER_DIV6_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 6 Position */
+#define ADC_CTRLB_PRESCALER_DIV7              (ADC_CTRLB_PRESCALER_DIV7_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 7 Position */
+#define ADC_CTRLB_PRESCALER_DIV8              (ADC_CTRLB_PRESCALER_DIV8_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 8 Position */
+#define ADC_CTRLB_PRESCALER_DIV9              (ADC_CTRLB_PRESCALER_DIV9_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 9 Position */
+#define ADC_CTRLB_PRESCALER_DIV10             (ADC_CTRLB_PRESCALER_DIV10_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 10 Position */
+#define ADC_CTRLB_PRESCALER_DIV11             (ADC_CTRLB_PRESCALER_DIV11_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 11 Position */
+#define ADC_CTRLB_PRESCALER_DIV12             (ADC_CTRLB_PRESCALER_DIV12_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 12 Position */
+#define ADC_CTRLB_PRESCALER_DIV13             (ADC_CTRLB_PRESCALER_DIV13_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 13 Position */
+#define ADC_CTRLB_PRESCALER_DIV14             (ADC_CTRLB_PRESCALER_DIV14_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 14 Position */
+#define ADC_CTRLB_PRESCALER_DIV15             (ADC_CTRLB_PRESCALER_DIV15_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 15 Position */
+#define ADC_CTRLB_PRESCALER_DIV16             (ADC_CTRLB_PRESCALER_DIV16_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 16 Position */
+#define ADC_CTRLB_PRESCALER_DIV17             (ADC_CTRLB_PRESCALER_DIV17_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 17 Position */
+#define ADC_CTRLB_PRESCALER_DIV18             (ADC_CTRLB_PRESCALER_DIV18_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 18 Position */
+#define ADC_CTRLB_PRESCALER_DIV19             (ADC_CTRLB_PRESCALER_DIV19_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 19 Position */
+#define ADC_CTRLB_PRESCALER_DIV20             (ADC_CTRLB_PRESCALER_DIV20_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 20 Position */
+#define ADC_CTRLB_PRESCALER_DIV21             (ADC_CTRLB_PRESCALER_DIV21_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 21 Position */
+#define ADC_CTRLB_PRESCALER_DIV22             (ADC_CTRLB_PRESCALER_DIV22_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 22 Position */
+#define ADC_CTRLB_PRESCALER_DIV23             (ADC_CTRLB_PRESCALER_DIV23_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 23 Position */
+#define ADC_CTRLB_PRESCALER_DIV24             (ADC_CTRLB_PRESCALER_DIV24_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 24 Position */
+#define ADC_CTRLB_PRESCALER_DIV25             (ADC_CTRLB_PRESCALER_DIV25_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 25 Position */
+#define ADC_CTRLB_PRESCALER_DIV26             (ADC_CTRLB_PRESCALER_DIV26_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 26 Position */
+#define ADC_CTRLB_PRESCALER_DIV27             (ADC_CTRLB_PRESCALER_DIV27_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 27 Position */
+#define ADC_CTRLB_PRESCALER_DIV28             (ADC_CTRLB_PRESCALER_DIV28_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 28 Position */
+#define ADC_CTRLB_PRESCALER_DIV29             (ADC_CTRLB_PRESCALER_DIV29_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 29 Position */
+#define ADC_CTRLB_PRESCALER_DIV30             (ADC_CTRLB_PRESCALER_DIV30_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 30 Position */
+#define ADC_CTRLB_PRESCALER_DIV31             (ADC_CTRLB_PRESCALER_DIV31_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 31 Position */
+#define ADC_CTRLB_PRESCALER_DIV32             (ADC_CTRLB_PRESCALER_DIV32_Val << ADC_CTRLB_PRESCALER_Pos) /* (ADC_CTRLB) APB clock divided by 32 Position */
 #define ADC_CTRLB_TIMEBASE_Pos                _UINT32_(8)                                          /* (ADC_CTRLB) Timebase Position */
 #define ADC_CTRLB_TIMEBASE_Msk                (_UINT32_(0x1F) << ADC_CTRLB_TIMEBASE_Pos)           /* (ADC_CTRLB) Timebase Mask */
 #define ADC_CTRLB_TIMEBASE(value)             (ADC_CTRLB_TIMEBASE_Msk & (_UINT32_(value) << ADC_CTRLB_TIMEBASE_Pos)) /* Assignment of value for TIMEBASE in the ADC_CTRLB register */
@@ -128,13 +128,13 @@
 #define ADC_CTRLC_REFSEL_Msk                  (_UINT32_(0x7) << ADC_CTRLC_REFSEL_Pos)              /* (ADC_CTRLC) Reference Selection Mask */
 #define ADC_CTRLC_REFSEL(value)               (ADC_CTRLC_REFSEL_Msk & (_UINT32_(value) << ADC_CTRLC_REFSEL_Pos)) /* Assignment of value for REFSEL in the ADC_CTRLC register */
 #define   ADC_CTRLC_REFSEL_VDD_Val            _UINT32_(0x0)                                        /* (ADC_CTRLC) VDD  */
-#define   ADC_CTRLC_REFSEL_EXTVREF0_Val       _UINT32_(0x2)                                        /* (ADC_CTRLC) External pin used as reference  */
+#define   ADC_CTRLC_REFSEL_EXTVREF_Val        _UINT32_(0x2)                                        /* (ADC_CTRLC) External pin used as reference  */
 #define   ADC_CTRLC_REFSEL_1V024_Val          _UINT32_(0x4)                                        /* (ADC_CTRLC) Internal reference 1.024V  */
 #define   ADC_CTRLC_REFSEL_2V048_Val          _UINT32_(0x5)                                        /* (ADC_CTRLC) Internal reference 2.048V  */
 #define   ADC_CTRLC_REFSEL_4V096_Val          _UINT32_(0x6)                                        /* (ADC_CTRLC) Internal reference 4.096V  */
 #define   ADC_CTRLC_REFSEL_2V500_Val          _UINT32_(0x7)                                        /* (ADC_CTRLC) Internal reference 2.500V  */
 #define ADC_CTRLC_REFSEL_VDD                  (ADC_CTRLC_REFSEL_VDD_Val << ADC_CTRLC_REFSEL_Pos)   /* (ADC_CTRLC) VDD Position */
-#define ADC_CTRLC_REFSEL_EXTVREF0             (ADC_CTRLC_REFSEL_EXTVREF0_Val << ADC_CTRLC_REFSEL_Pos) /* (ADC_CTRLC) External pin used as reference Position */
+#define ADC_CTRLC_REFSEL_EXTVREF              (ADC_CTRLC_REFSEL_EXTVREF_Val << ADC_CTRLC_REFSEL_Pos) /* (ADC_CTRLC) External pin used as reference Position */
 #define ADC_CTRLC_REFSEL_1V024                (ADC_CTRLC_REFSEL_1V024_Val << ADC_CTRLC_REFSEL_Pos) /* (ADC_CTRLC) Internal reference 1.024V Position */
 #define ADC_CTRLC_REFSEL_2V048                (ADC_CTRLC_REFSEL_2V048_Val << ADC_CTRLC_REFSEL_Pos) /* (ADC_CTRLC) Internal reference 2.048V Position */
 #define ADC_CTRLC_REFSEL_4V096                (ADC_CTRLC_REFSEL_4V096_Val << ADC_CTRLC_REFSEL_Pos) /* (ADC_CTRLC) Internal reference 4.096V Position */
@@ -181,15 +181,15 @@
 #define ADC_CTRLD_RESOLUTION_13BIT            (ADC_CTRLD_RESOLUTION_13BIT_Val << ADC_CTRLD_RESOLUTION_Pos) /* (ADC_CTRLD) 13-bit ADC Result Position */
 #define ADC_CTRLD_RESOLUTION_10BIT            (ADC_CTRLD_RESOLUTION_10BIT_Val << ADC_CTRLD_RESOLUTION_Pos) /* (ADC_CTRLD) 10-bit ADC Result Position */
 #define ADC_CTRLD_RESOLUTION_8BIT             (ADC_CTRLD_RESOLUTION_8BIT_Val << ADC_CTRLD_RESOLUTION_Pos) /* (ADC_CTRLD) 8-bit ADC Result Position */
-#define ADC_CTRLD_SCALING_Pos                 _UINT32_(10)                                         /* (ADC_CTRLD) Result-scaling Position */
-#define ADC_CTRLD_SCALING_Msk                 (_UINT32_(0x3) << ADC_CTRLD_SCALING_Pos)             /* (ADC_CTRLD) Result-scaling Mask */
+#define ADC_CTRLD_SCALING_Pos                 _UINT32_(10)                                         /* (ADC_CTRLD) Result Scaling Position */
+#define ADC_CTRLD_SCALING_Msk                 (_UINT32_(0x3) << ADC_CTRLD_SCALING_Pos)             /* (ADC_CTRLD) Result Scaling Mask */
 #define ADC_CTRLD_SCALING(value)              (ADC_CTRLD_SCALING_Msk & (_UINT32_(value) << ADC_CTRLD_SCALING_Pos)) /* Assignment of value for SCALING in the ADC_CTRLD register */
-#define   ADC_CTRLD_SCALING_NORMAL_Val        _UINT32_(0x0)                                        /* (ADC_CTRLD) ADC output of sample or accumulated result is right adjusted.  */
-#define   ADC_CTRLD_SCALING_LEFTADJ_Val       _UINT32_(0x1)                                        /* (ADC_CTRLD) ADC output is left adjusted  */
-#define   ADC_CTRLD_SCALING_AVERAGE_Val       _UINT32_(0x2)                                        /* (ADC_CTRLD) Accumulated ADC result is averaged and right adjusted  */
-#define ADC_CTRLD_SCALING_NORMAL              (ADC_CTRLD_SCALING_NORMAL_Val << ADC_CTRLD_SCALING_Pos) /* (ADC_CTRLD) ADC output of sample or accumulated result is right adjusted. Position */
-#define ADC_CTRLD_SCALING_LEFTADJ             (ADC_CTRLD_SCALING_LEFTADJ_Val << ADC_CTRLD_SCALING_Pos) /* (ADC_CTRLD) ADC output is left adjusted Position */
-#define ADC_CTRLD_SCALING_AVERAGE             (ADC_CTRLD_SCALING_AVERAGE_Val << ADC_CTRLD_SCALING_Pos) /* (ADC_CTRLD) Accumulated ADC result is averaged and right adjusted Position */
+#define   ADC_CTRLD_SCALING_NORMAL_Val        _UINT32_(0x0)                                        /* (ADC_CTRLD) The ADC output of the sample or accumulated result is right adjusted  */
+#define   ADC_CTRLD_SCALING_LEFTADJ_Val       _UINT32_(0x1)                                        /* (ADC_CTRLD) The ADC output is left adjusted  */
+#define   ADC_CTRLD_SCALING_AVERAGE_Val       _UINT32_(0x2)                                        /* (ADC_CTRLD) The accumulated ADC result is averaged and right adjusted  */
+#define ADC_CTRLD_SCALING_NORMAL              (ADC_CTRLD_SCALING_NORMAL_Val << ADC_CTRLD_SCALING_Pos) /* (ADC_CTRLD) The ADC output of the sample or accumulated result is right adjusted Position */
+#define ADC_CTRLD_SCALING_LEFTADJ             (ADC_CTRLD_SCALING_LEFTADJ_Val << ADC_CTRLD_SCALING_Pos) /* (ADC_CTRLD) The ADC output is left adjusted Position */
+#define ADC_CTRLD_SCALING_AVERAGE             (ADC_CTRLD_SCALING_AVERAGE_Val << ADC_CTRLD_SCALING_Pos) /* (ADC_CTRLD) The accumulated ADC result is averaged and right adjusted Position */
 #define ADC_CTRLD_FREERUN_Pos                 _UINT32_(12)                                         /* (ADC_CTRLD) Free-Running Position */
 #define ADC_CTRLD_FREERUN_Msk                 (_UINT32_(0x1) << ADC_CTRLD_FREERUN_Pos)             /* (ADC_CTRLD) Free-Running Mask */
 #define ADC_CTRLD_FREERUN(value)              (ADC_CTRLD_FREERUN_Msk & (_UINT32_(value) << ADC_CTRLD_FREERUN_Pos)) /* Assignment of value for FREERUN in the ADC_CTRLD register */
@@ -359,12 +359,12 @@
 #define   ADC_INPUTCTRL_MUXPOS_AIN46_Val      _UINT32_(0x2E)                                       /* (ADC_INPUTCTRL) ADC AIN46 Pin  */
 #define   ADC_INPUTCTRL_MUXPOS_AIN47_Val      _UINT32_(0x2F)                                       /* (ADC_INPUTCTRL) ADC AIN47 Pin  */
 #define   ADC_INPUTCTRL_MUXPOS_GND_Val        _UINT32_(0x60)                                       /* (ADC_INPUTCTRL) Analog Ground  */
-#define   ADC_INPUTCTRL_MUXPOS_VDDSC4_Val     _UINT32_(0x61)                                       /* (ADC_INPUTCTRL) 1/4 Scaled Core Supply  */
-#define   ADC_INPUTCTRL_MUXPOS_TEMPSENSOR_Val _UINT32_(0x62)                                       /* (ADC_INPUTCTRL) Temperature Sensor  */
-#define   ADC_INPUTCTRL_MUXPOS_VDDIO10_Val    _UINT32_(0x64)                                       /* (ADC_INPUTCTRL) 1/4 Scaled VDDIO Supply  */
-#define   ADC_INPUTCTRL_MUXPOS_VDDIO210_Val   _UINT32_(0x65)                                       /* (ADC_INPUTCTRL) 1/10 Scaled VDDIO2 Supply  */
-#define   ADC_INPUTCTRL_MUXPOS_DACREF0_Val    _UINT32_(0x69)                                       /* (ADC_INPUTCTRL) DACREF0 Output  */
-#define   ADC_INPUTCTRL_MUXPOS_DACREF1_Val    _UINT32_(0x6A)                                       /* (ADC_INPUTCTRL) DACREF1 Output  */
+#define   ADC_INPUTCTRL_MUXPOS_VDDCOREDIV4_Val _UINT32_(0x61)                                       /* (ADC_INPUTCTRL) 1/4 Scaled Core Supply  */
+#define   ADC_INPUTCTRL_MUXPOS_TEMPSENSE_Val  _UINT32_(0x62)                                       /* (ADC_INPUTCTRL) Temperature Sensor  */
+#define   ADC_INPUTCTRL_MUXPOS_VDDIODIV10_Val _UINT32_(0x64)                                       /* (ADC_INPUTCTRL) 1/10 Scaled VDDIO Supply  */
+#define   ADC_INPUTCTRL_MUXPOS_VDDIO2DIV10_Val _UINT32_(0x65)                                       /* (ADC_INPUTCTRL) 1/10 Scaled VDDIO2 Supply  */
+#define   ADC_INPUTCTRL_MUXPOS_ACVREFSCALE0_Val _UINT32_(0x69)                                       /* (ADC_INPUTCTRL) Output from AC VREFSCALE0  */
+#define   ADC_INPUTCTRL_MUXPOS_ACVREFSCALE1_Val _UINT32_(0x6A)                                       /* (ADC_INPUTCTRL) Output from AC VREFSCALE1  */
 #define   ADC_INPUTCTRL_MUXPOS_TESTBUF_Val    _UINT32_(0x70)                                       /* (ADC_INPUTCTRL) Test Buffer  */
 #define   ADC_INPUTCTRL_MUXPOS_PTC_Val        _UINT32_(0x7E)                                       /* (ADC_INPUTCTRL) PTC  */
 #define ADC_INPUTCTRL_MUXPOS_AIN2             (ADC_INPUTCTRL_MUXPOS_AIN2_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) ADC AIN2 Pin Position */
@@ -397,12 +397,12 @@
 #define ADC_INPUTCTRL_MUXPOS_AIN46            (ADC_INPUTCTRL_MUXPOS_AIN46_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) ADC AIN46 Pin Position */
 #define ADC_INPUTCTRL_MUXPOS_AIN47            (ADC_INPUTCTRL_MUXPOS_AIN47_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) ADC AIN47 Pin Position */
 #define ADC_INPUTCTRL_MUXPOS_GND              (ADC_INPUTCTRL_MUXPOS_GND_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) Analog Ground Position */
-#define ADC_INPUTCTRL_MUXPOS_VDDSC4           (ADC_INPUTCTRL_MUXPOS_VDDSC4_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) 1/4 Scaled Core Supply Position */
-#define ADC_INPUTCTRL_MUXPOS_TEMPSENSOR       (ADC_INPUTCTRL_MUXPOS_TEMPSENSOR_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) Temperature Sensor Position */
-#define ADC_INPUTCTRL_MUXPOS_VDDIO10          (ADC_INPUTCTRL_MUXPOS_VDDIO10_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) 1/4 Scaled VDDIO Supply Position */
-#define ADC_INPUTCTRL_MUXPOS_VDDIO210         (ADC_INPUTCTRL_MUXPOS_VDDIO210_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) 1/10 Scaled VDDIO2 Supply Position */
-#define ADC_INPUTCTRL_MUXPOS_DACREF0          (ADC_INPUTCTRL_MUXPOS_DACREF0_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) DACREF0 Output Position */
-#define ADC_INPUTCTRL_MUXPOS_DACREF1          (ADC_INPUTCTRL_MUXPOS_DACREF1_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) DACREF1 Output Position */
+#define ADC_INPUTCTRL_MUXPOS_VDDCOREDIV4      (ADC_INPUTCTRL_MUXPOS_VDDCOREDIV4_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) 1/4 Scaled Core Supply Position */
+#define ADC_INPUTCTRL_MUXPOS_TEMPSENSE        (ADC_INPUTCTRL_MUXPOS_TEMPSENSE_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) Temperature Sensor Position */
+#define ADC_INPUTCTRL_MUXPOS_VDDIODIV10       (ADC_INPUTCTRL_MUXPOS_VDDIODIV10_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) 1/10 Scaled VDDIO Supply Position */
+#define ADC_INPUTCTRL_MUXPOS_VDDIO2DIV10      (ADC_INPUTCTRL_MUXPOS_VDDIO2DIV10_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) 1/10 Scaled VDDIO2 Supply Position */
+#define ADC_INPUTCTRL_MUXPOS_ACVREFSCALE0     (ADC_INPUTCTRL_MUXPOS_ACVREFSCALE0_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) Output from AC VREFSCALE0 Position */
+#define ADC_INPUTCTRL_MUXPOS_ACVREFSCALE1     (ADC_INPUTCTRL_MUXPOS_ACVREFSCALE1_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) Output from AC VREFSCALE1 Position */
 #define ADC_INPUTCTRL_MUXPOS_TESTBUF          (ADC_INPUTCTRL_MUXPOS_TESTBUF_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) Test Buffer Position */
 #define ADC_INPUTCTRL_MUXPOS_PTC              (ADC_INPUTCTRL_MUXPOS_PTC_Val << ADC_INPUTCTRL_MUXPOS_Pos) /* (ADC_INPUTCTRL) PTC Position */
 #define ADC_INPUTCTRL_Msk                     _UINT32_(0x00007F7F)                                 /* (ADC_INPUTCTRL) Register Mask  */
@@ -423,8 +423,8 @@
 #define ADC_EVCTRL_SAMPRDYEO_Pos              _UINT32_(9)                                          /* (ADC_EVCTRL) Sample Ready Event Output Enable Position */
 #define ADC_EVCTRL_SAMPRDYEO_Msk              (_UINT32_(0x1) << ADC_EVCTRL_SAMPRDYEO_Pos)          /* (ADC_EVCTRL) Sample Ready Event Output Enable Mask */
 #define ADC_EVCTRL_SAMPRDYEO(value)           (ADC_EVCTRL_SAMPRDYEO_Msk & (_UINT32_(value) << ADC_EVCTRL_SAMPRDYEO_Pos)) /* Assignment of value for SAMPRDYEO in the ADC_EVCTRL register */
-#define ADC_EVCTRL_WCMPEO_Pos                 _UINT32_(10)                                         /* (ADC_EVCTRL) Window Compare Event Output Enable Position */
-#define ADC_EVCTRL_WCMPEO_Msk                 (_UINT32_(0x1) << ADC_EVCTRL_WCMPEO_Pos)             /* (ADC_EVCTRL) Window Compare Event Output Enable Mask */
+#define ADC_EVCTRL_WCMPEO_Pos                 _UINT32_(10)                                         /* (ADC_EVCTRL) Window Comparator Event Output Enable Position */
+#define ADC_EVCTRL_WCMPEO_Msk                 (_UINT32_(0x1) << ADC_EVCTRL_WCMPEO_Pos)             /* (ADC_EVCTRL) Window Comparator Event Output Enable Mask */
 #define ADC_EVCTRL_WCMPEO(value)              (ADC_EVCTRL_WCMPEO_Msk & (_UINT32_(value) << ADC_EVCTRL_WCMPEO_Pos)) /* Assignment of value for WCMPEO in the ADC_EVCTRL register */
 #define ADC_EVCTRL_Msk                        _UINT32_(0x00000711)                                 /* (ADC_EVCTRL) Register Mask  */
 
@@ -477,8 +477,8 @@
 #define ADC_INTENSET_Msk                      _UINT32_(0x0000003F)                                 /* (ADC_INTENSET) Register Mask  */
 
 
-/* -------- ADC_INTFLAG : (ADC Offset: 0x38) (R/W 32) Interrupt Flag -------- */
-#define ADC_INTFLAG_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_INTFLAG) Interrupt Flag  Reset Value */
+/* -------- ADC_INTFLAG : (ADC Offset: 0x38) (R/W 32) Interrupt Flag Status and Clear -------- */
+#define ADC_INTFLAG_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_INTFLAG) Interrupt Flag Status and Clear  Reset Value */
 
 #define ADC_INTFLAG_RESRDY_Pos                _UINT32_(0)                                          /* (ADC_INTFLAG) Result Ready Interrupt Flag Position */
 #define ADC_INTFLAG_RESRDY_Msk                (_UINT32_(0x1) << ADC_INTFLAG_RESRDY_Pos)            /* (ADC_INTFLAG) Result Ready Interrupt Flag Mask */
@@ -541,25 +541,25 @@
 #define ADC_COMMAND_START_Msk                 (_UINT32_(0x7) << ADC_COMMAND_START_Pos)             /* (ADC_COMMAND) Start Conversion Mask */
 #define ADC_COMMAND_START(value)              (ADC_COMMAND_START_Msk & (_UINT32_(value) << ADC_COMMAND_START_Pos)) /* Assignment of value for START in the ADC_COMMAND register */
 #define   ADC_COMMAND_START_STOP_Val          _UINT32_(0x0)                                        /* (ADC_COMMAND) Stop an ongoing conversion  */
-#define   ADC_COMMAND_START_IMMEDIATE_Val     _UINT32_(0x1)                                        /* (ADC_COMMAND) Start a conversion immediately. This will be set back to STOP when the conversion is done unless Free-Running mode is enabled.  */
-#define   ADC_COMMAND_START_INPUT_Val         _UINT32_(0x2)                                        /* (ADC_COMMAND) Start when a write to the INPUTCTRL register is done  */
-#define   ADC_COMMAND_START_EVENT_Val         _UINT32_(0x4)                                        /* (ADC_COMMAND) Start when an event is received by the ADC. Requires that STARTEI in ADCn.EVCTRL is set to '1'  */
+#define   ADC_COMMAND_START_IMMEDIATE_Val     _UINT32_(0x1)                                        /* (ADC_COMMAND) Start a conversion immediately. This bit will be reset to STOP when the conversion is complete, unless Free-Running mode is enabled.  */
+#define   ADC_COMMAND_START_INPUT_Val         _UINT32_(0x2)                                        /* (ADC_COMMAND) Start a conversion when a write to the INPUTCTRL register is performed  */
+#define   ADC_COMMAND_START_EVENT_Val         _UINT32_(0x4)                                        /* (ADC_COMMAND) Start a conversion when an event is received by the ADC. This requires EVCTRL.STARTEI to be set to '1'.  */
 #define ADC_COMMAND_START_STOP                (ADC_COMMAND_START_STOP_Val << ADC_COMMAND_START_Pos) /* (ADC_COMMAND) Stop an ongoing conversion Position */
-#define ADC_COMMAND_START_IMMEDIATE           (ADC_COMMAND_START_IMMEDIATE_Val << ADC_COMMAND_START_Pos) /* (ADC_COMMAND) Start a conversion immediately. This will be set back to STOP when the conversion is done unless Free-Running mode is enabled. Position */
-#define ADC_COMMAND_START_INPUT               (ADC_COMMAND_START_INPUT_Val << ADC_COMMAND_START_Pos) /* (ADC_COMMAND) Start when a write to the INPUTCTRL register is done Position */
-#define ADC_COMMAND_START_EVENT               (ADC_COMMAND_START_EVENT_Val << ADC_COMMAND_START_Pos) /* (ADC_COMMAND) Start when an event is received by the ADC. Requires that STARTEI in ADCn.EVCTRL is set to '1' Position */
+#define ADC_COMMAND_START_IMMEDIATE           (ADC_COMMAND_START_IMMEDIATE_Val << ADC_COMMAND_START_Pos) /* (ADC_COMMAND) Start a conversion immediately. This bit will be reset to STOP when the conversion is complete, unless Free-Running mode is enabled. Position */
+#define ADC_COMMAND_START_INPUT               (ADC_COMMAND_START_INPUT_Val << ADC_COMMAND_START_Pos) /* (ADC_COMMAND) Start a conversion when a write to the INPUTCTRL register is performed Position */
+#define ADC_COMMAND_START_EVENT               (ADC_COMMAND_START_EVENT_Val << ADC_COMMAND_START_Pos) /* (ADC_COMMAND) Start a conversion when an event is received by the ADC. This requires EVCTRL.STARTEI to be set to '1'. Position */
 #define ADC_COMMAND_MODE_Pos                  _UINT32_(4)                                          /* (ADC_COMMAND) Mode Position */
 #define ADC_COMMAND_MODE_Msk                  (_UINT32_(0x7) << ADC_COMMAND_MODE_Pos)              /* (ADC_COMMAND) Mode Mask */
 #define ADC_COMMAND_MODE(value)               (ADC_COMMAND_MODE_Msk & (_UINT32_(value) << ADC_COMMAND_MODE_Pos)) /* Assignment of value for MODE in the ADC_COMMAND register */
 #define   ADC_COMMAND_MODE_NONE_Val           _UINT32_(0x0)                                        /* (ADC_COMMAND) None  */
 #define   ADC_COMMAND_MODE_SINGLE_Val         _UINT32_(0x1)                                        /* (ADC_COMMAND) Single conversion  */
-#define   ADC_COMMAND_MODE_SERIES_Val         _UINT32_(0x2)                                        /* (ADC_COMMAND) Series with accumulation, a separate trigger for conversion  */
-#define   ADC_COMMAND_MODE_BURST_Val          _UINT32_(0x3)                                        /* (ADC_COMMAND) Burst with accumulation. One trigger will run SAMPNUM conversions in one sequence  */
+#define   ADC_COMMAND_MODE_SERIES_Val         _UINT32_(0x2)                                        /* (ADC_COMMAND) Series mode with accumulation, using a separate trigger for each conversion  */
+#define   ADC_COMMAND_MODE_BURST_Val          _UINT32_(0x3)                                        /* (ADC_COMMAND) Burst mode with accumulation. A single trigger will initiate the number of conversions configured by CTRLD.SAMPNUM in one sequence.  */
 #define   ADC_COMMAND_MODE_ACCTEST_Val        _UINT32_(0x7)                                        /* (ADC_COMMAND) Accumulator diagnostics mode  */
 #define ADC_COMMAND_MODE_NONE                 (ADC_COMMAND_MODE_NONE_Val << ADC_COMMAND_MODE_Pos)  /* (ADC_COMMAND) None Position */
 #define ADC_COMMAND_MODE_SINGLE               (ADC_COMMAND_MODE_SINGLE_Val << ADC_COMMAND_MODE_Pos) /* (ADC_COMMAND) Single conversion Position */
-#define ADC_COMMAND_MODE_SERIES               (ADC_COMMAND_MODE_SERIES_Val << ADC_COMMAND_MODE_Pos) /* (ADC_COMMAND) Series with accumulation, a separate trigger for conversion Position */
-#define ADC_COMMAND_MODE_BURST                (ADC_COMMAND_MODE_BURST_Val << ADC_COMMAND_MODE_Pos) /* (ADC_COMMAND) Burst with accumulation. One trigger will run SAMPNUM conversions in one sequence Position */
+#define ADC_COMMAND_MODE_SERIES               (ADC_COMMAND_MODE_SERIES_Val << ADC_COMMAND_MODE_Pos) /* (ADC_COMMAND) Series mode with accumulation, using a separate trigger for each conversion Position */
+#define ADC_COMMAND_MODE_BURST                (ADC_COMMAND_MODE_BURST_Val << ADC_COMMAND_MODE_Pos) /* (ADC_COMMAND) Burst mode with accumulation. A single trigger will initiate the number of conversions configured by CTRLD.SAMPNUM in one sequence. Position */
 #define ADC_COMMAND_MODE_ACCTEST              (ADC_COMMAND_MODE_ACCTEST_Val << ADC_COMMAND_MODE_Pos) /* (ADC_COMMAND) Accumulator diagnostics mode Position */
 #define ADC_COMMAND_DIFF_Pos                  _UINT32_(7)                                          /* (ADC_COMMAND) Differential Mode Position */
 #define ADC_COMMAND_DIFF_Msk                  (_UINT32_(0x1) << ADC_COMMAND_DIFF_Pos)              /* (ADC_COMMAND) Differential Mode Mask */
@@ -588,8 +588,8 @@
 /* -------- ADC_DBGCTRL : (ADC Offset: 0x6C) (R/W 32) Debug Control -------- */
 #define ADC_DBGCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (ADC_DBGCTRL) Debug Control  Reset Value */
 
-#define ADC_DBGCTRL_DBGRUN_Pos                _UINT32_(0)                                          /* (ADC_DBGCTRL) Run in Debug Mode Position */
-#define ADC_DBGCTRL_DBGRUN_Msk                (_UINT32_(0x1) << ADC_DBGCTRL_DBGRUN_Pos)            /* (ADC_DBGCTRL) Run in Debug Mode Mask */
+#define ADC_DBGCTRL_DBGRUN_Pos                _UINT32_(0)                                          /* (ADC_DBGCTRL) Debug Run Position */
+#define ADC_DBGCTRL_DBGRUN_Msk                (_UINT32_(0x1) << ADC_DBGCTRL_DBGRUN_Pos)            /* (ADC_DBGCTRL) Debug Run Mask */
 #define ADC_DBGCTRL_DBGRUN(value)             (ADC_DBGCTRL_DBGRUN_Msk & (_UINT32_(value) << ADC_DBGCTRL_DBGRUN_Pos)) /* Assignment of value for DBGRUN in the ADC_DBGCTRL register */
 #define ADC_DBGCTRL_Msk                       _UINT32_(0x00000001)                                 /* (ADC_DBGCTRL) Register Mask  */
 
@@ -600,14 +600,14 @@
 #define ADC_WPCTRL_WPEN_Pos                   _UINT32_(0)                                          /* (ADC_WPCTRL) Write Protection Enable Position */
 #define ADC_WPCTRL_WPEN_Msk                   (_UINT32_(0x1) << ADC_WPCTRL_WPEN_Pos)               /* (ADC_WPCTRL) Write Protection Enable Mask */
 #define ADC_WPCTRL_WPEN(value)                (ADC_WPCTRL_WPEN_Msk & (_UINT32_(value) << ADC_WPCTRL_WPEN_Pos)) /* Assignment of value for WPEN in the ADC_WPCTRL register */
-#define ADC_WPCTRL_WPLCK_Pos                  _UINT32_(1)                                          /* (ADC_WPCTRL) WPCTRL Write Lock Position */
-#define ADC_WPCTRL_WPLCK_Msk                  (_UINT32_(0x1) << ADC_WPCTRL_WPLCK_Pos)              /* (ADC_WPCTRL) WPCTRL Write Lock Mask */
+#define ADC_WPCTRL_WPLCK_Pos                  _UINT32_(1)                                          /* (ADC_WPCTRL) Write Protection Lock Position */
+#define ADC_WPCTRL_WPLCK_Msk                  (_UINT32_(0x1) << ADC_WPCTRL_WPLCK_Pos)              /* (ADC_WPCTRL) Write Protection Lock Mask */
 #define ADC_WPCTRL_WPLCK(value)               (ADC_WPCTRL_WPLCK_Msk & (_UINT32_(value) << ADC_WPCTRL_WPLCK_Pos)) /* Assignment of value for WPLCK in the ADC_WPCTRL register */
 #define ADC_WPCTRL_WPKEY_Pos                  _UINT32_(8)                                          /* (ADC_WPCTRL) Write Protection Key Position */
 #define ADC_WPCTRL_WPKEY_Msk                  (_UINT32_(0xFFFFFF) << ADC_WPCTRL_WPKEY_Pos)         /* (ADC_WPCTRL) Write Protection Key Mask */
 #define ADC_WPCTRL_WPKEY(value)               (ADC_WPCTRL_WPKEY_Msk & (_UINT32_(value) << ADC_WPCTRL_WPKEY_Pos)) /* Assignment of value for WPKEY in the ADC_WPCTRL register */
-#define   ADC_WPCTRL_WPKEY_KEY_Val            _UINT32_(0x414443)                                   /* (ADC_WPCTRL) Allow writes to the WPCTRL register.  */
-#define ADC_WPCTRL_WPKEY_KEY                  (ADC_WPCTRL_WPKEY_KEY_Val << ADC_WPCTRL_WPKEY_Pos)   /* (ADC_WPCTRL) Allow writes to the WPCTRL register. Position */
+#define   ADC_WPCTRL_WPKEY_KEY_Val            _UINT32_(0x414443)                                   /* (ADC_WPCTRL) Allow writes to the WPCTRL register  */
+#define ADC_WPCTRL_WPKEY_KEY                  (ADC_WPCTRL_WPKEY_KEY_Val << ADC_WPCTRL_WPKEY_Pos)   /* (ADC_WPCTRL) Allow writes to the WPCTRL register Position */
 #define ADC_WPCTRL_Msk                        _UINT32_(0xFFFFFF03)                                 /* (ADC_WPCTRL) Register Mask  */
 
 
@@ -624,7 +624,7 @@
 #define ADC_EVCTRL_REG_OFST            _UINT32_(0x2C)      /* (ADC_EVCTRL) Event Control Offset */
 #define ADC_INTENCLR_REG_OFST          _UINT32_(0x30)      /* (ADC_INTENCLR) Interrupt Enable Clear Offset */
 #define ADC_INTENSET_REG_OFST          _UINT32_(0x34)      /* (ADC_INTENSET) Interrupt Enable Set Offset */
-#define ADC_INTFLAG_REG_OFST           _UINT32_(0x38)      /* (ADC_INTFLAG) Interrupt Flag Offset */
+#define ADC_INTFLAG_REG_OFST           _UINT32_(0x38)      /* (ADC_INTFLAG) Interrupt Flag Status and Clear Offset */
 #define ADC_INTFLAGSET_REG_OFST        _UINT32_(0x3C)      /* (ADC_INTFLAGSET) Interrupt Flag Set Offset */
 #define ADC_STATUS_REG_OFST            _UINT32_(0x40)      /* (ADC_STATUS) Status Offset */
 #define ADC_COMMAND_REG_OFST           _UINT32_(0x48)      /* (ADC_COMMAND) Command Offset */
@@ -650,7 +650,7 @@ typedef struct
   __IO  uint32_t                       ADC_EVCTRL;         /* Offset: 0x2C (R/W  32) Event Control */
   __IO  uint32_t                       ADC_INTENCLR;       /* Offset: 0x30 (R/W  32) Interrupt Enable Clear */
   __IO  uint32_t                       ADC_INTENSET;       /* Offset: 0x34 (R/W  32) Interrupt Enable Set */
-  __IO  uint32_t                       ADC_INTFLAG;        /* Offset: 0x38 (R/W  32) Interrupt Flag */
+  __IO  uint32_t                       ADC_INTFLAG;        /* Offset: 0x38 (R/W  32) Interrupt Flag Status and Clear */
   __IO  uint32_t                       ADC_INTFLAGSET;     /* Offset: 0x3C (R/W  32) Interrupt Flag Set */
   __I   uint32_t                       ADC_STATUS;         /* Offset: 0x40 (R/   32) Status */
   __I   uint8_t                        Reserved2[0x04];
