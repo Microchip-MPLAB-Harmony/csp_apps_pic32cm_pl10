@@ -57,13 +57,7 @@
 #define RSTC_RCAUSE_LOCKUP_Pos                _UINT32_(6)                                          /* (RSTC_RCAUSE) Software Reset Flag Position */
 #define RSTC_RCAUSE_LOCKUP_Msk                (_UINT32_(0x1) << RSTC_RCAUSE_LOCKUP_Pos)            /* (RSTC_RCAUSE) Software Reset Flag Mask */
 #define RSTC_RCAUSE_LOCKUP(value)             (RSTC_RCAUSE_LOCKUP_Msk & (_UINT32_(value) << RSTC_RCAUSE_LOCKUP_Pos)) /* Assignment of value for LOCKUP in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_HV_Pos                    _UINT32_(8)                                          /* (RSTC_RCAUSE) High Voltage Reset Flag Position */
-#define RSTC_RCAUSE_HV_Msk                    (_UINT32_(0x1) << RSTC_RCAUSE_HV_Pos)                /* (RSTC_RCAUSE) High Voltage Reset Flag Mask */
-#define RSTC_RCAUSE_HV(value)                 (RSTC_RCAUSE_HV_Msk & (_UINT32_(value) << RSTC_RCAUSE_HV_Pos)) /* Assignment of value for HV in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_HVPRES_Pos                _UINT32_(9)                                          /* (RSTC_RCAUSE) High Voltage Present Flag Position */
-#define RSTC_RCAUSE_HVPRES_Msk                (_UINT32_(0x1) << RSTC_RCAUSE_HVPRES_Pos)            /* (RSTC_RCAUSE) High Voltage Present Flag Mask */
-#define RSTC_RCAUSE_HVPRES(value)             (RSTC_RCAUSE_HVPRES_Msk & (_UINT32_(value) << RSTC_RCAUSE_HVPRES_Pos)) /* Assignment of value for HVPRES in the RSTC_RCAUSE register */
-#define RSTC_RCAUSE_Msk                       _UINT32_(0x0000037B)                                 /* (RSTC_RCAUSE) Register Mask  */
+#define RSTC_RCAUSE_Msk                       _UINT32_(0x0000007B)                                 /* (RSTC_RCAUSE) Register Mask  */
 
 
 /* -------- RSTC_DBGCTRL : (RSTC Offset: 0x08) (R/W 32) Debug Control -------- */

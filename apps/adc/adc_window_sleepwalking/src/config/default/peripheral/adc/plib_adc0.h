@@ -98,19 +98,21 @@ void ADC0_ChannelSelect( ADC_POSINPUT positiveInput, ADC_NEGINPUT negativeInput 
 
 void ADC0_ConversionStart( void );
 
-uint16_t ADC0_ConversionResultGet( void );
+void ADC0_ConversionStartModeSet( ADC_STARTMODE startMode );
+
+bool ADC0_ConversionIsFinished( void );
+
+uint32_t ADC0_ConversionResultGet( void );
 
 void ADC0_ComparisonWindowSet(uint16_t low_threshold, uint16_t high_threshold);
 
 void ADC0_WindowModeSet(ADC_WINMODE mode);
 
-bool ADC0_ConversionSequenceIsFinished(void);
+void ADC0_InterruptsClear(ADC_INTERRUPTS interruptMask);
 
-void ADC0_InterruptsClear(ADC_STATUS interruptMask);
+void ADC0_InterruptsEnable(ADC_INTERRUPTS interruptMask);
 
-void ADC0_InterruptsEnable(ADC_STATUS interruptMask);
-
-void ADC0_InterruptsDisable(ADC_STATUS interruptMask);
+void ADC0_InterruptsDisable(ADC_INTERRUPTS interruptMask);
 
 
 void ADC0_CallbackRegister( ADC_CALLBACK callback, uintptr_t context );
