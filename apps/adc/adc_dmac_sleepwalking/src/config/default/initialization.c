@@ -52,33 +52,37 @@
 // Section: Configuration Bits
 // ****************************************************************************
 // ****************************************************************************
-#pragma config SEQUENCENUMBER = 0xffffffffU
-#pragma config NVMCTRL_BOOTPROT = 7
-#pragma config WDT_ENABLE = CLEAR
-#pragma config WDT_WEN = CLEAR
-#pragma config WDT_ALWAYSON = CLEAR
-#pragma config WDT_PER = 0x0U
-#pragma config WDT_WINDOW = 0x0U
-#pragma config WDT_EWOFFSET = 0x0U
-#pragma config SUPC_ENABLE = CLEAR
-#pragma config SUPC_STDBYCFG = CLEAR
-#pragma config SUPC_RUNSTDBY = CLEAR
-#pragma config SUPC_ACTCFG = CLEAR
-#pragma config SUPC_SAMPFREQ = CLEAR
-#pragma config SUPC_LEVEL = 0x0U
-#pragma config SUPC_VLMLVL = 0x0U
-#pragma config SUPC_VLMCFG = 0x0U
-#pragma config SUPC_WRTLOCK = CLEAR
-#pragma config SUPC_MVIOMODE = CLEAR
-#pragma config CRCSEL = CLEAR
-#pragma config CRCBOOT = CLEAR
-#pragma config SUT = 0x0U
-#pragma config GPIOSEL_GPIOPINSEL = 0x0U
-#pragma config GPIOSEL_ENABLE = CLEAR
-#pragma config GPIOSEL_GPIOPORTSEL = 0x0U
-#pragma config GPIOSEL_POL = CLEAR
-#pragma config GPIOSEL_ODRAIN = CLEAR
-#pragma config GPIOSEL_SLEWLIM = CLEAR
+#pragma config SEQNUM_SEQNUM = 0x0U
+#pragma config BOOTPROT_BOOTPROT = 0x7
+#pragma config WDTCFG_ENABLE = CLEAR
+#pragma config WDTCFG_WEN = CLEAR
+#pragma config WDTCFG_ALWAYSON = CLEAR
+#pragma config WDTCFG_PER = 0x0
+#pragma config WDTCFG_WINDOW = 0x0
+#pragma config WDTCFG_EWOFFSET = 0x0
+#pragma config BODCFG_ENABLE = CLEAR
+#pragma config BODCFG_STDBYCFG = CLEAR
+#pragma config BODCFG_RUNSTDBY = CLEAR
+#pragma config BODCFG_ACTCFG = 0x0
+#pragma config BODCFG_SAMPFREQ = 0x0
+#pragma config BODCFG_LEVEL = 0x0
+#pragma config BODCFG_VLMLVL = 0x0
+#pragma config BODCFG_VLMCFG = 0x0
+#pragma config BODCFG_WRTLOCK = CLEAR
+#pragma config USERCFG_MVIOMODE = 0x0
+#pragma config USERCFG_CRCSEL = 0x0
+#pragma config USERCFG_CRCBOOT = CLEAR
+#pragma config USERCFG_SUT = 0x0
+#pragma config BOOT_GPIOSEL_GPIOPINSEL = 0x00
+#pragma config BOOT_GPIOSEL_ENABLE = CLEAR
+#pragma config BOOT_GPIOSEL_GPIOPORTSEL = 0x0
+#pragma config BOOT_GPIOSEL_POL = 0x0
+#pragma config BOOT_GPIOSEL_ODRAIN = 0x0
+#pragma config BOOT_GPIOSEL_SLEWLIM = 0x0
+#pragma config SERNUM0_SERNUM0 = 0xffffffffU
+#pragma config SERNUM1_SERNUM1 = 0xffffffffU
+#pragma config SERNUM2_SERNUM2 = 0xffffffffU
+#pragma config SERNUM3_SERNUM3 = 0xffffffffU
 
 
 
@@ -89,10 +93,10 @@
 // *****************************************************************************
 // *****************************************************************************
 /* Following MISRA-C rules are deviated in the below code block */
-/* MISRA C-2012 Rule 7.2 - Deviation record ID - H3_MISRAC_2012_R_7_2_DR_1 */
-/* MISRA C-2012 Rule 11.1 - Deviation record ID - H3_MISRAC_2012_R_11_1_DR_1 */
-/* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
-/* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
+/* MISRA C-2023 Rule 7.2 - Deviation record ID - H3_MISRAC_2023_R_7_2_DR_1 */
+/* MISRA C-2023 Rule 11.1 - Deviation record ID - H3_MISRAC_2023_R_11_1_DR_1 */
+/* MISRA C-2023 Rule 11.3 - Deviation record ID - H3_MISRAC_2023_R_11_3_DR_1 */
+/* MISRA C-2023 Rule 11.8 - Deviation record ID - H3_MISRAC_2023_R_11_8_DR_1 */
 
 
 
@@ -134,19 +138,19 @@
  ********************************************************************************/
 static void STDIO_BufferModeSet(void)
 {
-    /* MISRAC 2012 deviation block start */
-    /* MISRA C-2012 Rule 21.6 deviated 2 times in this file.  Deviation record ID -  H3_MISRAC_2012_R_21_6_DR_3 */
+    /* MISRAC 2023 deviation block start */
+    /* MISRA C-2023 Rule 21.6 deviated 2 times in this file.  Deviation record ID -  H3_MISRAC_2023_R_21_6_DR_3 */
 
     /* Make stdin unbuffered */
     setbuf(stdin, NULL);
 
     /* Make stdout unbuffered */
     setbuf(stdout, NULL);
-    /* MISRAC 2012 deviation block end */
+    /* MISRAC 2023 deviation block end */
 }
 
 
-/* MISRAC 2012 deviation block end */
+/* MISRAC 2023 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -161,8 +165,8 @@ static void STDIO_BufferModeSet(void)
 void SYS_Initialize ( void* data )
 {
 
-    /* MISRAC 2012 deviation block start */
-    /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
+    /* MISRAC 2023 deviation block start */
+    /* MISRA C-2023 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2023_R_2_2_DR_1 */
 
     PM_Initialize();
 
@@ -191,7 +195,7 @@ void SYS_Initialize ( void* data )
     NVIC_Initialize();
 
 
-    /* MISRAC 2012 deviation block end */
+    /* MISRAC 2023 deviation block end */
 }
 
 /*******************************************************************************

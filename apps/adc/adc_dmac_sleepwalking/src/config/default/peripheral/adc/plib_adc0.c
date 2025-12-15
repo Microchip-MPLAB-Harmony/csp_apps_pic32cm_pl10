@@ -81,7 +81,7 @@ void ADC0_Initialize( void )
     }
 
     /* Prescaler and timebase configuration */
-    ADC0_REGS->ADC_CTRLB = (uint8_t)ADC_CTRLB_PRESC_DIV16 | ADC_CTRLB_TIMEBASE(1UL) ;
+    ADC0_REGS->ADC_CTRLB = (uint8_t)ADC_CTRLB_PRESCALER_DIV16 | ADC_CTRLB_TIMEBASE(1UL) ;
 
     /* Sampling length */
     ADC0_REGS->ADC_CTRLE = (uint8_t)ADC_CTRLE_SAMPLEN(32UL);
@@ -139,7 +139,7 @@ void ADC0_Disable( void )
 void ADC0_ChannelSelect( ADC_POSINPUT positiveInput, ADC_NEGINPUT negativeInput )
 {
     /* Configure pin scan mode and positive and negative input pins */
-    ADC0_REGS->ADC_INPUTCTRL = (uint16_t) positiveInput | (uint16_t) negativeInput;
+    ADC0_REGS->ADC_INPUTCTRL = (uint16_t)((uint16_t) positiveInput | (uint16_t) negativeInput);
 
     while((ADC0_REGS->ADC_STATUS & ADC_STATUS_ADCBUSY_Msk) != 0U)
     {
@@ -160,10 +160,10 @@ void ADC0_ConversionStart( void )
 }
 
 /* Select ADC conversion start type */
-void ADC0_ConversionStartTypeSelect( ADC_STARTTYPE startType )
+void ADC0_ConversionStartModeSet( ADC_STARTMODE startMode )
 {
     /* Start conversion */
-    ADC0_REGS->ADC_COMMAND |= (uint32_t)startType;
+    ADC0_REGS->ADC_COMMAND |= (uint32_t)startMode;
 
     while((ADC0_REGS->ADC_STATUS & ADC_STATUS_ADCBUSY_Msk) != 0U)
     {
@@ -198,22 +198,22 @@ void ADC0_WindowModeSet(ADC_WINMODE mode)
 }
 
 /* Read the conversion result */
-uint16_t ADC0_ConversionResultGet( void )
+uint32_t ADC0_ConversionResultGet( void )
 {
-    return ADC0_REGS->ADC_RESULT;
+    return (uint32_t)ADC0_REGS->ADC_RESULT;
 }
 
-void ADC0_InterruptsClear(ADC_STATUS interruptMask)
+void ADC0_InterruptsClear(ADC_INTERRUPTS interruptMask)
 {
     ADC0_REGS->ADC_INTFLAG = (uint8_t)interruptMask;
 }
 
-void ADC0_InterruptsEnable(ADC_STATUS interruptMask)
+void ADC0_InterruptsEnable(ADC_INTERRUPTS interruptMask)
 {
     ADC0_REGS->ADC_INTENSET = (uint8_t)interruptMask;
 }
 
-void ADC0_InterruptsDisable(ADC_STATUS interruptMask)
+void ADC0_InterruptsDisable(ADC_INTERRUPTS interruptMask)
 {
     ADC0_REGS->ADC_INTENCLR = (uint8_t)interruptMask;
 }

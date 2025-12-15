@@ -45,7 +45,7 @@
 
 static void OSC32KCTRL_Initialize(void)
 {
-    
+
     /****************** OSC32K Initialization  ******************************/
 
     /* Configure 32K RC oscillator */
@@ -104,6 +104,8 @@ void CLOCK_Initialize (void)
     }
 
 
+    /* Configure the APBB Bridge Clocks */
+    MCLK_REGS->MCLK_APBBMASK = 0x2fU;
 
     /* Configure the APBC Bridge Clocks */
     MCLK_REGS->MCLK_APBCMASK = 0x885U;

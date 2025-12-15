@@ -111,9 +111,9 @@
 #define MCLK_AHBMASK_PAC_Pos                  _UINT32_(8)                                          /* (MCLK_AHBMASK) PAC AHB Clock Mask Position */
 #define MCLK_AHBMASK_PAC_Msk                  (_UINT32_(0x1) << MCLK_AHBMASK_PAC_Pos)              /* (MCLK_AHBMASK) PAC AHB Clock Mask Mask */
 #define MCLK_AHBMASK_PAC(value)               (MCLK_AHBMASK_PAC_Msk & (_UINT32_(value) << MCLK_AHBMASK_PAC_Pos)) /* Assignment of value for PAC in the MCLK_AHBMASK register */
-#define MCLK_AHBMASK_BROMC_Pos                _UINT32_(9)                                          /* (MCLK_AHBMASK) BROMC AHB Clock Mask Position */
-#define MCLK_AHBMASK_BROMC_Msk                (_UINT32_(0x1) << MCLK_AHBMASK_BROMC_Pos)            /* (MCLK_AHBMASK) BROMC AHB Clock Mask Mask */
-#define MCLK_AHBMASK_BROMC(value)             (MCLK_AHBMASK_BROMC_Msk & (_UINT32_(value) << MCLK_AHBMASK_BROMC_Pos)) /* Assignment of value for BROMC in the MCLK_AHBMASK register */
+#define MCLK_AHBMASK_BROM_Pos                 _UINT32_(9)                                          /* (MCLK_AHBMASK) BROM AHB Clock Mask Position */
+#define MCLK_AHBMASK_BROM_Msk                 (_UINT32_(0x1) << MCLK_AHBMASK_BROM_Pos)             /* (MCLK_AHBMASK) BROM AHB Clock Mask Mask */
+#define MCLK_AHBMASK_BROM(value)              (MCLK_AHBMASK_BROM_Msk & (_UINT32_(value) << MCLK_AHBMASK_BROM_Pos)) /* Assignment of value for BROM in the MCLK_AHBMASK register */
 #define MCLK_AHBMASK_Msk                      _UINT32_(0x000003FF)                                 /* (MCLK_AHBMASK) Register Mask  */
 
 
@@ -157,7 +157,7 @@
 
 
 /* -------- MCLK_APBBMASK : (MCLK Offset: 0x18) (R/W 32) APB Bridge B Mask -------- */
-#define MCLK_APBBMASK_RESETVALUE              _UINT32_(0x0F)                                       /*  (MCLK_APBBMASK) APB Bridge B Mask  Reset Value */
+#define MCLK_APBBMASK_RESETVALUE              _UINT32_(0x27)                                       /*  (MCLK_APBBMASK) APB Bridge B Mask  Reset Value */
 
 #define MCLK_APBBMASK_PORT_Pos                _UINT32_(0)                                          /* (MCLK_APBBMASK) PORT APB Clock Enable Position */
 #define MCLK_APBBMASK_PORT_Msk                (_UINT32_(0x1) << MCLK_APBBMASK_PORT_Pos)            /* (MCLK_APBBMASK) PORT APB Clock Enable Mask */

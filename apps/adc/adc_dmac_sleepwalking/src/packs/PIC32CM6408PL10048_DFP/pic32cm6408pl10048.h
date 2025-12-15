@@ -179,12 +179,11 @@ void AC_Handler                    ( void );
 #endif /* !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__)) */
 
 /* Configuration of the CORTEX-M0PLUS Processor and Core Peripherals */
+#define __CM0PLUS_REV                 0x0001 /* Cortex-M0+ Core Revision                                                  */
 #define __MPU_PRESENT                      0 /* MPU present or not                                                        */
 #define __NVIC_PRIO_BITS                   2 /* Number of Bits used for Priority Levels                                   */
 #define __VTOR_PRESENT                     1 /* Vector Table Offset Register present or not                               */
 #define __Vendor_SysTickConfig             0 /* Set to 1 if different SysTick Config is used                              */
-#define __ARCH_ARM                         1
-#define __ARCH_ARM_CORTEX_M                1
 
 /* CMSIS includes */
 #include "core_cm0plus.h"
@@ -303,17 +302,13 @@ void AC_Handler                    ( void );
 #define DSU_REGS                         ((dsu_registers_t*)0x41002000)                /* DSU Registers Address        */
 #define EIC_REGS                         ((eic_registers_t*)0x40002800)                /* EIC Registers Address        */
 #define EVSYS_REGS                       ((evsys_registers_t*)0x42000000)              /* EVSYS Registers Address      */
+#define FUSES_BOOTCFG_REGS               ((fuses_bootcfg_registers_t*)0x0d000400)      /* FUSES Registers Address      */
+#define FUSES_SIGNATURE_REGS             ((fuses_signature_registers_t*)0x0d000200)    /* FUSES Registers Address      */
 #define GCLK_REGS                        ((gclk_registers_t*)0x40001c00)               /* GCLK Registers Address       */
 #define HMATRIXHS_REGS                   ((hmatrixb_registers_t*)0x4100a000)           /* HMATRIXHS Registers Address  */
 #define MCLK_REGS                        ((mclk_registers_t*)0x40000800)               /* MCLK Registers Address       */
 #define MTB_REGS                         ((mtb_registers_t*)0x41008000)                /* MTB Registers Address        */
 #define NVMCTRL_REGS                     ((nvmctrl_registers_t*)0x41004000)            /* NVMCTRL Registers Address    */
-#define BOOT0_FUSES_REGS                 ((fuses_boot0_fuses_registers_t*)0x0d000400)  /* FUSES Registers Address      */
-#define BOOT1_FUSES_REGS                 ((fuses_boot1_fuses_registers_t*)0x0d000408)  /* FUSES Registers Address      */
-#define BOOT2_FUSES_REGS                 ((fuses_boot2_fuses_registers_t*)0x0d000410)  /* FUSES Registers Address      */
-#define BOOT3_FUSES_REGS                 ((fuses_boot3_fuses_registers_t*)0x0d000418)  /* FUSES Registers Address      */
-#define BOOT4_FUSES_REGS                 ((fuses_boot4_fuses_registers_t*)0x0d000420)  /* FUSES Registers Address      */
-#define BOOT5_FUSES_REGS                 ((fuses_boot5_fuses_registers_t*)0x0d000428)  /* FUSES Registers Address      */
 #define OSC32KCTRL_REGS                  ((osc32kctrl_registers_t*)0x40001400)         /* OSC32KCTRL Registers Address */
 #define OSCCTRL_REGS                     ((oscctrl_registers_t*)0x40001000)            /* OSCCTRL Registers Address    */
 #define PAC_REGS                         ((pac_registers_t*)0x40000000)                /* PAC Registers Address        */
@@ -344,17 +339,13 @@ void AC_Handler                    ( void );
 #define DSU_BASE_ADDRESS                 _UINT32_(0x41002000)                          /* DSU Base Address */
 #define EIC_BASE_ADDRESS                 _UINT32_(0x40002800)                          /* EIC Base Address */
 #define EVSYS_BASE_ADDRESS               _UINT32_(0x42000000)                          /* EVSYS Base Address */
+#define FUSES_BOOTCFG_BASE_ADDRESS       _UINT32_(0x0d000400)                          /* FUSES Base Address */
+#define FUSES_SIGNATURE_BASE_ADDRESS     _UINT32_(0x0d000200)                          /* FUSES Base Address */
 #define GCLK_BASE_ADDRESS                _UINT32_(0x40001c00)                          /* GCLK Base Address */
 #define HMATRIXHS_BASE_ADDRESS           _UINT32_(0x4100a000)                          /* HMATRIXHS Base Address */
 #define MCLK_BASE_ADDRESS                _UINT32_(0x40000800)                          /* MCLK Base Address */
 #define MTB_BASE_ADDRESS                 _UINT32_(0x41008000)                          /* MTB Base Address */
 #define NVMCTRL_BASE_ADDRESS             _UINT32_(0x41004000)                          /* NVMCTRL Base Address */
-#define BOOT0_FUSES_BASE_ADDRESS         _UINT32_(0x0d000400)                          /* FUSES Base Address */
-#define BOOT1_FUSES_BASE_ADDRESS         _UINT32_(0x0d000408)                          /* FUSES Base Address */
-#define BOOT2_FUSES_BASE_ADDRESS         _UINT32_(0x0d000410)                          /* FUSES Base Address */
-#define BOOT3_FUSES_BASE_ADDRESS         _UINT32_(0x0d000418)                          /* FUSES Base Address */
-#define BOOT4_FUSES_BASE_ADDRESS         _UINT32_(0x0d000420)                          /* FUSES Base Address */
-#define BOOT5_FUSES_BASE_ADDRESS         _UINT32_(0x0d000428)                          /* FUSES Base Address */
 #define OSC32KCTRL_BASE_ADDRESS          _UINT32_(0x40001400)                          /* OSC32KCTRL Base Address */
 #define OSCCTRL_BASE_ADDRESS             _UINT32_(0x40001000)                          /* OSCCTRL Base Address */
 #define PAC_BASE_ADDRESS                 _UINT32_(0x40000000)                          /* PAC Base Address */
@@ -382,11 +373,13 @@ void AC_Handler                    ( void );
 /* ************************************************************************** */
 /*             MEMORY MAPPING DEFINITIONS FOR PIC32CM6408PL10048              */
 /* ************************************************************************** */
-#define BROMC_SIZE                     _UINT32_(0x00008000)    /*   32kB Memory segment type: rom */
+#define BROM_SIZE                      _UINT32_(0x00008000)    /*   32kB Memory segment type: rom */
 #define FLASH_SIZE                     _UINT32_(0x00010000)    /*   64kB Memory segment type: flash */
 #define FLASH_PAGE_SIZE                _UINT32_(       512)
 #define FLASH_NB_OF_PAGES              _UINT32_(       128)
 
+#define BOOTCFG_SIZE                   _UINT32_(0x00000100)    /*    0kB Memory segment type: fuses */
+#define SIGNATURE_SIZE                 _UINT32_(0x00000100)    /*    0kB Memory segment type: fuses */
 #define HSRAM_SIZE                     _UINT32_(0x00002000)    /*    8kB Memory segment type: ram */
 #define APBA_SIZE                      _UINT32_(0x00004000)    /*   16kB Memory segment type: io */
 #define APBB_SIZE                      _UINT32_(0x00010000)    /*   64kB Memory segment type: io */
@@ -394,8 +387,10 @@ void AC_Handler                    ( void );
 #define IOBUS_SIZE                     _UINT32_(0x00000200)    /*    0kB Memory segment type: io */
 #define PPB_SIZE                       _UINT32_(0x00100000)    /* 1024kB Memory segment type: io */
 
-#define BROMC_ADDR                     _UINT32_(0x00000000)    /* BROMC base address (type: rom)*/
+#define BROM_ADDR                      _UINT32_(0x00000000)    /* BROM base address (type: rom)*/
 #define FLASH_ADDR                     _UINT32_(0x0c000000)    /* FLASH base address (type: flash)*/
+#define BOOTCFG_ADDR                   _UINT32_(0x0d000400)    /* BOOTCFG base address (type: fuses)*/
+#define SIGNATURE_ADDR                 _UINT32_(0x0d000200)    /* SIGNATURE base address (type: fuses)*/
 #define HSRAM_ADDR                     _UINT32_(0x20000000)    /* HSRAM base address (type: ram)*/
 #define APBA_ADDR                      _UINT32_(0x40000000)    /* APBA base address (type: io)*/
 #define APBB_ADDR                      _UINT32_(0x41000000)    /* APBB base address (type: io)*/
@@ -415,9 +410,9 @@ void AC_Handler                    ( void );
 /* ************************************************************************** */
 /*                  Event Generator IDs for C32CM6408PL10048                  */
 /* ************************************************************************** */
-#define EVENT_ID_GEN_OSC32KCTRL_XOSC32K_FAIL              1 /* ID for OSC32KCTRL event generator XOSC32K_FAIL */
-#define EVENT_ID_GEN_MVIO                                 2 /* ID for MVIO event generator MVIO */
-#define EVENT_ID_GEN_VLM                                  3 /* ID for VLM event generator VLM */
+#define EVENT_ID_GEN_OSC32KCTRL_CLKFAIL                   1 /* ID for OSC32KCTRL event generator CLKFAIL */
+#define EVENT_ID_GEN_SUPC_MVIO                            2 /* ID for SUPC event generator MVIO */
+#define EVENT_ID_GEN_SUPC_VLM                             3 /* ID for SUPC event generator VLM */
 #define EVENT_ID_GEN_RTC_CMP_0                            4 /* ID for RTC event generator CMP_0 */
 #define EVENT_ID_GEN_RTC_CMP_1                            5 /* ID for RTC event generator CMP_1 */
 #define EVENT_ID_GEN_RTC_OVF                              6 /* ID for RTC event generator OVF */
@@ -448,21 +443,21 @@ void AC_Handler                    ( void );
 #define EVENT_ID_GEN_DMAC_CH_0                           31 /* ID for DMAC event generator CH_0 */
 #define EVENT_ID_GEN_DMAC_CH_1                           32 /* ID for DMAC event generator CH_1 */
 #define EVENT_ID_GEN_TC0_OVF                             33 /* ID for TC0 event generator OVF */
-#define EVENT_ID_GEN_TC0_MCX_0                           34 /* ID for TC0 event generator MCX_0 */
-#define EVENT_ID_GEN_TC0_MCX_1                           35 /* ID for TC0 event generator MCX_1 */
+#define EVENT_ID_GEN_TC0_MC_0                            34 /* ID for TC0 event generator MC_0 */
+#define EVENT_ID_GEN_TC0_MC_1                            35 /* ID for TC0 event generator MC_1 */
 #define EVENT_ID_GEN_TC1_OVF                             36 /* ID for TC1 event generator OVF */
-#define EVENT_ID_GEN_TC1_MCX_0                           37 /* ID for TC1 event generator MCX_0 */
-#define EVENT_ID_GEN_TC1_MCX_1                           38 /* ID for TC1 event generator MCX_1 */
+#define EVENT_ID_GEN_TC1_MC_0                            37 /* ID for TC1 event generator MC_0 */
+#define EVENT_ID_GEN_TC1_MC_1                            38 /* ID for TC1 event generator MC_1 */
 #define EVENT_ID_GEN_TC2_OVF                             39 /* ID for TC2 event generator OVF */
-#define EVENT_ID_GEN_TC2_MCX_0                           40 /* ID for TC2 event generator MCX_0 */
-#define EVENT_ID_GEN_TC2_MCX_1                           41 /* ID for TC2 event generator MCX_1 */
+#define EVENT_ID_GEN_TC2_MC_0                            40 /* ID for TC2 event generator MC_0 */
+#define EVENT_ID_GEN_TC2_MC_1                            41 /* ID for TC2 event generator MC_1 */
 #define EVENT_ID_GEN_TCC0_OVF                            42 /* ID for TCC0 event generator OVF */
 #define EVENT_ID_GEN_TCC0_TRG                            43 /* ID for TCC0 event generator TRG */
 #define EVENT_ID_GEN_TCC0_CNT                            44 /* ID for TCC0 event generator CNT */
-#define EVENT_ID_GEN_TCC0_MCX_0                          45 /* ID for TCC0 event generator MCX_0 */
-#define EVENT_ID_GEN_TCC0_MCX_1                          46 /* ID for TCC0 event generator MCX_1 */
-#define EVENT_ID_GEN_TCC0_MCX_2                          47 /* ID for TCC0 event generator MCX_2 */
-#define EVENT_ID_GEN_TCC0_MCX_3                          48 /* ID for TCC0 event generator MCX_3 */
+#define EVENT_ID_GEN_TCC0_MC_0                           45 /* ID for TCC0 event generator MC_0 */
+#define EVENT_ID_GEN_TCC0_MC_1                           46 /* ID for TCC0 event generator MC_1 */
+#define EVENT_ID_GEN_TCC0_MC_2                           47 /* ID for TCC0 event generator MC_2 */
+#define EVENT_ID_GEN_TCC0_MC_3                           48 /* ID for TCC0 event generator MC_3 */
 #define EVENT_ID_GEN_ADC0_RESRDY                         49 /* ID for ADC0 event generator RESRDY */
 #define EVENT_ID_GEN_ADC0_SAMPRDY                        50 /* ID for ADC0 event generator SAMPRDY */
 #define EVENT_ID_GEN_ADC0_WCMP                           51 /* ID for ADC0 event generator WCMP */
@@ -473,7 +468,7 @@ void AC_Handler                    ( void );
 #define EVENT_ID_GEN_CCL_LUTOUT_1                        56 /* ID for CCL event generator LUTOUT_1 */
 #define EVENT_ID_GEN_CCL_LUTOUT_2                        57 /* ID for CCL event generator LUTOUT_2 */
 #define EVENT_ID_GEN_CCL_LUTOUT_3                        58 /* ID for CCL event generator LUTOUT_3 */
-#define EVENT_ID_GEN_OSCTEST_OUT                         59 /* ID for OSCTEST event generator OUT */
+#define EVENT_ID_GEN_SYSCTRL_OSCTEST                     59 /* ID for SYSCTRL event generator OSCTEST */
 #define EVENT_ID_GEN_PAC_ACCERR                          60 /* ID for PAC event generator ACCERR */
 #define EVENT_ID_GEN_DSU_SWCCSTAT                        61 /* ID for DSU event generator SWCCSTAT */
 #define EVENT_ID_GEN_DSU_COMP                            62 /* ID for DSU event generator COMP */
@@ -503,7 +498,7 @@ void AC_Handler                    ( void );
 #define EVENT_ID_USER_CCL_LUTIN_3                        19 /* ID for CCL event user LUTIN_3 */
 #define EVENT_ID_USER_MTB_START                          20 /* ID for MTB event user START */
 #define EVENT_ID_USER_MTB_STOP                           21 /* ID for MTB event user STOP */
-#define EVENT_ID_USER_OSCTEST_IN                         22 /* ID for OSCTEST event user IN */
+#define EVENT_ID_USER_SYSCTRL_OSCTEST                    22 /* ID for SYSCTRL event user OSCTEST */
 
 #ifdef __cplusplus
 }
