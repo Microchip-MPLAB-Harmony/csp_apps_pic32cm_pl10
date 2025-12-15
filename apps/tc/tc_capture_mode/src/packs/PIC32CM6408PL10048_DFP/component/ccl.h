@@ -76,8 +76,8 @@
 #define CCL_SEQCTRL_Msk                       _UINT32_(0x00000F0F)                                 /* (CCL_SEQCTRL) Register Mask  */
 
 
-/* -------- CCL_LUTCTRL : (CCL Offset: 0x08) (R/W 32) LUT Control n -------- */
-#define CCL_LUTCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (CCL_LUTCTRL) LUT Control n  Reset Value */
+/* -------- CCL_LUTCTRL : (CCL Offset: 0x08) (R/W 32) LUT Control # -------- */
+#define CCL_LUTCTRL_RESETVALUE                _UINT32_(0x00)                                       /*  (CCL_LUTCTRL) LUT Control #  Reset Value */
 
 #define CCL_LUTCTRL_FILTSEL_Pos               _UINT32_(4)                                          /* (CCL_LUTCTRL) Filter Selection Position */
 #define CCL_LUTCTRL_FILTSEL_Msk               (_UINT32_(0x3) << CCL_LUTCTRL_FILTSEL_Pos)           /* (CCL_LUTCTRL) Filter Selection Mask */
@@ -103,6 +103,7 @@
 #define   CCL_LUTCTRL_INSEL0_TC_Val           _UINT32_(0x6)                                        /* (CCL_LUTCTRL) TC input source: TC0 (LUT0) / TC1 (LUT1) / TC2 (LUT2) / TC0 (LUT3)  */
 #define   CCL_LUTCTRL_INSEL0_TCC_Val          _UINT32_(0x8)                                        /* (CCL_LUTCTRL) TCC input source: TCC0  */
 #define   CCL_LUTCTRL_INSEL0_SERCOM_Val       _UINT32_(0x9)                                        /* (CCL_LUTCTRL) SERCOM input source: SERCOM0 (LUT0) / SERCOM1 (LUT1) / SERCOM0 (LUT2) / SERCOM1 (LUT3)  */
+#define   CCL_LUTCTRL_INSEL0_ASYNCEVENT_Val   _UINT32_(0xB)                                        /* (CCL_LUTCTRL) Asynchronous event input source  */
 #define CCL_LUTCTRL_INSEL0_MASK               (CCL_LUTCTRL_INSEL0_MASK_Val << CCL_LUTCTRL_INSEL0_Pos) /* (CCL_LUTCTRL) Masked input Position */
 #define CCL_LUTCTRL_INSEL0_FEEDBACK           (CCL_LUTCTRL_INSEL0_FEEDBACK_Val << CCL_LUTCTRL_INSEL0_Pos) /* (CCL_LUTCTRL) Feedback input source Position */
 #define CCL_LUTCTRL_INSEL0_LINK               (CCL_LUTCTRL_INSEL0_LINK_Val << CCL_LUTCTRL_INSEL0_Pos) /* (CCL_LUTCTRL) Linked LUT input source Position */
@@ -112,6 +113,7 @@
 #define CCL_LUTCTRL_INSEL0_TC                 (CCL_LUTCTRL_INSEL0_TC_Val << CCL_LUTCTRL_INSEL0_Pos) /* (CCL_LUTCTRL) TC input source: TC0 (LUT0) / TC1 (LUT1) / TC2 (LUT2) / TC0 (LUT3) Position */
 #define CCL_LUTCTRL_INSEL0_TCC                (CCL_LUTCTRL_INSEL0_TCC_Val << CCL_LUTCTRL_INSEL0_Pos) /* (CCL_LUTCTRL) TCC input source: TCC0 Position */
 #define CCL_LUTCTRL_INSEL0_SERCOM             (CCL_LUTCTRL_INSEL0_SERCOM_Val << CCL_LUTCTRL_INSEL0_Pos) /* (CCL_LUTCTRL) SERCOM input source: SERCOM0 (LUT0) / SERCOM1 (LUT1) / SERCOM0 (LUT2) / SERCOM1 (LUT3) Position */
+#define CCL_LUTCTRL_INSEL0_ASYNCEVENT         (CCL_LUTCTRL_INSEL0_ASYNCEVENT_Val << CCL_LUTCTRL_INSEL0_Pos) /* (CCL_LUTCTRL) Asynchronous event input source Position */
 #define CCL_LUTCTRL_INSEL1_Pos                _UINT32_(12)                                         /* (CCL_LUTCTRL) LUT Input 1 Source Selection Position */
 #define CCL_LUTCTRL_INSEL1_Msk                (_UINT32_(0xF) << CCL_LUTCTRL_INSEL1_Pos)            /* (CCL_LUTCTRL) LUT Input 1 Source Selection Mask */
 #define CCL_LUTCTRL_INSEL1(value)             (CCL_LUTCTRL_INSEL1_Msk & (_UINT32_(value) << CCL_LUTCTRL_INSEL1_Pos)) /* Assignment of value for INSEL1 in the CCL_LUTCTRL register */
@@ -124,6 +126,7 @@
 #define   CCL_LUTCTRL_INSEL1_TC_Val           _UINT32_(0x6)                                        /* (CCL_LUTCTRL) TC input source: TC0 (LUT0) / TC1 (LUT1) / TC2 (LUT2) / TC0 (LUT3)  */
 #define   CCL_LUTCTRL_INSEL1_TCC_Val          _UINT32_(0x8)                                        /* (CCL_LUTCTRL) TCC input source: TCC0  */
 #define   CCL_LUTCTRL_INSEL1_SERCOM_Val       _UINT32_(0x9)                                        /* (CCL_LUTCTRL) SERCOM input source: SERCOM0 (LUT0) / SERCOM1 (LUT1) / SERCOM0 (LUT2) / SERCOM1 (LUT3)  */
+#define   CCL_LUTCTRL_INSEL1_ASYNCEVENT_Val   _UINT32_(0xB)                                        /* (CCL_LUTCTRL) Asynchronous event input source  */
 #define CCL_LUTCTRL_INSEL1_MASK               (CCL_LUTCTRL_INSEL1_MASK_Val << CCL_LUTCTRL_INSEL1_Pos) /* (CCL_LUTCTRL) Masked input Position */
 #define CCL_LUTCTRL_INSEL1_FEEDBACK           (CCL_LUTCTRL_INSEL1_FEEDBACK_Val << CCL_LUTCTRL_INSEL1_Pos) /* (CCL_LUTCTRL) Feedback input source Position */
 #define CCL_LUTCTRL_INSEL1_LINK               (CCL_LUTCTRL_INSEL1_LINK_Val << CCL_LUTCTRL_INSEL1_Pos) /* (CCL_LUTCTRL) Linked LUT input source Position */
@@ -133,6 +136,7 @@
 #define CCL_LUTCTRL_INSEL1_TC                 (CCL_LUTCTRL_INSEL1_TC_Val << CCL_LUTCTRL_INSEL1_Pos) /* (CCL_LUTCTRL) TC input source: TC0 (LUT0) / TC1 (LUT1) / TC2 (LUT2) / TC0 (LUT3) Position */
 #define CCL_LUTCTRL_INSEL1_TCC                (CCL_LUTCTRL_INSEL1_TCC_Val << CCL_LUTCTRL_INSEL1_Pos) /* (CCL_LUTCTRL) TCC input source: TCC0 Position */
 #define CCL_LUTCTRL_INSEL1_SERCOM             (CCL_LUTCTRL_INSEL1_SERCOM_Val << CCL_LUTCTRL_INSEL1_Pos) /* (CCL_LUTCTRL) SERCOM input source: SERCOM0 (LUT0) / SERCOM1 (LUT1) / SERCOM0 (LUT2) / SERCOM1 (LUT3) Position */
+#define CCL_LUTCTRL_INSEL1_ASYNCEVENT         (CCL_LUTCTRL_INSEL1_ASYNCEVENT_Val << CCL_LUTCTRL_INSEL1_Pos) /* (CCL_LUTCTRL) Asynchronous event input source Position */
 #define CCL_LUTCTRL_INSEL2_Pos                _UINT32_(16)                                         /* (CCL_LUTCTRL) LUT Input 2 Source Selection Position */
 #define CCL_LUTCTRL_INSEL2_Msk                (_UINT32_(0xF) << CCL_LUTCTRL_INSEL2_Pos)            /* (CCL_LUTCTRL) LUT Input 2 Source Selection Mask */
 #define CCL_LUTCTRL_INSEL2(value)             (CCL_LUTCTRL_INSEL2_Msk & (_UINT32_(value) << CCL_LUTCTRL_INSEL2_Pos)) /* Assignment of value for INSEL2 in the CCL_LUTCTRL register */
@@ -145,6 +149,7 @@
 #define   CCL_LUTCTRL_INSEL2_TC_Val           _UINT32_(0x6)                                        /* (CCL_LUTCTRL) TC input source: TC0 (LUT0) / TC1 (LUT1) / TC2 (LUT2) / TC0 (LUT3)  */
 #define   CCL_LUTCTRL_INSEL2_TCC_Val          _UINT32_(0x8)                                        /* (CCL_LUTCTRL) TCC input source: TCC0  */
 #define   CCL_LUTCTRL_INSEL2_SERCOM_Val       _UINT32_(0x9)                                        /* (CCL_LUTCTRL) SERCOM input source: SERCOM0 (LUT0) / SERCOM1 (LUT1) / SERCOM0 (LUT2) / SERCOM1 (LUT3)  */
+#define   CCL_LUTCTRL_INSEL2_ASYNCEVENT_Val   _UINT32_(0xB)                                        /* (CCL_LUTCTRL) Asynchronous event input source  */
 #define CCL_LUTCTRL_INSEL2_MASK               (CCL_LUTCTRL_INSEL2_MASK_Val << CCL_LUTCTRL_INSEL2_Pos) /* (CCL_LUTCTRL) Masked input Position */
 #define CCL_LUTCTRL_INSEL2_FEEDBACK           (CCL_LUTCTRL_INSEL2_FEEDBACK_Val << CCL_LUTCTRL_INSEL2_Pos) /* (CCL_LUTCTRL) Feedback input source Position */
 #define CCL_LUTCTRL_INSEL2_LINK               (CCL_LUTCTRL_INSEL2_LINK_Val << CCL_LUTCTRL_INSEL2_Pos) /* (CCL_LUTCTRL) Linked LUT input source Position */
@@ -154,6 +159,7 @@
 #define CCL_LUTCTRL_INSEL2_TC                 (CCL_LUTCTRL_INSEL2_TC_Val << CCL_LUTCTRL_INSEL2_Pos) /* (CCL_LUTCTRL) TC input source: TC0 (LUT0) / TC1 (LUT1) / TC2 (LUT2) / TC0 (LUT3) Position */
 #define CCL_LUTCTRL_INSEL2_TCC                (CCL_LUTCTRL_INSEL2_TCC_Val << CCL_LUTCTRL_INSEL2_Pos) /* (CCL_LUTCTRL) TCC input source: TCC0 Position */
 #define CCL_LUTCTRL_INSEL2_SERCOM             (CCL_LUTCTRL_INSEL2_SERCOM_Val << CCL_LUTCTRL_INSEL2_Pos) /* (CCL_LUTCTRL) SERCOM input source: SERCOM0 (LUT0) / SERCOM1 (LUT1) / SERCOM0 (LUT2) / SERCOM1 (LUT3) Position */
+#define CCL_LUTCTRL_INSEL2_ASYNCEVENT         (CCL_LUTCTRL_INSEL2_ASYNCEVENT_Val << CCL_LUTCTRL_INSEL2_Pos) /* (CCL_LUTCTRL) Asynchronous event input source Position */
 #define CCL_LUTCTRL_LUTINV_Pos                _UINT32_(20)                                         /* (CCL_LUTCTRL) LUT Inverted Event Input Enable Position */
 #define CCL_LUTCTRL_LUTINV_Msk                (_UINT32_(0x1) << CCL_LUTCTRL_LUTINV_Pos)            /* (CCL_LUTCTRL) LUT Inverted Event Input Enable Mask */
 #define CCL_LUTCTRL_LUTINV(value)             (CCL_LUTCTRL_LUTINV_Msk & (_UINT32_(value) << CCL_LUTCTRL_LUTINV_Pos)) /* Assignment of value for LUTINV in the CCL_LUTCTRL register */
@@ -189,11 +195,11 @@
 /* CCL register offsets definitions */
 #define CCL_CTRLA_REG_OFST             _UINT32_(0x00)      /* (CCL_CTRLA) Control A Offset */
 #define CCL_SEQCTRL_REG_OFST           _UINT32_(0x04)      /* (CCL_SEQCTRL) Sequential Control Offset */
-#define CCL_LUTCTRL_REG_OFST           _UINT32_(0x08)      /* (CCL_LUTCTRL) LUT Control n Offset */
-#define CCL_LUTCTRL0_REG_OFST          _UINT32_(0x08)      /* (CCL_LUTCTRL0) LUT Control n Offset */
-#define CCL_LUTCTRL1_REG_OFST          _UINT32_(0x0C)      /* (CCL_LUTCTRL1) LUT Control n Offset */
-#define CCL_LUTCTRL2_REG_OFST          _UINT32_(0x10)      /* (CCL_LUTCTRL2) LUT Control n Offset */
-#define CCL_LUTCTRL3_REG_OFST          _UINT32_(0x14)      /* (CCL_LUTCTRL3) LUT Control n Offset */
+#define CCL_LUTCTRL_REG_OFST           _UINT32_(0x08)      /* (CCL_LUTCTRL) LUT Control # Offset */
+#define CCL_LUTCTRL0_REG_OFST          _UINT32_(0x08)      /* (CCL_LUTCTRL0) LUT Control # Offset */
+#define CCL_LUTCTRL1_REG_OFST          _UINT32_(0x0C)      /* (CCL_LUTCTRL1) LUT Control # Offset */
+#define CCL_LUTCTRL2_REG_OFST          _UINT32_(0x10)      /* (CCL_LUTCTRL2) LUT Control # Offset */
+#define CCL_LUTCTRL3_REG_OFST          _UINT32_(0x14)      /* (CCL_LUTCTRL3) LUT Control # Offset */
 #define CCL_WPCTRL_REG_OFST            _UINT32_(0x28)      /* (CCL_WPCTRL) Write Protection Control Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
@@ -202,7 +208,7 @@ typedef struct
 {  /* Configurable Custom Logic */
   __IO  uint32_t                       CCL_CTRLA;          /* Offset: 0x00 (R/W  32) Control A */
   __IO  uint32_t                       CCL_SEQCTRL;        /* Offset: 0x04 (R/W  32) Sequential Control */
-  __IO  uint32_t                       CCL_LUTCTRL[4];     /* Offset: 0x08 (R/W  32) LUT Control n */
+  __IO  uint32_t                       CCL_LUTCTRL[4];     /* Offset: 0x08 (R/W  32) LUT Control # */
   __I   uint8_t                        Reserved1[0x10];
   __IO  uint32_t                       CCL_WPCTRL;         /* Offset: 0x28 (R/W  32) Write Protection Control */
 } ccl_registers_t;
