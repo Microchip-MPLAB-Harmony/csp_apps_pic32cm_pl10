@@ -32,15 +32,15 @@
 /* -------- DSU_CTRLB : (DSU Offset: 0x04) (R/W 32) Control B -------- */
 #define DSU_CTRLB_RESETVALUE                  _UINT32_(0x04)                                       /*  (DSU_CTRLB) Control B  Reset Value */
 
-#define DSU_CTRLB_DCCDMALVL0_Pos              _UINT32_(0)                                          /* (DSU_CTRLB) DMA Trigger n Level Position */
-#define DSU_CTRLB_DCCDMALVL0_Msk              (_UINT32_(0x1) << DSU_CTRLB_DCCDMALVL0_Pos)          /* (DSU_CTRLB) DMA Trigger n Level Mask */
+#define DSU_CTRLB_DCCDMALVL0_Pos              _UINT32_(0)                                          /* (DSU_CTRLB) DMA Trigger 0 Level Position */
+#define DSU_CTRLB_DCCDMALVL0_Msk              (_UINT32_(0x1) << DSU_CTRLB_DCCDMALVL0_Pos)          /* (DSU_CTRLB) DMA Trigger 0 Level Mask */
 #define DSU_CTRLB_DCCDMALVL0(value)           (DSU_CTRLB_DCCDMALVL0_Msk & (_UINT32_(value) << DSU_CTRLB_DCCDMALVL0_Pos)) /* Assignment of value for DCCDMALVL0 in the DSU_CTRLB register */
 #define   DSU_CTRLB_DCCDMALVL0_EMPTY_Val      _UINT32_(0x0)                                        /* (DSU_CTRLB) Trigger n rises when DCCn is read and falls when it is written  */
 #define   DSU_CTRLB_DCCDMALVL0_FULL_Val       _UINT32_(0x1)                                        /* (DSU_CTRLB) Trigger n rises when DCCn is written and falls when it is read  */
 #define DSU_CTRLB_DCCDMALVL0_EMPTY            (DSU_CTRLB_DCCDMALVL0_EMPTY_Val << DSU_CTRLB_DCCDMALVL0_Pos) /* (DSU_CTRLB) Trigger n rises when DCCn is read and falls when it is written Position */
 #define DSU_CTRLB_DCCDMALVL0_FULL             (DSU_CTRLB_DCCDMALVL0_FULL_Val << DSU_CTRLB_DCCDMALVL0_Pos) /* (DSU_CTRLB) Trigger n rises when DCCn is written and falls when it is read Position */
-#define DSU_CTRLB_DCCDMALVL1_Pos              _UINT32_(1)                                          /* (DSU_CTRLB) DMA Trigger n Level Position */
-#define DSU_CTRLB_DCCDMALVL1_Msk              (_UINT32_(0x1) << DSU_CTRLB_DCCDMALVL1_Pos)          /* (DSU_CTRLB) DMA Trigger n Level Mask */
+#define DSU_CTRLB_DCCDMALVL1_Pos              _UINT32_(1)                                          /* (DSU_CTRLB) DMA Trigger 1 Level Position */
+#define DSU_CTRLB_DCCDMALVL1_Msk              (_UINT32_(0x1) << DSU_CTRLB_DCCDMALVL1_Pos)          /* (DSU_CTRLB) DMA Trigger 1 Level Mask */
 #define DSU_CTRLB_DCCDMALVL1(value)           (DSU_CTRLB_DCCDMALVL1_Msk & (_UINT32_(value) << DSU_CTRLB_DCCDMALVL1_Pos)) /* Assignment of value for DCCDMALVL1 in the DSU_CTRLB register */
 #define   DSU_CTRLB_DCCDMALVL1_EMPTY_Val      _UINT32_(0x0)                                        /* (DSU_CTRLB) Trigger n rises when DCCn is read and falls when it is written  */
 #define   DSU_CTRLB_DCCDMALVL1_FULL_Val       _UINT32_(0x1)                                        /* (DSU_CTRLB) Trigger n rises when DCCn is written and falls when it is read  */
@@ -59,7 +59,7 @@
 #define DSU_CTRLB_QOS_HIGH                    (DSU_CTRLB_QOS_HIGH_Val << DSU_CTRLB_QOS_Pos)        /* (DSU_CTRLB) Critical latency Position */
 #define DSU_CTRLB_Msk                         _UINT32_(0x0000000F)                                 /* (DSU_CTRLB) Register Mask  */
 
-#define DSU_CTRLB_DCCDMALVL_Pos               _UINT32_(0)                                          /* (DSU_CTRLB Position) DMA Trigger n Level */
+#define DSU_CTRLB_DCCDMALVL_Pos               _UINT32_(0)                                          /* (DSU_CTRLB Position) DMA Trigger x Level */
 #define DSU_CTRLB_DCCDMALVL_Msk               (_UINT32_(0x3) << DSU_CTRLB_DCCDMALVL_Pos)           /* (DSU_CTRLB Mask) DCCDMALVL */
 #define DSU_CTRLB_DCCDMALVL(value)            (DSU_CTRLB_DCCDMALVL_Msk & (_UINT32_(value) << DSU_CTRLB_DCCDMALVL_Pos)) 
 
@@ -116,17 +116,17 @@
 /* -------- DSU_STATUSB : (DSU Offset: 0x108) ( R/ 32) Status B -------- */
 #define DSU_STATUSB_RESETVALUE                _UINT32_(0x00)                                       /*  (DSU_STATUSB) Status B  Reset Value */
 
-#define DSU_STATUSB_BCCD0_Pos                 _UINT32_(0)                                          /* (DSU_STATUSB) Boot ROM Communication Channel n Dirty Position */
-#define DSU_STATUSB_BCCD0_Msk                 (_UINT32_(0x1) << DSU_STATUSB_BCCD0_Pos)             /* (DSU_STATUSB) Boot ROM Communication Channel n Dirty Mask */
+#define DSU_STATUSB_BCCD0_Pos                 _UINT32_(0)                                          /* (DSU_STATUSB) Boot ROM Communication Channel 0 Dirty Position */
+#define DSU_STATUSB_BCCD0_Msk                 (_UINT32_(0x1) << DSU_STATUSB_BCCD0_Pos)             /* (DSU_STATUSB) Boot ROM Communication Channel 0 Dirty Mask */
 #define DSU_STATUSB_BCCD0(value)              (DSU_STATUSB_BCCD0_Msk & (_UINT32_(value) << DSU_STATUSB_BCCD0_Pos)) /* Assignment of value for BCCD0 in the DSU_STATUSB register */
-#define DSU_STATUSB_BCCD1_Pos                 _UINT32_(1)                                          /* (DSU_STATUSB) Boot ROM Communication Channel n Dirty Position */
-#define DSU_STATUSB_BCCD1_Msk                 (_UINT32_(0x1) << DSU_STATUSB_BCCD1_Pos)             /* (DSU_STATUSB) Boot ROM Communication Channel n Dirty Mask */
+#define DSU_STATUSB_BCCD1_Pos                 _UINT32_(1)                                          /* (DSU_STATUSB) Boot ROM Communication Channel 1 Dirty Position */
+#define DSU_STATUSB_BCCD1_Msk                 (_UINT32_(0x1) << DSU_STATUSB_BCCD1_Pos)             /* (DSU_STATUSB) Boot ROM Communication Channel 1 Dirty Mask */
 #define DSU_STATUSB_BCCD1(value)              (DSU_STATUSB_BCCD1_Msk & (_UINT32_(value) << DSU_STATUSB_BCCD1_Pos)) /* Assignment of value for BCCD1 in the DSU_STATUSB register */
-#define DSU_STATUSB_DCCD0_Pos                 _UINT32_(2)                                          /* (DSU_STATUSB) Debug Communication Channel n Dirty Position */
-#define DSU_STATUSB_DCCD0_Msk                 (_UINT32_(0x1) << DSU_STATUSB_DCCD0_Pos)             /* (DSU_STATUSB) Debug Communication Channel n Dirty Mask */
+#define DSU_STATUSB_DCCD0_Pos                 _UINT32_(2)                                          /* (DSU_STATUSB) Debug Communication Channel 0 Dirty Position */
+#define DSU_STATUSB_DCCD0_Msk                 (_UINT32_(0x1) << DSU_STATUSB_DCCD0_Pos)             /* (DSU_STATUSB) Debug Communication Channel 0 Dirty Mask */
 #define DSU_STATUSB_DCCD0(value)              (DSU_STATUSB_DCCD0_Msk & (_UINT32_(value) << DSU_STATUSB_DCCD0_Pos)) /* Assignment of value for DCCD0 in the DSU_STATUSB register */
-#define DSU_STATUSB_DCCD1_Pos                 _UINT32_(3)                                          /* (DSU_STATUSB) Debug Communication Channel n Dirty Position */
-#define DSU_STATUSB_DCCD1_Msk                 (_UINT32_(0x1) << DSU_STATUSB_DCCD1_Pos)             /* (DSU_STATUSB) Debug Communication Channel n Dirty Mask */
+#define DSU_STATUSB_DCCD1_Pos                 _UINT32_(3)                                          /* (DSU_STATUSB) Debug Communication Channel 1 Dirty Position */
+#define DSU_STATUSB_DCCD1_Msk                 (_UINT32_(0x1) << DSU_STATUSB_DCCD1_Pos)             /* (DSU_STATUSB) Debug Communication Channel 1 Dirty Mask */
 #define DSU_STATUSB_DCCD1(value)              (DSU_STATUSB_DCCD1_Msk & (_UINT32_(value) << DSU_STATUSB_DCCD1_Pos)) /* Assignment of value for DCCD1 in the DSU_STATUSB register */
 #define DSU_STATUSB_DBGPRES_Pos               _UINT32_(8)                                          /* (DSU_STATUSB) Debugger Present Status Position */
 #define DSU_STATUSB_DBGPRES_Msk               (_UINT32_(0x1) << DSU_STATUSB_DBGPRES_Pos)           /* (DSU_STATUSB) Debugger Present Status Mask */
@@ -136,21 +136,21 @@
 #define DSU_STATUSB_HPS(value)                (DSU_STATUSB_HPS_Msk & (_UINT32_(value) << DSU_STATUSB_HPS_Pos)) /* Assignment of value for HPS in the DSU_STATUSB register */
 #define DSU_STATUSB_Msk                       _UINT32_(0x0000050F)                                 /* (DSU_STATUSB) Register Mask  */
 
-#define DSU_STATUSB_BCCD_Pos                  _UINT32_(0)                                          /* (DSU_STATUSB Position) Boot ROM Communication Channel n Dirty */
+#define DSU_STATUSB_BCCD_Pos                  _UINT32_(0)                                          /* (DSU_STATUSB Position) Boot ROM Communication Channel x Dirty */
 #define DSU_STATUSB_BCCD_Msk                  (_UINT32_(0x3) << DSU_STATUSB_BCCD_Pos)              /* (DSU_STATUSB Mask) BCCD */
 #define DSU_STATUSB_BCCD(value)               (DSU_STATUSB_BCCD_Msk & (_UINT32_(value) << DSU_STATUSB_BCCD_Pos)) 
-#define DSU_STATUSB_DCCD_Pos                  _UINT32_(2)                                          /* (DSU_STATUSB Position) Debug Communication Channel n Dirty */
+#define DSU_STATUSB_DCCD_Pos                  _UINT32_(2)                                          /* (DSU_STATUSB Position) Debug Communication Channel x Dirty */
 #define DSU_STATUSB_DCCD_Msk                  (_UINT32_(0x3) << DSU_STATUSB_DCCD_Pos)              /* (DSU_STATUSB Mask) DCCD */
 #define DSU_STATUSB_DCCD(value)               (DSU_STATUSB_DCCD_Msk & (_UINT32_(value) << DSU_STATUSB_DCCD_Pos)) 
 
-/* -------- DSU_BCC : (DSU Offset: 0x110) (R/W 32) Boot ROM Channel n -------- */
+/* -------- DSU_BCC : (DSU Offset: 0x110) (R/W 32) Boot ROM Channel # -------- */
 #define DSU_BCC_DATA_Pos                      _UINT32_(0)                                          /* (DSU_BCC) Data Position */
 #define DSU_BCC_DATA_Msk                      (_UINT32_(0xFFFFFFFF) << DSU_BCC_DATA_Pos)           /* (DSU_BCC) Data Mask */
 #define DSU_BCC_DATA(value)                   (DSU_BCC_DATA_Msk & (_UINT32_(value) << DSU_BCC_DATA_Pos)) /* Assignment of value for DATA in the DSU_BCC register */
 #define DSU_BCC_Msk                           _UINT32_(0xFFFFFFFF)                                 /* (DSU_BCC) Register Mask  */
 
 
-/* -------- DSU_DCC : (DSU Offset: 0x118) (R/W 32) Debug Communication Channel n -------- */
+/* -------- DSU_DCC : (DSU Offset: 0x118) (R/W 32) Debug Communication Channel # -------- */
 #define DSU_DCC_DATA_Pos                      _UINT32_(0)                                          /* (DSU_DCC) Data Position */
 #define DSU_DCC_DATA_Msk                      (_UINT32_(0xFFFFFFFF) << DSU_DCC_DATA_Pos)           /* (DSU_DCC) Data Mask */
 #define DSU_DCC_DATA(value)                   (DSU_DCC_DATA_Msk & (_UINT32_(value) << DSU_DCC_DATA_Pos)) /* Assignment of value for DATA in the DSU_DCC register */
@@ -380,12 +380,12 @@
 #define DSU_CTRLC_REG_OFST             _UINT32_(0x100)     /* (DSU_CTRLC) Control C Offset */
 #define DSU_STATUSA_REG_OFST           _UINT32_(0x104)     /* (DSU_STATUSA) Status A Offset */
 #define DSU_STATUSB_REG_OFST           _UINT32_(0x108)     /* (DSU_STATUSB) Status B Offset */
-#define DSU_BCC_REG_OFST               _UINT32_(0x110)     /* (DSU_BCC) Boot ROM Channel n Offset */
-#define DSU_BCC0_REG_OFST              _UINT32_(0x110)     /* (DSU_BCC0) Boot ROM Channel n Offset */
-#define DSU_BCC1_REG_OFST              _UINT32_(0x114)     /* (DSU_BCC1) Boot ROM Channel n Offset */
-#define DSU_DCC_REG_OFST               _UINT32_(0x118)     /* (DSU_DCC) Debug Communication Channel n Offset */
-#define DSU_DCC0_REG_OFST              _UINT32_(0x118)     /* (DSU_DCC0) Debug Communication Channel n Offset */
-#define DSU_DCC1_REG_OFST              _UINT32_(0x11C)     /* (DSU_DCC1) Debug Communication Channel n Offset */
+#define DSU_BCC_REG_OFST               _UINT32_(0x110)     /* (DSU_BCC) Boot ROM Channel # Offset */
+#define DSU_BCC0_REG_OFST              _UINT32_(0x110)     /* (DSU_BCC0) Boot ROM Channel # Offset */
+#define DSU_BCC1_REG_OFST              _UINT32_(0x114)     /* (DSU_BCC1) Boot ROM Channel # Offset */
+#define DSU_DCC_REG_OFST               _UINT32_(0x118)     /* (DSU_DCC) Debug Communication Channel # Offset */
+#define DSU_DCC0_REG_OFST              _UINT32_(0x118)     /* (DSU_DCC0) Debug Communication Channel # Offset */
+#define DSU_DCC1_REG_OFST              _UINT32_(0x11C)     /* (DSU_DCC1) Debug Communication Channel # Offset */
 #define DSU_DID_REG_OFST               _UINT32_(0x120)     /* (DSU_DID) Device Identification Offset */
 #define DSU_DAL_REG_OFST               _UINT32_(0x124)     /* (DSU_DAL) Debugger Access Level Offset */
 #define DSU_ENTRY0_REG_OFST            _UINT32_(0x1000)    /* (DSU_ENTRY0) CoreSight ROM Table Entry 0 Offset */
@@ -418,8 +418,8 @@ typedef struct
   __I   uint32_t                       DSU_STATUSA;        /* Offset: 0x104 (R/   32) Status A */
   __I   uint32_t                       DSU_STATUSB;        /* Offset: 0x108 (R/   32) Status B */
   __I   uint8_t                        Reserved3[0x04];
-  __IO  uint32_t                       DSU_BCC[2];         /* Offset: 0x110 (R/W  32) Boot ROM Channel n */
-  __IO  uint32_t                       DSU_DCC[2];         /* Offset: 0x118 (R/W  32) Debug Communication Channel n */
+  __IO  uint32_t                       DSU_BCC[2];         /* Offset: 0x110 (R/W  32) Boot ROM Channel # */
+  __IO  uint32_t                       DSU_DCC[2];         /* Offset: 0x118 (R/W  32) Debug Communication Channel # */
   __I   uint32_t                       DSU_DID;            /* Offset: 0x120 (R/   32) Device Identification */
   __I   uint32_t                       DSU_DAL;            /* Offset: 0x124 (R/   32) Debugger Access Level */
   __I   uint8_t                        Reserved4[0xED8];
