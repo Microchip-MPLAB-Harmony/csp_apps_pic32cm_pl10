@@ -185,8 +185,8 @@ typedef enum
 
 typedef enum
 {
-        USART_STOP_0_BIT = SERCOM_USART_CTRLB_SBMODE_ONE,
-    USART_STOP_1_BIT = SERCOM_USART_CTRLB_SBMODE_TWO,
+        USART_STOP_0_BIT = SERCOM_USART_CTRLB_SBMODE_1_BIT,
+    USART_STOP_1_BIT = SERCOM_USART_CTRLB_SBMODE_2_BIT,
 
 
     /* Force the compiler to reserve 32-bit memory for each enum */

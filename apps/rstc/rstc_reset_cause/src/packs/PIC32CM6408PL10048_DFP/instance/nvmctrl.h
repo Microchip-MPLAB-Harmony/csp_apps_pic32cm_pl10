@@ -25,7 +25,6 @@
 
 
 /* ========== Instance Parameter definitions for NVMCTRL peripheral ========== */
-#define NVMCTRL_CTRLAPRIV_IMPLEMENTED            (0)
 #define NVMCTRL_FACTORY_WORD_IMPLEMENTED_MASK    (0xC0000007FFFFFFFF)
 #define NVMCTRL_FLASH_SIZE                       (65536)
 #define NVMCTRL_INSTANCE_ID                      (34)       /* Instance index for NVMCTRL */
@@ -34,6 +33,7 @@
 #define NVMCTRL_PAGE_SIZE                        (512)
 #define NVMCTRL_PMSB                             (3)
 #define NVMCTRL_PSZ_BITS                         (9)
+#define NVMCTRL_REGION_LOCK_NUM                  (16)       /* Number of regions that can be individually protected or unprotected */
 #define NVMCTRL_ROW_PAGES                        (4)
 #define NVMCTRL_USER_WORD_IMPLEMENTED_MASK       (0xC01FFFFFFFFFFFFF)
 

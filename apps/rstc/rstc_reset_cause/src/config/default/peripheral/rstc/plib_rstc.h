@@ -86,10 +86,6 @@
 
 #define RSTC_RESET_CAUSE_LOCKUP_RESET  RSTC_RCAUSE_LOCKUP_Msk
 
-#define RSTC_RESET_CAUSE_HV_RESET  RSTC_RCAUSE_HV_Msk
-
-#define RSTC_RESET_CAUSE_HVPRES_RESET  RSTC_RCAUSE_HVPRES_Msk
-
 
 // *****************************************************************************
 // *****************************************************************************

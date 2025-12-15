@@ -52,10 +52,10 @@
 #define TC_CTRLA_PRESCSYNC(value)             (TC_CTRLA_PRESCSYNC_Msk & (_UINT32_(value) << TC_CTRLA_PRESCSYNC_Pos)) /* Assignment of value for PRESCSYNC in the TC_CTRLA register */
 #define   TC_CTRLA_PRESCSYNC_GCLK_Val         _UINT32_(0x0)                                        /* (TC_CTRLA) Reload or reset the counter on next generic clock  */
 #define   TC_CTRLA_PRESCSYNC_PRESC_Val        _UINT32_(0x1)                                        /* (TC_CTRLA) Reload or reset the counter on next prescaler clock  */
-#define   TC_CTRLA_PRESCSYNC_RESYNC_Val       _UINT32_(0x2)                                        /* (TC_CTRLA) Reload or reset the counter on next generic clock. Reset the prescaler counter  */
+#define   TC_CTRLA_PRESCSYNC_RESYNC_Val       _UINT32_(0x2)                                        /* (TC_CTRLA) Reload or reset the counter on next generic clock. Reset the prescaler counter.  */
 #define TC_CTRLA_PRESCSYNC_GCLK               (TC_CTRLA_PRESCSYNC_GCLK_Val << TC_CTRLA_PRESCSYNC_Pos) /* (TC_CTRLA) Reload or reset the counter on next generic clock Position */
 #define TC_CTRLA_PRESCSYNC_PRESC              (TC_CTRLA_PRESCSYNC_PRESC_Val << TC_CTRLA_PRESCSYNC_Pos) /* (TC_CTRLA) Reload or reset the counter on next prescaler clock Position */
-#define TC_CTRLA_PRESCSYNC_RESYNC             (TC_CTRLA_PRESCSYNC_RESYNC_Val << TC_CTRLA_PRESCSYNC_Pos) /* (TC_CTRLA) Reload or reset the counter on next generic clock. Reset the prescaler counter Position */
+#define TC_CTRLA_PRESCSYNC_RESYNC             (TC_CTRLA_PRESCSYNC_RESYNC_Val << TC_CTRLA_PRESCSYNC_Pos) /* (TC_CTRLA) Reload or reset the counter on next generic clock. Reset the prescaler counter. Position */
 #define TC_CTRLA_RUNSTDBY_Pos                 _UINT32_(6)                                          /* (TC_CTRLA) Run in Standby Position */
 #define TC_CTRLA_RUNSTDBY_Msk                 (_UINT32_(0x1) << TC_CTRLA_RUNSTDBY_Pos)             /* (TC_CTRLA) Run in Standby Mask */
 #define TC_CTRLA_RUNSTDBY(value)              (TC_CTRLA_RUNSTDBY_Msk & (_UINT32_(value) << TC_CTRLA_RUNSTDBY_Pos)) /* Assignment of value for RUNSTDBY in the TC_CTRLA register */
@@ -84,24 +84,45 @@
 #define TC_CTRLA_ALOCK_Pos                    _UINT32_(11)                                         /* (TC_CTRLA) Auto Lock Position */
 #define TC_CTRLA_ALOCK_Msk                    (_UINT32_(0x1) << TC_CTRLA_ALOCK_Pos)                /* (TC_CTRLA) Auto Lock Mask */
 #define TC_CTRLA_ALOCK(value)                 (TC_CTRLA_ALOCK_Msk & (_UINT32_(value) << TC_CTRLA_ALOCK_Pos)) /* Assignment of value for ALOCK in the TC_CTRLA register */
-#define TC_CTRLA_CAPTEN0_Pos                  _UINT32_(16)                                         /* (TC_CTRLA) Capture Channel # Enable Position */
-#define TC_CTRLA_CAPTEN0_Msk                  (_UINT32_(0x1) << TC_CTRLA_CAPTEN0_Pos)              /* (TC_CTRLA) Capture Channel # Enable Mask */
+#define TC_CTRLA_DMAOS_Pos                    _UINT32_(15)                                         /* (TC_CTRLA) DMA One-Shot Trigger Mode Position */
+#define TC_CTRLA_DMAOS_Msk                    (_UINT32_(0x1) << TC_CTRLA_DMAOS_Pos)                /* (TC_CTRLA) DMA One-Shot Trigger Mode Mask */
+#define TC_CTRLA_DMAOS(value)                 (TC_CTRLA_DMAOS_Msk & (_UINT32_(value) << TC_CTRLA_DMAOS_Pos)) /* Assignment of value for DMAOS in the TC_CTRLA register */
+#define TC_CTRLA_CAPTEN0_Pos                  _UINT32_(16)                                         /* (TC_CTRLA) Capture Channel 0 Enable Position */
+#define TC_CTRLA_CAPTEN0_Msk                  (_UINT32_(0x1) << TC_CTRLA_CAPTEN0_Pos)              /* (TC_CTRLA) Capture Channel 0 Enable Mask */
 #define TC_CTRLA_CAPTEN0(value)               (TC_CTRLA_CAPTEN0_Msk & (_UINT32_(value) << TC_CTRLA_CAPTEN0_Pos)) /* Assignment of value for CAPTEN0 in the TC_CTRLA register */
-#define TC_CTRLA_CAPTEN1_Pos                  _UINT32_(17)                                         /* (TC_CTRLA) Capture Channel # Enable Position */
-#define TC_CTRLA_CAPTEN1_Msk                  (_UINT32_(0x1) << TC_CTRLA_CAPTEN1_Pos)              /* (TC_CTRLA) Capture Channel # Enable Mask */
+#define TC_CTRLA_CAPTEN1_Pos                  _UINT32_(17)                                         /* (TC_CTRLA) Capture Channel 1 Enable Position */
+#define TC_CTRLA_CAPTEN1_Msk                  (_UINT32_(0x1) << TC_CTRLA_CAPTEN1_Pos)              /* (TC_CTRLA) Capture Channel 1 Enable Mask */
 #define TC_CTRLA_CAPTEN1(value)               (TC_CTRLA_CAPTEN1_Msk & (_UINT32_(value) << TC_CTRLA_CAPTEN1_Pos)) /* Assignment of value for CAPTEN1 in the TC_CTRLA register */
-#define TC_CTRLA_COPEN0_Pos                   _UINT32_(20)                                         /* (TC_CTRLA) Capture On Pin # Enable Position */
-#define TC_CTRLA_COPEN0_Msk                   (_UINT32_(0x1) << TC_CTRLA_COPEN0_Pos)               /* (TC_CTRLA) Capture On Pin # Enable Mask */
+#define TC_CTRLA_COPEN0_Pos                   _UINT32_(20)                                         /* (TC_CTRLA) Capture On Pin 0 Enable Position */
+#define TC_CTRLA_COPEN0_Msk                   (_UINT32_(0x1) << TC_CTRLA_COPEN0_Pos)               /* (TC_CTRLA) Capture On Pin 0 Enable Mask */
 #define TC_CTRLA_COPEN0(value)                (TC_CTRLA_COPEN0_Msk & (_UINT32_(value) << TC_CTRLA_COPEN0_Pos)) /* Assignment of value for COPEN0 in the TC_CTRLA register */
-#define TC_CTRLA_COPEN1_Pos                   _UINT32_(21)                                         /* (TC_CTRLA) Capture On Pin # Enable Position */
-#define TC_CTRLA_COPEN1_Msk                   (_UINT32_(0x1) << TC_CTRLA_COPEN1_Pos)               /* (TC_CTRLA) Capture On Pin # Enable Mask */
+#define TC_CTRLA_COPEN1_Pos                   _UINT32_(21)                                         /* (TC_CTRLA) Capture On Pin 1 Enable Position */
+#define TC_CTRLA_COPEN1_Msk                   (_UINT32_(0x1) << TC_CTRLA_COPEN1_Pos)               /* (TC_CTRLA) Capture On Pin 1 Enable Mask */
 #define TC_CTRLA_COPEN1(value)                (TC_CTRLA_COPEN1_Msk & (_UINT32_(value) << TC_CTRLA_COPEN1_Pos)) /* Assignment of value for COPEN1 in the TC_CTRLA register */
-#define TC_CTRLA_Msk                          _UINT32_(0x00330FFF)                                 /* (TC_CTRLA) Register Mask  */
+#define TC_CTRLA_CAPTMODE0_Pos                _UINT32_(24)                                         /* (TC_CTRLA) Capture mode Channel 0 Position */
+#define TC_CTRLA_CAPTMODE0_Msk                (_UINT32_(0x3) << TC_CTRLA_CAPTMODE0_Pos)            /* (TC_CTRLA) Capture mode Channel 0 Mask */
+#define TC_CTRLA_CAPTMODE0(value)             (TC_CTRLA_CAPTMODE0_Msk & (_UINT32_(value) << TC_CTRLA_CAPTMODE0_Pos)) /* Assignment of value for CAPTMODE0 in the TC_CTRLA register */
+#define   TC_CTRLA_CAPTMODE0_DEFAULT_Val      _UINT32_(0x0)                                        /* (TC_CTRLA) Default capture  */
+#define   TC_CTRLA_CAPTMODE0_CAPTMIN_Val      _UINT32_(0x1)                                        /* (TC_CTRLA) Minimum capture  */
+#define   TC_CTRLA_CAPTMODE0_CAPTMAX_Val      _UINT32_(0x2)                                        /* (TC_CTRLA) Maximum capture  */
+#define TC_CTRLA_CAPTMODE0_DEFAULT            (TC_CTRLA_CAPTMODE0_DEFAULT_Val << TC_CTRLA_CAPTMODE0_Pos) /* (TC_CTRLA) Default capture Position */
+#define TC_CTRLA_CAPTMODE0_CAPTMIN            (TC_CTRLA_CAPTMODE0_CAPTMIN_Val << TC_CTRLA_CAPTMODE0_Pos) /* (TC_CTRLA) Minimum capture Position */
+#define TC_CTRLA_CAPTMODE0_CAPTMAX            (TC_CTRLA_CAPTMODE0_CAPTMAX_Val << TC_CTRLA_CAPTMODE0_Pos) /* (TC_CTRLA) Maximum capture Position */
+#define TC_CTRLA_CAPTMODE1_Pos                _UINT32_(27)                                         /* (TC_CTRLA) Capture mode Channel 1 Position */
+#define TC_CTRLA_CAPTMODE1_Msk                (_UINT32_(0x3) << TC_CTRLA_CAPTMODE1_Pos)            /* (TC_CTRLA) Capture mode Channel 1 Mask */
+#define TC_CTRLA_CAPTMODE1(value)             (TC_CTRLA_CAPTMODE1_Msk & (_UINT32_(value) << TC_CTRLA_CAPTMODE1_Pos)) /* Assignment of value for CAPTMODE1 in the TC_CTRLA register */
+#define   TC_CTRLA_CAPTMODE1_DEFAULT_Val      _UINT32_(0x0)                                        /* (TC_CTRLA) Default capture  */
+#define   TC_CTRLA_CAPTMODE1_CAPTMIN_Val      _UINT32_(0x1)                                        /* (TC_CTRLA) Minimum capture  */
+#define   TC_CTRLA_CAPTMODE1_CAPTMAX_Val      _UINT32_(0x2)                                        /* (TC_CTRLA) Maximum capture  */
+#define TC_CTRLA_CAPTMODE1_DEFAULT            (TC_CTRLA_CAPTMODE1_DEFAULT_Val << TC_CTRLA_CAPTMODE1_Pos) /* (TC_CTRLA) Default capture Position */
+#define TC_CTRLA_CAPTMODE1_CAPTMIN            (TC_CTRLA_CAPTMODE1_CAPTMIN_Val << TC_CTRLA_CAPTMODE1_Pos) /* (TC_CTRLA) Minimum capture Position */
+#define TC_CTRLA_CAPTMODE1_CAPTMAX            (TC_CTRLA_CAPTMODE1_CAPTMAX_Val << TC_CTRLA_CAPTMODE1_Pos) /* (TC_CTRLA) Maximum capture Position */
+#define TC_CTRLA_Msk                          _UINT32_(0x1B338FFF)                                 /* (TC_CTRLA) Register Mask  */
 
-#define TC_CTRLA_CAPTEN_Pos                   _UINT32_(16)                                         /* (TC_CTRLA Position) Capture Channel # Enable */
+#define TC_CTRLA_CAPTEN_Pos                   _UINT32_(16)                                         /* (TC_CTRLA Position) Capture Channel x Enable */
 #define TC_CTRLA_CAPTEN_Msk                   (_UINT32_(0x3) << TC_CTRLA_CAPTEN_Pos)               /* (TC_CTRLA Mask) CAPTEN */
 #define TC_CTRLA_CAPTEN(value)                (TC_CTRLA_CAPTEN_Msk & (_UINT32_(value) << TC_CTRLA_CAPTEN_Pos)) 
-#define TC_CTRLA_COPEN_Pos                    _UINT32_(20)                                         /* (TC_CTRLA Position) Capture On Pin # Enable */
+#define TC_CTRLA_COPEN_Pos                    _UINT32_(20)                                         /* (TC_CTRLA Position) Capture On Pin x Enable */
 #define TC_CTRLA_COPEN_Msk                    (_UINT32_(0x3) << TC_CTRLA_COPEN_Pos)                /* (TC_CTRLA Mask) COPEN */
 #define TC_CTRLA_COPEN(value)                 (TC_CTRLA_COPEN_Msk & (_UINT32_(value) << TC_CTRLA_COPEN_Pos)) 
 
@@ -120,16 +141,6 @@
 #define TC_CTRLBCLR_CMD_Pos                   _UINT8_(5)                                           /* (TC_CTRLBCLR) Command Position */
 #define TC_CTRLBCLR_CMD_Msk                   (_UINT8_(0x7) << TC_CTRLBCLR_CMD_Pos)                /* (TC_CTRLBCLR) Command Mask */
 #define TC_CTRLBCLR_CMD(value)                (TC_CTRLBCLR_CMD_Msk & (_UINT8_(value) << TC_CTRLBCLR_CMD_Pos)) /* Assignment of value for CMD in the TC_CTRLBCLR register */
-#define   TC_CTRLBCLR_CMD_NONE_Val            _UINT8_(0x0)                                         /* (TC_CTRLBCLR) No action  */
-#define   TC_CTRLBCLR_CMD_RETRIGGER_Val       _UINT8_(0x1)                                         /* (TC_CTRLBCLR) Force a start, restart or retrigger  */
-#define   TC_CTRLBCLR_CMD_STOP_Val            _UINT8_(0x2)                                         /* (TC_CTRLBCLR) Force a stop  */
-#define   TC_CTRLBCLR_CMD_UPDATE_Val          _UINT8_(0x3)                                         /* (TC_CTRLBCLR) Force update of double-buffered registers  */
-#define   TC_CTRLBCLR_CMD_READSYNC_Val        _UINT8_(0x4)                                         /* (TC_CTRLBCLR) Force a read synchronization of COUNT  */
-#define TC_CTRLBCLR_CMD_NONE                  (TC_CTRLBCLR_CMD_NONE_Val << TC_CTRLBCLR_CMD_Pos)    /* (TC_CTRLBCLR) No action Position */
-#define TC_CTRLBCLR_CMD_RETRIGGER             (TC_CTRLBCLR_CMD_RETRIGGER_Val << TC_CTRLBCLR_CMD_Pos) /* (TC_CTRLBCLR) Force a start, restart or retrigger Position */
-#define TC_CTRLBCLR_CMD_STOP                  (TC_CTRLBCLR_CMD_STOP_Val << TC_CTRLBCLR_CMD_Pos)    /* (TC_CTRLBCLR) Force a stop Position */
-#define TC_CTRLBCLR_CMD_UPDATE                (TC_CTRLBCLR_CMD_UPDATE_Val << TC_CTRLBCLR_CMD_Pos)  /* (TC_CTRLBCLR) Force update of double-buffered registers Position */
-#define TC_CTRLBCLR_CMD_READSYNC              (TC_CTRLBCLR_CMD_READSYNC_Val << TC_CTRLBCLR_CMD_Pos) /* (TC_CTRLBCLR) Force a read synchronization of COUNT Position */
 #define TC_CTRLBCLR_Msk                       _UINT8_(0xE7)                                        /* (TC_CTRLBCLR) Register Mask  */
 
 
@@ -153,11 +164,13 @@
 #define   TC_CTRLBSET_CMD_STOP_Val            _UINT8_(0x2)                                         /* (TC_CTRLBSET) Force a stop  */
 #define   TC_CTRLBSET_CMD_UPDATE_Val          _UINT8_(0x3)                                         /* (TC_CTRLBSET) Force update of double buffered registers  */
 #define   TC_CTRLBSET_CMD_READSYNC_Val        _UINT8_(0x4)                                         /* (TC_CTRLBSET) Force a read synchronization of COUNT  */
+#define   TC_CTRLBSET_CMD_DMAOS_Val           _UINT8_(0x5)                                         /* (TC_CTRLBSET) One-shot DMA trigger  */
 #define TC_CTRLBSET_CMD_NONE                  (TC_CTRLBSET_CMD_NONE_Val << TC_CTRLBSET_CMD_Pos)    /* (TC_CTRLBSET) No action Position */
 #define TC_CTRLBSET_CMD_RETRIGGER             (TC_CTRLBSET_CMD_RETRIGGER_Val << TC_CTRLBSET_CMD_Pos) /* (TC_CTRLBSET) Force a start, restart or retrigger Position */
 #define TC_CTRLBSET_CMD_STOP                  (TC_CTRLBSET_CMD_STOP_Val << TC_CTRLBSET_CMD_Pos)    /* (TC_CTRLBSET) Force a stop Position */
 #define TC_CTRLBSET_CMD_UPDATE                (TC_CTRLBSET_CMD_UPDATE_Val << TC_CTRLBSET_CMD_Pos)  /* (TC_CTRLBSET) Force update of double buffered registers Position */
 #define TC_CTRLBSET_CMD_READSYNC              (TC_CTRLBSET_CMD_READSYNC_Val << TC_CTRLBSET_CMD_Pos) /* (TC_CTRLBSET) Force a read synchronization of COUNT Position */
+#define TC_CTRLBSET_CMD_DMAOS                 (TC_CTRLBSET_CMD_DMAOS_Val << TC_CTRLBSET_CMD_Pos)   /* (TC_CTRLBSET) One-shot DMA trigger Position */
 #define TC_CTRLBSET_Msk                       _UINT8_(0xE7)                                        /* (TC_CTRLBSET) Register Mask  */
 
 
@@ -192,15 +205,15 @@
 #define TC_EVCTRL_OVFEO_Pos                   _UINT16_(8)                                          /* (TC_EVCTRL) Overflow/Underflow Event Output Enable Position */
 #define TC_EVCTRL_OVFEO_Msk                   (_UINT16_(0x1) << TC_EVCTRL_OVFEO_Pos)               /* (TC_EVCTRL) Overflow/Underflow Event Output Enable Mask */
 #define TC_EVCTRL_OVFEO(value)                (TC_EVCTRL_OVFEO_Msk & (_UINT16_(value) << TC_EVCTRL_OVFEO_Pos)) /* Assignment of value for OVFEO in the TC_EVCTRL register */
-#define TC_EVCTRL_MCEO0_Pos                   _UINT16_(12)                                         /* (TC_EVCTRL) Match or Capture Channel 0 Event Output Enable [x = 1..0] Position */
-#define TC_EVCTRL_MCEO0_Msk                   (_UINT16_(0x1) << TC_EVCTRL_MCEO0_Pos)               /* (TC_EVCTRL) Match or Capture Channel 0 Event Output Enable [x = 1..0] Mask */
+#define TC_EVCTRL_MCEO0_Pos                   _UINT16_(12)                                         /* (TC_EVCTRL) Match or Capture Channel 0 Event Output Enable Position */
+#define TC_EVCTRL_MCEO0_Msk                   (_UINT16_(0x1) << TC_EVCTRL_MCEO0_Pos)               /* (TC_EVCTRL) Match or Capture Channel 0 Event Output Enable Mask */
 #define TC_EVCTRL_MCEO0(value)                (TC_EVCTRL_MCEO0_Msk & (_UINT16_(value) << TC_EVCTRL_MCEO0_Pos)) /* Assignment of value for MCEO0 in the TC_EVCTRL register */
-#define TC_EVCTRL_MCEO1_Pos                   _UINT16_(13)                                         /* (TC_EVCTRL) Match or Capture Channel 1 Event Output Enable [x = 1..0] Position */
-#define TC_EVCTRL_MCEO1_Msk                   (_UINT16_(0x1) << TC_EVCTRL_MCEO1_Pos)               /* (TC_EVCTRL) Match or Capture Channel 1 Event Output Enable [x = 1..0] Mask */
+#define TC_EVCTRL_MCEO1_Pos                   _UINT16_(13)                                         /* (TC_EVCTRL) Match or Capture Channel 1 Event Output Enable Position */
+#define TC_EVCTRL_MCEO1_Msk                   (_UINT16_(0x1) << TC_EVCTRL_MCEO1_Pos)               /* (TC_EVCTRL) Match or Capture Channel 1 Event Output Enable Mask */
 #define TC_EVCTRL_MCEO1(value)                (TC_EVCTRL_MCEO1_Msk & (_UINT16_(value) << TC_EVCTRL_MCEO1_Pos)) /* Assignment of value for MCEO1 in the TC_EVCTRL register */
 #define TC_EVCTRL_Msk                         _UINT16_(0x3137)                                     /* (TC_EVCTRL) Register Mask  */
 
-#define TC_EVCTRL_MCEO_Pos                    _UINT16_(12)                                         /* (TC_EVCTRL Position) Match or Capture Channel x Event Output Enable [x = x..x] */
+#define TC_EVCTRL_MCEO_Pos                    _UINT16_(12)                                         /* (TC_EVCTRL Position) Match or Capture Channel x Event Output Enable */
 #define TC_EVCTRL_MCEO_Msk                    (_UINT16_(0x3) << TC_EVCTRL_MCEO_Pos)                /* (TC_EVCTRL Mask) MCEO */
 #define TC_EVCTRL_MCEO(value)                 (TC_EVCTRL_MCEO_Msk & (_UINT16_(value) << TC_EVCTRL_MCEO_Pos)) 
 
@@ -213,15 +226,15 @@
 #define TC_INTENCLR_ERR_Pos                   _UINT8_(1)                                           /* (TC_INTENCLR) Error Interrupt Enable Position */
 #define TC_INTENCLR_ERR_Msk                   (_UINT8_(0x1) << TC_INTENCLR_ERR_Pos)                /* (TC_INTENCLR) Error Interrupt Enable Mask */
 #define TC_INTENCLR_ERR(value)                (TC_INTENCLR_ERR_Msk & (_UINT8_(value) << TC_INTENCLR_ERR_Pos)) /* Assignment of value for ERR in the TC_INTENCLR register */
-#define TC_INTENCLR_MC0_Pos                   _UINT8_(4)                                           /* (TC_INTENCLR) Match or Capture Channel 0 Interrupt Disable Position */
-#define TC_INTENCLR_MC0_Msk                   (_UINT8_(0x1) << TC_INTENCLR_MC0_Pos)                /* (TC_INTENCLR) Match or Capture Channel 0 Interrupt Disable Mask */
+#define TC_INTENCLR_MC0_Pos                   _UINT8_(4)                                           /* (TC_INTENCLR) Match or Capture Channel 0 Interrupt Enable Position */
+#define TC_INTENCLR_MC0_Msk                   (_UINT8_(0x1) << TC_INTENCLR_MC0_Pos)                /* (TC_INTENCLR) Match or Capture Channel 0 Interrupt Enable Mask */
 #define TC_INTENCLR_MC0(value)                (TC_INTENCLR_MC0_Msk & (_UINT8_(value) << TC_INTENCLR_MC0_Pos)) /* Assignment of value for MC0 in the TC_INTENCLR register */
-#define TC_INTENCLR_MC1_Pos                   _UINT8_(5)                                           /* (TC_INTENCLR) Match or Capture Channel 1 Interrupt Disable Position */
-#define TC_INTENCLR_MC1_Msk                   (_UINT8_(0x1) << TC_INTENCLR_MC1_Pos)                /* (TC_INTENCLR) Match or Capture Channel 1 Interrupt Disable Mask */
+#define TC_INTENCLR_MC1_Pos                   _UINT8_(5)                                           /* (TC_INTENCLR) Match or Capture Channel 1 Interrupt Enable Position */
+#define TC_INTENCLR_MC1_Msk                   (_UINT8_(0x1) << TC_INTENCLR_MC1_Pos)                /* (TC_INTENCLR) Match or Capture Channel 1 Interrupt Enable Mask */
 #define TC_INTENCLR_MC1(value)                (TC_INTENCLR_MC1_Msk & (_UINT8_(value) << TC_INTENCLR_MC1_Pos)) /* Assignment of value for MC1 in the TC_INTENCLR register */
 #define TC_INTENCLR_Msk                       _UINT8_(0x33)                                        /* (TC_INTENCLR) Register Mask  */
 
-#define TC_INTENCLR_MC_Pos                    _UINT8_(4)                                           /* (TC_INTENCLR Position) Match or Capture Channel x Interrupt Disable */
+#define TC_INTENCLR_MC_Pos                    _UINT8_(4)                                           /* (TC_INTENCLR Position) Match or Capture Channel x Interrupt Enable */
 #define TC_INTENCLR_MC_Msk                    (_UINT8_(0x3) << TC_INTENCLR_MC_Pos)                 /* (TC_INTENCLR Mask) MC */
 #define TC_INTENCLR_MC(value)                 (TC_INTENCLR_MC_Msk & (_UINT8_(value) << TC_INTENCLR_MC_Pos)) 
 
@@ -297,29 +310,29 @@
 #define TC_WAVE_WAVEGEN_Pos                   _UINT8_(0)                                           /* (TC_WAVE) Waveform Generation Mode Position */
 #define TC_WAVE_WAVEGEN_Msk                   (_UINT8_(0x3) << TC_WAVE_WAVEGEN_Pos)                /* (TC_WAVE) Waveform Generation Mode Mask */
 #define TC_WAVE_WAVEGEN(value)                (TC_WAVE_WAVEGEN_Msk & (_UINT8_(value) << TC_WAVE_WAVEGEN_Pos)) /* Assignment of value for WAVEGEN in the TC_WAVE register */
-#define   TC_WAVE_WAVEGEN_NFRQ_Val            _UINT8_(0x0)                                         /* (TC_WAVE) Normal frequency  */
-#define   TC_WAVE_WAVEGEN_MFRQ_Val            _UINT8_(0x1)                                         /* (TC_WAVE) Match frequency  */
-#define   TC_WAVE_WAVEGEN_NPWM_Val            _UINT8_(0x2)                                         /* (TC_WAVE) Normal PWM  */
-#define   TC_WAVE_WAVEGEN_MPWM_Val            _UINT8_(0x3)                                         /* (TC_WAVE) Match PWM  */
-#define TC_WAVE_WAVEGEN_NFRQ                  (TC_WAVE_WAVEGEN_NFRQ_Val << TC_WAVE_WAVEGEN_Pos)    /* (TC_WAVE) Normal frequency Position */
-#define TC_WAVE_WAVEGEN_MFRQ                  (TC_WAVE_WAVEGEN_MFRQ_Val << TC_WAVE_WAVEGEN_Pos)    /* (TC_WAVE) Match frequency Position */
-#define TC_WAVE_WAVEGEN_NPWM                  (TC_WAVE_WAVEGEN_NPWM_Val << TC_WAVE_WAVEGEN_Pos)    /* (TC_WAVE) Normal PWM Position */
-#define TC_WAVE_WAVEGEN_MPWM                  (TC_WAVE_WAVEGEN_MPWM_Val << TC_WAVE_WAVEGEN_Pos)    /* (TC_WAVE) Match PWM Position */
+#define   TC_WAVE_WAVEGEN_NFRQ_Val            _UINT8_(0x0)                                         /* (TC_WAVE) Normal Frequency Generation mode  */
+#define   TC_WAVE_WAVEGEN_MFRQ_Val            _UINT8_(0x1)                                         /* (TC_WAVE) Match Frequency Generation mode  */
+#define   TC_WAVE_WAVEGEN_NPWM_Val            _UINT8_(0x2)                                         /* (TC_WAVE) Normal Pulse-Width Modulation mode  */
+#define   TC_WAVE_WAVEGEN_MPWM_Val            _UINT8_(0x3)                                         /* (TC_WAVE) Match Pulse-Width Modulation mode  */
+#define TC_WAVE_WAVEGEN_NFRQ                  (TC_WAVE_WAVEGEN_NFRQ_Val << TC_WAVE_WAVEGEN_Pos)    /* (TC_WAVE) Normal Frequency Generation mode Position */
+#define TC_WAVE_WAVEGEN_MFRQ                  (TC_WAVE_WAVEGEN_MFRQ_Val << TC_WAVE_WAVEGEN_Pos)    /* (TC_WAVE) Match Frequency Generation mode Position */
+#define TC_WAVE_WAVEGEN_NPWM                  (TC_WAVE_WAVEGEN_NPWM_Val << TC_WAVE_WAVEGEN_Pos)    /* (TC_WAVE) Normal Pulse-Width Modulation mode Position */
+#define TC_WAVE_WAVEGEN_MPWM                  (TC_WAVE_WAVEGEN_MPWM_Val << TC_WAVE_WAVEGEN_Pos)    /* (TC_WAVE) Match Pulse-Width Modulation mode Position */
 #define TC_WAVE_Msk                           _UINT8_(0x03)                                        /* (TC_WAVE) Register Mask  */
 
 
 /* -------- TC_DRVCTRL : (TC Offset: 0x0D) (R/W 8) Driver Control -------- */
 #define TC_DRVCTRL_RESETVALUE                 _UINT8_(0x00)                                        /*  (TC_DRVCTRL) Driver Control  Reset Value */
 
-#define TC_DRVCTRL_INVEN0_Pos                 _UINT8_(0)                                           /* (TC_DRVCTRL) Output Waveform 0 Invert Enable Position */
-#define TC_DRVCTRL_INVEN0_Msk                 (_UINT8_(0x1) << TC_DRVCTRL_INVEN0_Pos)              /* (TC_DRVCTRL) Output Waveform 0 Invert Enable Mask */
+#define TC_DRVCTRL_INVEN0_Pos                 _UINT8_(0)                                           /* (TC_DRVCTRL) Waveform Output 0 Invert Enable Position */
+#define TC_DRVCTRL_INVEN0_Msk                 (_UINT8_(0x1) << TC_DRVCTRL_INVEN0_Pos)              /* (TC_DRVCTRL) Waveform Output 0 Invert Enable Mask */
 #define TC_DRVCTRL_INVEN0(value)              (TC_DRVCTRL_INVEN0_Msk & (_UINT8_(value) << TC_DRVCTRL_INVEN0_Pos)) /* Assignment of value for INVEN0 in the TC_DRVCTRL register */
-#define TC_DRVCTRL_INVEN1_Pos                 _UINT8_(1)                                           /* (TC_DRVCTRL) Output Waveform 1 Invert Enable Position */
-#define TC_DRVCTRL_INVEN1_Msk                 (_UINT8_(0x1) << TC_DRVCTRL_INVEN1_Pos)              /* (TC_DRVCTRL) Output Waveform 1 Invert Enable Mask */
+#define TC_DRVCTRL_INVEN1_Pos                 _UINT8_(1)                                           /* (TC_DRVCTRL) Waveform Output 1 Invert Enable Position */
+#define TC_DRVCTRL_INVEN1_Msk                 (_UINT8_(0x1) << TC_DRVCTRL_INVEN1_Pos)              /* (TC_DRVCTRL) Waveform Output 1 Invert Enable Mask */
 #define TC_DRVCTRL_INVEN1(value)              (TC_DRVCTRL_INVEN1_Msk & (_UINT8_(value) << TC_DRVCTRL_INVEN1_Pos)) /* Assignment of value for INVEN1 in the TC_DRVCTRL register */
 #define TC_DRVCTRL_Msk                        _UINT8_(0x03)                                        /* (TC_DRVCTRL) Register Mask  */
 
-#define TC_DRVCTRL_INVEN_Pos                  _UINT8_(0)                                           /* (TC_DRVCTRL Position) Output Waveform x Invert Enable */
+#define TC_DRVCTRL_INVEN_Pos                  _UINT8_(0)                                           /* (TC_DRVCTRL Position) Waveform Output x Invert Enable */
 #define TC_DRVCTRL_INVEN_Msk                  (_UINT8_(0x3) << TC_DRVCTRL_INVEN_Pos)               /* (TC_DRVCTRL Mask) INVEN */
 #define TC_DRVCTRL_INVEN(value)               (TC_DRVCTRL_INVEN_Msk & (_UINT8_(value) << TC_DRVCTRL_INVEN_Pos)) 
 
@@ -353,15 +366,15 @@
 #define TC_SYNCBUSY_PER_Pos                   _UINT32_(5)                                          /* (TC_SYNCBUSY) PER Synchronization Busy Position */
 #define TC_SYNCBUSY_PER_Msk                   (_UINT32_(0x1) << TC_SYNCBUSY_PER_Pos)               /* (TC_SYNCBUSY) PER Synchronization Busy Mask */
 #define TC_SYNCBUSY_PER(value)                (TC_SYNCBUSY_PER_Msk & (_UINT32_(value) << TC_SYNCBUSY_PER_Pos)) /* Assignment of value for PER in the TC_SYNCBUSY register */
-#define TC_SYNCBUSY_CC0_Pos                   _UINT32_(6)                                          /* (TC_SYNCBUSY) Compare/Capture Channel 0 Synchronization Busy [x=0..1] Position */
-#define TC_SYNCBUSY_CC0_Msk                   (_UINT32_(0x1) << TC_SYNCBUSY_CC0_Pos)               /* (TC_SYNCBUSY) Compare/Capture Channel 0 Synchronization Busy [x=0..1] Mask */
+#define TC_SYNCBUSY_CC0_Pos                   _UINT32_(6)                                          /* (TC_SYNCBUSY) Compare/Capture Channel 0 Synchronization Busy Position */
+#define TC_SYNCBUSY_CC0_Msk                   (_UINT32_(0x1) << TC_SYNCBUSY_CC0_Pos)               /* (TC_SYNCBUSY) Compare/Capture Channel 0 Synchronization Busy Mask */
 #define TC_SYNCBUSY_CC0(value)                (TC_SYNCBUSY_CC0_Msk & (_UINT32_(value) << TC_SYNCBUSY_CC0_Pos)) /* Assignment of value for CC0 in the TC_SYNCBUSY register */
-#define TC_SYNCBUSY_CC1_Pos                   _UINT32_(7)                                          /* (TC_SYNCBUSY) Compare/Capture Channel 1 Synchronization Busy [x=0..1] Position */
-#define TC_SYNCBUSY_CC1_Msk                   (_UINT32_(0x1) << TC_SYNCBUSY_CC1_Pos)               /* (TC_SYNCBUSY) Compare/Capture Channel 1 Synchronization Busy [x=0..1] Mask */
+#define TC_SYNCBUSY_CC1_Pos                   _UINT32_(7)                                          /* (TC_SYNCBUSY) Compare/Capture Channel 1 Synchronization Busy Position */
+#define TC_SYNCBUSY_CC1_Msk                   (_UINT32_(0x1) << TC_SYNCBUSY_CC1_Pos)               /* (TC_SYNCBUSY) Compare/Capture Channel 1 Synchronization Busy Mask */
 #define TC_SYNCBUSY_CC1(value)                (TC_SYNCBUSY_CC1_Msk & (_UINT32_(value) << TC_SYNCBUSY_CC1_Pos)) /* Assignment of value for CC1 in the TC_SYNCBUSY register */
 #define TC_SYNCBUSY_Msk                       _UINT32_(0x000000FF)                                 /* (TC_SYNCBUSY) Register Mask  */
 
-#define TC_SYNCBUSY_CC_Pos                    _UINT32_(6)                                          /* (TC_SYNCBUSY Position) Compare/Capture Channel x Synchronization Busy [x=x..x] */
+#define TC_SYNCBUSY_CC_Pos                    _UINT32_(6)                                          /* (TC_SYNCBUSY Position) Compare/Capture Channel x Synchronization Busy */
 #define TC_SYNCBUSY_CC_Msk                    (_UINT32_(0x3) << TC_SYNCBUSY_CC_Pos)                /* (TC_SYNCBUSY Mask) CC */
 #define TC_SYNCBUSY_CC(value)                 (TC_SYNCBUSY_CC_Msk & (_UINT32_(value) << TC_SYNCBUSY_CC_Pos)) 
 
@@ -392,8 +405,8 @@
 #define TC_COUNT32_COUNT_Msk                  _UINT32_(0xFFFFFFFF)                                 /* (TC_COUNT32_COUNT) Register Mask  */
 
 
-/* -------- TC_COUNT8_PER : (TC Offset: 0x1B) (R/W 8) COUNT8 Period, 8-bit Mode -------- */
-#define TC_COUNT8_PER_RESETVALUE              _UINT8_(0xFF)                                        /*  (TC_COUNT8_PER) COUNT8 Period, 8-bit Mode  Reset Value */
+/* -------- TC_COUNT8_PER : (TC Offset: 0x1B) (R/W 8) COUNT8 Period -------- */
+#define TC_COUNT8_PER_RESETVALUE              _UINT8_(0xFF)                                        /*  (TC_COUNT8_PER) COUNT8 Period  Reset Value */
 
 #define TC_COUNT8_PER_PER_Pos                 _UINT8_(0)                                           /* (TC_COUNT8_PER) Period Value Position */
 #define TC_COUNT8_PER_PER_Msk                 (_UINT8_(0xFF) << TC_COUNT8_PER_PER_Pos)             /* (TC_COUNT8_PER) Period Value Mask */
@@ -401,35 +414,35 @@
 #define TC_COUNT8_PER_Msk                     _UINT8_(0xFF)                                        /* (TC_COUNT8_PER) Register Mask  */
 
 
-/* -------- TC_COUNT8_CC : (TC Offset: 0x1C) (R/W 8) COUNT8 Channel x Compare/Capture Value, 8-bit Mode -------- */
-#define TC_COUNT8_CC_RESETVALUE               _UINT8_(0x00)                                        /*  (TC_COUNT8_CC) COUNT8 Channel x Compare/Capture Value, 8-bit Mode  Reset Value */
+/* -------- TC_COUNT8_CC : (TC Offset: 0x1C) (R/W 8) COUNT8 Channel # Compare/Capture -------- */
+#define TC_COUNT8_CC_RESETVALUE               _UINT8_(0x00)                                        /*  (TC_COUNT8_CC) COUNT8 Channel # Compare/Capture  Reset Value */
 
-#define TC_COUNT8_CC_CC_Pos                   _UINT8_(0)                                           /* (TC_COUNT8_CC) Channel x Compare/Capture Value Position */
-#define TC_COUNT8_CC_CC_Msk                   (_UINT8_(0xFF) << TC_COUNT8_CC_CC_Pos)               /* (TC_COUNT8_CC) Channel x Compare/Capture Value Mask */
+#define TC_COUNT8_CC_CC_Pos                   _UINT8_(0)                                           /* (TC_COUNT8_CC) Channel Compare/Capture Value Position */
+#define TC_COUNT8_CC_CC_Msk                   (_UINT8_(0xFF) << TC_COUNT8_CC_CC_Pos)               /* (TC_COUNT8_CC) Channel Compare/Capture Value Mask */
 #define TC_COUNT8_CC_CC(value)                (TC_COUNT8_CC_CC_Msk & (_UINT8_(value) << TC_COUNT8_CC_CC_Pos)) /* Assignment of value for CC in the TC_COUNT8_CC register */
 #define TC_COUNT8_CC_Msk                      _UINT8_(0xFF)                                        /* (TC_COUNT8_CC) Register Mask  */
 
 
-/* -------- TC_COUNT16_CC : (TC Offset: 0x1C) (R/W 16) COUNT16 Channel x Compare/Capture, 16-bit Mode -------- */
-#define TC_COUNT16_CC_RESETVALUE              _UINT16_(0x00)                                       /*  (TC_COUNT16_CC) COUNT16 Channel x Compare/Capture, 16-bit Mode  Reset Value */
+/* -------- TC_COUNT16_CC : (TC Offset: 0x1C) (R/W 16) COUNT16 Channel # Compare/Capture -------- */
+#define TC_COUNT16_CC_RESETVALUE              _UINT16_(0x00)                                       /*  (TC_COUNT16_CC) COUNT16 Channel # Compare/Capture  Reset Value */
 
-#define TC_COUNT16_CC_CC_Pos                  _UINT16_(0)                                          /* (TC_COUNT16_CC) Channel x Compare/Capture Value Position */
-#define TC_COUNT16_CC_CC_Msk                  (_UINT16_(0xFFFF) << TC_COUNT16_CC_CC_Pos)           /* (TC_COUNT16_CC) Channel x Compare/Capture Value Mask */
+#define TC_COUNT16_CC_CC_Pos                  _UINT16_(0)                                          /* (TC_COUNT16_CC) Channel Compare/Capture Value Position */
+#define TC_COUNT16_CC_CC_Msk                  (_UINT16_(0xFFFF) << TC_COUNT16_CC_CC_Pos)           /* (TC_COUNT16_CC) Channel Compare/Capture Value Mask */
 #define TC_COUNT16_CC_CC(value)               (TC_COUNT16_CC_CC_Msk & (_UINT16_(value) << TC_COUNT16_CC_CC_Pos)) /* Assignment of value for CC in the TC_COUNT16_CC register */
 #define TC_COUNT16_CC_Msk                     _UINT16_(0xFFFF)                                     /* (TC_COUNT16_CC) Register Mask  */
 
 
-/* -------- TC_COUNT32_CC : (TC Offset: 0x1C) (R/W 32) COUNT32 Channel x Compare/Capture, 32-bit Mode -------- */
-#define TC_COUNT32_CC_RESETVALUE              _UINT32_(0x00)                                       /*  (TC_COUNT32_CC) COUNT32 Channel x Compare/Capture, 32-bit Mode  Reset Value */
+/* -------- TC_COUNT32_CC : (TC Offset: 0x1C) (R/W 32) COUNT32 Channel # Compare/Capture -------- */
+#define TC_COUNT32_CC_RESETVALUE              _UINT32_(0x00)                                       /*  (TC_COUNT32_CC) COUNT32 Channel # Compare/Capture  Reset Value */
 
-#define TC_COUNT32_CC_CC_Pos                  _UINT32_(0)                                          /* (TC_COUNT32_CC) Channel x Compare/Capture Value Position */
-#define TC_COUNT32_CC_CC_Msk                  (_UINT32_(0xFFFFFFFF) << TC_COUNT32_CC_CC_Pos)       /* (TC_COUNT32_CC) Channel x Compare/Capture Value Mask */
+#define TC_COUNT32_CC_CC_Pos                  _UINT32_(0)                                          /* (TC_COUNT32_CC) Channel Compare/Capture Value Position */
+#define TC_COUNT32_CC_CC_Msk                  (_UINT32_(0xFFFFFFFF) << TC_COUNT32_CC_CC_Pos)       /* (TC_COUNT32_CC) Channel Compare/Capture Value Mask */
 #define TC_COUNT32_CC_CC(value)               (TC_COUNT32_CC_CC_Msk & (_UINT32_(value) << TC_COUNT32_CC_CC_Pos)) /* Assignment of value for CC in the TC_COUNT32_CC register */
 #define TC_COUNT32_CC_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (TC_COUNT32_CC) Register Mask  */
 
 
-/* -------- TC_COUNT8_PERBUF : (TC Offset: 0x2F) (R/W 8) COUNT8 Period Buffer, 8-bit Mode -------- */
-#define TC_COUNT8_PERBUF_RESETVALUE           _UINT8_(0xFF)                                        /*  (TC_COUNT8_PERBUF) COUNT8 Period Buffer, 8-bit Mode  Reset Value */
+/* -------- TC_COUNT8_PERBUF : (TC Offset: 0x2F) (R/W 8) COUNT8 Period Buffer -------- */
+#define TC_COUNT8_PERBUF_RESETVALUE           _UINT8_(0xFF)                                        /*  (TC_COUNT8_PERBUF) COUNT8 Period Buffer  Reset Value */
 
 #define TC_COUNT8_PERBUF_PERBUF_Pos           _UINT8_(0)                                           /* (TC_COUNT8_PERBUF) Period Buffer Value Position */
 #define TC_COUNT8_PERBUF_PERBUF_Msk           (_UINT8_(0xFF) << TC_COUNT8_PERBUF_PERBUF_Pos)       /* (TC_COUNT8_PERBUF) Period Buffer Value Mask */
@@ -437,29 +450,29 @@
 #define TC_COUNT8_PERBUF_Msk                  _UINT8_(0xFF)                                        /* (TC_COUNT8_PERBUF) Register Mask  */
 
 
-/* -------- TC_COUNT8_CCBUF : (TC Offset: 0x30) (R/W 8) COUNT8 Channel x Compare Buffer, 8-bit Mode -------- */
-#define TC_COUNT8_CCBUF_RESETVALUE            _UINT8_(0x00)                                        /*  (TC_COUNT8_CCBUF) COUNT8 Channel x Compare Buffer, 8-bit Mode  Reset Value */
+/* -------- TC_COUNT8_CCBUF : (TC Offset: 0x30) (R/W 8) COUNT8 Channel # Compare Buffer -------- */
+#define TC_COUNT8_CCBUF_RESETVALUE            _UINT8_(0x00)                                        /*  (TC_COUNT8_CCBUF) COUNT8 Channel # Compare Buffer  Reset Value */
 
-#define TC_COUNT8_CCBUF_CCBUF_Pos             _UINT8_(0)                                           /* (TC_COUNT8_CCBUF) Channel x Compare Buffer Value Position */
-#define TC_COUNT8_CCBUF_CCBUF_Msk             (_UINT8_(0xFF) << TC_COUNT8_CCBUF_CCBUF_Pos)         /* (TC_COUNT8_CCBUF) Channel x Compare Buffer Value Mask */
+#define TC_COUNT8_CCBUF_CCBUF_Pos             _UINT8_(0)                                           /* (TC_COUNT8_CCBUF) Channel Compare Buffer Value Position */
+#define TC_COUNT8_CCBUF_CCBUF_Msk             (_UINT8_(0xFF) << TC_COUNT8_CCBUF_CCBUF_Pos)         /* (TC_COUNT8_CCBUF) Channel Compare Buffer Value Mask */
 #define TC_COUNT8_CCBUF_CCBUF(value)          (TC_COUNT8_CCBUF_CCBUF_Msk & (_UINT8_(value) << TC_COUNT8_CCBUF_CCBUF_Pos)) /* Assignment of value for CCBUF in the TC_COUNT8_CCBUF register */
 #define TC_COUNT8_CCBUF_Msk                   _UINT8_(0xFF)                                        /* (TC_COUNT8_CCBUF) Register Mask  */
 
 
-/* -------- TC_COUNT16_CCBUF : (TC Offset: 0x30) (R/W 16) COUNT16 Channel x Compare Buffer, 16-bit Mode -------- */
-#define TC_COUNT16_CCBUF_RESETVALUE           _UINT16_(0x00)                                       /*  (TC_COUNT16_CCBUF) COUNT16 Channel x Compare Buffer, 16-bit Mode  Reset Value */
+/* -------- TC_COUNT16_CCBUF : (TC Offset: 0x30) (R/W 16) COUNT16 Channel # Compare Buffer -------- */
+#define TC_COUNT16_CCBUF_RESETVALUE           _UINT16_(0x00)                                       /*  (TC_COUNT16_CCBUF) COUNT16 Channel # Compare Buffer  Reset Value */
 
-#define TC_COUNT16_CCBUF_CCBUF_Pos            _UINT16_(0)                                          /* (TC_COUNT16_CCBUF) Channel x Compare Buffer Value Position */
-#define TC_COUNT16_CCBUF_CCBUF_Msk            (_UINT16_(0xFFFF) << TC_COUNT16_CCBUF_CCBUF_Pos)     /* (TC_COUNT16_CCBUF) Channel x Compare Buffer Value Mask */
+#define TC_COUNT16_CCBUF_CCBUF_Pos            _UINT16_(0)                                          /* (TC_COUNT16_CCBUF) Channel Compare Buffer Value Position */
+#define TC_COUNT16_CCBUF_CCBUF_Msk            (_UINT16_(0xFFFF) << TC_COUNT16_CCBUF_CCBUF_Pos)     /* (TC_COUNT16_CCBUF) Channel Compare Buffer Value Mask */
 #define TC_COUNT16_CCBUF_CCBUF(value)         (TC_COUNT16_CCBUF_CCBUF_Msk & (_UINT16_(value) << TC_COUNT16_CCBUF_CCBUF_Pos)) /* Assignment of value for CCBUF in the TC_COUNT16_CCBUF register */
 #define TC_COUNT16_CCBUF_Msk                  _UINT16_(0xFFFF)                                     /* (TC_COUNT16_CCBUF) Register Mask  */
 
 
-/* -------- TC_COUNT32_CCBUF : (TC Offset: 0x30) (R/W 32) COUNT32 Channel x Compare Buffer, 32-bit Mode -------- */
-#define TC_COUNT32_CCBUF_RESETVALUE           _UINT32_(0x00)                                       /*  (TC_COUNT32_CCBUF) COUNT32 Channel x Compare Buffer, 32-bit Mode  Reset Value */
+/* -------- TC_COUNT32_CCBUF : (TC Offset: 0x30) (R/W 32) COUNT32 Channel # Compare Buffer -------- */
+#define TC_COUNT32_CCBUF_RESETVALUE           _UINT32_(0x00)                                       /*  (TC_COUNT32_CCBUF) COUNT32 Channel # Compare Buffer  Reset Value */
 
-#define TC_COUNT32_CCBUF_CCBUF_Pos            _UINT32_(0)                                          /* (TC_COUNT32_CCBUF) Channel x Compare Buffer Value Position */
-#define TC_COUNT32_CCBUF_CCBUF_Msk            (_UINT32_(0xFFFFFFFF) << TC_COUNT32_CCBUF_CCBUF_Pos) /* (TC_COUNT32_CCBUF) Channel x Compare Buffer Value Mask */
+#define TC_COUNT32_CCBUF_CCBUF_Pos            _UINT32_(0)                                          /* (TC_COUNT32_CCBUF) Channel Compare Buffer Value Position */
+#define TC_COUNT32_CCBUF_CCBUF_Msk            (_UINT32_(0xFFFFFFFF) << TC_COUNT32_CCBUF_CCBUF_Pos) /* (TC_COUNT32_CCBUF) Channel Compare Buffer Value Mask */
 #define TC_COUNT32_CCBUF_CCBUF(value)         (TC_COUNT32_CCBUF_CCBUF_Msk & (_UINT32_(value) << TC_COUNT32_CCBUF_CCBUF_Pos)) /* Assignment of value for CCBUF in the TC_COUNT32_CCBUF register */
 #define TC_COUNT32_CCBUF_Msk                  _UINT32_(0xFFFFFFFF)                                 /* (TC_COUNT32_CCBUF) Register Mask  */
 
@@ -480,26 +493,26 @@
 #define TC_COUNT8_COUNT_REG_OFST       _UINT32_(0x14)      /* (TC_COUNT8_COUNT) COUNT8 Counter Offset */
 #define TC_COUNT16_COUNT_REG_OFST      _UINT32_(0x14)      /* (TC_COUNT16_COUNT) COUNT16 Counter Offset */
 #define TC_COUNT32_COUNT_REG_OFST      _UINT32_(0x14)      /* (TC_COUNT32_COUNT) COUNT32 Counter Offset */
-#define TC_COUNT8_PER_REG_OFST         _UINT32_(0x1B)      /* (TC_COUNT8_PER) COUNT8 Period, 8-bit Mode Offset */
-#define TC_COUNT8_CC_REG_OFST          _UINT32_(0x1C)      /* (TC_COUNT8_CC) COUNT8 Channel x Compare/Capture Value, 8-bit Mode Offset */
-#define TC_COUNT8_CC0_REG_OFST         _UINT32_(0x1C)      /* (TC_COUNT8_CC0) COUNT8 Channel x Compare/Capture Value, 8-bit Mode Offset */
-#define TC_COUNT8_CC1_REG_OFST         _UINT32_(0x1D)      /* (TC_COUNT8_CC1) COUNT8 Channel x Compare/Capture Value, 8-bit Mode Offset */
-#define TC_COUNT16_CC_REG_OFST         _UINT32_(0x1C)      /* (TC_COUNT16_CC) COUNT16 Channel x Compare/Capture, 16-bit Mode Offset */
-#define TC_COUNT16_CC0_REG_OFST        _UINT32_(0x1C)      /* (TC_COUNT16_CC0) COUNT16 Channel x Compare/Capture, 16-bit Mode Offset */
-#define TC_COUNT16_CC1_REG_OFST        _UINT32_(0x1E)      /* (TC_COUNT16_CC1) COUNT16 Channel x Compare/Capture, 16-bit Mode Offset */
-#define TC_COUNT32_CC_REG_OFST         _UINT32_(0x1C)      /* (TC_COUNT32_CC) COUNT32 Channel x Compare/Capture, 32-bit Mode Offset */
-#define TC_COUNT32_CC0_REG_OFST        _UINT32_(0x1C)      /* (TC_COUNT32_CC0) COUNT32 Channel x Compare/Capture, 32-bit Mode Offset */
-#define TC_COUNT32_CC1_REG_OFST        _UINT32_(0x20)      /* (TC_COUNT32_CC1) COUNT32 Channel x Compare/Capture, 32-bit Mode Offset */
-#define TC_COUNT8_PERBUF_REG_OFST      _UINT32_(0x2F)      /* (TC_COUNT8_PERBUF) COUNT8 Period Buffer, 8-bit Mode Offset */
-#define TC_COUNT8_CCBUF_REG_OFST       _UINT32_(0x30)      /* (TC_COUNT8_CCBUF) COUNT8 Channel x Compare Buffer, 8-bit Mode Offset */
-#define TC_COUNT8_CCBUF0_REG_OFST      _UINT32_(0x30)      /* (TC_COUNT8_CCBUF0) COUNT8 Channel x Compare Buffer, 8-bit Mode Offset */
-#define TC_COUNT8_CCBUF1_REG_OFST      _UINT32_(0x31)      /* (TC_COUNT8_CCBUF1) COUNT8 Channel x Compare Buffer, 8-bit Mode Offset */
-#define TC_COUNT16_CCBUF_REG_OFST      _UINT32_(0x30)      /* (TC_COUNT16_CCBUF) COUNT16 Channel x Compare Buffer, 16-bit Mode Offset */
-#define TC_COUNT16_CCBUF0_REG_OFST     _UINT32_(0x30)      /* (TC_COUNT16_CCBUF0) COUNT16 Channel x Compare Buffer, 16-bit Mode Offset */
-#define TC_COUNT16_CCBUF1_REG_OFST     _UINT32_(0x32)      /* (TC_COUNT16_CCBUF1) COUNT16 Channel x Compare Buffer, 16-bit Mode Offset */
-#define TC_COUNT32_CCBUF_REG_OFST      _UINT32_(0x30)      /* (TC_COUNT32_CCBUF) COUNT32 Channel x Compare Buffer, 32-bit Mode Offset */
-#define TC_COUNT32_CCBUF0_REG_OFST     _UINT32_(0x30)      /* (TC_COUNT32_CCBUF0) COUNT32 Channel x Compare Buffer, 32-bit Mode Offset */
-#define TC_COUNT32_CCBUF1_REG_OFST     _UINT32_(0x34)      /* (TC_COUNT32_CCBUF1) COUNT32 Channel x Compare Buffer, 32-bit Mode Offset */
+#define TC_COUNT8_PER_REG_OFST         _UINT32_(0x1B)      /* (TC_COUNT8_PER) COUNT8 Period Offset */
+#define TC_COUNT8_CC_REG_OFST          _UINT32_(0x1C)      /* (TC_COUNT8_CC) COUNT8 Channel # Compare/Capture Offset */
+#define TC_COUNT8_CC0_REG_OFST         _UINT32_(0x1C)      /* (TC_COUNT8_CC0) COUNT8 Channel # Compare/Capture Offset */
+#define TC_COUNT8_CC1_REG_OFST         _UINT32_(0x1D)      /* (TC_COUNT8_CC1) COUNT8 Channel # Compare/Capture Offset */
+#define TC_COUNT16_CC_REG_OFST         _UINT32_(0x1C)      /* (TC_COUNT16_CC) COUNT16 Channel # Compare/Capture Offset */
+#define TC_COUNT16_CC0_REG_OFST        _UINT32_(0x1C)      /* (TC_COUNT16_CC0) COUNT16 Channel # Compare/Capture Offset */
+#define TC_COUNT16_CC1_REG_OFST        _UINT32_(0x1E)      /* (TC_COUNT16_CC1) COUNT16 Channel # Compare/Capture Offset */
+#define TC_COUNT32_CC_REG_OFST         _UINT32_(0x1C)      /* (TC_COUNT32_CC) COUNT32 Channel # Compare/Capture Offset */
+#define TC_COUNT32_CC0_REG_OFST        _UINT32_(0x1C)      /* (TC_COUNT32_CC0) COUNT32 Channel # Compare/Capture Offset */
+#define TC_COUNT32_CC1_REG_OFST        _UINT32_(0x20)      /* (TC_COUNT32_CC1) COUNT32 Channel # Compare/Capture Offset */
+#define TC_COUNT8_PERBUF_REG_OFST      _UINT32_(0x2F)      /* (TC_COUNT8_PERBUF) COUNT8 Period Buffer Offset */
+#define TC_COUNT8_CCBUF_REG_OFST       _UINT32_(0x30)      /* (TC_COUNT8_CCBUF) COUNT8 Channel # Compare Buffer Offset */
+#define TC_COUNT8_CCBUF0_REG_OFST      _UINT32_(0x30)      /* (TC_COUNT8_CCBUF0) COUNT8 Channel # Compare Buffer Offset */
+#define TC_COUNT8_CCBUF1_REG_OFST      _UINT32_(0x31)      /* (TC_COUNT8_CCBUF1) COUNT8 Channel # Compare Buffer Offset */
+#define TC_COUNT16_CCBUF_REG_OFST      _UINT32_(0x30)      /* (TC_COUNT16_CCBUF) COUNT16 Channel # Compare Buffer Offset */
+#define TC_COUNT16_CCBUF0_REG_OFST     _UINT32_(0x30)      /* (TC_COUNT16_CCBUF0) COUNT16 Channel # Compare Buffer Offset */
+#define TC_COUNT16_CCBUF1_REG_OFST     _UINT32_(0x32)      /* (TC_COUNT16_CCBUF1) COUNT16 Channel # Compare Buffer Offset */
+#define TC_COUNT32_CCBUF_REG_OFST      _UINT32_(0x30)      /* (TC_COUNT32_CCBUF) COUNT32 Channel # Compare Buffer Offset */
+#define TC_COUNT32_CCBUF0_REG_OFST     _UINT32_(0x30)      /* (TC_COUNT32_CCBUF0) COUNT32 Channel # Compare Buffer Offset */
+#define TC_COUNT32_CCBUF1_REG_OFST     _UINT32_(0x34)      /* (TC_COUNT32_CCBUF1) COUNT32 Channel # Compare Buffer Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /* TC register API structure */
@@ -520,11 +533,11 @@ typedef struct
   __I   uint32_t                       TC_SYNCBUSY;        /* Offset: 0x10 (R/   32) Synchronization Busy */
   __IO  uint8_t                        TC_COUNT;           /* Offset: 0x14 (R/W  8) COUNT8 Counter */
   __I   uint8_t                        Reserved2[0x06];
-  __IO  uint8_t                        TC_PER;             /* Offset: 0x1B (R/W  8) COUNT8 Period, 8-bit Mode */
-  __IO  uint8_t                        TC_CC[2];           /* Offset: 0x1C (R/W  8) COUNT8 Channel x Compare/Capture Value, 8-bit Mode */
+  __IO  uint8_t                        TC_PER;             /* Offset: 0x1B (R/W  8) COUNT8 Period */
+  __IO  uint8_t                        TC_CC[2];           /* Offset: 0x1C (R/W  8) COUNT8 Channel # Compare/Capture */
   __I   uint8_t                        Reserved3[0x11];
-  __IO  uint8_t                        TC_PERBUF;          /* Offset: 0x2F (R/W  8) COUNT8 Period Buffer, 8-bit Mode */
-  __IO  uint8_t                        TC_CCBUF[2];        /* Offset: 0x30 (R/W  8) COUNT8 Channel x Compare Buffer, 8-bit Mode */
+  __IO  uint8_t                        TC_PERBUF;          /* Offset: 0x2F (R/W  8) COUNT8 Period Buffer */
+  __IO  uint8_t                        TC_CCBUF[2];        /* Offset: 0x30 (R/W  8) COUNT8 Channel # Compare Buffer */
 } tc_count8_registers_t;
 
 /* TC register API structure */
@@ -545,9 +558,9 @@ typedef struct
   __I   uint32_t                       TC_SYNCBUSY;        /* Offset: 0x10 (R/   32) Synchronization Busy */
   __IO  uint16_t                       TC_COUNT;           /* Offset: 0x14 (R/W  16) COUNT16 Counter */
   __I   uint8_t                        Reserved2[0x06];
-  __IO  uint16_t                       TC_CC[2];           /* Offset: 0x1C (R/W  16) COUNT16 Channel x Compare/Capture, 16-bit Mode */
+  __IO  uint16_t                       TC_CC[2];           /* Offset: 0x1C (R/W  16) COUNT16 Channel # Compare/Capture */
   __I   uint8_t                        Reserved3[0x10];
-  __IO  uint16_t                       TC_CCBUF[2];        /* Offset: 0x30 (R/W  16) COUNT16 Channel x Compare Buffer, 16-bit Mode */
+  __IO  uint16_t                       TC_CCBUF[2];        /* Offset: 0x30 (R/W  16) COUNT16 Channel # Compare Buffer */
 } tc_count16_registers_t;
 
 /* TC register API structure */
@@ -568,9 +581,9 @@ typedef struct
   __I   uint32_t                       TC_SYNCBUSY;        /* Offset: 0x10 (R/   32) Synchronization Busy */
   __IO  uint32_t                       TC_COUNT;           /* Offset: 0x14 (R/W  32) COUNT32 Counter */
   __I   uint8_t                        Reserved2[0x04];
-  __IO  uint32_t                       TC_CC[2];           /* Offset: 0x1C (R/W  32) COUNT32 Channel x Compare/Capture, 32-bit Mode */
+  __IO  uint32_t                       TC_CC[2];           /* Offset: 0x1C (R/W  32) COUNT32 Channel # Compare/Capture */
   __I   uint8_t                        Reserved3[0x0C];
-  __IO  uint32_t                       TC_CCBUF[2];        /* Offset: 0x30 (R/W  32) COUNT32 Channel x Compare Buffer, 32-bit Mode */
+  __IO  uint32_t                       TC_CCBUF[2];        /* Offset: 0x30 (R/W  32) COUNT32 Channel # Compare Buffer */
 } tc_count32_registers_t;
 
 /* TC hardware registers */

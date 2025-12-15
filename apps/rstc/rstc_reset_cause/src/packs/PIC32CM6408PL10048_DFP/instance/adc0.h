@@ -25,6 +25,8 @@
 
 
 /* ========== Instance Parameter definitions for ADC0 peripheral ========== */
+#define ADC0_DMAC_ID_RESRDY                      (19)       /* Index of DMA RESRDY trigger */
+#define ADC0_DMAC_ID_SAMPRDY                     (20)       /* Index of DMA SAMPRDY trigger */
 #define ADC0_INSTANCE_ID                         (71)       /* Instance index for ADC0 */
 
 #endif /* _PIC32CMPL10_ADC0_INSTANCE_ */

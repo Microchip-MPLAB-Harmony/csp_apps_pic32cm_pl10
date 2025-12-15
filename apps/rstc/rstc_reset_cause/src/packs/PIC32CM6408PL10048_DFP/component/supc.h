@@ -115,8 +115,8 @@
 #define SUPC_STATUS_Msk                       _UINT32_(0x00000039)                                 /* (SUPC_STATUS) Register Mask  */
 
 
-/* -------- SUPC_BODVDD : (SUPC Offset: 0x1C) (R/W 32) VDD Brown-Out Detector (BODVDD) Control -------- */
-#define SUPC_BODVDD_RESETVALUE                _UINT32_(0x00)                                       /*  (SUPC_BODVDD) VDD Brown-Out Detector (BODVDD) Control  Reset Value */
+/* -------- SUPC_BODVDD : (SUPC Offset: 0x1C) (R/W 32) VDD Brown-Out Detector Control -------- */
+#define SUPC_BODVDD_RESETVALUE                _UINT32_(0x00)                                       /*  (SUPC_BODVDD) VDD Brown-Out Detector Control  Reset Value */
 
 #define SUPC_BODVDD_ENABLE_Pos                _UINT32_(1)                                          /* (SUPC_BODVDD) Enable Position */
 #define SUPC_BODVDD_ENABLE_Msk                (_UINT32_(0x1) << SUPC_BODVDD_ENABLE_Pos)            /* (SUPC_BODVDD) Enable Mask */
@@ -159,31 +159,31 @@
 #define SUPC_BODVDD_VLMLVL_Pos                _UINT32_(24)                                         /* (SUPC_BODVDD) Voltage Level Monitor Level Position */
 #define SUPC_BODVDD_VLMLVL_Msk                (_UINT32_(0x3) << SUPC_BODVDD_VLMLVL_Pos)            /* (SUPC_BODVDD) Voltage Level Monitor Level Mask */
 #define SUPC_BODVDD_VLMLVL(value)             (SUPC_BODVDD_VLMLVL_Msk & (_UINT32_(value) << SUPC_BODVDD_VLMLVL_Pos)) /* Assignment of value for VLMLVL in the SUPC_BODVDD register */
-#define   SUPC_BODVDD_VLMLVL_OFF_Val          _UINT32_(0x0)                                        /* (SUPC_BODVDD) VLM disabled  */
-#define   SUPC_BODVDD_VLMLVL_5ABOVE_Val       _UINT32_(0x1)                                        /* (SUPC_BODVDD) VLM threshold is 5% above BOD threshold  */
-#define   SUPC_BODVDD_VLMLVL_15ABOVE_Val      _UINT32_(0x2)                                        /* (SUPC_BODVDD) VLM threshold is 15% above BOD threshold  */
-#define   SUPC_BODVDD_VLMLVL_25ABOVE_Val      _UINT32_(0x3)                                        /* (SUPC_BODVDD) VLM threshold is 25% above BOD threshold  */
-#define SUPC_BODVDD_VLMLVL_OFF                (SUPC_BODVDD_VLMLVL_OFF_Val << SUPC_BODVDD_VLMLVL_Pos) /* (SUPC_BODVDD) VLM disabled Position */
-#define SUPC_BODVDD_VLMLVL_5ABOVE             (SUPC_BODVDD_VLMLVL_5ABOVE_Val << SUPC_BODVDD_VLMLVL_Pos) /* (SUPC_BODVDD) VLM threshold is 5% above BOD threshold Position */
-#define SUPC_BODVDD_VLMLVL_15ABOVE            (SUPC_BODVDD_VLMLVL_15ABOVE_Val << SUPC_BODVDD_VLMLVL_Pos) /* (SUPC_BODVDD) VLM threshold is 15% above BOD threshold Position */
-#define SUPC_BODVDD_VLMLVL_25ABOVE            (SUPC_BODVDD_VLMLVL_25ABOVE_Val << SUPC_BODVDD_VLMLVL_Pos) /* (SUPC_BODVDD) VLM threshold is 25% above BOD threshold Position */
+#define   SUPC_BODVDD_VLMLVL_OFF_Val          _UINT32_(0x0)                                        /* (SUPC_BODVDD) VLM is disabled  */
+#define   SUPC_BODVDD_VLMLVL_5ABOVE_Val       _UINT32_(0x1)                                        /* (SUPC_BODVDD) The VLM threshold is 5% above the BOD threshold  */
+#define   SUPC_BODVDD_VLMLVL_15ABOVE_Val      _UINT32_(0x2)                                        /* (SUPC_BODVDD) The VLM threshold is 15% above the BOD threshold  */
+#define   SUPC_BODVDD_VLMLVL_25ABOVE_Val      _UINT32_(0x3)                                        /* (SUPC_BODVDD) The VLM threshold is 25% above the BOD threshold  */
+#define SUPC_BODVDD_VLMLVL_OFF                (SUPC_BODVDD_VLMLVL_OFF_Val << SUPC_BODVDD_VLMLVL_Pos) /* (SUPC_BODVDD) VLM is disabled Position */
+#define SUPC_BODVDD_VLMLVL_5ABOVE             (SUPC_BODVDD_VLMLVL_5ABOVE_Val << SUPC_BODVDD_VLMLVL_Pos) /* (SUPC_BODVDD) The VLM threshold is 5% above the BOD threshold Position */
+#define SUPC_BODVDD_VLMLVL_15ABOVE            (SUPC_BODVDD_VLMLVL_15ABOVE_Val << SUPC_BODVDD_VLMLVL_Pos) /* (SUPC_BODVDD) The VLM threshold is 15% above the BOD threshold Position */
+#define SUPC_BODVDD_VLMLVL_25ABOVE            (SUPC_BODVDD_VLMLVL_25ABOVE_Val << SUPC_BODVDD_VLMLVL_Pos) /* (SUPC_BODVDD) The VLM threshold is 25% above the BOD threshold Position */
 #define SUPC_BODVDD_VLMCFG_Pos                _UINT32_(26)                                         /* (SUPC_BODVDD) Voltage Level Monitor Interrupt Configuration Position */
 #define SUPC_BODVDD_VLMCFG_Msk                (_UINT32_(0x3) << SUPC_BODVDD_VLMCFG_Pos)            /* (SUPC_BODVDD) Voltage Level Monitor Interrupt Configuration Mask */
 #define SUPC_BODVDD_VLMCFG(value)             (SUPC_BODVDD_VLMCFG_Msk & (_UINT32_(value) << SUPC_BODVDD_VLMCFG_Pos)) /* Assignment of value for VLMCFG in the SUPC_BODVDD register */
-#define   SUPC_BODVDD_VLMCFG_FALLING_Val      _UINT32_(0x0)                                        /* (SUPC_BODVDD) VDD falls below VLM threshold  */
-#define   SUPC_BODVDD_VLMCFG_RISING_Val       _UINT32_(0x1)                                        /* (SUPC_BODVDD) VDD rises above VLM threshold  */
-#define   SUPC_BODVDD_VLMCFG_BOTH_Val         _UINT32_(0x2)                                        /* (SUPC_BODVDD) VDD crosses VLM threshold  */
-#define SUPC_BODVDD_VLMCFG_FALLING            (SUPC_BODVDD_VLMCFG_FALLING_Val << SUPC_BODVDD_VLMCFG_Pos) /* (SUPC_BODVDD) VDD falls below VLM threshold Position */
-#define SUPC_BODVDD_VLMCFG_RISING             (SUPC_BODVDD_VLMCFG_RISING_Val << SUPC_BODVDD_VLMCFG_Pos) /* (SUPC_BODVDD) VDD rises above VLM threshold Position */
-#define SUPC_BODVDD_VLMCFG_BOTH               (SUPC_BODVDD_VLMCFG_BOTH_Val << SUPC_BODVDD_VLMCFG_Pos) /* (SUPC_BODVDD) VDD crosses VLM threshold Position */
+#define   SUPC_BODVDD_VLMCFG_FALLING_Val      _UINT32_(0x0)                                        /* (SUPC_BODVDD) VDD falls below the VLM threshold  */
+#define   SUPC_BODVDD_VLMCFG_RISING_Val       _UINT32_(0x1)                                        /* (SUPC_BODVDD) VDD rises above the VLM threshold  */
+#define   SUPC_BODVDD_VLMCFG_BOTH_Val         _UINT32_(0x2)                                        /* (SUPC_BODVDD) VDD crosses the VLM threshold  */
+#define SUPC_BODVDD_VLMCFG_FALLING            (SUPC_BODVDD_VLMCFG_FALLING_Val << SUPC_BODVDD_VLMCFG_Pos) /* (SUPC_BODVDD) VDD falls below the VLM threshold Position */
+#define SUPC_BODVDD_VLMCFG_RISING             (SUPC_BODVDD_VLMCFG_RISING_Val << SUPC_BODVDD_VLMCFG_Pos) /* (SUPC_BODVDD) VDD rises above the VLM threshold Position */
+#define SUPC_BODVDD_VLMCFG_BOTH               (SUPC_BODVDD_VLMCFG_BOTH_Val << SUPC_BODVDD_VLMCFG_Pos) /* (SUPC_BODVDD) VDD crosses the VLM threshold Position */
 #define SUPC_BODVDD_WRTLOCK_Pos               _UINT32_(31)                                         /* (SUPC_BODVDD) Write Lock Position */
 #define SUPC_BODVDD_WRTLOCK_Msk               (_UINT32_(0x1) << SUPC_BODVDD_WRTLOCK_Pos)           /* (SUPC_BODVDD) Write Lock Mask */
 #define SUPC_BODVDD_WRTLOCK(value)            (SUPC_BODVDD_WRTLOCK_Msk & (_UINT32_(value) << SUPC_BODVDD_WRTLOCK_Pos)) /* Assignment of value for WRTLOCK in the SUPC_BODVDD register */
 #define SUPC_BODVDD_Msk                       _UINT32_(0x8F031162)                                 /* (SUPC_BODVDD) Register Mask  */
 
 
-/* -------- SUPC_VREG : (SUPC Offset: 0x20) (R/W 32) Voltage Regulator System (VREG) Control -------- */
-#define SUPC_VREG_RESETVALUE                  _UINT32_(0x00)                                       /*  (SUPC_VREG) Voltage Regulator System (VREG) Control  Reset Value */
+/* -------- SUPC_VREG : (SUPC Offset: 0x20) (R/W 32) Voltage Regulator Control -------- */
+#define SUPC_VREG_RESETVALUE                  _UINT32_(0x00)                                       /*  (SUPC_VREG) Voltage Regulator Control  Reset Value */
 
 #define SUPC_VREG_RUNSTDBY_Pos                _UINT32_(6)                                          /* (SUPC_VREG) Run in Standby Position */
 #define SUPC_VREG_RUNSTDBY_Msk                (_UINT32_(0x1) << SUPC_VREG_RUNSTDBY_Pos)            /* (SUPC_VREG) Run in Standby Mask */
@@ -231,14 +231,14 @@
 #define SUPC_WPCTRL_WPEN_Pos                  _UINT32_(0)                                          /* (SUPC_WPCTRL) Write Protection Enable Position */
 #define SUPC_WPCTRL_WPEN_Msk                  (_UINT32_(0x1) << SUPC_WPCTRL_WPEN_Pos)              /* (SUPC_WPCTRL) Write Protection Enable Mask */
 #define SUPC_WPCTRL_WPEN(value)               (SUPC_WPCTRL_WPEN_Msk & (_UINT32_(value) << SUPC_WPCTRL_WPEN_Pos)) /* Assignment of value for WPEN in the SUPC_WPCTRL register */
-#define SUPC_WPCTRL_WPLCK_Pos                 _UINT32_(1)                                          /* (SUPC_WPCTRL) WPCTRL Write Lock Bit Position */
-#define SUPC_WPCTRL_WPLCK_Msk                 (_UINT32_(0x1) << SUPC_WPCTRL_WPLCK_Pos)             /* (SUPC_WPCTRL) WPCTRL Write Lock Bit Mask */
+#define SUPC_WPCTRL_WPLCK_Pos                 _UINT32_(1)                                          /* (SUPC_WPCTRL) Write Protection Lock Position */
+#define SUPC_WPCTRL_WPLCK_Msk                 (_UINT32_(0x1) << SUPC_WPCTRL_WPLCK_Pos)             /* (SUPC_WPCTRL) Write Protection Lock Mask */
 #define SUPC_WPCTRL_WPLCK(value)              (SUPC_WPCTRL_WPLCK_Msk & (_UINT32_(value) << SUPC_WPCTRL_WPLCK_Pos)) /* Assignment of value for WPLCK in the SUPC_WPCTRL register */
 #define SUPC_WPCTRL_WPKEY_Pos                 _UINT32_(8)                                          /* (SUPC_WPCTRL) Write Protection Key Position */
 #define SUPC_WPCTRL_WPKEY_Msk                 (_UINT32_(0xFFFFFF) << SUPC_WPCTRL_WPKEY_Pos)        /* (SUPC_WPCTRL) Write Protection Key Mask */
 #define SUPC_WPCTRL_WPKEY(value)              (SUPC_WPCTRL_WPKEY_Msk & (_UINT32_(value) << SUPC_WPCTRL_WPKEY_Pos)) /* Assignment of value for WPKEY in the SUPC_WPCTRL register */
-#define   SUPC_WPCTRL_WPKEY_KEY_Val           _UINT32_(0x535550)                                   /* (SUPC_WPCTRL) Allow writes to the WPCTRL register.  */
-#define SUPC_WPCTRL_WPKEY_KEY                 (SUPC_WPCTRL_WPKEY_KEY_Val << SUPC_WPCTRL_WPKEY_Pos) /* (SUPC_WPCTRL) Allow writes to the WPCTRL register. Position */
+#define   SUPC_WPCTRL_WPKEY_KEY_Val           _UINT32_(0x535550)                                   /* (SUPC_WPCTRL) Allows writes to the WPCTRL register  */
+#define SUPC_WPCTRL_WPKEY_KEY                 (SUPC_WPCTRL_WPKEY_KEY_Val << SUPC_WPCTRL_WPKEY_Pos) /* (SUPC_WPCTRL) Allows writes to the WPCTRL register Position */
 #define SUPC_WPCTRL_Msk                       _UINT32_(0xFFFFFF03)                                 /* (SUPC_WPCTRL) Register Mask  */
 
 
@@ -248,8 +248,8 @@
 #define SUPC_INTFLAG_REG_OFST          _UINT32_(0x0C)      /* (SUPC_INTFLAG) Interrupt Flag Status and Clear Offset */
 #define SUPC_INTFLAGSET_REG_OFST       _UINT32_(0x10)      /* (SUPC_INTFLAGSET) Interrupt Flag Software Set Offset */
 #define SUPC_STATUS_REG_OFST           _UINT32_(0x14)      /* (SUPC_STATUS) Status Offset */
-#define SUPC_BODVDD_REG_OFST           _UINT32_(0x1C)      /* (SUPC_BODVDD) VDD Brown-Out Detector (BODVDD) Control Offset */
-#define SUPC_VREG_REG_OFST             _UINT32_(0x20)      /* (SUPC_VREG) Voltage Regulator System (VREG) Control Offset */
+#define SUPC_BODVDD_REG_OFST           _UINT32_(0x1C)      /* (SUPC_BODVDD) VDD Brown-Out Detector Control Offset */
+#define SUPC_VREG_REG_OFST             _UINT32_(0x20)      /* (SUPC_VREG) Voltage Regulator Control Offset */
 #define SUPC_MVIO_REG_OFST             _UINT32_(0x24)      /* (SUPC_MVIO) MVIO Control Offset */
 #define SUPC_EVCTRL_REG_OFST           _UINT32_(0x28)      /* (SUPC_EVCTRL) Event Control Offset */
 #define SUPC_WPCTRL_REG_OFST           _UINT32_(0x2C)      /* (SUPC_WPCTRL) Write Protection Control Offset */
@@ -265,8 +265,8 @@ typedef struct
   __IO  uint32_t                       SUPC_INTFLAGSET;    /* Offset: 0x10 (R/W  32) Interrupt Flag Software Set */
   __I   uint32_t                       SUPC_STATUS;        /* Offset: 0x14 (R/   32) Status */
   __I   uint8_t                        Reserved2[0x04];
-  __IO  uint32_t                       SUPC_BODVDD;        /* Offset: 0x1C (R/W  32) VDD Brown-Out Detector (BODVDD) Control */
-  __IO  uint32_t                       SUPC_VREG;          /* Offset: 0x20 (R/W  32) Voltage Regulator System (VREG) Control */
+  __IO  uint32_t                       SUPC_BODVDD;        /* Offset: 0x1C (R/W  32) VDD Brown-Out Detector Control */
+  __IO  uint32_t                       SUPC_VREG;          /* Offset: 0x20 (R/W  32) Voltage Regulator Control */
   __IO  uint32_t                       SUPC_MVIO;          /* Offset: 0x24 (R/W  32) MVIO Control */
   __IO  uint32_t                       SUPC_EVCTRL;        /* Offset: 0x28 (R/W  32) Event Control */
   __IO  uint32_t                       SUPC_WPCTRL;        /* Offset: 0x2C (R/W  32) Write Protection Control */
