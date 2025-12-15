@@ -39,167 +39,165 @@
 
 
 /* -------- EVSYS_CHSTATUS : (EVSYS Offset: 0x0C) ( R/ 32) Channel Status -------- */
-#define EVSYS_CHSTATUS_RESETVALUE             _UINT32_(0x0F)                                       /*  (EVSYS_CHSTATUS) Channel Status  Reset Value */
-
-#define EVSYS_CHSTATUS_USRRDY0_Pos            _UINT32_(0)                                          /* (EVSYS_CHSTATUS) Users Ready on Channel # Position */
-#define EVSYS_CHSTATUS_USRRDY0_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_USRRDY0_Pos)        /* (EVSYS_CHSTATUS) Users Ready on Channel # Mask */
+#define EVSYS_CHSTATUS_USRRDY0_Pos            _UINT32_(0)                                          /* (EVSYS_CHSTATUS) Users Ready on Channel 0 Position */
+#define EVSYS_CHSTATUS_USRRDY0_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_USRRDY0_Pos)        /* (EVSYS_CHSTATUS) Users Ready on Channel 0 Mask */
 #define EVSYS_CHSTATUS_USRRDY0(value)         (EVSYS_CHSTATUS_USRRDY0_Msk & (_UINT32_(value) << EVSYS_CHSTATUS_USRRDY0_Pos)) /* Assignment of value for USRRDY0 in the EVSYS_CHSTATUS register */
-#define EVSYS_CHSTATUS_USRRDY1_Pos            _UINT32_(1)                                          /* (EVSYS_CHSTATUS) Users Ready on Channel # Position */
-#define EVSYS_CHSTATUS_USRRDY1_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_USRRDY1_Pos)        /* (EVSYS_CHSTATUS) Users Ready on Channel # Mask */
+#define EVSYS_CHSTATUS_USRRDY1_Pos            _UINT32_(1)                                          /* (EVSYS_CHSTATUS) Users Ready on Channel 1 Position */
+#define EVSYS_CHSTATUS_USRRDY1_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_USRRDY1_Pos)        /* (EVSYS_CHSTATUS) Users Ready on Channel 1 Mask */
 #define EVSYS_CHSTATUS_USRRDY1(value)         (EVSYS_CHSTATUS_USRRDY1_Msk & (_UINT32_(value) << EVSYS_CHSTATUS_USRRDY1_Pos)) /* Assignment of value for USRRDY1 in the EVSYS_CHSTATUS register */
-#define EVSYS_CHSTATUS_USRRDY2_Pos            _UINT32_(2)                                          /* (EVSYS_CHSTATUS) Users Ready on Channel # Position */
-#define EVSYS_CHSTATUS_USRRDY2_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_USRRDY2_Pos)        /* (EVSYS_CHSTATUS) Users Ready on Channel # Mask */
+#define EVSYS_CHSTATUS_USRRDY2_Pos            _UINT32_(2)                                          /* (EVSYS_CHSTATUS) Users Ready on Channel 2 Position */
+#define EVSYS_CHSTATUS_USRRDY2_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_USRRDY2_Pos)        /* (EVSYS_CHSTATUS) Users Ready on Channel 2 Mask */
 #define EVSYS_CHSTATUS_USRRDY2(value)         (EVSYS_CHSTATUS_USRRDY2_Msk & (_UINT32_(value) << EVSYS_CHSTATUS_USRRDY2_Pos)) /* Assignment of value for USRRDY2 in the EVSYS_CHSTATUS register */
-#define EVSYS_CHSTATUS_USRRDY3_Pos            _UINT32_(3)                                          /* (EVSYS_CHSTATUS) Users Ready on Channel # Position */
-#define EVSYS_CHSTATUS_USRRDY3_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_USRRDY3_Pos)        /* (EVSYS_CHSTATUS) Users Ready on Channel # Mask */
+#define EVSYS_CHSTATUS_USRRDY3_Pos            _UINT32_(3)                                          /* (EVSYS_CHSTATUS) Users Ready on Channel 3 Position */
+#define EVSYS_CHSTATUS_USRRDY3_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_USRRDY3_Pos)        /* (EVSYS_CHSTATUS) Users Ready on Channel 3 Mask */
 #define EVSYS_CHSTATUS_USRRDY3(value)         (EVSYS_CHSTATUS_USRRDY3_Msk & (_UINT32_(value) << EVSYS_CHSTATUS_USRRDY3_Pos)) /* Assignment of value for USRRDY3 in the EVSYS_CHSTATUS register */
-#define EVSYS_CHSTATUS_CHBUSY0_Pos            _UINT32_(16)                                         /* (EVSYS_CHSTATUS) Channel # Busy Position */
-#define EVSYS_CHSTATUS_CHBUSY0_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_CHBUSY0_Pos)        /* (EVSYS_CHSTATUS) Channel # Busy Mask */
+#define EVSYS_CHSTATUS_CHBUSY0_Pos            _UINT32_(16)                                         /* (EVSYS_CHSTATUS) Channel 0 Busy Position */
+#define EVSYS_CHSTATUS_CHBUSY0_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_CHBUSY0_Pos)        /* (EVSYS_CHSTATUS) Channel 0 Busy Mask */
 #define EVSYS_CHSTATUS_CHBUSY0(value)         (EVSYS_CHSTATUS_CHBUSY0_Msk & (_UINT32_(value) << EVSYS_CHSTATUS_CHBUSY0_Pos)) /* Assignment of value for CHBUSY0 in the EVSYS_CHSTATUS register */
-#define EVSYS_CHSTATUS_CHBUSY1_Pos            _UINT32_(17)                                         /* (EVSYS_CHSTATUS) Channel # Busy Position */
-#define EVSYS_CHSTATUS_CHBUSY1_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_CHBUSY1_Pos)        /* (EVSYS_CHSTATUS) Channel # Busy Mask */
+#define EVSYS_CHSTATUS_CHBUSY1_Pos            _UINT32_(17)                                         /* (EVSYS_CHSTATUS) Channel 1 Busy Position */
+#define EVSYS_CHSTATUS_CHBUSY1_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_CHBUSY1_Pos)        /* (EVSYS_CHSTATUS) Channel 1 Busy Mask */
 #define EVSYS_CHSTATUS_CHBUSY1(value)         (EVSYS_CHSTATUS_CHBUSY1_Msk & (_UINT32_(value) << EVSYS_CHSTATUS_CHBUSY1_Pos)) /* Assignment of value for CHBUSY1 in the EVSYS_CHSTATUS register */
-#define EVSYS_CHSTATUS_CHBUSY2_Pos            _UINT32_(18)                                         /* (EVSYS_CHSTATUS) Channel # Busy Position */
-#define EVSYS_CHSTATUS_CHBUSY2_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_CHBUSY2_Pos)        /* (EVSYS_CHSTATUS) Channel # Busy Mask */
+#define EVSYS_CHSTATUS_CHBUSY2_Pos            _UINT32_(18)                                         /* (EVSYS_CHSTATUS) Channel 2 Busy Position */
+#define EVSYS_CHSTATUS_CHBUSY2_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_CHBUSY2_Pos)        /* (EVSYS_CHSTATUS) Channel 2 Busy Mask */
 #define EVSYS_CHSTATUS_CHBUSY2(value)         (EVSYS_CHSTATUS_CHBUSY2_Msk & (_UINT32_(value) << EVSYS_CHSTATUS_CHBUSY2_Pos)) /* Assignment of value for CHBUSY2 in the EVSYS_CHSTATUS register */
-#define EVSYS_CHSTATUS_CHBUSY3_Pos            _UINT32_(19)                                         /* (EVSYS_CHSTATUS) Channel # Busy Position */
-#define EVSYS_CHSTATUS_CHBUSY3_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_CHBUSY3_Pos)        /* (EVSYS_CHSTATUS) Channel # Busy Mask */
+#define EVSYS_CHSTATUS_CHBUSY3_Pos            _UINT32_(19)                                         /* (EVSYS_CHSTATUS) Channel 3 Busy Position */
+#define EVSYS_CHSTATUS_CHBUSY3_Msk            (_UINT32_(0x1) << EVSYS_CHSTATUS_CHBUSY3_Pos)        /* (EVSYS_CHSTATUS) Channel 3 Busy Mask */
 #define EVSYS_CHSTATUS_CHBUSY3(value)         (EVSYS_CHSTATUS_CHBUSY3_Msk & (_UINT32_(value) << EVSYS_CHSTATUS_CHBUSY3_Pos)) /* Assignment of value for CHBUSY3 in the EVSYS_CHSTATUS register */
 #define EVSYS_CHSTATUS_Msk                    _UINT32_(0x000F000F)                                 /* (EVSYS_CHSTATUS) Register Mask  */
 
-#define EVSYS_CHSTATUS_USRRDY_Pos             _UINT32_(0)                                          /* (EVSYS_CHSTATUS Position) Users Ready on Channel # */
+#define EVSYS_CHSTATUS_USRRDY_Pos             _UINT32_(0)                                          /* (EVSYS_CHSTATUS Position) Users Ready on Channel x */
 #define EVSYS_CHSTATUS_USRRDY_Msk             (_UINT32_(0xF) << EVSYS_CHSTATUS_USRRDY_Pos)         /* (EVSYS_CHSTATUS Mask) USRRDY */
 #define EVSYS_CHSTATUS_USRRDY(value)          (EVSYS_CHSTATUS_USRRDY_Msk & (_UINT32_(value) << EVSYS_CHSTATUS_USRRDY_Pos)) 
-#define EVSYS_CHSTATUS_CHBUSY_Pos             _UINT32_(16)                                         /* (EVSYS_CHSTATUS Position) Channel # Busy */
+#define EVSYS_CHSTATUS_CHBUSY_Pos             _UINT32_(16)                                         /* (EVSYS_CHSTATUS Position) Channel 3 Busy */
 #define EVSYS_CHSTATUS_CHBUSY_Msk             (_UINT32_(0xF) << EVSYS_CHSTATUS_CHBUSY_Pos)         /* (EVSYS_CHSTATUS Mask) CHBUSY */
 #define EVSYS_CHSTATUS_CHBUSY(value)          (EVSYS_CHSTATUS_CHBUSY_Msk & (_UINT32_(value) << EVSYS_CHSTATUS_CHBUSY_Pos)) 
 
 /* -------- EVSYS_INTENCLR : (EVSYS Offset: 0x10) (R/W 32) Interrupt Enable Clear -------- */
 #define EVSYS_INTENCLR_RESETVALUE             _UINT32_(0x00)                                       /*  (EVSYS_INTENCLR) Interrupt Enable Clear  Reset Value */
 
-#define EVSYS_INTENCLR_OVR0_Pos               _UINT32_(0)                                          /* (EVSYS_INTENCLR) Overrun Channel # Interrupt Enable Position */
-#define EVSYS_INTENCLR_OVR0_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_OVR0_Pos)           /* (EVSYS_INTENCLR) Overrun Channel # Interrupt Enable Mask */
+#define EVSYS_INTENCLR_OVR0_Pos               _UINT32_(0)                                          /* (EVSYS_INTENCLR) Overrun Channel 0 Interrupt Enable Position */
+#define EVSYS_INTENCLR_OVR0_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_OVR0_Pos)           /* (EVSYS_INTENCLR) Overrun Channel 0 Interrupt Enable Mask */
 #define EVSYS_INTENCLR_OVR0(value)            (EVSYS_INTENCLR_OVR0_Msk & (_UINT32_(value) << EVSYS_INTENCLR_OVR0_Pos)) /* Assignment of value for OVR0 in the EVSYS_INTENCLR register */
-#define EVSYS_INTENCLR_OVR1_Pos               _UINT32_(1)                                          /* (EVSYS_INTENCLR) Overrun Channel # Interrupt Enable Position */
-#define EVSYS_INTENCLR_OVR1_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_OVR1_Pos)           /* (EVSYS_INTENCLR) Overrun Channel # Interrupt Enable Mask */
+#define EVSYS_INTENCLR_OVR1_Pos               _UINT32_(1)                                          /* (EVSYS_INTENCLR) Overrun Channel 1 Interrupt Enable Position */
+#define EVSYS_INTENCLR_OVR1_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_OVR1_Pos)           /* (EVSYS_INTENCLR) Overrun Channel 1 Interrupt Enable Mask */
 #define EVSYS_INTENCLR_OVR1(value)            (EVSYS_INTENCLR_OVR1_Msk & (_UINT32_(value) << EVSYS_INTENCLR_OVR1_Pos)) /* Assignment of value for OVR1 in the EVSYS_INTENCLR register */
-#define EVSYS_INTENCLR_OVR2_Pos               _UINT32_(2)                                          /* (EVSYS_INTENCLR) Overrun Channel # Interrupt Enable Position */
-#define EVSYS_INTENCLR_OVR2_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_OVR2_Pos)           /* (EVSYS_INTENCLR) Overrun Channel # Interrupt Enable Mask */
+#define EVSYS_INTENCLR_OVR2_Pos               _UINT32_(2)                                          /* (EVSYS_INTENCLR) Overrun Channel 2 Interrupt Enable Position */
+#define EVSYS_INTENCLR_OVR2_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_OVR2_Pos)           /* (EVSYS_INTENCLR) Overrun Channel 2 Interrupt Enable Mask */
 #define EVSYS_INTENCLR_OVR2(value)            (EVSYS_INTENCLR_OVR2_Msk & (_UINT32_(value) << EVSYS_INTENCLR_OVR2_Pos)) /* Assignment of value for OVR2 in the EVSYS_INTENCLR register */
-#define EVSYS_INTENCLR_OVR3_Pos               _UINT32_(3)                                          /* (EVSYS_INTENCLR) Overrun Channel # Interrupt Enable Position */
-#define EVSYS_INTENCLR_OVR3_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_OVR3_Pos)           /* (EVSYS_INTENCLR) Overrun Channel # Interrupt Enable Mask */
+#define EVSYS_INTENCLR_OVR3_Pos               _UINT32_(3)                                          /* (EVSYS_INTENCLR) Overrun Channel 3 Interrupt Enable Position */
+#define EVSYS_INTENCLR_OVR3_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_OVR3_Pos)           /* (EVSYS_INTENCLR) Overrun Channel 3 Interrupt Enable Mask */
 #define EVSYS_INTENCLR_OVR3(value)            (EVSYS_INTENCLR_OVR3_Msk & (_UINT32_(value) << EVSYS_INTENCLR_OVR3_Pos)) /* Assignment of value for OVR3 in the EVSYS_INTENCLR register */
-#define EVSYS_INTENCLR_EVD0_Pos               _UINT32_(16)                                         /* (EVSYS_INTENCLR) Event Detected Channel # Interrupt Enable Position */
-#define EVSYS_INTENCLR_EVD0_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_EVD0_Pos)           /* (EVSYS_INTENCLR) Event Detected Channel # Interrupt Enable Mask */
+#define EVSYS_INTENCLR_EVD0_Pos               _UINT32_(16)                                         /* (EVSYS_INTENCLR) Event Detected Channel 0 Interrupt Enable Position */
+#define EVSYS_INTENCLR_EVD0_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_EVD0_Pos)           /* (EVSYS_INTENCLR) Event Detected Channel 0 Interrupt Enable Mask */
 #define EVSYS_INTENCLR_EVD0(value)            (EVSYS_INTENCLR_EVD0_Msk & (_UINT32_(value) << EVSYS_INTENCLR_EVD0_Pos)) /* Assignment of value for EVD0 in the EVSYS_INTENCLR register */
-#define EVSYS_INTENCLR_EVD1_Pos               _UINT32_(17)                                         /* (EVSYS_INTENCLR) Event Detected Channel # Interrupt Enable Position */
-#define EVSYS_INTENCLR_EVD1_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_EVD1_Pos)           /* (EVSYS_INTENCLR) Event Detected Channel # Interrupt Enable Mask */
+#define EVSYS_INTENCLR_EVD1_Pos               _UINT32_(17)                                         /* (EVSYS_INTENCLR) Event Detected Channel 1 Interrupt Enable Position */
+#define EVSYS_INTENCLR_EVD1_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_EVD1_Pos)           /* (EVSYS_INTENCLR) Event Detected Channel 1 Interrupt Enable Mask */
 #define EVSYS_INTENCLR_EVD1(value)            (EVSYS_INTENCLR_EVD1_Msk & (_UINT32_(value) << EVSYS_INTENCLR_EVD1_Pos)) /* Assignment of value for EVD1 in the EVSYS_INTENCLR register */
-#define EVSYS_INTENCLR_EVD2_Pos               _UINT32_(18)                                         /* (EVSYS_INTENCLR) Event Detected Channel # Interrupt Enable Position */
-#define EVSYS_INTENCLR_EVD2_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_EVD2_Pos)           /* (EVSYS_INTENCLR) Event Detected Channel # Interrupt Enable Mask */
+#define EVSYS_INTENCLR_EVD2_Pos               _UINT32_(18)                                         /* (EVSYS_INTENCLR) Event Detected Channel 2 Interrupt Enable Position */
+#define EVSYS_INTENCLR_EVD2_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_EVD2_Pos)           /* (EVSYS_INTENCLR) Event Detected Channel 2 Interrupt Enable Mask */
 #define EVSYS_INTENCLR_EVD2(value)            (EVSYS_INTENCLR_EVD2_Msk & (_UINT32_(value) << EVSYS_INTENCLR_EVD2_Pos)) /* Assignment of value for EVD2 in the EVSYS_INTENCLR register */
-#define EVSYS_INTENCLR_EVD3_Pos               _UINT32_(19)                                         /* (EVSYS_INTENCLR) Event Detected Channel # Interrupt Enable Position */
-#define EVSYS_INTENCLR_EVD3_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_EVD3_Pos)           /* (EVSYS_INTENCLR) Event Detected Channel # Interrupt Enable Mask */
+#define EVSYS_INTENCLR_EVD3_Pos               _UINT32_(19)                                         /* (EVSYS_INTENCLR) Event Detected Channel 3 Interrupt Enable Position */
+#define EVSYS_INTENCLR_EVD3_Msk               (_UINT32_(0x1) << EVSYS_INTENCLR_EVD3_Pos)           /* (EVSYS_INTENCLR) Event Detected Channel 3 Interrupt Enable Mask */
 #define EVSYS_INTENCLR_EVD3(value)            (EVSYS_INTENCLR_EVD3_Msk & (_UINT32_(value) << EVSYS_INTENCLR_EVD3_Pos)) /* Assignment of value for EVD3 in the EVSYS_INTENCLR register */
 #define EVSYS_INTENCLR_Msk                    _UINT32_(0x000F000F)                                 /* (EVSYS_INTENCLR) Register Mask  */
 
-#define EVSYS_INTENCLR_OVR_Pos                _UINT32_(0)                                          /* (EVSYS_INTENCLR Position) Overrun Channel # Interrupt Enable */
+#define EVSYS_INTENCLR_OVR_Pos                _UINT32_(0)                                          /* (EVSYS_INTENCLR Position) Overrun Channel x Interrupt Enable */
 #define EVSYS_INTENCLR_OVR_Msk                (_UINT32_(0xF) << EVSYS_INTENCLR_OVR_Pos)            /* (EVSYS_INTENCLR Mask) OVR */
 #define EVSYS_INTENCLR_OVR(value)             (EVSYS_INTENCLR_OVR_Msk & (_UINT32_(value) << EVSYS_INTENCLR_OVR_Pos)) 
-#define EVSYS_INTENCLR_EVD_Pos                _UINT32_(16)                                         /* (EVSYS_INTENCLR Position) Event Detected Channel # Interrupt Enable */
+#define EVSYS_INTENCLR_EVD_Pos                _UINT32_(16)                                         /* (EVSYS_INTENCLR Position) Event Detected Channel 3 Interrupt Enable */
 #define EVSYS_INTENCLR_EVD_Msk                (_UINT32_(0xF) << EVSYS_INTENCLR_EVD_Pos)            /* (EVSYS_INTENCLR Mask) EVD */
 #define EVSYS_INTENCLR_EVD(value)             (EVSYS_INTENCLR_EVD_Msk & (_UINT32_(value) << EVSYS_INTENCLR_EVD_Pos)) 
 
 /* -------- EVSYS_INTENSET : (EVSYS Offset: 0x14) (R/W 32) Interrupt Enable Set -------- */
 #define EVSYS_INTENSET_RESETVALUE             _UINT32_(0x00)                                       /*  (EVSYS_INTENSET) Interrupt Enable Set  Reset Value */
 
-#define EVSYS_INTENSET_OVR0_Pos               _UINT32_(0)                                          /* (EVSYS_INTENSET) Overrun Channel # Interrupt Enable Position */
-#define EVSYS_INTENSET_OVR0_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_OVR0_Pos)           /* (EVSYS_INTENSET) Overrun Channel # Interrupt Enable Mask */
+#define EVSYS_INTENSET_OVR0_Pos               _UINT32_(0)                                          /* (EVSYS_INTENSET) Overrun Channel 0 Interrupt Enable Position */
+#define EVSYS_INTENSET_OVR0_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_OVR0_Pos)           /* (EVSYS_INTENSET) Overrun Channel 0 Interrupt Enable Mask */
 #define EVSYS_INTENSET_OVR0(value)            (EVSYS_INTENSET_OVR0_Msk & (_UINT32_(value) << EVSYS_INTENSET_OVR0_Pos)) /* Assignment of value for OVR0 in the EVSYS_INTENSET register */
-#define EVSYS_INTENSET_OVR1_Pos               _UINT32_(1)                                          /* (EVSYS_INTENSET) Overrun Channel # Interrupt Enable Position */
-#define EVSYS_INTENSET_OVR1_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_OVR1_Pos)           /* (EVSYS_INTENSET) Overrun Channel # Interrupt Enable Mask */
+#define EVSYS_INTENSET_OVR1_Pos               _UINT32_(1)                                          /* (EVSYS_INTENSET) Overrun Channel 1 Interrupt Enable Position */
+#define EVSYS_INTENSET_OVR1_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_OVR1_Pos)           /* (EVSYS_INTENSET) Overrun Channel 1 Interrupt Enable Mask */
 #define EVSYS_INTENSET_OVR1(value)            (EVSYS_INTENSET_OVR1_Msk & (_UINT32_(value) << EVSYS_INTENSET_OVR1_Pos)) /* Assignment of value for OVR1 in the EVSYS_INTENSET register */
-#define EVSYS_INTENSET_OVR2_Pos               _UINT32_(2)                                          /* (EVSYS_INTENSET) Overrun Channel # Interrupt Enable Position */
-#define EVSYS_INTENSET_OVR2_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_OVR2_Pos)           /* (EVSYS_INTENSET) Overrun Channel # Interrupt Enable Mask */
+#define EVSYS_INTENSET_OVR2_Pos               _UINT32_(2)                                          /* (EVSYS_INTENSET) Overrun Channel 2 Interrupt Enable Position */
+#define EVSYS_INTENSET_OVR2_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_OVR2_Pos)           /* (EVSYS_INTENSET) Overrun Channel 2 Interrupt Enable Mask */
 #define EVSYS_INTENSET_OVR2(value)            (EVSYS_INTENSET_OVR2_Msk & (_UINT32_(value) << EVSYS_INTENSET_OVR2_Pos)) /* Assignment of value for OVR2 in the EVSYS_INTENSET register */
-#define EVSYS_INTENSET_OVR3_Pos               _UINT32_(3)                                          /* (EVSYS_INTENSET) Overrun Channel # Interrupt Enable Position */
-#define EVSYS_INTENSET_OVR3_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_OVR3_Pos)           /* (EVSYS_INTENSET) Overrun Channel # Interrupt Enable Mask */
+#define EVSYS_INTENSET_OVR3_Pos               _UINT32_(3)                                          /* (EVSYS_INTENSET) Overrun Channel 3 Interrupt Enable Position */
+#define EVSYS_INTENSET_OVR3_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_OVR3_Pos)           /* (EVSYS_INTENSET) Overrun Channel 3 Interrupt Enable Mask */
 #define EVSYS_INTENSET_OVR3(value)            (EVSYS_INTENSET_OVR3_Msk & (_UINT32_(value) << EVSYS_INTENSET_OVR3_Pos)) /* Assignment of value for OVR3 in the EVSYS_INTENSET register */
-#define EVSYS_INTENSET_EVD0_Pos               _UINT32_(16)                                         /* (EVSYS_INTENSET) Event Detected Channel # Interrupt Enable Position */
-#define EVSYS_INTENSET_EVD0_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_EVD0_Pos)           /* (EVSYS_INTENSET) Event Detected Channel # Interrupt Enable Mask */
+#define EVSYS_INTENSET_EVD0_Pos               _UINT32_(16)                                         /* (EVSYS_INTENSET) Event Detected Channel 0 Interrupt Enable Position */
+#define EVSYS_INTENSET_EVD0_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_EVD0_Pos)           /* (EVSYS_INTENSET) Event Detected Channel 0 Interrupt Enable Mask */
 #define EVSYS_INTENSET_EVD0(value)            (EVSYS_INTENSET_EVD0_Msk & (_UINT32_(value) << EVSYS_INTENSET_EVD0_Pos)) /* Assignment of value for EVD0 in the EVSYS_INTENSET register */
-#define EVSYS_INTENSET_EVD1_Pos               _UINT32_(17)                                         /* (EVSYS_INTENSET) Event Detected Channel # Interrupt Enable Position */
-#define EVSYS_INTENSET_EVD1_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_EVD1_Pos)           /* (EVSYS_INTENSET) Event Detected Channel # Interrupt Enable Mask */
+#define EVSYS_INTENSET_EVD1_Pos               _UINT32_(17)                                         /* (EVSYS_INTENSET) Event Detected Channel 1 Interrupt Enable Position */
+#define EVSYS_INTENSET_EVD1_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_EVD1_Pos)           /* (EVSYS_INTENSET) Event Detected Channel 1 Interrupt Enable Mask */
 #define EVSYS_INTENSET_EVD1(value)            (EVSYS_INTENSET_EVD1_Msk & (_UINT32_(value) << EVSYS_INTENSET_EVD1_Pos)) /* Assignment of value for EVD1 in the EVSYS_INTENSET register */
-#define EVSYS_INTENSET_EVD2_Pos               _UINT32_(18)                                         /* (EVSYS_INTENSET) Event Detected Channel # Interrupt Enable Position */
-#define EVSYS_INTENSET_EVD2_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_EVD2_Pos)           /* (EVSYS_INTENSET) Event Detected Channel # Interrupt Enable Mask */
+#define EVSYS_INTENSET_EVD2_Pos               _UINT32_(18)                                         /* (EVSYS_INTENSET) Event Detected Channel 2 Interrupt Enable Position */
+#define EVSYS_INTENSET_EVD2_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_EVD2_Pos)           /* (EVSYS_INTENSET) Event Detected Channel 2 Interrupt Enable Mask */
 #define EVSYS_INTENSET_EVD2(value)            (EVSYS_INTENSET_EVD2_Msk & (_UINT32_(value) << EVSYS_INTENSET_EVD2_Pos)) /* Assignment of value for EVD2 in the EVSYS_INTENSET register */
-#define EVSYS_INTENSET_EVD3_Pos               _UINT32_(19)                                         /* (EVSYS_INTENSET) Event Detected Channel # Interrupt Enable Position */
-#define EVSYS_INTENSET_EVD3_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_EVD3_Pos)           /* (EVSYS_INTENSET) Event Detected Channel # Interrupt Enable Mask */
+#define EVSYS_INTENSET_EVD3_Pos               _UINT32_(19)                                         /* (EVSYS_INTENSET) Event Detected Channel 3 Interrupt Enable Position */
+#define EVSYS_INTENSET_EVD3_Msk               (_UINT32_(0x1) << EVSYS_INTENSET_EVD3_Pos)           /* (EVSYS_INTENSET) Event Detected Channel 3 Interrupt Enable Mask */
 #define EVSYS_INTENSET_EVD3(value)            (EVSYS_INTENSET_EVD3_Msk & (_UINT32_(value) << EVSYS_INTENSET_EVD3_Pos)) /* Assignment of value for EVD3 in the EVSYS_INTENSET register */
 #define EVSYS_INTENSET_Msk                    _UINT32_(0x000F000F)                                 /* (EVSYS_INTENSET) Register Mask  */
 
-#define EVSYS_INTENSET_OVR_Pos                _UINT32_(0)                                          /* (EVSYS_INTENSET Position) Overrun Channel # Interrupt Enable */
+#define EVSYS_INTENSET_OVR_Pos                _UINT32_(0)                                          /* (EVSYS_INTENSET Position) Overrun Channel x Interrupt Enable */
 #define EVSYS_INTENSET_OVR_Msk                (_UINT32_(0xF) << EVSYS_INTENSET_OVR_Pos)            /* (EVSYS_INTENSET Mask) OVR */
 #define EVSYS_INTENSET_OVR(value)             (EVSYS_INTENSET_OVR_Msk & (_UINT32_(value) << EVSYS_INTENSET_OVR_Pos)) 
-#define EVSYS_INTENSET_EVD_Pos                _UINT32_(16)                                         /* (EVSYS_INTENSET Position) Event Detected Channel # Interrupt Enable */
+#define EVSYS_INTENSET_EVD_Pos                _UINT32_(16)                                         /* (EVSYS_INTENSET Position) Event Detected Channel 3 Interrupt Enable */
 #define EVSYS_INTENSET_EVD_Msk                (_UINT32_(0xF) << EVSYS_INTENSET_EVD_Pos)            /* (EVSYS_INTENSET Mask) EVD */
 #define EVSYS_INTENSET_EVD(value)             (EVSYS_INTENSET_EVD_Msk & (_UINT32_(value) << EVSYS_INTENSET_EVD_Pos)) 
 
 /* -------- EVSYS_INTFLAG : (EVSYS Offset: 0x18) (R/W 32) Interrupt Flag Status and Clear -------- */
 #define EVSYS_INTFLAG_RESETVALUE              _UINT32_(0x00)                                       /*  (EVSYS_INTFLAG) Interrupt Flag Status and Clear  Reset Value */
 
-#define EVSYS_INTFLAG_OVR0_Pos                _UINT32_(0)                                          /* (EVSYS_INTFLAG) Overrun Channel # Position */
-#define EVSYS_INTFLAG_OVR0_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_OVR0_Pos)            /* (EVSYS_INTFLAG) Overrun Channel # Mask */
+#define EVSYS_INTFLAG_OVR0_Pos                _UINT32_(0)                                          /* (EVSYS_INTFLAG) Overrun Channel 0 Position */
+#define EVSYS_INTFLAG_OVR0_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_OVR0_Pos)            /* (EVSYS_INTFLAG) Overrun Channel 0 Mask */
 #define EVSYS_INTFLAG_OVR0(value)             (EVSYS_INTFLAG_OVR0_Msk & (_UINT32_(value) << EVSYS_INTFLAG_OVR0_Pos)) /* Assignment of value for OVR0 in the EVSYS_INTFLAG register */
-#define EVSYS_INTFLAG_OVR1_Pos                _UINT32_(1)                                          /* (EVSYS_INTFLAG) Overrun Channel # Position */
-#define EVSYS_INTFLAG_OVR1_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_OVR1_Pos)            /* (EVSYS_INTFLAG) Overrun Channel # Mask */
+#define EVSYS_INTFLAG_OVR1_Pos                _UINT32_(1)                                          /* (EVSYS_INTFLAG) Overrun Channel 1 Position */
+#define EVSYS_INTFLAG_OVR1_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_OVR1_Pos)            /* (EVSYS_INTFLAG) Overrun Channel 1 Mask */
 #define EVSYS_INTFLAG_OVR1(value)             (EVSYS_INTFLAG_OVR1_Msk & (_UINT32_(value) << EVSYS_INTFLAG_OVR1_Pos)) /* Assignment of value for OVR1 in the EVSYS_INTFLAG register */
-#define EVSYS_INTFLAG_OVR2_Pos                _UINT32_(2)                                          /* (EVSYS_INTFLAG) Overrun Channel # Position */
-#define EVSYS_INTFLAG_OVR2_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_OVR2_Pos)            /* (EVSYS_INTFLAG) Overrun Channel # Mask */
+#define EVSYS_INTFLAG_OVR2_Pos                _UINT32_(2)                                          /* (EVSYS_INTFLAG) Overrun Channel 2 Position */
+#define EVSYS_INTFLAG_OVR2_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_OVR2_Pos)            /* (EVSYS_INTFLAG) Overrun Channel 2 Mask */
 #define EVSYS_INTFLAG_OVR2(value)             (EVSYS_INTFLAG_OVR2_Msk & (_UINT32_(value) << EVSYS_INTFLAG_OVR2_Pos)) /* Assignment of value for OVR2 in the EVSYS_INTFLAG register */
-#define EVSYS_INTFLAG_OVR3_Pos                _UINT32_(3)                                          /* (EVSYS_INTFLAG) Overrun Channel # Position */
-#define EVSYS_INTFLAG_OVR3_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_OVR3_Pos)            /* (EVSYS_INTFLAG) Overrun Channel # Mask */
+#define EVSYS_INTFLAG_OVR3_Pos                _UINT32_(3)                                          /* (EVSYS_INTFLAG) Overrun Channel 3 Position */
+#define EVSYS_INTFLAG_OVR3_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_OVR3_Pos)            /* (EVSYS_INTFLAG) Overrun Channel 3 Mask */
 #define EVSYS_INTFLAG_OVR3(value)             (EVSYS_INTFLAG_OVR3_Msk & (_UINT32_(value) << EVSYS_INTFLAG_OVR3_Pos)) /* Assignment of value for OVR3 in the EVSYS_INTFLAG register */
-#define EVSYS_INTFLAG_EVD0_Pos                _UINT32_(16)                                         /* (EVSYS_INTFLAG) Event Detected Channel # Position */
-#define EVSYS_INTFLAG_EVD0_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_EVD0_Pos)            /* (EVSYS_INTFLAG) Event Detected Channel # Mask */
+#define EVSYS_INTFLAG_EVD0_Pos                _UINT32_(16)                                         /* (EVSYS_INTFLAG) Event Detected Channel 0 Position */
+#define EVSYS_INTFLAG_EVD0_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_EVD0_Pos)            /* (EVSYS_INTFLAG) Event Detected Channel 0 Mask */
 #define EVSYS_INTFLAG_EVD0(value)             (EVSYS_INTFLAG_EVD0_Msk & (_UINT32_(value) << EVSYS_INTFLAG_EVD0_Pos)) /* Assignment of value for EVD0 in the EVSYS_INTFLAG register */
-#define EVSYS_INTFLAG_EVD1_Pos                _UINT32_(17)                                         /* (EVSYS_INTFLAG) Event Detected Channel # Position */
-#define EVSYS_INTFLAG_EVD1_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_EVD1_Pos)            /* (EVSYS_INTFLAG) Event Detected Channel # Mask */
+#define EVSYS_INTFLAG_EVD1_Pos                _UINT32_(17)                                         /* (EVSYS_INTFLAG) Event Detected Channel 1 Position */
+#define EVSYS_INTFLAG_EVD1_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_EVD1_Pos)            /* (EVSYS_INTFLAG) Event Detected Channel 1 Mask */
 #define EVSYS_INTFLAG_EVD1(value)             (EVSYS_INTFLAG_EVD1_Msk & (_UINT32_(value) << EVSYS_INTFLAG_EVD1_Pos)) /* Assignment of value for EVD1 in the EVSYS_INTFLAG register */
-#define EVSYS_INTFLAG_EVD2_Pos                _UINT32_(18)                                         /* (EVSYS_INTFLAG) Event Detected Channel # Position */
-#define EVSYS_INTFLAG_EVD2_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_EVD2_Pos)            /* (EVSYS_INTFLAG) Event Detected Channel # Mask */
+#define EVSYS_INTFLAG_EVD2_Pos                _UINT32_(18)                                         /* (EVSYS_INTFLAG) Event Detected Channel 2 Position */
+#define EVSYS_INTFLAG_EVD2_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_EVD2_Pos)            /* (EVSYS_INTFLAG) Event Detected Channel 2 Mask */
 #define EVSYS_INTFLAG_EVD2(value)             (EVSYS_INTFLAG_EVD2_Msk & (_UINT32_(value) << EVSYS_INTFLAG_EVD2_Pos)) /* Assignment of value for EVD2 in the EVSYS_INTFLAG register */
-#define EVSYS_INTFLAG_EVD3_Pos                _UINT32_(19)                                         /* (EVSYS_INTFLAG) Event Detected Channel # Position */
-#define EVSYS_INTFLAG_EVD3_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_EVD3_Pos)            /* (EVSYS_INTFLAG) Event Detected Channel # Mask */
+#define EVSYS_INTFLAG_EVD3_Pos                _UINT32_(19)                                         /* (EVSYS_INTFLAG) Event Detected Channel 3 Position */
+#define EVSYS_INTFLAG_EVD3_Msk                (_UINT32_(0x1) << EVSYS_INTFLAG_EVD3_Pos)            /* (EVSYS_INTFLAG) Event Detected Channel 3 Mask */
 #define EVSYS_INTFLAG_EVD3(value)             (EVSYS_INTFLAG_EVD3_Msk & (_UINT32_(value) << EVSYS_INTFLAG_EVD3_Pos)) /* Assignment of value for EVD3 in the EVSYS_INTFLAG register */
 #define EVSYS_INTFLAG_Msk                     _UINT32_(0x000F000F)                                 /* (EVSYS_INTFLAG) Register Mask  */
 
-#define EVSYS_INTFLAG_OVR_Pos                 _UINT32_(0)                                          /* (EVSYS_INTFLAG Position) Overrun Channel # */
+#define EVSYS_INTFLAG_OVR_Pos                 _UINT32_(0)                                          /* (EVSYS_INTFLAG Position) Overrun Channel x */
 #define EVSYS_INTFLAG_OVR_Msk                 (_UINT32_(0xF) << EVSYS_INTFLAG_OVR_Pos)             /* (EVSYS_INTFLAG Mask) OVR */
 #define EVSYS_INTFLAG_OVR(value)              (EVSYS_INTFLAG_OVR_Msk & (_UINT32_(value) << EVSYS_INTFLAG_OVR_Pos)) 
-#define EVSYS_INTFLAG_EVD_Pos                 _UINT32_(16)                                         /* (EVSYS_INTFLAG Position) Event Detected Channel # */
+#define EVSYS_INTFLAG_EVD_Pos                 _UINT32_(16)                                         /* (EVSYS_INTFLAG Position) Event Detected Channel 3 */
 #define EVSYS_INTFLAG_EVD_Msk                 (_UINT32_(0xF) << EVSYS_INTFLAG_EVD_Pos)             /* (EVSYS_INTFLAG Mask) EVD */
 #define EVSYS_INTFLAG_EVD(value)              (EVSYS_INTFLAG_EVD_Msk & (_UINT32_(value) << EVSYS_INTFLAG_EVD_Pos)) 
 
 /* -------- EVSYS_SWEVT : (EVSYS Offset: 0x1C) ( /W 32) Software Event -------- */
 #define EVSYS_SWEVT_RESETVALUE                _UINT32_(0x00)                                       /*  (EVSYS_SWEVT) Software Event  Reset Value */
 
-#define EVSYS_SWEVT_CHANNEL0_Pos              _UINT32_(0)                                          /* (EVSYS_SWEVT) Channel # Software Selection Position */
-#define EVSYS_SWEVT_CHANNEL0_Msk              (_UINT32_(0x1) << EVSYS_SWEVT_CHANNEL0_Pos)          /* (EVSYS_SWEVT) Channel # Software Selection Mask */
+#define EVSYS_SWEVT_CHANNEL0_Pos              _UINT32_(0)                                          /* (EVSYS_SWEVT) Channel 0 Software Selection Position */
+#define EVSYS_SWEVT_CHANNEL0_Msk              (_UINT32_(0x1) << EVSYS_SWEVT_CHANNEL0_Pos)          /* (EVSYS_SWEVT) Channel 0 Software Selection Mask */
 #define EVSYS_SWEVT_CHANNEL0(value)           (EVSYS_SWEVT_CHANNEL0_Msk & (_UINT32_(value) << EVSYS_SWEVT_CHANNEL0_Pos)) /* Assignment of value for CHANNEL0 in the EVSYS_SWEVT register */
-#define EVSYS_SWEVT_CHANNEL1_Pos              _UINT32_(1)                                          /* (EVSYS_SWEVT) Channel # Software Selection Position */
-#define EVSYS_SWEVT_CHANNEL1_Msk              (_UINT32_(0x1) << EVSYS_SWEVT_CHANNEL1_Pos)          /* (EVSYS_SWEVT) Channel # Software Selection Mask */
+#define EVSYS_SWEVT_CHANNEL1_Pos              _UINT32_(1)                                          /* (EVSYS_SWEVT) Channel 1 Software Selection Position */
+#define EVSYS_SWEVT_CHANNEL1_Msk              (_UINT32_(0x1) << EVSYS_SWEVT_CHANNEL1_Pos)          /* (EVSYS_SWEVT) Channel 1 Software Selection Mask */
 #define EVSYS_SWEVT_CHANNEL1(value)           (EVSYS_SWEVT_CHANNEL1_Msk & (_UINT32_(value) << EVSYS_SWEVT_CHANNEL1_Pos)) /* Assignment of value for CHANNEL1 in the EVSYS_SWEVT register */
-#define EVSYS_SWEVT_CHANNEL2_Pos              _UINT32_(2)                                          /* (EVSYS_SWEVT) Channel # Software Selection Position */
-#define EVSYS_SWEVT_CHANNEL2_Msk              (_UINT32_(0x1) << EVSYS_SWEVT_CHANNEL2_Pos)          /* (EVSYS_SWEVT) Channel # Software Selection Mask */
+#define EVSYS_SWEVT_CHANNEL2_Pos              _UINT32_(2)                                          /* (EVSYS_SWEVT) Channel 2 Software Selection Position */
+#define EVSYS_SWEVT_CHANNEL2_Msk              (_UINT32_(0x1) << EVSYS_SWEVT_CHANNEL2_Pos)          /* (EVSYS_SWEVT) Channel 2 Software Selection Mask */
 #define EVSYS_SWEVT_CHANNEL2(value)           (EVSYS_SWEVT_CHANNEL2_Msk & (_UINT32_(value) << EVSYS_SWEVT_CHANNEL2_Pos)) /* Assignment of value for CHANNEL2 in the EVSYS_SWEVT register */
-#define EVSYS_SWEVT_CHANNEL3_Pos              _UINT32_(3)                                          /* (EVSYS_SWEVT) Channel # Software Selection Position */
-#define EVSYS_SWEVT_CHANNEL3_Msk              (_UINT32_(0x1) << EVSYS_SWEVT_CHANNEL3_Pos)          /* (EVSYS_SWEVT) Channel # Software Selection Mask */
+#define EVSYS_SWEVT_CHANNEL3_Pos              _UINT32_(3)                                          /* (EVSYS_SWEVT) Channel 3 Software Selection Position */
+#define EVSYS_SWEVT_CHANNEL3_Msk              (_UINT32_(0x1) << EVSYS_SWEVT_CHANNEL3_Pos)          /* (EVSYS_SWEVT) Channel 3 Software Selection Mask */
 #define EVSYS_SWEVT_CHANNEL3(value)           (EVSYS_SWEVT_CHANNEL3_Msk & (_UINT32_(value) << EVSYS_SWEVT_CHANNEL3_Pos)) /* Assignment of value for CHANNEL3 in the EVSYS_SWEVT register */
 #define EVSYS_SWEVT_Msk                       _UINT32_(0x0000000F)                                 /* (EVSYS_SWEVT) Register Mask  */
 
-#define EVSYS_SWEVT_CHANNEL_Pos               _UINT32_(0)                                          /* (EVSYS_SWEVT Position) Channel # Software Selection */
+#define EVSYS_SWEVT_CHANNEL_Pos               _UINT32_(0)                                          /* (EVSYS_SWEVT Position) Channel 3 Software Selection */
 #define EVSYS_SWEVT_CHANNEL_Msk               (_UINT32_(0xF) << EVSYS_SWEVT_CHANNEL_Pos)           /* (EVSYS_SWEVT Mask) CHANNEL */
 #define EVSYS_SWEVT_CHANNEL(value)            (EVSYS_SWEVT_CHANNEL_Msk & (_UINT32_(value) << EVSYS_SWEVT_CHANNEL_Pos)) 
 
@@ -207,7 +205,7 @@
 #define EVSYS_CHANNEL_RESETVALUE              _UINT32_(0x8000)                                     /*  (EVSYS_CHANNEL) Channel # Control  Reset Value */
 
 #define EVSYS_CHANNEL_EVGEN_Pos               _UINT32_(0)                                          /* (EVSYS_CHANNEL) Event Generator Position */
-#define EVSYS_CHANNEL_EVGEN_Msk               (_UINT32_(0x3F) << EVSYS_CHANNEL_EVGEN_Pos)          /* (EVSYS_CHANNEL) Event Generator Mask */
+#define EVSYS_CHANNEL_EVGEN_Msk               (_UINT32_(0x7F) << EVSYS_CHANNEL_EVGEN_Pos)          /* (EVSYS_CHANNEL) Event Generator Mask */
 #define EVSYS_CHANNEL_EVGEN(value)            (EVSYS_CHANNEL_EVGEN_Msk & (_UINT32_(value) << EVSYS_CHANNEL_EVGEN_Pos)) /* Assignment of value for EVGEN in the EVSYS_CHANNEL register */
 #define EVSYS_CHANNEL_PATH_Pos                _UINT32_(8)                                          /* (EVSYS_CHANNEL) Path Selection Position */
 #define EVSYS_CHANNEL_PATH_Msk                (_UINT32_(0x3) << EVSYS_CHANNEL_PATH_Pos)            /* (EVSYS_CHANNEL) Path Selection Mask */
@@ -222,24 +220,24 @@
 #define EVSYS_CHANNEL_EDGSEL_Msk              (_UINT32_(0x3) << EVSYS_CHANNEL_EDGSEL_Pos)          /* (EVSYS_CHANNEL) Edge Detection Selection Mask */
 #define EVSYS_CHANNEL_EDGSEL(value)           (EVSYS_CHANNEL_EDGSEL_Msk & (_UINT32_(value) << EVSYS_CHANNEL_EDGSEL_Pos)) /* Assignment of value for EDGSEL in the EVSYS_CHANNEL register */
 #define   EVSYS_CHANNEL_EDGSEL_NO_EVT_OUTPUT_Val _UINT32_(0x0)                                        /* (EVSYS_CHANNEL) No event output when using the resynchronized or synchronous path  */
-#define   EVSYS_CHANNEL_EDGSEL_RISING_EDGE_Val _UINT32_(0x1)                                        /* (EVSYS_CHANNEL) Event detection only on the rising edge of the signal from the event generator  */
-#define   EVSYS_CHANNEL_EDGSEL_FALLING_EDGE_Val _UINT32_(0x2)                                        /* (EVSYS_CHANNEL) Event detection only on the falling edge of the signal from the event generator  */
-#define   EVSYS_CHANNEL_EDGSEL_BOTH_EDGES_Val _UINT32_(0x3)                                        /* (EVSYS_CHANNEL) Event detection on rising and falling edges of the signal from the event generator  */
+#define   EVSYS_CHANNEL_EDGSEL_RISING_EDGE_Val _UINT32_(0x1)                                        /* (EVSYS_CHANNEL) Event detection occurs only on the rising edge of the signal from the event generator  */
+#define   EVSYS_CHANNEL_EDGSEL_FALLING_EDGE_Val _UINT32_(0x2)                                        /* (EVSYS_CHANNEL) Event detection occurs only on the falling edge of the signal from the event generator  */
+#define   EVSYS_CHANNEL_EDGSEL_BOTH_EDGES_Val _UINT32_(0x3)                                        /* (EVSYS_CHANNEL) Event detection occurs on both the rising and falling edges of the signal from the event generator  */
 #define EVSYS_CHANNEL_EDGSEL_NO_EVT_OUTPUT    (EVSYS_CHANNEL_EDGSEL_NO_EVT_OUTPUT_Val << EVSYS_CHANNEL_EDGSEL_Pos) /* (EVSYS_CHANNEL) No event output when using the resynchronized or synchronous path Position */
-#define EVSYS_CHANNEL_EDGSEL_RISING_EDGE      (EVSYS_CHANNEL_EDGSEL_RISING_EDGE_Val << EVSYS_CHANNEL_EDGSEL_Pos) /* (EVSYS_CHANNEL) Event detection only on the rising edge of the signal from the event generator Position */
-#define EVSYS_CHANNEL_EDGSEL_FALLING_EDGE     (EVSYS_CHANNEL_EDGSEL_FALLING_EDGE_Val << EVSYS_CHANNEL_EDGSEL_Pos) /* (EVSYS_CHANNEL) Event detection only on the falling edge of the signal from the event generator Position */
-#define EVSYS_CHANNEL_EDGSEL_BOTH_EDGES       (EVSYS_CHANNEL_EDGSEL_BOTH_EDGES_Val << EVSYS_CHANNEL_EDGSEL_Pos) /* (EVSYS_CHANNEL) Event detection on rising and falling edges of the signal from the event generator Position */
+#define EVSYS_CHANNEL_EDGSEL_RISING_EDGE      (EVSYS_CHANNEL_EDGSEL_RISING_EDGE_Val << EVSYS_CHANNEL_EDGSEL_Pos) /* (EVSYS_CHANNEL) Event detection occurs only on the rising edge of the signal from the event generator Position */
+#define EVSYS_CHANNEL_EDGSEL_FALLING_EDGE     (EVSYS_CHANNEL_EDGSEL_FALLING_EDGE_Val << EVSYS_CHANNEL_EDGSEL_Pos) /* (EVSYS_CHANNEL) Event detection occurs only on the falling edge of the signal from the event generator Position */
+#define EVSYS_CHANNEL_EDGSEL_BOTH_EDGES       (EVSYS_CHANNEL_EDGSEL_BOTH_EDGES_Val << EVSYS_CHANNEL_EDGSEL_Pos) /* (EVSYS_CHANNEL) Event detection occurs on both the rising and falling edges of the signal from the event generator Position */
 #define EVSYS_CHANNEL_RUNSTDBY_Pos            _UINT32_(14)                                         /* (EVSYS_CHANNEL) Run in Standby Position */
 #define EVSYS_CHANNEL_RUNSTDBY_Msk            (_UINT32_(0x1) << EVSYS_CHANNEL_RUNSTDBY_Pos)        /* (EVSYS_CHANNEL) Run in Standby Mask */
 #define EVSYS_CHANNEL_RUNSTDBY(value)         (EVSYS_CHANNEL_RUNSTDBY_Msk & (_UINT32_(value) << EVSYS_CHANNEL_RUNSTDBY_Pos)) /* Assignment of value for RUNSTDBY in the EVSYS_CHANNEL register */
 #define EVSYS_CHANNEL_ONDEMAND_Pos            _UINT32_(15)                                         /* (EVSYS_CHANNEL) Generic Clock On Demand Position */
 #define EVSYS_CHANNEL_ONDEMAND_Msk            (_UINT32_(0x1) << EVSYS_CHANNEL_ONDEMAND_Pos)        /* (EVSYS_CHANNEL) Generic Clock On Demand Mask */
 #define EVSYS_CHANNEL_ONDEMAND(value)         (EVSYS_CHANNEL_ONDEMAND_Msk & (_UINT32_(value) << EVSYS_CHANNEL_ONDEMAND_Pos)) /* Assignment of value for ONDEMAND in the EVSYS_CHANNEL register */
-#define EVSYS_CHANNEL_Msk                     _UINT32_(0x0000CF3F)                                 /* (EVSYS_CHANNEL) Register Mask  */
+#define EVSYS_CHANNEL_Msk                     _UINT32_(0x0000CF7F)                                 /* (EVSYS_CHANNEL) Register Mask  */
 
 
-/* -------- EVSYS_USER : (EVSYS Offset: 0x80) (R/W 32) User x Channel Selection -------- */
-#define EVSYS_USER_RESETVALUE                 _UINT32_(0x00)                                       /*  (EVSYS_USER) User x Channel Selection  Reset Value */
+/* -------- EVSYS_USER : (EVSYS Offset: 0x80) (R/W 32) User # Channel Selection -------- */
+#define EVSYS_USER_RESETVALUE                 _UINT32_(0x00)                                       /*  (EVSYS_USER) User # Channel Selection  Reset Value */
 
 #define EVSYS_USER_CHANNEL_Pos                _UINT32_(0)                                          /* (EVSYS_USER) Channel Event Selection Position */
 #define EVSYS_USER_CHANNEL_Msk                (_UINT32_(0x1F) << EVSYS_USER_CHANNEL_Pos)           /* (EVSYS_USER) Channel Event Selection Mask */
@@ -269,30 +267,30 @@
 #define EVSYS_CHANNEL1_REG_OFST        _UINT32_(0x24)      /* (EVSYS_CHANNEL1) Channel # Control Offset */
 #define EVSYS_CHANNEL2_REG_OFST        _UINT32_(0x28)      /* (EVSYS_CHANNEL2) Channel # Control Offset */
 #define EVSYS_CHANNEL3_REG_OFST        _UINT32_(0x2C)      /* (EVSYS_CHANNEL3) Channel # Control Offset */
-#define EVSYS_USER_REG_OFST            _UINT32_(0x80)      /* (EVSYS_USER) User x Channel Selection Offset */
-#define EVSYS_USER0_REG_OFST           _UINT32_(0x80)      /* (EVSYS_USER0) User x Channel Selection Offset */
-#define EVSYS_USER1_REG_OFST           _UINT32_(0x84)      /* (EVSYS_USER1) User x Channel Selection Offset */
-#define EVSYS_USER2_REG_OFST           _UINT32_(0x88)      /* (EVSYS_USER2) User x Channel Selection Offset */
-#define EVSYS_USER3_REG_OFST           _UINT32_(0x8C)      /* (EVSYS_USER3) User x Channel Selection Offset */
-#define EVSYS_USER4_REG_OFST           _UINT32_(0x90)      /* (EVSYS_USER4) User x Channel Selection Offset */
-#define EVSYS_USER5_REG_OFST           _UINT32_(0x94)      /* (EVSYS_USER5) User x Channel Selection Offset */
-#define EVSYS_USER6_REG_OFST           _UINT32_(0x98)      /* (EVSYS_USER6) User x Channel Selection Offset */
-#define EVSYS_USER7_REG_OFST           _UINT32_(0x9C)      /* (EVSYS_USER7) User x Channel Selection Offset */
-#define EVSYS_USER8_REG_OFST           _UINT32_(0xA0)      /* (EVSYS_USER8) User x Channel Selection Offset */
-#define EVSYS_USER9_REG_OFST           _UINT32_(0xA4)      /* (EVSYS_USER9) User x Channel Selection Offset */
-#define EVSYS_USER10_REG_OFST          _UINT32_(0xA8)      /* (EVSYS_USER10) User x Channel Selection Offset */
-#define EVSYS_USER11_REG_OFST          _UINT32_(0xAC)      /* (EVSYS_USER11) User x Channel Selection Offset */
-#define EVSYS_USER12_REG_OFST          _UINT32_(0xB0)      /* (EVSYS_USER12) User x Channel Selection Offset */
-#define EVSYS_USER13_REG_OFST          _UINT32_(0xB4)      /* (EVSYS_USER13) User x Channel Selection Offset */
-#define EVSYS_USER14_REG_OFST          _UINT32_(0xB8)      /* (EVSYS_USER14) User x Channel Selection Offset */
-#define EVSYS_USER15_REG_OFST          _UINT32_(0xBC)      /* (EVSYS_USER15) User x Channel Selection Offset */
-#define EVSYS_USER16_REG_OFST          _UINT32_(0xC0)      /* (EVSYS_USER16) User x Channel Selection Offset */
-#define EVSYS_USER17_REG_OFST          _UINT32_(0xC4)      /* (EVSYS_USER17) User x Channel Selection Offset */
-#define EVSYS_USER18_REG_OFST          _UINT32_(0xC8)      /* (EVSYS_USER18) User x Channel Selection Offset */
-#define EVSYS_USER19_REG_OFST          _UINT32_(0xCC)      /* (EVSYS_USER19) User x Channel Selection Offset */
-#define EVSYS_USER20_REG_OFST          _UINT32_(0xD0)      /* (EVSYS_USER20) User x Channel Selection Offset */
-#define EVSYS_USER21_REG_OFST          _UINT32_(0xD4)      /* (EVSYS_USER21) User x Channel Selection Offset */
-#define EVSYS_USER22_REG_OFST          _UINT32_(0xD8)      /* (EVSYS_USER22) User x Channel Selection Offset */
+#define EVSYS_USER_REG_OFST            _UINT32_(0x80)      /* (EVSYS_USER) User # Channel Selection Offset */
+#define EVSYS_USER0_REG_OFST           _UINT32_(0x80)      /* (EVSYS_USER0) User # Channel Selection Offset */
+#define EVSYS_USER1_REG_OFST           _UINT32_(0x84)      /* (EVSYS_USER1) User # Channel Selection Offset */
+#define EVSYS_USER2_REG_OFST           _UINT32_(0x88)      /* (EVSYS_USER2) User # Channel Selection Offset */
+#define EVSYS_USER3_REG_OFST           _UINT32_(0x8C)      /* (EVSYS_USER3) User # Channel Selection Offset */
+#define EVSYS_USER4_REG_OFST           _UINT32_(0x90)      /* (EVSYS_USER4) User # Channel Selection Offset */
+#define EVSYS_USER5_REG_OFST           _UINT32_(0x94)      /* (EVSYS_USER5) User # Channel Selection Offset */
+#define EVSYS_USER6_REG_OFST           _UINT32_(0x98)      /* (EVSYS_USER6) User # Channel Selection Offset */
+#define EVSYS_USER7_REG_OFST           _UINT32_(0x9C)      /* (EVSYS_USER7) User # Channel Selection Offset */
+#define EVSYS_USER8_REG_OFST           _UINT32_(0xA0)      /* (EVSYS_USER8) User # Channel Selection Offset */
+#define EVSYS_USER9_REG_OFST           _UINT32_(0xA4)      /* (EVSYS_USER9) User # Channel Selection Offset */
+#define EVSYS_USER10_REG_OFST          _UINT32_(0xA8)      /* (EVSYS_USER10) User # Channel Selection Offset */
+#define EVSYS_USER11_REG_OFST          _UINT32_(0xAC)      /* (EVSYS_USER11) User # Channel Selection Offset */
+#define EVSYS_USER12_REG_OFST          _UINT32_(0xB0)      /* (EVSYS_USER12) User # Channel Selection Offset */
+#define EVSYS_USER13_REG_OFST          _UINT32_(0xB4)      /* (EVSYS_USER13) User # Channel Selection Offset */
+#define EVSYS_USER14_REG_OFST          _UINT32_(0xB8)      /* (EVSYS_USER14) User # Channel Selection Offset */
+#define EVSYS_USER15_REG_OFST          _UINT32_(0xBC)      /* (EVSYS_USER15) User # Channel Selection Offset */
+#define EVSYS_USER16_REG_OFST          _UINT32_(0xC0)      /* (EVSYS_USER16) User # Channel Selection Offset */
+#define EVSYS_USER17_REG_OFST          _UINT32_(0xC4)      /* (EVSYS_USER17) User # Channel Selection Offset */
+#define EVSYS_USER18_REG_OFST          _UINT32_(0xC8)      /* (EVSYS_USER18) User # Channel Selection Offset */
+#define EVSYS_USER19_REG_OFST          _UINT32_(0xCC)      /* (EVSYS_USER19) User # Channel Selection Offset */
+#define EVSYS_USER20_REG_OFST          _UINT32_(0xD0)      /* (EVSYS_USER20) User # Channel Selection Offset */
+#define EVSYS_USER21_REG_OFST          _UINT32_(0xD4)      /* (EVSYS_USER21) User # Channel Selection Offset */
+#define EVSYS_USER22_REG_OFST          _UINT32_(0xD8)      /* (EVSYS_USER22) User # Channel Selection Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /* EVSYS register API structure */
@@ -307,7 +305,7 @@ typedef struct
   __O   uint32_t                       EVSYS_SWEVT;        /* Offset: 0x1C ( /W  32) Software Event */
   __IO  uint32_t                       EVSYS_CHANNEL[4];   /* Offset: 0x20 (R/W  32) Channel # Control */
   __I   uint8_t                        Reserved2[0x50];
-  __IO  uint32_t                       EVSYS_USER[23];     /* Offset: 0x80 (R/W  32) User x Channel Selection */
+  __IO  uint32_t                       EVSYS_USER[23];     /* Offset: 0x80 (R/W  32) User # Channel Selection */
 } evsys_registers_t;
 
 

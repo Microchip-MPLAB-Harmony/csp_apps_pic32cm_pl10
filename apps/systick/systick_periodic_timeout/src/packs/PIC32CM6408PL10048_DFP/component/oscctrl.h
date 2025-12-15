@@ -126,14 +126,14 @@
 #define OSCCTRL_WPCTRL_WPEN_Pos               _UINT32_(0)                                          /* (OSCCTRL_WPCTRL) Write Protection Enable Position */
 #define OSCCTRL_WPCTRL_WPEN_Msk               (_UINT32_(0x1) << OSCCTRL_WPCTRL_WPEN_Pos)           /* (OSCCTRL_WPCTRL) Write Protection Enable Mask */
 #define OSCCTRL_WPCTRL_WPEN(value)            (OSCCTRL_WPCTRL_WPEN_Msk & (_UINT32_(value) << OSCCTRL_WPCTRL_WPEN_Pos)) /* Assignment of value for WPEN in the OSCCTRL_WPCTRL register */
-#define OSCCTRL_WPCTRL_WPLCK_Pos              _UINT32_(1)                                          /* (OSCCTRL_WPCTRL) WPCTRL Write Lock Position */
-#define OSCCTRL_WPCTRL_WPLCK_Msk              (_UINT32_(0x1) << OSCCTRL_WPCTRL_WPLCK_Pos)          /* (OSCCTRL_WPCTRL) WPCTRL Write Lock Mask */
+#define OSCCTRL_WPCTRL_WPLCK_Pos              _UINT32_(1)                                          /* (OSCCTRL_WPCTRL) Write Protection Lock Position */
+#define OSCCTRL_WPCTRL_WPLCK_Msk              (_UINT32_(0x1) << OSCCTRL_WPCTRL_WPLCK_Pos)          /* (OSCCTRL_WPCTRL) Write Protection Lock Mask */
 #define OSCCTRL_WPCTRL_WPLCK(value)           (OSCCTRL_WPCTRL_WPLCK_Msk & (_UINT32_(value) << OSCCTRL_WPCTRL_WPLCK_Pos)) /* Assignment of value for WPLCK in the OSCCTRL_WPCTRL register */
 #define OSCCTRL_WPCTRL_WPKEY_Pos              _UINT32_(8)                                          /* (OSCCTRL_WPCTRL) Write Protection Key Position */
 #define OSCCTRL_WPCTRL_WPKEY_Msk              (_UINT32_(0xFFFFFF) << OSCCTRL_WPCTRL_WPKEY_Pos)     /* (OSCCTRL_WPCTRL) Write Protection Key Mask */
 #define OSCCTRL_WPCTRL_WPKEY(value)           (OSCCTRL_WPCTRL_WPKEY_Msk & (_UINT32_(value) << OSCCTRL_WPCTRL_WPKEY_Pos)) /* Assignment of value for WPKEY in the OSCCTRL_WPCTRL register */
-#define   OSCCTRL_WPCTRL_WPKEY_KEY_Val        _UINT32_(0x4F5343)                                   /* (OSCCTRL_WPCTRL) Allow writes to the WPCTRL register.  */
-#define OSCCTRL_WPCTRL_WPKEY_KEY              (OSCCTRL_WPCTRL_WPKEY_KEY_Val << OSCCTRL_WPCTRL_WPKEY_Pos) /* (OSCCTRL_WPCTRL) Allow writes to the WPCTRL register. Position */
+#define   OSCCTRL_WPCTRL_WPKEY_KEY_Val        _UINT32_(0x4F5343)                                   /* (OSCCTRL_WPCTRL) Allow writes to the WPCTRL register  */
+#define OSCCTRL_WPCTRL_WPKEY_KEY              (OSCCTRL_WPCTRL_WPKEY_KEY_Val << OSCCTRL_WPCTRL_WPKEY_Pos) /* (OSCCTRL_WPCTRL) Allow writes to the WPCTRL register Position */
 #define OSCCTRL_WPCTRL_Msk                    _UINT32_(0xFFFFFF03)                                 /* (OSCCTRL_WPCTRL) Register Mask  */
 
 

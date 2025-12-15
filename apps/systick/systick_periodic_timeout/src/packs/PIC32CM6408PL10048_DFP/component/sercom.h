@@ -41,8 +41,18 @@
 #define SERCOM_I2CM_CTRLA_MODE_Pos            _UINT32_(2)                                          /* (SERCOM_I2CM_CTRLA) Operating Mode Position */
 #define SERCOM_I2CM_CTRLA_MODE_Msk            (_UINT32_(0x7) << SERCOM_I2CM_CTRLA_MODE_Pos)        /* (SERCOM_I2CM_CTRLA) Operating Mode Mask */
 #define SERCOM_I2CM_CTRLA_MODE(value)         (SERCOM_I2CM_CTRLA_MODE_Msk & (_UINT32_(value) << SERCOM_I2CM_CTRLA_MODE_Pos)) /* Assignment of value for MODE in the SERCOM_I2CM_CTRLA register */
-#define   SERCOM_I2CM_CTRLA_MODE_I2C_MASTER_Val _UINT32_(0x5)                                        /* (SERCOM_I2CM_CTRLA) The I2C is configured in Host mode.  */
-#define SERCOM_I2CM_CTRLA_MODE_I2C_MASTER     (SERCOM_I2CM_CTRLA_MODE_I2C_MASTER_Val << SERCOM_I2CM_CTRLA_MODE_Pos) /* (SERCOM_I2CM_CTRLA) The I2C is configured in Host mode. Position */
+#define   SERCOM_I2CM_CTRLA_MODE_USART_EXT_Val _UINT32_(0x0)                                        /* (SERCOM_I2CM_CTRLA) USART with external clock  */
+#define   SERCOM_I2CM_CTRLA_MODE_USART_INT_Val _UINT32_(0x1)                                        /* (SERCOM_I2CM_CTRLA) USART with internal clock  */
+#define   SERCOM_I2CM_CTRLA_MODE_SPI_SLAVE_Val _UINT32_(0x2)                                        /* (SERCOM_I2CM_CTRLA) SPI Client mode  */
+#define   SERCOM_I2CM_CTRLA_MODE_SPI_MASTER_Val _UINT32_(0x3)                                        /* (SERCOM_I2CM_CTRLA) SPI Host mode  */
+#define   SERCOM_I2CM_CTRLA_MODE_I2C_SLAVE_Val _UINT32_(0x4)                                        /* (SERCOM_I2CM_CTRLA) I2C Client mode  */
+#define   SERCOM_I2CM_CTRLA_MODE_I2C_MASTER_Val _UINT32_(0x5)                                        /* (SERCOM_I2CM_CTRLA) I2C Host mode  */
+#define SERCOM_I2CM_CTRLA_MODE_USART_EXT      (SERCOM_I2CM_CTRLA_MODE_USART_EXT_Val << SERCOM_I2CM_CTRLA_MODE_Pos) /* (SERCOM_I2CM_CTRLA) USART with external clock Position */
+#define SERCOM_I2CM_CTRLA_MODE_USART_INT      (SERCOM_I2CM_CTRLA_MODE_USART_INT_Val << SERCOM_I2CM_CTRLA_MODE_Pos) /* (SERCOM_I2CM_CTRLA) USART with internal clock Position */
+#define SERCOM_I2CM_CTRLA_MODE_SPI_SLAVE      (SERCOM_I2CM_CTRLA_MODE_SPI_SLAVE_Val << SERCOM_I2CM_CTRLA_MODE_Pos) /* (SERCOM_I2CM_CTRLA) SPI Client mode Position */
+#define SERCOM_I2CM_CTRLA_MODE_SPI_MASTER     (SERCOM_I2CM_CTRLA_MODE_SPI_MASTER_Val << SERCOM_I2CM_CTRLA_MODE_Pos) /* (SERCOM_I2CM_CTRLA) SPI Host mode Position */
+#define SERCOM_I2CM_CTRLA_MODE_I2C_SLAVE      (SERCOM_I2CM_CTRLA_MODE_I2C_SLAVE_Val << SERCOM_I2CM_CTRLA_MODE_Pos) /* (SERCOM_I2CM_CTRLA) I2C Client mode Position */
+#define SERCOM_I2CM_CTRLA_MODE_I2C_MASTER     (SERCOM_I2CM_CTRLA_MODE_I2C_MASTER_Val << SERCOM_I2CM_CTRLA_MODE_Pos) /* (SERCOM_I2CM_CTRLA) I2C Host mode Position */
 #define SERCOM_I2CM_CTRLA_RUNSTDBY_Pos        _UINT32_(7)                                          /* (SERCOM_I2CM_CTRLA) Run in Standby Position */
 #define SERCOM_I2CM_CTRLA_RUNSTDBY_Msk        (_UINT32_(0x1) << SERCOM_I2CM_CTRLA_RUNSTDBY_Pos)    /* (SERCOM_I2CM_CTRLA) Run in Standby Mask */
 #define SERCOM_I2CM_CTRLA_RUNSTDBY(value)     (SERCOM_I2CM_CTRLA_RUNSTDBY_Msk & (_UINT32_(value) << SERCOM_I2CM_CTRLA_RUNSTDBY_Pos)) /* Assignment of value for RUNSTDBY in the SERCOM_I2CM_CTRLA register */
@@ -52,14 +62,14 @@
 #define SERCOM_I2CM_CTRLA_SDAHOLD_Pos         _UINT32_(20)                                         /* (SERCOM_I2CM_CTRLA) SDA Hold Time Position */
 #define SERCOM_I2CM_CTRLA_SDAHOLD_Msk         (_UINT32_(0x3) << SERCOM_I2CM_CTRLA_SDAHOLD_Pos)     /* (SERCOM_I2CM_CTRLA) SDA Hold Time Mask */
 #define SERCOM_I2CM_CTRLA_SDAHOLD(value)      (SERCOM_I2CM_CTRLA_SDAHOLD_Msk & (_UINT32_(value) << SERCOM_I2CM_CTRLA_SDAHOLD_Pos)) /* Assignment of value for SDAHOLD in the SERCOM_I2CM_CTRLA register */
-#define   SERCOM_I2CM_CTRLA_SDAHOLD_DIS_Val   _UINT32_(0x0)                                        /* (SERCOM_I2CM_CTRLA) SDA hold time is Disabled  */
-#define   SERCOM_I2CM_CTRLA_SDAHOLD_75NS_Val  _UINT32_(0x1)                                        /* (SERCOM_I2CM_CTRLA) SDA hold time is 50-100ns  */
-#define   SERCOM_I2CM_CTRLA_SDAHOLD_450NS_Val _UINT32_(0x2)                                        /* (SERCOM_I2CM_CTRLA) SDA hold time is 300-600ns  */
-#define   SERCOM_I2CM_CTRLA_SDAHOLD_600NS_Val _UINT32_(0x3)                                        /* (SERCOM_I2CM_CTRLA) SDA hold time is 400-800ns  */
-#define SERCOM_I2CM_CTRLA_SDAHOLD_DIS         (SERCOM_I2CM_CTRLA_SDAHOLD_DIS_Val << SERCOM_I2CM_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CM_CTRLA) SDA hold time is Disabled Position */
-#define SERCOM_I2CM_CTRLA_SDAHOLD_75NS        (SERCOM_I2CM_CTRLA_SDAHOLD_75NS_Val << SERCOM_I2CM_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CM_CTRLA) SDA hold time is 50-100ns Position */
-#define SERCOM_I2CM_CTRLA_SDAHOLD_450NS       (SERCOM_I2CM_CTRLA_SDAHOLD_450NS_Val << SERCOM_I2CM_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CM_CTRLA) SDA hold time is 300-600ns Position */
-#define SERCOM_I2CM_CTRLA_SDAHOLD_600NS       (SERCOM_I2CM_CTRLA_SDAHOLD_600NS_Val << SERCOM_I2CM_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CM_CTRLA) SDA hold time is 400-800ns Position */
+#define   SERCOM_I2CM_CTRLA_SDAHOLD_DIS_Val   _UINT32_(0x0)                                        /* (SERCOM_I2CM_CTRLA) SDA hold time is disabled  */
+#define   SERCOM_I2CM_CTRLA_SDAHOLD_75NS_Val  _UINT32_(0x1)                                        /* (SERCOM_I2CM_CTRLA) SDA hold time is 50-100 ns  */
+#define   SERCOM_I2CM_CTRLA_SDAHOLD_450NS_Val _UINT32_(0x2)                                        /* (SERCOM_I2CM_CTRLA) SDA hold time is 300-600 ns  */
+#define   SERCOM_I2CM_CTRLA_SDAHOLD_600NS_Val _UINT32_(0x3)                                        /* (SERCOM_I2CM_CTRLA) SDA hold time is 400-800 ns  */
+#define SERCOM_I2CM_CTRLA_SDAHOLD_DIS         (SERCOM_I2CM_CTRLA_SDAHOLD_DIS_Val << SERCOM_I2CM_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CM_CTRLA) SDA hold time is disabled Position */
+#define SERCOM_I2CM_CTRLA_SDAHOLD_75NS        (SERCOM_I2CM_CTRLA_SDAHOLD_75NS_Val << SERCOM_I2CM_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CM_CTRLA) SDA hold time is 50-100 ns Position */
+#define SERCOM_I2CM_CTRLA_SDAHOLD_450NS       (SERCOM_I2CM_CTRLA_SDAHOLD_450NS_Val << SERCOM_I2CM_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CM_CTRLA) SDA hold time is 300-600 ns Position */
+#define SERCOM_I2CM_CTRLA_SDAHOLD_600NS       (SERCOM_I2CM_CTRLA_SDAHOLD_600NS_Val << SERCOM_I2CM_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CM_CTRLA) SDA hold time is 400-800 ns Position */
 #define SERCOM_I2CM_CTRLA_MEXTTOEN_Pos        _UINT32_(22)                                         /* (SERCOM_I2CM_CTRLA) Host SCL Low Extend Time-Out Position */
 #define SERCOM_I2CM_CTRLA_MEXTTOEN_Msk        (_UINT32_(0x1) << SERCOM_I2CM_CTRLA_MEXTTOEN_Pos)    /* (SERCOM_I2CM_CTRLA) Host SCL Low Extend Time-Out Mask */
 #define SERCOM_I2CM_CTRLA_MEXTTOEN(value)     (SERCOM_I2CM_CTRLA_MEXTTOEN_Msk & (_UINT32_(value) << SERCOM_I2CM_CTRLA_MEXTTOEN_Pos)) /* Assignment of value for MEXTTOEN in the SERCOM_I2CM_CTRLA register */
@@ -69,10 +79,10 @@
 #define SERCOM_I2CM_CTRLA_SPEED_Pos           _UINT32_(24)                                         /* (SERCOM_I2CM_CTRLA) Transfer Speed Position */
 #define SERCOM_I2CM_CTRLA_SPEED_Msk           (_UINT32_(0x3) << SERCOM_I2CM_CTRLA_SPEED_Pos)       /* (SERCOM_I2CM_CTRLA) Transfer Speed Mask */
 #define SERCOM_I2CM_CTRLA_SPEED(value)        (SERCOM_I2CM_CTRLA_SPEED_Msk & (_UINT32_(value) << SERCOM_I2CM_CTRLA_SPEED_Pos)) /* Assignment of value for SPEED in the SERCOM_I2CM_CTRLA register */
-#define   SERCOM_I2CM_CTRLA_SPEED_SM_MODE_Val _UINT32_(0x0)                                        /* (SERCOM_I2CM_CTRLA) Standard-mode (Sm) up to 100 kHz and Fast-mode (Fm) up to 400 kHz  */
-#define   SERCOM_I2CM_CTRLA_SPEED_FASTPLUS_MODE_Val _UINT32_(0x1)                                        /* (SERCOM_I2CM_CTRLA) Fast-mode Plus (Fm+) up to 1 MHz  */
-#define SERCOM_I2CM_CTRLA_SPEED_SM_MODE       (SERCOM_I2CM_CTRLA_SPEED_SM_MODE_Val << SERCOM_I2CM_CTRLA_SPEED_Pos) /* (SERCOM_I2CM_CTRLA) Standard-mode (Sm) up to 100 kHz and Fast-mode (Fm) up to 400 kHz Position */
-#define SERCOM_I2CM_CTRLA_SPEED_FASTPLUS_MODE (SERCOM_I2CM_CTRLA_SPEED_FASTPLUS_MODE_Val << SERCOM_I2CM_CTRLA_SPEED_Pos) /* (SERCOM_I2CM_CTRLA) Fast-mode Plus (Fm+) up to 1 MHz Position */
+#define   SERCOM_I2CM_CTRLA_SPEED_SM_MODE_Val _UINT32_(0x0)                                        /* (SERCOM_I2CM_CTRLA) Standard-mode (Sm) and Fast-mode (Fm)  */
+#define   SERCOM_I2CM_CTRLA_SPEED_FASTPLUS_MODE_Val _UINT32_(0x1)                                        /* (SERCOM_I2CM_CTRLA) Fast-mode Plus (Fm+)  */
+#define SERCOM_I2CM_CTRLA_SPEED_SM_MODE       (SERCOM_I2CM_CTRLA_SPEED_SM_MODE_Val << SERCOM_I2CM_CTRLA_SPEED_Pos) /* (SERCOM_I2CM_CTRLA) Standard-mode (Sm) and Fast-mode (Fm) Position */
+#define SERCOM_I2CM_CTRLA_SPEED_FASTPLUS_MODE (SERCOM_I2CM_CTRLA_SPEED_FASTPLUS_MODE_Val << SERCOM_I2CM_CTRLA_SPEED_Pos) /* (SERCOM_I2CM_CTRLA) Fast-mode Plus (Fm+) Position */
 #define SERCOM_I2CM_CTRLA_SCLSM_Pos           _UINT32_(27)                                         /* (SERCOM_I2CM_CTRLA) SCL Clock Stretch Mode Position */
 #define SERCOM_I2CM_CTRLA_SCLSM_Msk           (_UINT32_(0x1) << SERCOM_I2CM_CTRLA_SCLSM_Pos)       /* (SERCOM_I2CM_CTRLA) SCL Clock Stretch Mode Mask */
 #define SERCOM_I2CM_CTRLA_SCLSM(value)        (SERCOM_I2CM_CTRLA_SCLSM_Msk & (_UINT32_(value) << SERCOM_I2CM_CTRLA_SCLSM_Pos)) /* Assignment of value for SCLSM in the SERCOM_I2CM_CTRLA register */
@@ -80,13 +90,13 @@
 #define SERCOM_I2CM_CTRLA_INACTOUT_Msk        (_UINT32_(0x3) << SERCOM_I2CM_CTRLA_INACTOUT_Pos)    /* (SERCOM_I2CM_CTRLA) Inactive Time-Out Mask */
 #define SERCOM_I2CM_CTRLA_INACTOUT(value)     (SERCOM_I2CM_CTRLA_INACTOUT_Msk & (_UINT32_(value) << SERCOM_I2CM_CTRLA_INACTOUT_Pos)) /* Assignment of value for INACTOUT in the SERCOM_I2CM_CTRLA register */
 #define   SERCOM_I2CM_CTRLA_INACTOUT_DIS_Val  _UINT32_(0x0)                                        /* (SERCOM_I2CM_CTRLA) Disabled  */
-#define   SERCOM_I2CM_CTRLA_INACTOUT_55US_Val _UINT32_(0x1)                                        /* (SERCOM_I2CM_CTRLA) 5-6 SCL cycle time-out (50-60us)  */
-#define   SERCOM_I2CM_CTRLA_INACTOUT_105US_Val _UINT32_(0x2)                                        /* (SERCOM_I2CM_CTRLA) 10-11 SCL cycle time-out (100-110us)  */
-#define   SERCOM_I2CM_CTRLA_INACTOUT_205US_Val _UINT32_(0x3)                                        /* (SERCOM_I2CM_CTRLA) 20-21 SCL cycle time-out (200-210us)  */
+#define   SERCOM_I2CM_CTRLA_INACTOUT_55US_Val _UINT32_(0x1)                                        /* (SERCOM_I2CM_CTRLA) 5-6 SCL cycle time-out (50-60 us)  */
+#define   SERCOM_I2CM_CTRLA_INACTOUT_105US_Val _UINT32_(0x2)                                        /* (SERCOM_I2CM_CTRLA) 10-11 SCL cycle time-out (100-110 us)  */
+#define   SERCOM_I2CM_CTRLA_INACTOUT_205US_Val _UINT32_(0x3)                                        /* (SERCOM_I2CM_CTRLA) 20-21 SCL cycle time-out (200-210 us)  */
 #define SERCOM_I2CM_CTRLA_INACTOUT_DIS        (SERCOM_I2CM_CTRLA_INACTOUT_DIS_Val << SERCOM_I2CM_CTRLA_INACTOUT_Pos) /* (SERCOM_I2CM_CTRLA) Disabled Position */
-#define SERCOM_I2CM_CTRLA_INACTOUT_55US       (SERCOM_I2CM_CTRLA_INACTOUT_55US_Val << SERCOM_I2CM_CTRLA_INACTOUT_Pos) /* (SERCOM_I2CM_CTRLA) 5-6 SCL cycle time-out (50-60us) Position */
-#define SERCOM_I2CM_CTRLA_INACTOUT_105US      (SERCOM_I2CM_CTRLA_INACTOUT_105US_Val << SERCOM_I2CM_CTRLA_INACTOUT_Pos) /* (SERCOM_I2CM_CTRLA) 10-11 SCL cycle time-out (100-110us) Position */
-#define SERCOM_I2CM_CTRLA_INACTOUT_205US      (SERCOM_I2CM_CTRLA_INACTOUT_205US_Val << SERCOM_I2CM_CTRLA_INACTOUT_Pos) /* (SERCOM_I2CM_CTRLA) 20-21 SCL cycle time-out (200-210us) Position */
+#define SERCOM_I2CM_CTRLA_INACTOUT_55US       (SERCOM_I2CM_CTRLA_INACTOUT_55US_Val << SERCOM_I2CM_CTRLA_INACTOUT_Pos) /* (SERCOM_I2CM_CTRLA) 5-6 SCL cycle time-out (50-60 us) Position */
+#define SERCOM_I2CM_CTRLA_INACTOUT_105US      (SERCOM_I2CM_CTRLA_INACTOUT_105US_Val << SERCOM_I2CM_CTRLA_INACTOUT_Pos) /* (SERCOM_I2CM_CTRLA) 10-11 SCL cycle time-out (100-110 us) Position */
+#define SERCOM_I2CM_CTRLA_INACTOUT_205US      (SERCOM_I2CM_CTRLA_INACTOUT_205US_Val << SERCOM_I2CM_CTRLA_INACTOUT_Pos) /* (SERCOM_I2CM_CTRLA) 20-21 SCL cycle time-out (200-210 us) Position */
 #define SERCOM_I2CM_CTRLA_LOWTOUTEN_Pos       _UINT32_(30)                                         /* (SERCOM_I2CM_CTRLA) SCL Low Time-Out Position */
 #define SERCOM_I2CM_CTRLA_LOWTOUTEN_Msk       (_UINT32_(0x1) << SERCOM_I2CM_CTRLA_LOWTOUTEN_Pos)   /* (SERCOM_I2CM_CTRLA) SCL Low Time-Out Mask */
 #define SERCOM_I2CM_CTRLA_LOWTOUTEN(value)    (SERCOM_I2CM_CTRLA_LOWTOUTEN_Msk & (_UINT32_(value) << SERCOM_I2CM_CTRLA_LOWTOUTEN_Pos)) /* Assignment of value for LOWTOUTEN in the SERCOM_I2CM_CTRLA register */
@@ -105,18 +115,18 @@
 #define SERCOM_I2CS_CTRLA_MODE_Pos            _UINT32_(2)                                          /* (SERCOM_I2CS_CTRLA) Operating Mode Position */
 #define SERCOM_I2CS_CTRLA_MODE_Msk            (_UINT32_(0x7) << SERCOM_I2CS_CTRLA_MODE_Pos)        /* (SERCOM_I2CS_CTRLA) Operating Mode Mask */
 #define SERCOM_I2CS_CTRLA_MODE(value)         (SERCOM_I2CS_CTRLA_MODE_Msk & (_UINT32_(value) << SERCOM_I2CS_CTRLA_MODE_Pos)) /* Assignment of value for MODE in the SERCOM_I2CS_CTRLA register */
-#define   SERCOM_I2CS_CTRLA_MODE_USART_EXT_Val _UINT32_(0x0)                                        /* (SERCOM_I2CS_CTRLA) The USART is configured with external clock.  */
-#define   SERCOM_I2CS_CTRLA_MODE_USART_INT_Val _UINT32_(0x1)                                        /* (SERCOM_I2CS_CTRLA) The USART is configured with internal clock.  */
-#define   SERCOM_I2CS_CTRLA_MODE_SPI_SLAVE_Val _UINT32_(0x2)                                        /* (SERCOM_I2CS_CTRLA) The SPI in configured to Client mode.  */
-#define   SERCOM_I2CS_CTRLA_MODE_SPI_MASTER_Val _UINT32_(0x3)                                        /* (SERCOM_I2CS_CTRLA) The SPI is configured to Host mode.  */
-#define   SERCOM_I2CS_CTRLA_MODE_I2C_SLAVE_Val _UINT32_(0x4)                                        /* (SERCOM_I2CS_CTRLA) The I2C is configured in Client mode.  */
-#define   SERCOM_I2CS_CTRLA_MODE_I2C_MASTER_Val _UINT32_(0x5)                                        /* (SERCOM_I2CS_CTRLA) The I2C is configured in Host mode.  */
-#define SERCOM_I2CS_CTRLA_MODE_USART_EXT      (SERCOM_I2CS_CTRLA_MODE_USART_EXT_Val << SERCOM_I2CS_CTRLA_MODE_Pos) /* (SERCOM_I2CS_CTRLA) The USART is configured with external clock. Position */
-#define SERCOM_I2CS_CTRLA_MODE_USART_INT      (SERCOM_I2CS_CTRLA_MODE_USART_INT_Val << SERCOM_I2CS_CTRLA_MODE_Pos) /* (SERCOM_I2CS_CTRLA) The USART is configured with internal clock. Position */
-#define SERCOM_I2CS_CTRLA_MODE_SPI_SLAVE      (SERCOM_I2CS_CTRLA_MODE_SPI_SLAVE_Val << SERCOM_I2CS_CTRLA_MODE_Pos) /* (SERCOM_I2CS_CTRLA) The SPI in configured to Client mode. Position */
-#define SERCOM_I2CS_CTRLA_MODE_SPI_MASTER     (SERCOM_I2CS_CTRLA_MODE_SPI_MASTER_Val << SERCOM_I2CS_CTRLA_MODE_Pos) /* (SERCOM_I2CS_CTRLA) The SPI is configured to Host mode. Position */
-#define SERCOM_I2CS_CTRLA_MODE_I2C_SLAVE      (SERCOM_I2CS_CTRLA_MODE_I2C_SLAVE_Val << SERCOM_I2CS_CTRLA_MODE_Pos) /* (SERCOM_I2CS_CTRLA) The I2C is configured in Client mode. Position */
-#define SERCOM_I2CS_CTRLA_MODE_I2C_MASTER     (SERCOM_I2CS_CTRLA_MODE_I2C_MASTER_Val << SERCOM_I2CS_CTRLA_MODE_Pos) /* (SERCOM_I2CS_CTRLA) The I2C is configured in Host mode. Position */
+#define   SERCOM_I2CS_CTRLA_MODE_USART_EXT_Val _UINT32_(0x0)                                        /* (SERCOM_I2CS_CTRLA) USART with external clock  */
+#define   SERCOM_I2CS_CTRLA_MODE_USART_INT_Val _UINT32_(0x1)                                        /* (SERCOM_I2CS_CTRLA) USART with internal clock  */
+#define   SERCOM_I2CS_CTRLA_MODE_SPI_SLAVE_Val _UINT32_(0x2)                                        /* (SERCOM_I2CS_CTRLA) SPI Client mode  */
+#define   SERCOM_I2CS_CTRLA_MODE_SPI_MASTER_Val _UINT32_(0x3)                                        /* (SERCOM_I2CS_CTRLA) SPI Host mode  */
+#define   SERCOM_I2CS_CTRLA_MODE_I2C_SLAVE_Val _UINT32_(0x4)                                        /* (SERCOM_I2CS_CTRLA) I2C Client mode  */
+#define   SERCOM_I2CS_CTRLA_MODE_I2C_MASTER_Val _UINT32_(0x5)                                        /* (SERCOM_I2CS_CTRLA) I2C Host mode  */
+#define SERCOM_I2CS_CTRLA_MODE_USART_EXT      (SERCOM_I2CS_CTRLA_MODE_USART_EXT_Val << SERCOM_I2CS_CTRLA_MODE_Pos) /* (SERCOM_I2CS_CTRLA) USART with external clock Position */
+#define SERCOM_I2CS_CTRLA_MODE_USART_INT      (SERCOM_I2CS_CTRLA_MODE_USART_INT_Val << SERCOM_I2CS_CTRLA_MODE_Pos) /* (SERCOM_I2CS_CTRLA) USART with internal clock Position */
+#define SERCOM_I2CS_CTRLA_MODE_SPI_SLAVE      (SERCOM_I2CS_CTRLA_MODE_SPI_SLAVE_Val << SERCOM_I2CS_CTRLA_MODE_Pos) /* (SERCOM_I2CS_CTRLA) SPI Client mode Position */
+#define SERCOM_I2CS_CTRLA_MODE_SPI_MASTER     (SERCOM_I2CS_CTRLA_MODE_SPI_MASTER_Val << SERCOM_I2CS_CTRLA_MODE_Pos) /* (SERCOM_I2CS_CTRLA) SPI Host mode Position */
+#define SERCOM_I2CS_CTRLA_MODE_I2C_SLAVE      (SERCOM_I2CS_CTRLA_MODE_I2C_SLAVE_Val << SERCOM_I2CS_CTRLA_MODE_Pos) /* (SERCOM_I2CS_CTRLA) I2C Client mode Position */
+#define SERCOM_I2CS_CTRLA_MODE_I2C_MASTER     (SERCOM_I2CS_CTRLA_MODE_I2C_MASTER_Val << SERCOM_I2CS_CTRLA_MODE_Pos) /* (SERCOM_I2CS_CTRLA) I2C Host mode Position */
 #define SERCOM_I2CS_CTRLA_RUNSTDBY_Pos        _UINT32_(7)                                          /* (SERCOM_I2CS_CTRLA) Run in Standby Position */
 #define SERCOM_I2CS_CTRLA_RUNSTDBY_Msk        (_UINT32_(0x1) << SERCOM_I2CS_CTRLA_RUNSTDBY_Pos)    /* (SERCOM_I2CS_CTRLA) Run in Standby Mask */
 #define SERCOM_I2CS_CTRLA_RUNSTDBY(value)     (SERCOM_I2CS_CTRLA_RUNSTDBY_Msk & (_UINT32_(value) << SERCOM_I2CS_CTRLA_RUNSTDBY_Pos)) /* Assignment of value for RUNSTDBY in the SERCOM_I2CS_CTRLA register */
@@ -127,23 +137,23 @@
 #define SERCOM_I2CS_CTRLA_SDAHOLD_Msk         (_UINT32_(0x3) << SERCOM_I2CS_CTRLA_SDAHOLD_Pos)     /* (SERCOM_I2CS_CTRLA) SDA Hold Time Mask */
 #define SERCOM_I2CS_CTRLA_SDAHOLD(value)      (SERCOM_I2CS_CTRLA_SDAHOLD_Msk & (_UINT32_(value) << SERCOM_I2CS_CTRLA_SDAHOLD_Pos)) /* Assignment of value for SDAHOLD in the SERCOM_I2CS_CTRLA register */
 #define   SERCOM_I2CS_CTRLA_SDAHOLD_DIS_Val   _UINT32_(0x0)                                        /* (SERCOM_I2CS_CTRLA) Disabled  */
-#define   SERCOM_I2CS_CTRLA_SDAHOLD_75NS_Val  _UINT32_(0x1)                                        /* (SERCOM_I2CS_CTRLA) 50-100ns hold time  */
-#define   SERCOM_I2CS_CTRLA_SDAHOLD_450NS_Val _UINT32_(0x2)                                        /* (SERCOM_I2CS_CTRLA) 300-600ns hold time  */
-#define   SERCOM_I2CS_CTRLA_SDAHOLD_600NS_Val _UINT32_(0x3)                                        /* (SERCOM_I2CS_CTRLA) 400-800ns hold time  */
+#define   SERCOM_I2CS_CTRLA_SDAHOLD_75NS_Val  _UINT32_(0x1)                                        /* (SERCOM_I2CS_CTRLA) 50-100 ns hold time  */
+#define   SERCOM_I2CS_CTRLA_SDAHOLD_450NS_Val _UINT32_(0x2)                                        /* (SERCOM_I2CS_CTRLA) 300-600 ns hold time  */
+#define   SERCOM_I2CS_CTRLA_SDAHOLD_600NS_Val _UINT32_(0x3)                                        /* (SERCOM_I2CS_CTRLA) 400-800 ns hold time  */
 #define SERCOM_I2CS_CTRLA_SDAHOLD_DIS         (SERCOM_I2CS_CTRLA_SDAHOLD_DIS_Val << SERCOM_I2CS_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CS_CTRLA) Disabled Position */
-#define SERCOM_I2CS_CTRLA_SDAHOLD_75NS        (SERCOM_I2CS_CTRLA_SDAHOLD_75NS_Val << SERCOM_I2CS_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CS_CTRLA) 50-100ns hold time Position */
-#define SERCOM_I2CS_CTRLA_SDAHOLD_450NS       (SERCOM_I2CS_CTRLA_SDAHOLD_450NS_Val << SERCOM_I2CS_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CS_CTRLA) 300-600ns hold time Position */
-#define SERCOM_I2CS_CTRLA_SDAHOLD_600NS       (SERCOM_I2CS_CTRLA_SDAHOLD_600NS_Val << SERCOM_I2CS_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CS_CTRLA) 400-800ns hold time Position */
+#define SERCOM_I2CS_CTRLA_SDAHOLD_75NS        (SERCOM_I2CS_CTRLA_SDAHOLD_75NS_Val << SERCOM_I2CS_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CS_CTRLA) 50-100 ns hold time Position */
+#define SERCOM_I2CS_CTRLA_SDAHOLD_450NS       (SERCOM_I2CS_CTRLA_SDAHOLD_450NS_Val << SERCOM_I2CS_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CS_CTRLA) 300-600 ns hold time Position */
+#define SERCOM_I2CS_CTRLA_SDAHOLD_600NS       (SERCOM_I2CS_CTRLA_SDAHOLD_600NS_Val << SERCOM_I2CS_CTRLA_SDAHOLD_Pos) /* (SERCOM_I2CS_CTRLA) 400-800 ns hold time Position */
 #define SERCOM_I2CS_CTRLA_SEXTTOEN_Pos        _UINT32_(23)                                         /* (SERCOM_I2CS_CTRLA) Client SCL Low Extend Time-Out Position */
 #define SERCOM_I2CS_CTRLA_SEXTTOEN_Msk        (_UINT32_(0x1) << SERCOM_I2CS_CTRLA_SEXTTOEN_Pos)    /* (SERCOM_I2CS_CTRLA) Client SCL Low Extend Time-Out Mask */
 #define SERCOM_I2CS_CTRLA_SEXTTOEN(value)     (SERCOM_I2CS_CTRLA_SEXTTOEN_Msk & (_UINT32_(value) << SERCOM_I2CS_CTRLA_SEXTTOEN_Pos)) /* Assignment of value for SEXTTOEN in the SERCOM_I2CS_CTRLA register */
 #define SERCOM_I2CS_CTRLA_SPEED_Pos           _UINT32_(24)                                         /* (SERCOM_I2CS_CTRLA) Transfer Speed Position */
 #define SERCOM_I2CS_CTRLA_SPEED_Msk           (_UINT32_(0x3) << SERCOM_I2CS_CTRLA_SPEED_Pos)       /* (SERCOM_I2CS_CTRLA) Transfer Speed Mask */
 #define SERCOM_I2CS_CTRLA_SPEED(value)        (SERCOM_I2CS_CTRLA_SPEED_Msk & (_UINT32_(value) << SERCOM_I2CS_CTRLA_SPEED_Pos)) /* Assignment of value for SPEED in the SERCOM_I2CS_CTRLA register */
-#define   SERCOM_I2CS_CTRLA_SPEED_SM_MODE_Val _UINT32_(0x0)                                        /* (SERCOM_I2CS_CTRLA) Standard-mode (Sm) up to 100 kHz and Fast-mode (Fm) up to 400 kHz  */
-#define   SERCOM_I2CS_CTRLA_SPEED_FASTPLUS_MODE_Val _UINT32_(0x1)                                        /* (SERCOM_I2CS_CTRLA) Fast-mode Plus (Fm+) up to 1 MHz  */
-#define SERCOM_I2CS_CTRLA_SPEED_SM_MODE       (SERCOM_I2CS_CTRLA_SPEED_SM_MODE_Val << SERCOM_I2CS_CTRLA_SPEED_Pos) /* (SERCOM_I2CS_CTRLA) Standard-mode (Sm) up to 100 kHz and Fast-mode (Fm) up to 400 kHz Position */
-#define SERCOM_I2CS_CTRLA_SPEED_FASTPLUS_MODE (SERCOM_I2CS_CTRLA_SPEED_FASTPLUS_MODE_Val << SERCOM_I2CS_CTRLA_SPEED_Pos) /* (SERCOM_I2CS_CTRLA) Fast-mode Plus (Fm+) up to 1 MHz Position */
+#define   SERCOM_I2CS_CTRLA_SPEED_SM_MODE_Val _UINT32_(0x0)                                        /* (SERCOM_I2CS_CTRLA) Standard-mode (Sm) and Fast-mode (Fm)  */
+#define   SERCOM_I2CS_CTRLA_SPEED_FASTPLUS_MODE_Val _UINT32_(0x1)                                        /* (SERCOM_I2CS_CTRLA) Fast-mode Plus (Fm+)  */
+#define SERCOM_I2CS_CTRLA_SPEED_SM_MODE       (SERCOM_I2CS_CTRLA_SPEED_SM_MODE_Val << SERCOM_I2CS_CTRLA_SPEED_Pos) /* (SERCOM_I2CS_CTRLA) Standard-mode (Sm) and Fast-mode (Fm) Position */
+#define SERCOM_I2CS_CTRLA_SPEED_FASTPLUS_MODE (SERCOM_I2CS_CTRLA_SPEED_FASTPLUS_MODE_Val << SERCOM_I2CS_CTRLA_SPEED_Pos) /* (SERCOM_I2CS_CTRLA) Fast-mode Plus (Fm+) Position */
 #define SERCOM_I2CS_CTRLA_SCLSM_Pos           _UINT32_(27)                                         /* (SERCOM_I2CS_CTRLA) SCL Clock Stretch Mode Position */
 #define SERCOM_I2CS_CTRLA_SCLSM_Msk           (_UINT32_(0x1) << SERCOM_I2CS_CTRLA_SCLSM_Pos)       /* (SERCOM_I2CS_CTRLA) SCL Clock Stretch Mode Mask */
 #define SERCOM_I2CS_CTRLA_SCLSM(value)        (SERCOM_I2CS_CTRLA_SCLSM_Msk & (_UINT32_(value) << SERCOM_I2CS_CTRLA_SCLSM_Pos)) /* Assignment of value for SCLSM in the SERCOM_I2CS_CTRLA register */
@@ -165,50 +175,46 @@
 #define SERCOM_SPI_CTRLA_MODE_Pos             _UINT32_(2)                                          /* (SERCOM_SPI_CTRLA) Operating Mode Position */
 #define SERCOM_SPI_CTRLA_MODE_Msk             (_UINT32_(0x7) << SERCOM_SPI_CTRLA_MODE_Pos)         /* (SERCOM_SPI_CTRLA) Operating Mode Mask */
 #define SERCOM_SPI_CTRLA_MODE(value)          (SERCOM_SPI_CTRLA_MODE_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLA_MODE_Pos)) /* Assignment of value for MODE in the SERCOM_SPI_CTRLA register */
-#define   SERCOM_SPI_CTRLA_MODE_USART_EXT_Val _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) The USART is configured with external clock.  */
-#define   SERCOM_SPI_CTRLA_MODE_USART_INT_Val _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) The USART is configured with internal clock.  */
-#define   SERCOM_SPI_CTRLA_MODE_SPI_SLAVE_Val _UINT32_(0x2)                                        /* (SERCOM_SPI_CTRLA) The SPI in configured to Client mode.  */
-#define   SERCOM_SPI_CTRLA_MODE_SPI_MASTER_Val _UINT32_(0x3)                                        /* (SERCOM_SPI_CTRLA) The SPI is configured to Host mode.  */
-#define   SERCOM_SPI_CTRLA_MODE_I2C_SLAVE_Val _UINT32_(0x4)                                        /* (SERCOM_SPI_CTRLA) The I2C is configured in Client mode.  */
-#define   SERCOM_SPI_CTRLA_MODE_I2C_MASTER_Val _UINT32_(0x5)                                        /* (SERCOM_SPI_CTRLA) The I2C is configured in Host mode.  */
-#define SERCOM_SPI_CTRLA_MODE_USART_EXT       (SERCOM_SPI_CTRLA_MODE_USART_EXT_Val << SERCOM_SPI_CTRLA_MODE_Pos) /* (SERCOM_SPI_CTRLA) The USART is configured with external clock. Position */
-#define SERCOM_SPI_CTRLA_MODE_USART_INT       (SERCOM_SPI_CTRLA_MODE_USART_INT_Val << SERCOM_SPI_CTRLA_MODE_Pos) /* (SERCOM_SPI_CTRLA) The USART is configured with internal clock. Position */
-#define SERCOM_SPI_CTRLA_MODE_SPI_SLAVE       (SERCOM_SPI_CTRLA_MODE_SPI_SLAVE_Val << SERCOM_SPI_CTRLA_MODE_Pos) /* (SERCOM_SPI_CTRLA) The SPI in configured to Client mode. Position */
-#define SERCOM_SPI_CTRLA_MODE_SPI_MASTER      (SERCOM_SPI_CTRLA_MODE_SPI_MASTER_Val << SERCOM_SPI_CTRLA_MODE_Pos) /* (SERCOM_SPI_CTRLA) The SPI is configured to Host mode. Position */
-#define SERCOM_SPI_CTRLA_MODE_I2C_SLAVE       (SERCOM_SPI_CTRLA_MODE_I2C_SLAVE_Val << SERCOM_SPI_CTRLA_MODE_Pos) /* (SERCOM_SPI_CTRLA) The I2C is configured in Client mode. Position */
-#define SERCOM_SPI_CTRLA_MODE_I2C_MASTER      (SERCOM_SPI_CTRLA_MODE_I2C_MASTER_Val << SERCOM_SPI_CTRLA_MODE_Pos) /* (SERCOM_SPI_CTRLA) The I2C is configured in Host mode. Position */
+#define   SERCOM_SPI_CTRLA_MODE_USART_EXT_Val _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) USART with external clock  */
+#define   SERCOM_SPI_CTRLA_MODE_USART_INT_Val _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) USART with internal clock  */
+#define   SERCOM_SPI_CTRLA_MODE_SPI_SLAVE_Val _UINT32_(0x2)                                        /* (SERCOM_SPI_CTRLA) SPI Client mode  */
+#define   SERCOM_SPI_CTRLA_MODE_SPI_MASTER_Val _UINT32_(0x3)                                        /* (SERCOM_SPI_CTRLA) SPI Host mode  */
+#define   SERCOM_SPI_CTRLA_MODE_I2C_SLAVE_Val _UINT32_(0x4)                                        /* (SERCOM_SPI_CTRLA) I2C Client mode  */
+#define   SERCOM_SPI_CTRLA_MODE_I2C_MASTER_Val _UINT32_(0x5)                                        /* (SERCOM_SPI_CTRLA) I2C Host mode  */
+#define SERCOM_SPI_CTRLA_MODE_USART_EXT       (SERCOM_SPI_CTRLA_MODE_USART_EXT_Val << SERCOM_SPI_CTRLA_MODE_Pos) /* (SERCOM_SPI_CTRLA) USART with external clock Position */
+#define SERCOM_SPI_CTRLA_MODE_USART_INT       (SERCOM_SPI_CTRLA_MODE_USART_INT_Val << SERCOM_SPI_CTRLA_MODE_Pos) /* (SERCOM_SPI_CTRLA) USART with internal clock Position */
+#define SERCOM_SPI_CTRLA_MODE_SPI_SLAVE       (SERCOM_SPI_CTRLA_MODE_SPI_SLAVE_Val << SERCOM_SPI_CTRLA_MODE_Pos) /* (SERCOM_SPI_CTRLA) SPI Client mode Position */
+#define SERCOM_SPI_CTRLA_MODE_SPI_MASTER      (SERCOM_SPI_CTRLA_MODE_SPI_MASTER_Val << SERCOM_SPI_CTRLA_MODE_Pos) /* (SERCOM_SPI_CTRLA) SPI Host mode Position */
+#define SERCOM_SPI_CTRLA_MODE_I2C_SLAVE       (SERCOM_SPI_CTRLA_MODE_I2C_SLAVE_Val << SERCOM_SPI_CTRLA_MODE_Pos) /* (SERCOM_SPI_CTRLA) I2C Client mode Position */
+#define SERCOM_SPI_CTRLA_MODE_I2C_MASTER      (SERCOM_SPI_CTRLA_MODE_I2C_MASTER_Val << SERCOM_SPI_CTRLA_MODE_Pos) /* (SERCOM_SPI_CTRLA) I2C Host mode Position */
 #define SERCOM_SPI_CTRLA_RUNSTDBY_Pos         _UINT32_(7)                                          /* (SERCOM_SPI_CTRLA) Run In Standby Position */
 #define SERCOM_SPI_CTRLA_RUNSTDBY_Msk         (_UINT32_(0x1) << SERCOM_SPI_CTRLA_RUNSTDBY_Pos)     /* (SERCOM_SPI_CTRLA) Run In Standby Mask */
 #define SERCOM_SPI_CTRLA_RUNSTDBY(value)      (SERCOM_SPI_CTRLA_RUNSTDBY_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLA_RUNSTDBY_Pos)) /* Assignment of value for RUNSTDBY in the SERCOM_SPI_CTRLA register */
 #define SERCOM_SPI_CTRLA_IBON_Pos             _UINT32_(8)                                          /* (SERCOM_SPI_CTRLA) Immediate Buffer Overflow Notification Position */
 #define SERCOM_SPI_CTRLA_IBON_Msk             (_UINT32_(0x1) << SERCOM_SPI_CTRLA_IBON_Pos)         /* (SERCOM_SPI_CTRLA) Immediate Buffer Overflow Notification Mask */
 #define SERCOM_SPI_CTRLA_IBON(value)          (SERCOM_SPI_CTRLA_IBON_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLA_IBON_Pos)) /* Assignment of value for IBON in the SERCOM_SPI_CTRLA register */
-#define   SERCOM_SPI_CTRLA_IBON_0X0_Val       _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) STATUS.BUFOVF is set when it occurs in the data stream.  */
-#define   SERCOM_SPI_CTRLA_IBON_0X1_Val       _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) STATUS.BUFOVF is set immediately upon buffer overflow.  */
-#define SERCOM_SPI_CTRLA_IBON_0X0             (SERCOM_SPI_CTRLA_IBON_0X0_Val << SERCOM_SPI_CTRLA_IBON_Pos) /* (SERCOM_SPI_CTRLA) STATUS.BUFOVF is set when it occurs in the data stream. Position */
-#define SERCOM_SPI_CTRLA_IBON_0X1             (SERCOM_SPI_CTRLA_IBON_0X1_Val << SERCOM_SPI_CTRLA_IBON_Pos) /* (SERCOM_SPI_CTRLA) STATUS.BUFOVF is set immediately upon buffer overflow. Position */
 #define SERCOM_SPI_CTRLA_DOPO_Pos             _UINT32_(16)                                         /* (SERCOM_SPI_CTRLA) Data Out Pinout Position */
 #define SERCOM_SPI_CTRLA_DOPO_Msk             (_UINT32_(0x3) << SERCOM_SPI_CTRLA_DOPO_Pos)         /* (SERCOM_SPI_CTRLA) Data Out Pinout Mask */
 #define SERCOM_SPI_CTRLA_DOPO(value)          (SERCOM_SPI_CTRLA_DOPO_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLA_DOPO_Pos)) /* Assignment of value for DOPO in the SERCOM_SPI_CTRLA register */
-#define   SERCOM_SPI_CTRLA_DOPO_0X0_Val       _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) PAD[0]=DO, PAD[1]=SCK, PAD[2]=SS  */
-#define   SERCOM_SPI_CTRLA_DOPO_0X1_Val       _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) PAD[2]=DO, PAD[3]=SCK, PAD[1]=SS  */
-#define   SERCOM_SPI_CTRLA_DOPO_0X2_Val       _UINT32_(0x2)                                        /* (SERCOM_SPI_CTRLA) PAD[3]=DO, PAD[1]=SCK, PAD[2]=SS  */
-#define   SERCOM_SPI_CTRLA_DOPO_0X3_Val       _UINT32_(0x3)                                        /* (SERCOM_SPI_CTRLA) PAD[0]=DO, PAD[3]=SCK, PAD[1]=SS  */
-#define SERCOM_SPI_CTRLA_DOPO_0X0             (SERCOM_SPI_CTRLA_DOPO_0X0_Val << SERCOM_SPI_CTRLA_DOPO_Pos) /* (SERCOM_SPI_CTRLA) PAD[0]=DO, PAD[1]=SCK, PAD[2]=SS Position */
-#define SERCOM_SPI_CTRLA_DOPO_0X1             (SERCOM_SPI_CTRLA_DOPO_0X1_Val << SERCOM_SPI_CTRLA_DOPO_Pos) /* (SERCOM_SPI_CTRLA) PAD[2]=DO, PAD[3]=SCK, PAD[1]=SS Position */
-#define SERCOM_SPI_CTRLA_DOPO_0X2             (SERCOM_SPI_CTRLA_DOPO_0X2_Val << SERCOM_SPI_CTRLA_DOPO_Pos) /* (SERCOM_SPI_CTRLA) PAD[3]=DO, PAD[1]=SCK, PAD[2]=SS Position */
-#define SERCOM_SPI_CTRLA_DOPO_0X3             (SERCOM_SPI_CTRLA_DOPO_0X3_Val << SERCOM_SPI_CTRLA_DOPO_Pos) /* (SERCOM_SPI_CTRLA) PAD[0]=DO, PAD[3]=SCK, PAD[1]=SS Position */
+#define   SERCOM_SPI_CTRLA_DOPO_MUX0_Val      _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) PAD[0]=DO, PAD[1]=SCK, PAD[2]=SS  */
+#define   SERCOM_SPI_CTRLA_DOPO_MUX1_Val      _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) PAD[2]=DO, PAD[3]=SCK, PAD[1]=SS  */
+#define   SERCOM_SPI_CTRLA_DOPO_MUX2_Val      _UINT32_(0x2)                                        /* (SERCOM_SPI_CTRLA) PAD[3]=DO, PAD[1]=SCK, PAD[2]=SS  */
+#define   SERCOM_SPI_CTRLA_DOPO_MUX3_Val      _UINT32_(0x3)                                        /* (SERCOM_SPI_CTRLA) PAD[0]=DO, PAD[3]=SCK, PAD[1]=SS  */
+#define SERCOM_SPI_CTRLA_DOPO_MUX0            (SERCOM_SPI_CTRLA_DOPO_MUX0_Val << SERCOM_SPI_CTRLA_DOPO_Pos) /* (SERCOM_SPI_CTRLA) PAD[0]=DO, PAD[1]=SCK, PAD[2]=SS Position */
+#define SERCOM_SPI_CTRLA_DOPO_MUX1            (SERCOM_SPI_CTRLA_DOPO_MUX1_Val << SERCOM_SPI_CTRLA_DOPO_Pos) /* (SERCOM_SPI_CTRLA) PAD[2]=DO, PAD[3]=SCK, PAD[1]=SS Position */
+#define SERCOM_SPI_CTRLA_DOPO_MUX2            (SERCOM_SPI_CTRLA_DOPO_MUX2_Val << SERCOM_SPI_CTRLA_DOPO_Pos) /* (SERCOM_SPI_CTRLA) PAD[3]=DO, PAD[1]=SCK, PAD[2]=SS Position */
+#define SERCOM_SPI_CTRLA_DOPO_MUX3            (SERCOM_SPI_CTRLA_DOPO_MUX3_Val << SERCOM_SPI_CTRLA_DOPO_Pos) /* (SERCOM_SPI_CTRLA) PAD[0]=DO, PAD[3]=SCK, PAD[1]=SS Position */
 #define SERCOM_SPI_CTRLA_DIPO_Pos             _UINT32_(20)                                         /* (SERCOM_SPI_CTRLA) Data In Pinout Position */
 #define SERCOM_SPI_CTRLA_DIPO_Msk             (_UINT32_(0x3) << SERCOM_SPI_CTRLA_DIPO_Pos)         /* (SERCOM_SPI_CTRLA) Data In Pinout Mask */
 #define SERCOM_SPI_CTRLA_DIPO(value)          (SERCOM_SPI_CTRLA_DIPO_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLA_DIPO_Pos)) /* Assignment of value for DIPO in the SERCOM_SPI_CTRLA register */
-#define   SERCOM_SPI_CTRLA_DIPO_PAD0_Val      _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) SERCOM PAD[0] is used as data input  */
-#define   SERCOM_SPI_CTRLA_DIPO_PAD1_Val      _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) SERCOM PAD[1] is used as data input  */
-#define   SERCOM_SPI_CTRLA_DIPO_PAD2_Val      _UINT32_(0x2)                                        /* (SERCOM_SPI_CTRLA) SERCOM PAD[2] is used as data input  */
-#define   SERCOM_SPI_CTRLA_DIPO_PAD3_Val      _UINT32_(0x3)                                        /* (SERCOM_SPI_CTRLA) SERCOM PAD[3] is used as data input  */
-#define SERCOM_SPI_CTRLA_DIPO_PAD0            (SERCOM_SPI_CTRLA_DIPO_PAD0_Val << SERCOM_SPI_CTRLA_DIPO_Pos) /* (SERCOM_SPI_CTRLA) SERCOM PAD[0] is used as data input Position */
-#define SERCOM_SPI_CTRLA_DIPO_PAD1            (SERCOM_SPI_CTRLA_DIPO_PAD1_Val << SERCOM_SPI_CTRLA_DIPO_Pos) /* (SERCOM_SPI_CTRLA) SERCOM PAD[1] is used as data input Position */
-#define SERCOM_SPI_CTRLA_DIPO_PAD2            (SERCOM_SPI_CTRLA_DIPO_PAD2_Val << SERCOM_SPI_CTRLA_DIPO_Pos) /* (SERCOM_SPI_CTRLA) SERCOM PAD[2] is used as data input Position */
-#define SERCOM_SPI_CTRLA_DIPO_PAD3            (SERCOM_SPI_CTRLA_DIPO_PAD3_Val << SERCOM_SPI_CTRLA_DIPO_Pos) /* (SERCOM_SPI_CTRLA) SERCOM PAD[3] is used as data input Position */
+#define   SERCOM_SPI_CTRLA_DIPO_MUX0_Val      _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) SERCOM PAD[0] is used as data input  */
+#define   SERCOM_SPI_CTRLA_DIPO_MUX1_Val      _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) SERCOM PAD[1] is used as data input  */
+#define   SERCOM_SPI_CTRLA_DIPO_MUX2_Val      _UINT32_(0x2)                                        /* (SERCOM_SPI_CTRLA) SERCOM PAD[2] is used as data input  */
+#define   SERCOM_SPI_CTRLA_DIPO_MUX3_Val      _UINT32_(0x3)                                        /* (SERCOM_SPI_CTRLA) SERCOM PAD[3] is used as data input  */
+#define SERCOM_SPI_CTRLA_DIPO_MUX0            (SERCOM_SPI_CTRLA_DIPO_MUX0_Val << SERCOM_SPI_CTRLA_DIPO_Pos) /* (SERCOM_SPI_CTRLA) SERCOM PAD[0] is used as data input Position */
+#define SERCOM_SPI_CTRLA_DIPO_MUX1            (SERCOM_SPI_CTRLA_DIPO_MUX1_Val << SERCOM_SPI_CTRLA_DIPO_Pos) /* (SERCOM_SPI_CTRLA) SERCOM PAD[1] is used as data input Position */
+#define SERCOM_SPI_CTRLA_DIPO_MUX2            (SERCOM_SPI_CTRLA_DIPO_MUX2_Val << SERCOM_SPI_CTRLA_DIPO_Pos) /* (SERCOM_SPI_CTRLA) SERCOM PAD[2] is used as data input Position */
+#define SERCOM_SPI_CTRLA_DIPO_MUX3            (SERCOM_SPI_CTRLA_DIPO_MUX3_Val << SERCOM_SPI_CTRLA_DIPO_Pos) /* (SERCOM_SPI_CTRLA) SERCOM PAD[3] is used as data input Position */
 #define SERCOM_SPI_CTRLA_FORM_Pos             _UINT32_(24)                                         /* (SERCOM_SPI_CTRLA) Frame Format Position */
 #define SERCOM_SPI_CTRLA_FORM_Msk             (_UINT32_(0xF) << SERCOM_SPI_CTRLA_FORM_Pos)         /* (SERCOM_SPI_CTRLA) Frame Format Mask */
 #define SERCOM_SPI_CTRLA_FORM(value)          (SERCOM_SPI_CTRLA_FORM_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLA_FORM_Pos)) /* Assignment of value for FORM in the SERCOM_SPI_CTRLA register */
@@ -219,24 +225,24 @@
 #define SERCOM_SPI_CTRLA_CPHA_Pos             _UINT32_(28)                                         /* (SERCOM_SPI_CTRLA) Clock Phase Position */
 #define SERCOM_SPI_CTRLA_CPHA_Msk             (_UINT32_(0x1) << SERCOM_SPI_CTRLA_CPHA_Pos)         /* (SERCOM_SPI_CTRLA) Clock Phase Mask */
 #define SERCOM_SPI_CTRLA_CPHA(value)          (SERCOM_SPI_CTRLA_CPHA_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLA_CPHA_Pos)) /* Assignment of value for CPHA in the SERCOM_SPI_CTRLA register */
-#define   SERCOM_SPI_CTRLA_CPHA_LEADING_EDGE_Val _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) The data is sampled on a leading SCK edge and changed on a trailing SCK edge.  */
-#define   SERCOM_SPI_CTRLA_CPHA_TRAILING_EDGE_Val _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) The data is sampled on a trailing SCK edge and changed on a leading SCK edge.  */
-#define SERCOM_SPI_CTRLA_CPHA_LEADING_EDGE    (SERCOM_SPI_CTRLA_CPHA_LEADING_EDGE_Val << SERCOM_SPI_CTRLA_CPHA_Pos) /* (SERCOM_SPI_CTRLA) The data is sampled on a leading SCK edge and changed on a trailing SCK edge. Position */
-#define SERCOM_SPI_CTRLA_CPHA_TRAILING_EDGE   (SERCOM_SPI_CTRLA_CPHA_TRAILING_EDGE_Val << SERCOM_SPI_CTRLA_CPHA_Pos) /* (SERCOM_SPI_CTRLA) The data is sampled on a trailing SCK edge and changed on a leading SCK edge. Position */
+#define   SERCOM_SPI_CTRLA_CPHA_LEADING_EDGE_Val _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) The data is sampled on a leading SCK edge and changed on a trailing SCK edge  */
+#define   SERCOM_SPI_CTRLA_CPHA_TRAILING_EDGE_Val _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) The data is sampled on a trailing SCK edge and changed on a leading SCK edge  */
+#define SERCOM_SPI_CTRLA_CPHA_LEADING_EDGE    (SERCOM_SPI_CTRLA_CPHA_LEADING_EDGE_Val << SERCOM_SPI_CTRLA_CPHA_Pos) /* (SERCOM_SPI_CTRLA) The data is sampled on a leading SCK edge and changed on a trailing SCK edge Position */
+#define SERCOM_SPI_CTRLA_CPHA_TRAILING_EDGE   (SERCOM_SPI_CTRLA_CPHA_TRAILING_EDGE_Val << SERCOM_SPI_CTRLA_CPHA_Pos) /* (SERCOM_SPI_CTRLA) The data is sampled on a trailing SCK edge and changed on a leading SCK edge Position */
 #define SERCOM_SPI_CTRLA_CPOL_Pos             _UINT32_(29)                                         /* (SERCOM_SPI_CTRLA) Clock Polarity Position */
 #define SERCOM_SPI_CTRLA_CPOL_Msk             (_UINT32_(0x1) << SERCOM_SPI_CTRLA_CPOL_Pos)         /* (SERCOM_SPI_CTRLA) Clock Polarity Mask */
 #define SERCOM_SPI_CTRLA_CPOL(value)          (SERCOM_SPI_CTRLA_CPOL_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLA_CPOL_Pos)) /* Assignment of value for CPOL in the SERCOM_SPI_CTRLA register */
-#define   SERCOM_SPI_CTRLA_CPOL_IDLE_LOW_Val  _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) SCK is low when idle. The leading edge of a clock cycle is a rising edge, while the trailing edge is a falling edge.  */
-#define   SERCOM_SPI_CTRLA_CPOL_IDLE_HIGH_Val _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) SCK is high when idle. The leading edge of a clock cycle is a falling edge, while the trailing edge is a rising edge.  */
-#define SERCOM_SPI_CTRLA_CPOL_IDLE_LOW        (SERCOM_SPI_CTRLA_CPOL_IDLE_LOW_Val << SERCOM_SPI_CTRLA_CPOL_Pos) /* (SERCOM_SPI_CTRLA) SCK is low when idle. The leading edge of a clock cycle is a rising edge, while the trailing edge is a falling edge. Position */
-#define SERCOM_SPI_CTRLA_CPOL_IDLE_HIGH       (SERCOM_SPI_CTRLA_CPOL_IDLE_HIGH_Val << SERCOM_SPI_CTRLA_CPOL_Pos) /* (SERCOM_SPI_CTRLA) SCK is high when idle. The leading edge of a clock cycle is a falling edge, while the trailing edge is a rising edge. Position */
+#define   SERCOM_SPI_CTRLA_CPOL_IDLE_LOW_Val  _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) SCK is low when IDLE. The leading edge of a clock cycle is a rising edge, while the trailing edge is a falling edge.  */
+#define   SERCOM_SPI_CTRLA_CPOL_IDLE_HIGH_Val _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) SCK is high when IDLE. The leading edge of a clock cycle is a falling edge, while the trailing edge is a rising edge.  */
+#define SERCOM_SPI_CTRLA_CPOL_IDLE_LOW        (SERCOM_SPI_CTRLA_CPOL_IDLE_LOW_Val << SERCOM_SPI_CTRLA_CPOL_Pos) /* (SERCOM_SPI_CTRLA) SCK is low when IDLE. The leading edge of a clock cycle is a rising edge, while the trailing edge is a falling edge. Position */
+#define SERCOM_SPI_CTRLA_CPOL_IDLE_HIGH       (SERCOM_SPI_CTRLA_CPOL_IDLE_HIGH_Val << SERCOM_SPI_CTRLA_CPOL_Pos) /* (SERCOM_SPI_CTRLA) SCK is high when IDLE. The leading edge of a clock cycle is a falling edge, while the trailing edge is a rising edge. Position */
 #define SERCOM_SPI_CTRLA_DORD_Pos             _UINT32_(30)                                         /* (SERCOM_SPI_CTRLA) Data Order Position */
 #define SERCOM_SPI_CTRLA_DORD_Msk             (_UINT32_(0x1) << SERCOM_SPI_CTRLA_DORD_Pos)         /* (SERCOM_SPI_CTRLA) Data Order Mask */
 #define SERCOM_SPI_CTRLA_DORD(value)          (SERCOM_SPI_CTRLA_DORD_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLA_DORD_Pos)) /* Assignment of value for DORD in the SERCOM_SPI_CTRLA register */
-#define   SERCOM_SPI_CTRLA_DORD_MSB_Val       _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) MSb is transferred first.  */
-#define   SERCOM_SPI_CTRLA_DORD_LSB_Val       _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) LSb is transferred first.  */
-#define SERCOM_SPI_CTRLA_DORD_MSB             (SERCOM_SPI_CTRLA_DORD_MSB_Val << SERCOM_SPI_CTRLA_DORD_Pos) /* (SERCOM_SPI_CTRLA) MSb is transferred first. Position */
-#define SERCOM_SPI_CTRLA_DORD_LSB             (SERCOM_SPI_CTRLA_DORD_LSB_Val << SERCOM_SPI_CTRLA_DORD_Pos) /* (SERCOM_SPI_CTRLA) LSb is transferred first. Position */
+#define   SERCOM_SPI_CTRLA_DORD_MSB_Val       _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLA) MSb is transferred first  */
+#define   SERCOM_SPI_CTRLA_DORD_LSB_Val       _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLA) LSb is transferred first  */
+#define SERCOM_SPI_CTRLA_DORD_MSB             (SERCOM_SPI_CTRLA_DORD_MSB_Val << SERCOM_SPI_CTRLA_DORD_Pos) /* (SERCOM_SPI_CTRLA) MSb is transferred first Position */
+#define SERCOM_SPI_CTRLA_DORD_LSB             (SERCOM_SPI_CTRLA_DORD_LSB_Val << SERCOM_SPI_CTRLA_DORD_Pos) /* (SERCOM_SPI_CTRLA) LSb is transferred first Position */
 #define SERCOM_SPI_CTRLA_Msk                  _UINT32_(0x7F33019F)                                 /* (SERCOM_SPI_CTRLA) Register Mask  */
 
 
@@ -252,18 +258,18 @@
 #define SERCOM_USART_CTRLA_MODE_Pos           _UINT32_(2)                                          /* (SERCOM_USART_CTRLA) Operating Mode Position */
 #define SERCOM_USART_CTRLA_MODE_Msk           (_UINT32_(0x7) << SERCOM_USART_CTRLA_MODE_Pos)       /* (SERCOM_USART_CTRLA) Operating Mode Mask */
 #define SERCOM_USART_CTRLA_MODE(value)        (SERCOM_USART_CTRLA_MODE_Msk & (_UINT32_(value) << SERCOM_USART_CTRLA_MODE_Pos)) /* Assignment of value for MODE in the SERCOM_USART_CTRLA register */
-#define   SERCOM_USART_CTRLA_MODE_USART_EXT_Val _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) The USART is configured with external clock.  */
-#define   SERCOM_USART_CTRLA_MODE_USART_INT_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) The USART is configured with internal clock.  */
-#define   SERCOM_USART_CTRLA_MODE_SPI_SLAVE_Val _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLA) The SPI in configured to Client mode.  */
-#define   SERCOM_USART_CTRLA_MODE_SPI_MASTER_Val _UINT32_(0x3)                                        /* (SERCOM_USART_CTRLA) The SPI is configured to Host mode.  */
-#define   SERCOM_USART_CTRLA_MODE_I2C_SLAVE_Val _UINT32_(0x4)                                        /* (SERCOM_USART_CTRLA) The I2C is configured in Client mode.  */
-#define   SERCOM_USART_CTRLA_MODE_I2C_MASTER_Val _UINT32_(0x5)                                        /* (SERCOM_USART_CTRLA) The I2C is configured in Host mode.  */
-#define SERCOM_USART_CTRLA_MODE_USART_EXT     (SERCOM_USART_CTRLA_MODE_USART_EXT_Val << SERCOM_USART_CTRLA_MODE_Pos) /* (SERCOM_USART_CTRLA) The USART is configured with external clock. Position */
-#define SERCOM_USART_CTRLA_MODE_USART_INT     (SERCOM_USART_CTRLA_MODE_USART_INT_Val << SERCOM_USART_CTRLA_MODE_Pos) /* (SERCOM_USART_CTRLA) The USART is configured with internal clock. Position */
-#define SERCOM_USART_CTRLA_MODE_SPI_SLAVE     (SERCOM_USART_CTRLA_MODE_SPI_SLAVE_Val << SERCOM_USART_CTRLA_MODE_Pos) /* (SERCOM_USART_CTRLA) The SPI in configured to Client mode. Position */
-#define SERCOM_USART_CTRLA_MODE_SPI_MASTER    (SERCOM_USART_CTRLA_MODE_SPI_MASTER_Val << SERCOM_USART_CTRLA_MODE_Pos) /* (SERCOM_USART_CTRLA) The SPI is configured to Host mode. Position */
-#define SERCOM_USART_CTRLA_MODE_I2C_SLAVE     (SERCOM_USART_CTRLA_MODE_I2C_SLAVE_Val << SERCOM_USART_CTRLA_MODE_Pos) /* (SERCOM_USART_CTRLA) The I2C is configured in Client mode. Position */
-#define SERCOM_USART_CTRLA_MODE_I2C_MASTER    (SERCOM_USART_CTRLA_MODE_I2C_MASTER_Val << SERCOM_USART_CTRLA_MODE_Pos) /* (SERCOM_USART_CTRLA) The I2C is configured in Host mode. Position */
+#define   SERCOM_USART_CTRLA_MODE_USART_EXT_Val _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) USART with external clock  */
+#define   SERCOM_USART_CTRLA_MODE_USART_INT_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) USART with internal clock  */
+#define   SERCOM_USART_CTRLA_MODE_SPI_SLAVE_Val _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLA) SPI Client mode  */
+#define   SERCOM_USART_CTRLA_MODE_SPI_MASTER_Val _UINT32_(0x3)                                        /* (SERCOM_USART_CTRLA) SPI Host mode  */
+#define   SERCOM_USART_CTRLA_MODE_I2C_SLAVE_Val _UINT32_(0x4)                                        /* (SERCOM_USART_CTRLA) I2C Client mode  */
+#define   SERCOM_USART_CTRLA_MODE_I2C_MASTER_Val _UINT32_(0x5)                                        /* (SERCOM_USART_CTRLA) I2C Host mode  */
+#define SERCOM_USART_CTRLA_MODE_USART_EXT     (SERCOM_USART_CTRLA_MODE_USART_EXT_Val << SERCOM_USART_CTRLA_MODE_Pos) /* (SERCOM_USART_CTRLA) USART with external clock Position */
+#define SERCOM_USART_CTRLA_MODE_USART_INT     (SERCOM_USART_CTRLA_MODE_USART_INT_Val << SERCOM_USART_CTRLA_MODE_Pos) /* (SERCOM_USART_CTRLA) USART with internal clock Position */
+#define SERCOM_USART_CTRLA_MODE_SPI_SLAVE     (SERCOM_USART_CTRLA_MODE_SPI_SLAVE_Val << SERCOM_USART_CTRLA_MODE_Pos) /* (SERCOM_USART_CTRLA) SPI Client mode Position */
+#define SERCOM_USART_CTRLA_MODE_SPI_MASTER    (SERCOM_USART_CTRLA_MODE_SPI_MASTER_Val << SERCOM_USART_CTRLA_MODE_Pos) /* (SERCOM_USART_CTRLA) SPI Host mode Position */
+#define SERCOM_USART_CTRLA_MODE_I2C_SLAVE     (SERCOM_USART_CTRLA_MODE_I2C_SLAVE_Val << SERCOM_USART_CTRLA_MODE_Pos) /* (SERCOM_USART_CTRLA) I2C Client mode Position */
+#define SERCOM_USART_CTRLA_MODE_I2C_MASTER    (SERCOM_USART_CTRLA_MODE_I2C_MASTER_Val << SERCOM_USART_CTRLA_MODE_Pos) /* (SERCOM_USART_CTRLA) I2C Host mode Position */
 #define SERCOM_USART_CTRLA_RUNSTDBY_Pos       _UINT32_(7)                                          /* (SERCOM_USART_CTRLA) Run In Standby Position */
 #define SERCOM_USART_CTRLA_RUNSTDBY_Msk       (_UINT32_(0x1) << SERCOM_USART_CTRLA_RUNSTDBY_Pos)   /* (SERCOM_USART_CTRLA) Run In Standby Mask */
 #define SERCOM_USART_CTRLA_RUNSTDBY(value)    (SERCOM_USART_CTRLA_RUNSTDBY_Msk & (_UINT32_(value) << SERCOM_USART_CTRLA_RUNSTDBY_Pos)) /* Assignment of value for RUNSTDBY in the SERCOM_USART_CTRLA register */
@@ -273,38 +279,38 @@
 #define SERCOM_USART_CTRLA_SAMPR_Pos          _UINT32_(13)                                         /* (SERCOM_USART_CTRLA) Sample Rate Position */
 #define SERCOM_USART_CTRLA_SAMPR_Msk          (_UINT32_(0x7) << SERCOM_USART_CTRLA_SAMPR_Pos)      /* (SERCOM_USART_CTRLA) Sample Rate Mask */
 #define SERCOM_USART_CTRLA_SAMPR(value)       (SERCOM_USART_CTRLA_SAMPR_Msk & (_UINT32_(value) << SERCOM_USART_CTRLA_SAMPR_Pos)) /* Assignment of value for SAMPR in the SERCOM_USART_CTRLA register */
-#define   SERCOM_USART_CTRLA_SAMPR_16X_ARITHMETIC_Val _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) 16x over-sampling using arithmetic baudrate generation  */
-#define   SERCOM_USART_CTRLA_SAMPR_16X_FRACTIONAL_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) 16x over-sampling using fractional baudrate generation  */
-#define   SERCOM_USART_CTRLA_SAMPR_8X_ARITHMETIC_Val _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLA) 8x over-sampling using arithmetic baudrate generation  */
-#define   SERCOM_USART_CTRLA_SAMPR_8X_FRACTIONAL_Val _UINT32_(0x3)                                        /* (SERCOM_USART_CTRLA) 8x over-sampling using fractional baudrate generation  */
-#define   SERCOM_USART_CTRLA_SAMPR_3X_ARITHMETIC_Val _UINT32_(0x4)                                        /* (SERCOM_USART_CTRLA) 3x over-sampling using arithmetic baudrate generation  */
-#define SERCOM_USART_CTRLA_SAMPR_16X_ARITHMETIC (SERCOM_USART_CTRLA_SAMPR_16X_ARITHMETIC_Val << SERCOM_USART_CTRLA_SAMPR_Pos) /* (SERCOM_USART_CTRLA) 16x over-sampling using arithmetic baudrate generation Position */
-#define SERCOM_USART_CTRLA_SAMPR_16X_FRACTIONAL (SERCOM_USART_CTRLA_SAMPR_16X_FRACTIONAL_Val << SERCOM_USART_CTRLA_SAMPR_Pos) /* (SERCOM_USART_CTRLA) 16x over-sampling using fractional baudrate generation Position */
-#define SERCOM_USART_CTRLA_SAMPR_8X_ARITHMETIC (SERCOM_USART_CTRLA_SAMPR_8X_ARITHMETIC_Val << SERCOM_USART_CTRLA_SAMPR_Pos) /* (SERCOM_USART_CTRLA) 8x over-sampling using arithmetic baudrate generation Position */
-#define SERCOM_USART_CTRLA_SAMPR_8X_FRACTIONAL (SERCOM_USART_CTRLA_SAMPR_8X_FRACTIONAL_Val << SERCOM_USART_CTRLA_SAMPR_Pos) /* (SERCOM_USART_CTRLA) 8x over-sampling using fractional baudrate generation Position */
-#define SERCOM_USART_CTRLA_SAMPR_3X_ARITHMETIC (SERCOM_USART_CTRLA_SAMPR_3X_ARITHMETIC_Val << SERCOM_USART_CTRLA_SAMPR_Pos) /* (SERCOM_USART_CTRLA) 3x over-sampling using arithmetic baudrate generation Position */
+#define   SERCOM_USART_CTRLA_SAMPR_16X_ARITHMETIC_Val _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) 16x over-sampling using arithmetic baud rate generation  */
+#define   SERCOM_USART_CTRLA_SAMPR_16X_FRACTIONAL_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) 16x over-sampling using fractional baud rate generation  */
+#define   SERCOM_USART_CTRLA_SAMPR_8X_ARITHMETIC_Val _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLA) 8x over-sampling using arithmetic baud rate generation  */
+#define   SERCOM_USART_CTRLA_SAMPR_8X_FRACTIONAL_Val _UINT32_(0x3)                                        /* (SERCOM_USART_CTRLA) 8x over-sampling using fractional baud rate generation  */
+#define   SERCOM_USART_CTRLA_SAMPR_3X_ARITHMETIC_Val _UINT32_(0x4)                                        /* (SERCOM_USART_CTRLA) 3x over-sampling using arithmetic baud rate generation  */
+#define SERCOM_USART_CTRLA_SAMPR_16X_ARITHMETIC (SERCOM_USART_CTRLA_SAMPR_16X_ARITHMETIC_Val << SERCOM_USART_CTRLA_SAMPR_Pos) /* (SERCOM_USART_CTRLA) 16x over-sampling using arithmetic baud rate generation Position */
+#define SERCOM_USART_CTRLA_SAMPR_16X_FRACTIONAL (SERCOM_USART_CTRLA_SAMPR_16X_FRACTIONAL_Val << SERCOM_USART_CTRLA_SAMPR_Pos) /* (SERCOM_USART_CTRLA) 16x over-sampling using fractional baud rate generation Position */
+#define SERCOM_USART_CTRLA_SAMPR_8X_ARITHMETIC (SERCOM_USART_CTRLA_SAMPR_8X_ARITHMETIC_Val << SERCOM_USART_CTRLA_SAMPR_Pos) /* (SERCOM_USART_CTRLA) 8x over-sampling using arithmetic baud rate generation Position */
+#define SERCOM_USART_CTRLA_SAMPR_8X_FRACTIONAL (SERCOM_USART_CTRLA_SAMPR_8X_FRACTIONAL_Val << SERCOM_USART_CTRLA_SAMPR_Pos) /* (SERCOM_USART_CTRLA) 8x over-sampling using fractional baud rate generation Position */
+#define SERCOM_USART_CTRLA_SAMPR_3X_ARITHMETIC (SERCOM_USART_CTRLA_SAMPR_3X_ARITHMETIC_Val << SERCOM_USART_CTRLA_SAMPR_Pos) /* (SERCOM_USART_CTRLA) 3x over-sampling using arithmetic baud rate generation Position */
 #define SERCOM_USART_CTRLA_TXPO_Pos           _UINT32_(16)                                         /* (SERCOM_USART_CTRLA) Transmit Data Pinout Position */
 #define SERCOM_USART_CTRLA_TXPO_Msk           (_UINT32_(0x3) << SERCOM_USART_CTRLA_TXPO_Pos)       /* (SERCOM_USART_CTRLA) Transmit Data Pinout Mask */
 #define SERCOM_USART_CTRLA_TXPO(value)        (SERCOM_USART_CTRLA_TXPO_Msk & (_UINT32_(value) << SERCOM_USART_CTRLA_TXPO_Pos)) /* Assignment of value for TXPO in the SERCOM_USART_CTRLA register */
-#define   SERCOM_USART_CTRLA_TXPO_PAD0_Val    _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) PAD[0]=TxD, PAD[1]=XCK  */
-#define   SERCOM_USART_CTRLA_TXPO_PAD1_Val    _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) PAD[2]=TxD, PAD[3]=XCK  */
-#define   SERCOM_USART_CTRLA_TXPO_PAD2_Val    _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLA) PAD[0]=TxD, PAD[2]=RTS/TE, PAD[3]=CTS  */
-#define   SERCOM_USART_CTRLA_TXPO_PAD3_Val    _UINT32_(0x3)                                        /* (SERCOM_USART_CTRLA) PAD[0]=TxD, PAD[1]=XCK, PAD[2]=RTS/TE  */
-#define SERCOM_USART_CTRLA_TXPO_PAD0          (SERCOM_USART_CTRLA_TXPO_PAD0_Val << SERCOM_USART_CTRLA_TXPO_Pos) /* (SERCOM_USART_CTRLA) PAD[0]=TxD, PAD[1]=XCK Position */
-#define SERCOM_USART_CTRLA_TXPO_PAD1          (SERCOM_USART_CTRLA_TXPO_PAD1_Val << SERCOM_USART_CTRLA_TXPO_Pos) /* (SERCOM_USART_CTRLA) PAD[2]=TxD, PAD[3]=XCK Position */
-#define SERCOM_USART_CTRLA_TXPO_PAD2          (SERCOM_USART_CTRLA_TXPO_PAD2_Val << SERCOM_USART_CTRLA_TXPO_Pos) /* (SERCOM_USART_CTRLA) PAD[0]=TxD, PAD[2]=RTS/TE, PAD[3]=CTS Position */
-#define SERCOM_USART_CTRLA_TXPO_PAD3          (SERCOM_USART_CTRLA_TXPO_PAD3_Val << SERCOM_USART_CTRLA_TXPO_Pos) /* (SERCOM_USART_CTRLA) PAD[0]=TxD, PAD[1]=XCK, PAD[2]=RTS/TE Position */
+#define   SERCOM_USART_CTRLA_TXPO_MUX0_Val    _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) PAD[0]=TxD, PAD[1]=XCK  */
+#define   SERCOM_USART_CTRLA_TXPO_MUX1_Val    _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) PAD[2]=TxD, PAD[3]=XCK  */
+#define   SERCOM_USART_CTRLA_TXPO_MUX2_Val    _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLA) PAD[0]=TxD, PAD[2]=RTS/TE, PAD[3]=CTS  */
+#define   SERCOM_USART_CTRLA_TXPO_MUX3_Val    _UINT32_(0x3)                                        /* (SERCOM_USART_CTRLA) PAD[0]=TxD, PAD[1]=XCK, PAD[2]=RTS/TE  */
+#define SERCOM_USART_CTRLA_TXPO_MUX0          (SERCOM_USART_CTRLA_TXPO_MUX0_Val << SERCOM_USART_CTRLA_TXPO_Pos) /* (SERCOM_USART_CTRLA) PAD[0]=TxD, PAD[1]=XCK Position */
+#define SERCOM_USART_CTRLA_TXPO_MUX1          (SERCOM_USART_CTRLA_TXPO_MUX1_Val << SERCOM_USART_CTRLA_TXPO_Pos) /* (SERCOM_USART_CTRLA) PAD[2]=TxD, PAD[3]=XCK Position */
+#define SERCOM_USART_CTRLA_TXPO_MUX2          (SERCOM_USART_CTRLA_TXPO_MUX2_Val << SERCOM_USART_CTRLA_TXPO_Pos) /* (SERCOM_USART_CTRLA) PAD[0]=TxD, PAD[2]=RTS/TE, PAD[3]=CTS Position */
+#define SERCOM_USART_CTRLA_TXPO_MUX3          (SERCOM_USART_CTRLA_TXPO_MUX3_Val << SERCOM_USART_CTRLA_TXPO_Pos) /* (SERCOM_USART_CTRLA) PAD[0]=TxD, PAD[1]=XCK, PAD[2]=RTS/TE Position */
 #define SERCOM_USART_CTRLA_RXPO_Pos           _UINT32_(20)                                         /* (SERCOM_USART_CTRLA) Receive Data Pinout Position */
 #define SERCOM_USART_CTRLA_RXPO_Msk           (_UINT32_(0x3) << SERCOM_USART_CTRLA_RXPO_Pos)       /* (SERCOM_USART_CTRLA) Receive Data Pinout Mask */
 #define SERCOM_USART_CTRLA_RXPO(value)        (SERCOM_USART_CTRLA_RXPO_Msk & (_UINT32_(value) << SERCOM_USART_CTRLA_RXPO_Pos)) /* Assignment of value for RXPO in the SERCOM_USART_CTRLA register */
-#define   SERCOM_USART_CTRLA_RXPO_PAD0_Val    _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) SERCOM PAD[0] is used for data reception  */
-#define   SERCOM_USART_CTRLA_RXPO_PAD1_Val    _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) SERCOM PAD[1] is used for data reception  */
-#define   SERCOM_USART_CTRLA_RXPO_PAD2_Val    _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLA) SERCOM PAD[2] is used for data reception  */
-#define   SERCOM_USART_CTRLA_RXPO_PAD3_Val    _UINT32_(0x3)                                        /* (SERCOM_USART_CTRLA) SERCOM PAD[3] is used for data reception  */
-#define SERCOM_USART_CTRLA_RXPO_PAD0          (SERCOM_USART_CTRLA_RXPO_PAD0_Val << SERCOM_USART_CTRLA_RXPO_Pos) /* (SERCOM_USART_CTRLA) SERCOM PAD[0] is used for data reception Position */
-#define SERCOM_USART_CTRLA_RXPO_PAD1          (SERCOM_USART_CTRLA_RXPO_PAD1_Val << SERCOM_USART_CTRLA_RXPO_Pos) /* (SERCOM_USART_CTRLA) SERCOM PAD[1] is used for data reception Position */
-#define SERCOM_USART_CTRLA_RXPO_PAD2          (SERCOM_USART_CTRLA_RXPO_PAD2_Val << SERCOM_USART_CTRLA_RXPO_Pos) /* (SERCOM_USART_CTRLA) SERCOM PAD[2] is used for data reception Position */
-#define SERCOM_USART_CTRLA_RXPO_PAD3          (SERCOM_USART_CTRLA_RXPO_PAD3_Val << SERCOM_USART_CTRLA_RXPO_Pos) /* (SERCOM_USART_CTRLA) SERCOM PAD[3] is used for data reception Position */
+#define   SERCOM_USART_CTRLA_RXPO_MUX0_Val    _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) SERCOM PAD[0] is used for data reception  */
+#define   SERCOM_USART_CTRLA_RXPO_MUX1_Val    _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) SERCOM PAD[1] is used for data reception  */
+#define   SERCOM_USART_CTRLA_RXPO_MUX2_Val    _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLA) SERCOM PAD[2] is used for data reception  */
+#define   SERCOM_USART_CTRLA_RXPO_MUX3_Val    _UINT32_(0x3)                                        /* (SERCOM_USART_CTRLA) SERCOM PAD[3] is used for data reception  */
+#define SERCOM_USART_CTRLA_RXPO_MUX0          (SERCOM_USART_CTRLA_RXPO_MUX0_Val << SERCOM_USART_CTRLA_RXPO_Pos) /* (SERCOM_USART_CTRLA) SERCOM PAD[0] is used for data reception Position */
+#define SERCOM_USART_CTRLA_RXPO_MUX1          (SERCOM_USART_CTRLA_RXPO_MUX1_Val << SERCOM_USART_CTRLA_RXPO_Pos) /* (SERCOM_USART_CTRLA) SERCOM PAD[1] is used for data reception Position */
+#define SERCOM_USART_CTRLA_RXPO_MUX2          (SERCOM_USART_CTRLA_RXPO_MUX2_Val << SERCOM_USART_CTRLA_RXPO_Pos) /* (SERCOM_USART_CTRLA) SERCOM PAD[2] is used for data reception Position */
+#define SERCOM_USART_CTRLA_RXPO_MUX3          (SERCOM_USART_CTRLA_RXPO_MUX3_Val << SERCOM_USART_CTRLA_RXPO_Pos) /* (SERCOM_USART_CTRLA) SERCOM PAD[3] is used for data reception Position */
 #define SERCOM_USART_CTRLA_SAMPA_Pos          _UINT32_(22)                                         /* (SERCOM_USART_CTRLA) Sample Adjustment Position */
 #define SERCOM_USART_CTRLA_SAMPA_Msk          (_UINT32_(0x3) << SERCOM_USART_CTRLA_SAMPA_Pos)      /* (SERCOM_USART_CTRLA) Sample Adjustment Mask */
 #define SERCOM_USART_CTRLA_SAMPA(value)       (SERCOM_USART_CTRLA_SAMPA_Msk & (_UINT32_(value) << SERCOM_USART_CTRLA_SAMPA_Pos)) /* Assignment of value for SAMPA in the SERCOM_USART_CTRLA register */
@@ -321,35 +327,35 @@
 #define SERCOM_USART_CTRLA_FORM(value)        (SERCOM_USART_CTRLA_FORM_Msk & (_UINT32_(value) << SERCOM_USART_CTRLA_FORM_Pos)) /* Assignment of value for FORM in the SERCOM_USART_CTRLA register */
 #define   SERCOM_USART_CTRLA_FORM_USART_FRAME_NO_PARITY_Val _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) USART frame  */
 #define   SERCOM_USART_CTRLA_FORM_USART_FRAME_WITH_PARITY_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) USART frame with parity  */
-#define   SERCOM_USART_CTRLA_FORM_USART_FRAME_LINBRKGEN_Val _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLA) LIN Host - Break and sync generation. See LIN Command (CTRLB.LINCMD)  */
+#define   SERCOM_USART_CTRLA_FORM_USART_FRAME_LINBRKGEN_Val _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLA) LIN Host - Break and sync generation. See LIN Command (CTRLB.LINCMD).  */
 #define   SERCOM_USART_CTRLA_FORM_USART_FRAME_AUTO_BAUD_NO_PARITY_Val _UINT32_(0x4)                                        /* (SERCOM_USART_CTRLA) Auto-baud (LIN Client) - break detection and auto-baud  */
 #define   SERCOM_USART_CTRLA_FORM_USART_FRAME_AUTO_BAUD_WITH_PARITY_Val _UINT32_(0x5)                                        /* (SERCOM_USART_CTRLA) Auto-baud - break detection and auto-baud with parity  */
 #define SERCOM_USART_CTRLA_FORM_USART_FRAME_NO_PARITY (SERCOM_USART_CTRLA_FORM_USART_FRAME_NO_PARITY_Val << SERCOM_USART_CTRLA_FORM_Pos) /* (SERCOM_USART_CTRLA) USART frame Position */
 #define SERCOM_USART_CTRLA_FORM_USART_FRAME_WITH_PARITY (SERCOM_USART_CTRLA_FORM_USART_FRAME_WITH_PARITY_Val << SERCOM_USART_CTRLA_FORM_Pos) /* (SERCOM_USART_CTRLA) USART frame with parity Position */
-#define SERCOM_USART_CTRLA_FORM_USART_FRAME_LINBRKGEN (SERCOM_USART_CTRLA_FORM_USART_FRAME_LINBRKGEN_Val << SERCOM_USART_CTRLA_FORM_Pos) /* (SERCOM_USART_CTRLA) LIN Host - Break and sync generation. See LIN Command (CTRLB.LINCMD) Position */
+#define SERCOM_USART_CTRLA_FORM_USART_FRAME_LINBRKGEN (SERCOM_USART_CTRLA_FORM_USART_FRAME_LINBRKGEN_Val << SERCOM_USART_CTRLA_FORM_Pos) /* (SERCOM_USART_CTRLA) LIN Host - Break and sync generation. See LIN Command (CTRLB.LINCMD). Position */
 #define SERCOM_USART_CTRLA_FORM_USART_FRAME_AUTO_BAUD_NO_PARITY (SERCOM_USART_CTRLA_FORM_USART_FRAME_AUTO_BAUD_NO_PARITY_Val << SERCOM_USART_CTRLA_FORM_Pos) /* (SERCOM_USART_CTRLA) Auto-baud (LIN Client) - break detection and auto-baud Position */
 #define SERCOM_USART_CTRLA_FORM_USART_FRAME_AUTO_BAUD_WITH_PARITY (SERCOM_USART_CTRLA_FORM_USART_FRAME_AUTO_BAUD_WITH_PARITY_Val << SERCOM_USART_CTRLA_FORM_Pos) /* (SERCOM_USART_CTRLA) Auto-baud - break detection and auto-baud with parity Position */
 #define SERCOM_USART_CTRLA_CMODE_Pos          _UINT32_(28)                                         /* (SERCOM_USART_CTRLA) Communication Mode Position */
 #define SERCOM_USART_CTRLA_CMODE_Msk          (_UINT32_(0x1) << SERCOM_USART_CTRLA_CMODE_Pos)      /* (SERCOM_USART_CTRLA) Communication Mode Mask */
 #define SERCOM_USART_CTRLA_CMODE(value)       (SERCOM_USART_CTRLA_CMODE_Msk & (_UINT32_(value) << SERCOM_USART_CTRLA_CMODE_Pos)) /* Assignment of value for CMODE in the SERCOM_USART_CTRLA register */
-#define   SERCOM_USART_CTRLA_CMODE_ASYNC_Val  _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) Asynchronous communication.  */
-#define   SERCOM_USART_CTRLA_CMODE_SYNCH_Val  _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) Synchronous communication.  */
-#define SERCOM_USART_CTRLA_CMODE_ASYNC        (SERCOM_USART_CTRLA_CMODE_ASYNC_Val << SERCOM_USART_CTRLA_CMODE_Pos) /* (SERCOM_USART_CTRLA) Asynchronous communication. Position */
-#define SERCOM_USART_CTRLA_CMODE_SYNCH        (SERCOM_USART_CTRLA_CMODE_SYNCH_Val << SERCOM_USART_CTRLA_CMODE_Pos) /* (SERCOM_USART_CTRLA) Synchronous communication. Position */
+#define   SERCOM_USART_CTRLA_CMODE_ASYNC_Val  _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) Asynchronous communication  */
+#define   SERCOM_USART_CTRLA_CMODE_SYNC_Val   _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) Synchronous communication  */
+#define SERCOM_USART_CTRLA_CMODE_ASYNC        (SERCOM_USART_CTRLA_CMODE_ASYNC_Val << SERCOM_USART_CTRLA_CMODE_Pos) /* (SERCOM_USART_CTRLA) Asynchronous communication Position */
+#define SERCOM_USART_CTRLA_CMODE_SYNC         (SERCOM_USART_CTRLA_CMODE_SYNC_Val << SERCOM_USART_CTRLA_CMODE_Pos) /* (SERCOM_USART_CTRLA) Synchronous communication Position */
 #define SERCOM_USART_CTRLA_CPOL_Pos           _UINT32_(29)                                         /* (SERCOM_USART_CTRLA) Clock Polarity Position */
 #define SERCOM_USART_CTRLA_CPOL_Msk           (_UINT32_(0x1) << SERCOM_USART_CTRLA_CPOL_Pos)       /* (SERCOM_USART_CTRLA) Clock Polarity Mask */
 #define SERCOM_USART_CTRLA_CPOL(value)        (SERCOM_USART_CTRLA_CPOL_Msk & (_UINT32_(value) << SERCOM_USART_CTRLA_CPOL_Pos)) /* Assignment of value for CPOL in the SERCOM_USART_CTRLA register */
 #define   SERCOM_USART_CTRLA_CPOL_IDLE_LOW_Val _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) TxD Change: Rising XCK edge, RxD Sample: Falling XCK edge  */
-#define   SERCOM_USART_CTRLA_CPOL_IDLE_HIGH_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) TxD Change: Falling XCK edge, RxD Sample: Rising XCK edge.  */
+#define   SERCOM_USART_CTRLA_CPOL_IDLE_HIGH_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) TxD Change: Falling XCK edge, RxD Sample: Rising XCK edge  */
 #define SERCOM_USART_CTRLA_CPOL_IDLE_LOW      (SERCOM_USART_CTRLA_CPOL_IDLE_LOW_Val << SERCOM_USART_CTRLA_CPOL_Pos) /* (SERCOM_USART_CTRLA) TxD Change: Rising XCK edge, RxD Sample: Falling XCK edge Position */
-#define SERCOM_USART_CTRLA_CPOL_IDLE_HIGH     (SERCOM_USART_CTRLA_CPOL_IDLE_HIGH_Val << SERCOM_USART_CTRLA_CPOL_Pos) /* (SERCOM_USART_CTRLA) TxD Change: Falling XCK edge, RxD Sample: Rising XCK edge. Position */
+#define SERCOM_USART_CTRLA_CPOL_IDLE_HIGH     (SERCOM_USART_CTRLA_CPOL_IDLE_HIGH_Val << SERCOM_USART_CTRLA_CPOL_Pos) /* (SERCOM_USART_CTRLA) TxD Change: Falling XCK edge, RxD Sample: Rising XCK edge Position */
 #define SERCOM_USART_CTRLA_DORD_Pos           _UINT32_(30)                                         /* (SERCOM_USART_CTRLA) Data Order Position */
 #define SERCOM_USART_CTRLA_DORD_Msk           (_UINT32_(0x1) << SERCOM_USART_CTRLA_DORD_Pos)       /* (SERCOM_USART_CTRLA) Data Order Mask */
 #define SERCOM_USART_CTRLA_DORD(value)        (SERCOM_USART_CTRLA_DORD_Msk & (_UINT32_(value) << SERCOM_USART_CTRLA_DORD_Pos)) /* Assignment of value for DORD in the SERCOM_USART_CTRLA register */
-#define   SERCOM_USART_CTRLA_DORD_MSB_Val     _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) MSb is transferred first.  */
-#define   SERCOM_USART_CTRLA_DORD_LSB_Val     _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) LSb is transferred first.  */
-#define SERCOM_USART_CTRLA_DORD_MSB           (SERCOM_USART_CTRLA_DORD_MSB_Val << SERCOM_USART_CTRLA_DORD_Pos) /* (SERCOM_USART_CTRLA) MSb is transferred first. Position */
-#define SERCOM_USART_CTRLA_DORD_LSB           (SERCOM_USART_CTRLA_DORD_LSB_Val << SERCOM_USART_CTRLA_DORD_Pos) /* (SERCOM_USART_CTRLA) LSb is transferred first. Position */
+#define   SERCOM_USART_CTRLA_DORD_MSB_Val     _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLA) MSb is transferred first  */
+#define   SERCOM_USART_CTRLA_DORD_LSB_Val     _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLA) LSb is transferred first  */
+#define SERCOM_USART_CTRLA_DORD_MSB           (SERCOM_USART_CTRLA_DORD_MSB_Val << SERCOM_USART_CTRLA_DORD_Pos) /* (SERCOM_USART_CTRLA) MSb is transferred first Position */
+#define SERCOM_USART_CTRLA_DORD_LSB           (SERCOM_USART_CTRLA_DORD_LSB_Val << SERCOM_USART_CTRLA_DORD_Pos) /* (SERCOM_USART_CTRLA) LSb is transferred first Position */
 #define SERCOM_USART_CTRLA_Msk                _UINT32_(0x7FF3E19F)                                 /* (SERCOM_USART_CTRLA) Register Mask  */
 
 
@@ -387,10 +393,10 @@
 #define SERCOM_I2CS_CTRLB_AMODE_Msk           (_UINT32_(0x3) << SERCOM_I2CS_CTRLB_AMODE_Pos)       /* (SERCOM_I2CS_CTRLB) Address Mode Mask */
 #define SERCOM_I2CS_CTRLB_AMODE(value)        (SERCOM_I2CS_CTRLB_AMODE_Msk & (_UINT32_(value) << SERCOM_I2CS_CTRLB_AMODE_Pos)) /* Assignment of value for AMODE in the SERCOM_I2CS_CTRLB register */
 #define   SERCOM_I2CS_CTRLB_AMODE_MASK_Val    _UINT32_(0x0)                                        /* (SERCOM_I2CS_CTRLB) The client responds to the address written in ADDR.ADDR masked by the value in ADDR.ADDRMASK. See SERCOM - Serial Communication Interface for additional information.  */
-#define   SERCOM_I2CS_CTRLB_AMODE_2ADDRS_Val  _UINT32_(0x1)                                        /* (SERCOM_I2CS_CTRLB) The client responds to the two unique addresses in ADDR.ADDR and ADDR.ADDRMASK.  */
+#define   SERCOM_I2CS_CTRLB_AMODE_2ADDRS_Val  _UINT32_(0x1)                                        /* (SERCOM_I2CS_CTRLB) The client responds to the two unique addresses in ADDR.ADDR and ADDR.ADDRMASK  */
 #define   SERCOM_I2CS_CTRLB_AMODE_RANGE_Val   _UINT32_(0x2)                                        /* (SERCOM_I2CS_CTRLB) The client responds to the range of addresses between and including ADDR.ADDR and ADDR.ADDRMASK. ADDR.ADDR is the upper limit.  */
 #define SERCOM_I2CS_CTRLB_AMODE_MASK          (SERCOM_I2CS_CTRLB_AMODE_MASK_Val << SERCOM_I2CS_CTRLB_AMODE_Pos) /* (SERCOM_I2CS_CTRLB) The client responds to the address written in ADDR.ADDR masked by the value in ADDR.ADDRMASK. See SERCOM - Serial Communication Interface for additional information. Position */
-#define SERCOM_I2CS_CTRLB_AMODE_2ADDRS        (SERCOM_I2CS_CTRLB_AMODE_2ADDRS_Val << SERCOM_I2CS_CTRLB_AMODE_Pos) /* (SERCOM_I2CS_CTRLB) The client responds to the two unique addresses in ADDR.ADDR and ADDR.ADDRMASK. Position */
+#define SERCOM_I2CS_CTRLB_AMODE_2ADDRS        (SERCOM_I2CS_CTRLB_AMODE_2ADDRS_Val << SERCOM_I2CS_CTRLB_AMODE_Pos) /* (SERCOM_I2CS_CTRLB) The client responds to the two unique addresses in ADDR.ADDR and ADDR.ADDRMASK Position */
 #define SERCOM_I2CS_CTRLB_AMODE_RANGE         (SERCOM_I2CS_CTRLB_AMODE_RANGE_Val << SERCOM_I2CS_CTRLB_AMODE_Pos) /* (SERCOM_I2CS_CTRLB) The client responds to the range of addresses between and including ADDR.ADDR and ADDR.ADDRMASK. ADDR.ADDR is the upper limit. Position */
 #define SERCOM_I2CS_CTRLB_CMD_Pos             _UINT32_(16)                                         /* (SERCOM_I2CS_CTRLB) Command Position */
 #define SERCOM_I2CS_CTRLB_CMD_Msk             (_UINT32_(0x3) << SERCOM_I2CS_CTRLB_CMD_Pos)         /* (SERCOM_I2CS_CTRLB) Command Mask */
@@ -407,10 +413,10 @@
 #define SERCOM_SPI_CTRLB_CHSIZE_Pos           _UINT32_(0)                                          /* (SERCOM_SPI_CTRLB) Character Size Position */
 #define SERCOM_SPI_CTRLB_CHSIZE_Msk           (_UINT32_(0x7) << SERCOM_SPI_CTRLB_CHSIZE_Pos)       /* (SERCOM_SPI_CTRLB) Character Size Mask */
 #define SERCOM_SPI_CTRLB_CHSIZE(value)        (SERCOM_SPI_CTRLB_CHSIZE_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLB_CHSIZE_Pos)) /* Assignment of value for CHSIZE in the SERCOM_SPI_CTRLB register */
-#define   SERCOM_SPI_CTRLB_CHSIZE_8_BIT_Val   _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLB) 8 bits  */
-#define   SERCOM_SPI_CTRLB_CHSIZE_9_BIT_Val   _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLB) 9 bits  */
-#define SERCOM_SPI_CTRLB_CHSIZE_8_BIT         (SERCOM_SPI_CTRLB_CHSIZE_8_BIT_Val << SERCOM_SPI_CTRLB_CHSIZE_Pos) /* (SERCOM_SPI_CTRLB) 8 bits Position */
-#define SERCOM_SPI_CTRLB_CHSIZE_9_BIT         (SERCOM_SPI_CTRLB_CHSIZE_9_BIT_Val << SERCOM_SPI_CTRLB_CHSIZE_Pos) /* (SERCOM_SPI_CTRLB) 9 bits Position */
+#define   SERCOM_SPI_CTRLB_CHSIZE_8_BIT_Val   _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLB) Eight bits  */
+#define   SERCOM_SPI_CTRLB_CHSIZE_9_BIT_Val   _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLB) Nine bits  */
+#define SERCOM_SPI_CTRLB_CHSIZE_8_BIT         (SERCOM_SPI_CTRLB_CHSIZE_8_BIT_Val << SERCOM_SPI_CTRLB_CHSIZE_Pos) /* (SERCOM_SPI_CTRLB) Eight bits Position */
+#define SERCOM_SPI_CTRLB_CHSIZE_9_BIT         (SERCOM_SPI_CTRLB_CHSIZE_9_BIT_Val << SERCOM_SPI_CTRLB_CHSIZE_Pos) /* (SERCOM_SPI_CTRLB) Nine bits Position */
 #define SERCOM_SPI_CTRLB_PLOADEN_Pos          _UINT32_(6)                                          /* (SERCOM_SPI_CTRLB) Client Data Preload Enable Position */
 #define SERCOM_SPI_CTRLB_PLOADEN_Msk          (_UINT32_(0x1) << SERCOM_SPI_CTRLB_PLOADEN_Pos)      /* (SERCOM_SPI_CTRLB) Client Data Preload Enable Mask */
 #define SERCOM_SPI_CTRLB_PLOADEN(value)       (SERCOM_SPI_CTRLB_PLOADEN_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLB_PLOADEN_Pos)) /* Assignment of value for PLOADEN in the SERCOM_SPI_CTRLB register */
@@ -423,12 +429,12 @@
 #define SERCOM_SPI_CTRLB_AMODE_Pos            _UINT32_(14)                                         /* (SERCOM_SPI_CTRLB) Address Mode Position */
 #define SERCOM_SPI_CTRLB_AMODE_Msk            (_UINT32_(0x3) << SERCOM_SPI_CTRLB_AMODE_Pos)        /* (SERCOM_SPI_CTRLB) Address Mode Mask */
 #define SERCOM_SPI_CTRLB_AMODE(value)         (SERCOM_SPI_CTRLB_AMODE_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLB_AMODE_Pos)) /* Assignment of value for AMODE in the SERCOM_SPI_CTRLB register */
-#define   SERCOM_SPI_CTRLB_AMODE_MASK_Val     _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLB) ADDRMASK is used as a mask to the ADDR register.  */
-#define   SERCOM_SPI_CTRLB_AMODE_2ADDRS_Val   _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLB) The slave responds to the two unique addresses in ADDR and ADDRMASK.  */
-#define   SERCOM_SPI_CTRLB_AMODE_RANGE_Val    _UINT32_(0x2)                                        /* (SERCOM_SPI_CTRLB) The slave responds to the range of addresses between and including ADDR and ADDRMASK. ADDR is the upper limit.  */
-#define SERCOM_SPI_CTRLB_AMODE_MASK           (SERCOM_SPI_CTRLB_AMODE_MASK_Val << SERCOM_SPI_CTRLB_AMODE_Pos) /* (SERCOM_SPI_CTRLB) ADDRMASK is used as a mask to the ADDR register. Position */
-#define SERCOM_SPI_CTRLB_AMODE_2ADDRS         (SERCOM_SPI_CTRLB_AMODE_2ADDRS_Val << SERCOM_SPI_CTRLB_AMODE_Pos) /* (SERCOM_SPI_CTRLB) The slave responds to the two unique addresses in ADDR and ADDRMASK. Position */
-#define SERCOM_SPI_CTRLB_AMODE_RANGE          (SERCOM_SPI_CTRLB_AMODE_RANGE_Val << SERCOM_SPI_CTRLB_AMODE_Pos) /* (SERCOM_SPI_CTRLB) The slave responds to the range of addresses between and including ADDR and ADDRMASK. ADDR is the upper limit. Position */
+#define   SERCOM_SPI_CTRLB_AMODE_MASK_Val     _UINT32_(0x0)                                        /* (SERCOM_SPI_CTRLB) ADDRMASK is used as a mask to the ADDR register  */
+#define   SERCOM_SPI_CTRLB_AMODE_2ADDRS_Val   _UINT32_(0x1)                                        /* (SERCOM_SPI_CTRLB) The client responds to the two unique addresses in ADDR and ADDRMASK  */
+#define   SERCOM_SPI_CTRLB_AMODE_RANGE_Val    _UINT32_(0x2)                                        /* (SERCOM_SPI_CTRLB) The client responds to the range of addresses between and including ADDR and ADDRMASK with ADDR as the upper limit  */
+#define SERCOM_SPI_CTRLB_AMODE_MASK           (SERCOM_SPI_CTRLB_AMODE_MASK_Val << SERCOM_SPI_CTRLB_AMODE_Pos) /* (SERCOM_SPI_CTRLB) ADDRMASK is used as a mask to the ADDR register Position */
+#define SERCOM_SPI_CTRLB_AMODE_2ADDRS         (SERCOM_SPI_CTRLB_AMODE_2ADDRS_Val << SERCOM_SPI_CTRLB_AMODE_Pos) /* (SERCOM_SPI_CTRLB) The client responds to the two unique addresses in ADDR and ADDRMASK Position */
+#define SERCOM_SPI_CTRLB_AMODE_RANGE          (SERCOM_SPI_CTRLB_AMODE_RANGE_Val << SERCOM_SPI_CTRLB_AMODE_Pos) /* (SERCOM_SPI_CTRLB) The client responds to the range of addresses between and including ADDR and ADDRMASK with ADDR as the upper limit Position */
 #define SERCOM_SPI_CTRLB_RXEN_Pos             _UINT32_(17)                                         /* (SERCOM_SPI_CTRLB) Receiver Enable Position */
 #define SERCOM_SPI_CTRLB_RXEN_Msk             (_UINT32_(0x1) << SERCOM_SPI_CTRLB_RXEN_Pos)         /* (SERCOM_SPI_CTRLB) Receiver Enable Mask */
 #define SERCOM_SPI_CTRLB_RXEN(value)          (SERCOM_SPI_CTRLB_RXEN_Msk & (_UINT32_(value) << SERCOM_SPI_CTRLB_RXEN_Pos)) /* Assignment of value for RXEN in the SERCOM_SPI_CTRLB register */
@@ -454,10 +460,10 @@
 #define SERCOM_USART_CTRLB_SBMODE_Pos         _UINT32_(6)                                          /* (SERCOM_USART_CTRLB) Stop Bit Mode Position */
 #define SERCOM_USART_CTRLB_SBMODE_Msk         (_UINT32_(0x1) << SERCOM_USART_CTRLB_SBMODE_Pos)     /* (SERCOM_USART_CTRLB) Stop Bit Mode Mask */
 #define SERCOM_USART_CTRLB_SBMODE(value)      (SERCOM_USART_CTRLB_SBMODE_Msk & (_UINT32_(value) << SERCOM_USART_CTRLB_SBMODE_Pos)) /* Assignment of value for SBMODE in the SERCOM_USART_CTRLB register */
-#define   SERCOM_USART_CTRLB_SBMODE_ONE_Val   _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLB) One stop bit.  */
-#define   SERCOM_USART_CTRLB_SBMODE_TWO_Val   _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLB) Two stop bits.  */
-#define SERCOM_USART_CTRLB_SBMODE_ONE         (SERCOM_USART_CTRLB_SBMODE_ONE_Val << SERCOM_USART_CTRLB_SBMODE_Pos) /* (SERCOM_USART_CTRLB) One stop bit. Position */
-#define SERCOM_USART_CTRLB_SBMODE_TWO         (SERCOM_USART_CTRLB_SBMODE_TWO_Val << SERCOM_USART_CTRLB_SBMODE_Pos) /* (SERCOM_USART_CTRLB) Two stop bits. Position */
+#define   SERCOM_USART_CTRLB_SBMODE_1_BIT_Val _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLB) One stop bit  */
+#define   SERCOM_USART_CTRLB_SBMODE_2_BIT_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLB) Two stop bits  */
+#define SERCOM_USART_CTRLB_SBMODE_1_BIT       (SERCOM_USART_CTRLB_SBMODE_1_BIT_Val << SERCOM_USART_CTRLB_SBMODE_Pos) /* (SERCOM_USART_CTRLB) One stop bit Position */
+#define SERCOM_USART_CTRLB_SBMODE_2_BIT       (SERCOM_USART_CTRLB_SBMODE_2_BIT_Val << SERCOM_USART_CTRLB_SBMODE_Pos) /* (SERCOM_USART_CTRLB) Two stop bits Position */
 #define SERCOM_USART_CTRLB_COLDEN_Pos         _UINT32_(8)                                          /* (SERCOM_USART_CTRLB) Collision Detection Enable Position */
 #define SERCOM_USART_CTRLB_COLDEN_Msk         (_UINT32_(0x1) << SERCOM_USART_CTRLB_COLDEN_Pos)     /* (SERCOM_USART_CTRLB) Collision Detection Enable Mask */
 #define SERCOM_USART_CTRLB_COLDEN(value)      (SERCOM_USART_CTRLB_COLDEN_Msk & (_UINT32_(value) << SERCOM_USART_CTRLB_COLDEN_Pos)) /* Assignment of value for COLDEN in the SERCOM_USART_CTRLB register */
@@ -467,15 +473,15 @@
 #define SERCOM_USART_CTRLB_ENC_Pos            _UINT32_(10)                                         /* (SERCOM_USART_CTRLB) Encoding Format Position */
 #define SERCOM_USART_CTRLB_ENC_Msk            (_UINT32_(0x1) << SERCOM_USART_CTRLB_ENC_Pos)        /* (SERCOM_USART_CTRLB) Encoding Format Mask */
 #define SERCOM_USART_CTRLB_ENC(value)         (SERCOM_USART_CTRLB_ENC_Msk & (_UINT32_(value) << SERCOM_USART_CTRLB_ENC_Pos)) /* Assignment of value for ENC in the SERCOM_USART_CTRLB register */
-#define   SERCOM_USART_CTRLB_ENC_IRDA_Val     _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLB) Data is IrDA encoded.  */
-#define SERCOM_USART_CTRLB_ENC_IRDA           (SERCOM_USART_CTRLB_ENC_IRDA_Val << SERCOM_USART_CTRLB_ENC_Pos) /* (SERCOM_USART_CTRLB) Data is IrDA encoded. Position */
+#define   SERCOM_USART_CTRLB_ENC_IRDA_Val     _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLB) Data is IrDA encoded  */
+#define SERCOM_USART_CTRLB_ENC_IRDA           (SERCOM_USART_CTRLB_ENC_IRDA_Val << SERCOM_USART_CTRLB_ENC_Pos) /* (SERCOM_USART_CTRLB) Data is IrDA encoded Position */
 #define SERCOM_USART_CTRLB_PMODE_Pos          _UINT32_(13)                                         /* (SERCOM_USART_CTRLB) Parity Mode Position */
 #define SERCOM_USART_CTRLB_PMODE_Msk          (_UINT32_(0x1) << SERCOM_USART_CTRLB_PMODE_Pos)      /* (SERCOM_USART_CTRLB) Parity Mode Mask */
 #define SERCOM_USART_CTRLB_PMODE(value)       (SERCOM_USART_CTRLB_PMODE_Msk & (_UINT32_(value) << SERCOM_USART_CTRLB_PMODE_Pos)) /* Assignment of value for PMODE in the SERCOM_USART_CTRLB register */
-#define   SERCOM_USART_CTRLB_PMODE_EVEN_Val   _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLB) Even parity.  */
-#define   SERCOM_USART_CTRLB_PMODE_ODD_Val    _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLB) Odd parity.  */
-#define SERCOM_USART_CTRLB_PMODE_EVEN         (SERCOM_USART_CTRLB_PMODE_EVEN_Val << SERCOM_USART_CTRLB_PMODE_Pos) /* (SERCOM_USART_CTRLB) Even parity. Position */
-#define SERCOM_USART_CTRLB_PMODE_ODD          (SERCOM_USART_CTRLB_PMODE_ODD_Val << SERCOM_USART_CTRLB_PMODE_Pos) /* (SERCOM_USART_CTRLB) Odd parity. Position */
+#define   SERCOM_USART_CTRLB_PMODE_EVEN_Val   _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLB) Even parity  */
+#define   SERCOM_USART_CTRLB_PMODE_ODD_Val    _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLB) Odd parity  */
+#define SERCOM_USART_CTRLB_PMODE_EVEN         (SERCOM_USART_CTRLB_PMODE_EVEN_Val << SERCOM_USART_CTRLB_PMODE_Pos) /* (SERCOM_USART_CTRLB) Even parity Position */
+#define SERCOM_USART_CTRLB_PMODE_ODD          (SERCOM_USART_CTRLB_PMODE_ODD_Val << SERCOM_USART_CTRLB_PMODE_Pos) /* (SERCOM_USART_CTRLB) Odd parity Position */
 #define SERCOM_USART_CTRLB_TXEN_Pos           _UINT32_(16)                                         /* (SERCOM_USART_CTRLB) Transmitter Enable Position */
 #define SERCOM_USART_CTRLB_TXEN_Msk           (_UINT32_(0x1) << SERCOM_USART_CTRLB_TXEN_Pos)       /* (SERCOM_USART_CTRLB) Transmitter Enable Mask */
 #define SERCOM_USART_CTRLB_TXEN(value)        (SERCOM_USART_CTRLB_TXEN_Msk & (_UINT32_(value) << SERCOM_USART_CTRLB_TXEN_Pos)) /* Assignment of value for TXEN in the SERCOM_USART_CTRLB register */
@@ -485,12 +491,12 @@
 #define SERCOM_USART_CTRLB_LINCMD_Pos         _UINT32_(24)                                         /* (SERCOM_USART_CTRLB) LIN Command Position */
 #define SERCOM_USART_CTRLB_LINCMD_Msk         (_UINT32_(0x3) << SERCOM_USART_CTRLB_LINCMD_Pos)     /* (SERCOM_USART_CTRLB) LIN Command Mask */
 #define SERCOM_USART_CTRLB_LINCMD(value)      (SERCOM_USART_CTRLB_LINCMD_Msk & (_UINT32_(value) << SERCOM_USART_CTRLB_LINCMD_Pos)) /* Assignment of value for LINCMD in the SERCOM_USART_CTRLB register */
-#define   SERCOM_USART_CTRLB_LINCMD_NONE_Val  _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLB) Normal USART transmission.  */
-#define   SERCOM_USART_CTRLB_LINCMD_SOFTWARE_CONTROL_TRANSMIT_CMD_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLB) Break field is transmitted when DATA is written.  */
-#define   SERCOM_USART_CTRLB_LINCMD_AUTO_TRANSMIT_CMD_Val _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLB) Break, sync and identifier are automatically transmitted when DATA is written with the identifier.  */
-#define SERCOM_USART_CTRLB_LINCMD_NONE        (SERCOM_USART_CTRLB_LINCMD_NONE_Val << SERCOM_USART_CTRLB_LINCMD_Pos) /* (SERCOM_USART_CTRLB) Normal USART transmission. Position */
-#define SERCOM_USART_CTRLB_LINCMD_SOFTWARE_CONTROL_TRANSMIT_CMD (SERCOM_USART_CTRLB_LINCMD_SOFTWARE_CONTROL_TRANSMIT_CMD_Val << SERCOM_USART_CTRLB_LINCMD_Pos) /* (SERCOM_USART_CTRLB) Break field is transmitted when DATA is written. Position */
-#define SERCOM_USART_CTRLB_LINCMD_AUTO_TRANSMIT_CMD (SERCOM_USART_CTRLB_LINCMD_AUTO_TRANSMIT_CMD_Val << SERCOM_USART_CTRLB_LINCMD_Pos) /* (SERCOM_USART_CTRLB) Break, sync and identifier are automatically transmitted when DATA is written with the identifier. Position */
+#define   SERCOM_USART_CTRLB_LINCMD_NONE_Val  _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLB) Normal USART transmission  */
+#define   SERCOM_USART_CTRLB_LINCMD_SOFTWARE_CONTROL_TRANSMIT_CMD_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLB) A break field is transmitted when DATA is written  */
+#define   SERCOM_USART_CTRLB_LINCMD_AUTO_TRANSMIT_CMD_Val _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLB) The break, sync, and identifier fields are automatically transmitted when the DATA is written with the identifier  */
+#define SERCOM_USART_CTRLB_LINCMD_NONE        (SERCOM_USART_CTRLB_LINCMD_NONE_Val << SERCOM_USART_CTRLB_LINCMD_Pos) /* (SERCOM_USART_CTRLB) Normal USART transmission Position */
+#define SERCOM_USART_CTRLB_LINCMD_SOFTWARE_CONTROL_TRANSMIT_CMD (SERCOM_USART_CTRLB_LINCMD_SOFTWARE_CONTROL_TRANSMIT_CMD_Val << SERCOM_USART_CTRLB_LINCMD_Pos) /* (SERCOM_USART_CTRLB) A break field is transmitted when DATA is written Position */
+#define SERCOM_USART_CTRLB_LINCMD_AUTO_TRANSMIT_CMD (SERCOM_USART_CTRLB_LINCMD_AUTO_TRANSMIT_CMD_Val << SERCOM_USART_CTRLB_LINCMD_Pos) /* (SERCOM_USART_CTRLB) The break, sync, and identifier fields are automatically transmitted when the DATA is written with the identifier Position */
 #define SERCOM_USART_CTRLB_Msk                _UINT32_(0x03032747)                                 /* (SERCOM_USART_CTRLB) Register Mask  */
 
 
@@ -503,25 +509,25 @@
 #define SERCOM_USART_CTRLC_BRKLEN_Pos         _UINT32_(8)                                          /* (SERCOM_USART_CTRLC) LIN Host Break Length Position */
 #define SERCOM_USART_CTRLC_BRKLEN_Msk         (_UINT32_(0x3) << SERCOM_USART_CTRLC_BRKLEN_Pos)     /* (SERCOM_USART_CTRLC) LIN Host Break Length Mask */
 #define SERCOM_USART_CTRLC_BRKLEN(value)      (SERCOM_USART_CTRLC_BRKLEN_Msk & (_UINT32_(value) << SERCOM_USART_CTRLC_BRKLEN_Pos)) /* Assignment of value for BRKLEN in the SERCOM_USART_CTRLC register */
-#define   SERCOM_USART_CTRLC_BRKLEN_13_BIT_TIME_Val _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLC) Break field transmission is 13 bit times  */
-#define   SERCOM_USART_CTRLC_BRKLEN_17_BIT_TIME_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLC) Break field transmission is 17 bit times  */
-#define   SERCOM_USART_CTRLC_BRKLEN_21_BIT_TIME_Val _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLC) Break field transmission is 21 bit times  */
-#define   SERCOM_USART_CTRLC_BRKLEN_26_BIT_TIME_Val _UINT32_(0x3)                                        /* (SERCOM_USART_CTRLC) Break field transmission is 26 bit times  */
-#define SERCOM_USART_CTRLC_BRKLEN_13_BIT_TIME (SERCOM_USART_CTRLC_BRKLEN_13_BIT_TIME_Val << SERCOM_USART_CTRLC_BRKLEN_Pos) /* (SERCOM_USART_CTRLC) Break field transmission is 13 bit times Position */
-#define SERCOM_USART_CTRLC_BRKLEN_17_BIT_TIME (SERCOM_USART_CTRLC_BRKLEN_17_BIT_TIME_Val << SERCOM_USART_CTRLC_BRKLEN_Pos) /* (SERCOM_USART_CTRLC) Break field transmission is 17 bit times Position */
-#define SERCOM_USART_CTRLC_BRKLEN_21_BIT_TIME (SERCOM_USART_CTRLC_BRKLEN_21_BIT_TIME_Val << SERCOM_USART_CTRLC_BRKLEN_Pos) /* (SERCOM_USART_CTRLC) Break field transmission is 21 bit times Position */
-#define SERCOM_USART_CTRLC_BRKLEN_26_BIT_TIME (SERCOM_USART_CTRLC_BRKLEN_26_BIT_TIME_Val << SERCOM_USART_CTRLC_BRKLEN_Pos) /* (SERCOM_USART_CTRLC) Break field transmission is 26 bit times Position */
+#define   SERCOM_USART_CTRLC_BRKLEN_13_BIT_TIME_Val _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLC) The break field transmission is 13 bit times  */
+#define   SERCOM_USART_CTRLC_BRKLEN_17_BIT_TIME_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLC) The break field transmission is 17 bit times  */
+#define   SERCOM_USART_CTRLC_BRKLEN_21_BIT_TIME_Val _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLC) The break field transmission is 21 bit times  */
+#define   SERCOM_USART_CTRLC_BRKLEN_26_BIT_TIME_Val _UINT32_(0x3)                                        /* (SERCOM_USART_CTRLC) The break field transmission is 26 bit times  */
+#define SERCOM_USART_CTRLC_BRKLEN_13_BIT_TIME (SERCOM_USART_CTRLC_BRKLEN_13_BIT_TIME_Val << SERCOM_USART_CTRLC_BRKLEN_Pos) /* (SERCOM_USART_CTRLC) The break field transmission is 13 bit times Position */
+#define SERCOM_USART_CTRLC_BRKLEN_17_BIT_TIME (SERCOM_USART_CTRLC_BRKLEN_17_BIT_TIME_Val << SERCOM_USART_CTRLC_BRKLEN_Pos) /* (SERCOM_USART_CTRLC) The break field transmission is 17 bit times Position */
+#define SERCOM_USART_CTRLC_BRKLEN_21_BIT_TIME (SERCOM_USART_CTRLC_BRKLEN_21_BIT_TIME_Val << SERCOM_USART_CTRLC_BRKLEN_Pos) /* (SERCOM_USART_CTRLC) The break field transmission is 21 bit times Position */
+#define SERCOM_USART_CTRLC_BRKLEN_26_BIT_TIME (SERCOM_USART_CTRLC_BRKLEN_26_BIT_TIME_Val << SERCOM_USART_CTRLC_BRKLEN_Pos) /* (SERCOM_USART_CTRLC) The break field transmission is 26 bit times Position */
 #define SERCOM_USART_CTRLC_HDRDLY_Pos         _UINT32_(10)                                         /* (SERCOM_USART_CTRLC) LIN Host Header Delay Position */
 #define SERCOM_USART_CTRLC_HDRDLY_Msk         (_UINT32_(0x3) << SERCOM_USART_CTRLC_HDRDLY_Pos)     /* (SERCOM_USART_CTRLC) LIN Host Header Delay Mask */
 #define SERCOM_USART_CTRLC_HDRDLY(value)      (SERCOM_USART_CTRLC_HDRDLY_Msk & (_UINT32_(value) << SERCOM_USART_CTRLC_HDRDLY_Pos)) /* Assignment of value for HDRDLY in the SERCOM_USART_CTRLC register */
-#define   SERCOM_USART_CTRLC_HDRDLY_1_BIT_TIME_Val _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is 1 bit time. Delay between sync and ID transmission is 1 bit time.  */
-#define   SERCOM_USART_CTRLC_HDRDLY_4_BIT_TIME_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is 4 bit times. Delay between sync and ID transmission is 4 bit times.  */
-#define   SERCOM_USART_CTRLC_HDRDLY_8_BIT_TIME_Val _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is 8 bit times. Delay between sync and ID transmission is 4 bit times.  */
-#define   SERCOM_USART_CTRLC_HDRDLY_14_BIT_TIME_Val _UINT32_(0x3)                                        /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is 14 bit times. Delay between sync and ID transmission is 4 bit times.  */
-#define SERCOM_USART_CTRLC_HDRDLY_1_BIT_TIME  (SERCOM_USART_CTRLC_HDRDLY_1_BIT_TIME_Val << SERCOM_USART_CTRLC_HDRDLY_Pos) /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is 1 bit time. Delay between sync and ID transmission is 1 bit time. Position */
-#define SERCOM_USART_CTRLC_HDRDLY_4_BIT_TIME  (SERCOM_USART_CTRLC_HDRDLY_4_BIT_TIME_Val << SERCOM_USART_CTRLC_HDRDLY_Pos) /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is 4 bit times. Delay between sync and ID transmission is 4 bit times. Position */
-#define SERCOM_USART_CTRLC_HDRDLY_8_BIT_TIME  (SERCOM_USART_CTRLC_HDRDLY_8_BIT_TIME_Val << SERCOM_USART_CTRLC_HDRDLY_Pos) /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is 8 bit times. Delay between sync and ID transmission is 4 bit times. Position */
-#define SERCOM_USART_CTRLC_HDRDLY_14_BIT_TIME (SERCOM_USART_CTRLC_HDRDLY_14_BIT_TIME_Val << SERCOM_USART_CTRLC_HDRDLY_Pos) /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is 14 bit times. Delay between sync and ID transmission is 4 bit times. Position */
+#define   SERCOM_USART_CTRLC_HDRDLY_1_BIT_TIME_Val _UINT32_(0x0)                                        /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is one bit time. Delay between sync and ID transmission is one bit time.  */
+#define   SERCOM_USART_CTRLC_HDRDLY_4_BIT_TIME_Val _UINT32_(0x1)                                        /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is four bit times. Delay between sync and ID transmission is four bit times.  */
+#define   SERCOM_USART_CTRLC_HDRDLY_8_BIT_TIME_Val _UINT32_(0x2)                                        /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is eight bit times. Delay between sync and ID transmission is four bit times.  */
+#define   SERCOM_USART_CTRLC_HDRDLY_14_BIT_TIME_Val _UINT32_(0x3)                                        /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is 14 bit times. Delay between sync and ID transmission is four bit times.  */
+#define SERCOM_USART_CTRLC_HDRDLY_1_BIT_TIME  (SERCOM_USART_CTRLC_HDRDLY_1_BIT_TIME_Val << SERCOM_USART_CTRLC_HDRDLY_Pos) /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is one bit time. Delay between sync and ID transmission is one bit time. Position */
+#define SERCOM_USART_CTRLC_HDRDLY_4_BIT_TIME  (SERCOM_USART_CTRLC_HDRDLY_4_BIT_TIME_Val << SERCOM_USART_CTRLC_HDRDLY_Pos) /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is four bit times. Delay between sync and ID transmission is four bit times. Position */
+#define SERCOM_USART_CTRLC_HDRDLY_8_BIT_TIME  (SERCOM_USART_CTRLC_HDRDLY_8_BIT_TIME_Val << SERCOM_USART_CTRLC_HDRDLY_Pos) /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is eight bit times. Delay between sync and ID transmission is four bit times. Position */
+#define SERCOM_USART_CTRLC_HDRDLY_14_BIT_TIME (SERCOM_USART_CTRLC_HDRDLY_14_BIT_TIME_Val << SERCOM_USART_CTRLC_HDRDLY_Pos) /* (SERCOM_USART_CTRLC) Delay between break and sync transmission is 14 bit times. Delay between sync and ID transmission is four bit times. Position */
 #define SERCOM_USART_CTRLC_Msk                _UINT32_(0x00000F07)                                 /* (SERCOM_USART_CTRLC) Register Mask  */
 
 
@@ -540,8 +546,8 @@
 /* -------- SERCOM_SPI_BAUD : (SERCOM Offset: 0x0C) (R/W 8) SPI Baud Rate -------- */
 #define SERCOM_SPI_BAUD_RESETVALUE            _UINT8_(0x00)                                        /*  (SERCOM_SPI_BAUD) SPI Baud Rate  Reset Value */
 
-#define SERCOM_SPI_BAUD_BAUD_Pos              _UINT8_(0)                                           /* (SERCOM_SPI_BAUD) Baud Rate Value Position */
-#define SERCOM_SPI_BAUD_BAUD_Msk              (_UINT8_(0xFF) << SERCOM_SPI_BAUD_BAUD_Pos)          /* (SERCOM_SPI_BAUD) Baud Rate Value Mask */
+#define SERCOM_SPI_BAUD_BAUD_Pos              _UINT8_(0)                                           /* (SERCOM_SPI_BAUD) Baud Register Position */
+#define SERCOM_SPI_BAUD_BAUD_Msk              (_UINT8_(0xFF) << SERCOM_SPI_BAUD_BAUD_Pos)          /* (SERCOM_SPI_BAUD) Baud Register Mask */
 #define SERCOM_SPI_BAUD_BAUD(value)           (SERCOM_SPI_BAUD_BAUD_Msk & (_UINT8_(value) << SERCOM_SPI_BAUD_BAUD_Pos)) /* Assignment of value for BAUD in the SERCOM_SPI_BAUD register */
 #define SERCOM_SPI_BAUD_Msk                   _UINT8_(0xFF)                                        /* (SERCOM_SPI_BAUD) Register Mask  */
 
@@ -549,14 +555,17 @@
 /* -------- SERCOM_USART_BAUD : (SERCOM Offset: 0x0C) (R/W 16) USART Baud -------- */
 #define SERCOM_USART_BAUD_RESETVALUE          _UINT16_(0x00)                                       /*  (SERCOM_USART_BAUD) USART Baud  Reset Value */
 
-#define SERCOM_USART_BAUD_BAUD_Pos            _UINT16_(0)                                          /* (SERCOM_USART_BAUD) Baud Rate Value Position */
-#define SERCOM_USART_BAUD_BAUD_Msk            (_UINT16_(0xFFFF) << SERCOM_USART_BAUD_BAUD_Pos)     /* (SERCOM_USART_BAUD) Baud Rate Value Mask */
-#define SERCOM_USART_BAUD_BAUD(value)         (SERCOM_USART_BAUD_BAUD_Msk & (_UINT16_(value) << SERCOM_USART_BAUD_BAUD_Pos)) /* Assignment of value for BAUD in the SERCOM_USART_BAUD register */
-#define SERCOM_USART_BAUD_Msk                 _UINT16_(0xFFFF)                                     /* (SERCOM_USART_BAUD) Register Mask  */
+#define SERCOM_USART_BAUD_Msk                 _UINT16_(0x0000)                                     /* (SERCOM_USART_BAUD) Register Mask  */
+
+/* ARITH mode */
+#define SERCOM_USART_BAUD_ARITH_BAUD_Pos      _UINT16_(0)                                          /* (SERCOM_USART_BAUD) Baud Value Position */
+#define SERCOM_USART_BAUD_ARITH_BAUD_Msk      (_UINT16_(0xFFFF) << SERCOM_USART_BAUD_ARITH_BAUD_Pos) /* (SERCOM_USART_BAUD) Baud Value Mask */
+#define SERCOM_USART_BAUD_ARITH_BAUD(value)   (SERCOM_USART_BAUD_ARITH_BAUD_Msk & (_UINT16_(value) << SERCOM_USART_BAUD_ARITH_BAUD_Pos))
+#define SERCOM_USART_BAUD_ARITH_Msk           _UINT16_(0xFFFF)                                     /* (SERCOM_USART_BAUD_ARITH) Register Mask  */
 
 /* FRAC mode */
-#define SERCOM_USART_BAUD_FRAC_BAUD_Pos       _UINT16_(0)                                          /* (SERCOM_USART_BAUD) Baud Rate Value Position */
-#define SERCOM_USART_BAUD_FRAC_BAUD_Msk       (_UINT16_(0x1FFF) << SERCOM_USART_BAUD_FRAC_BAUD_Pos) /* (SERCOM_USART_BAUD) Baud Rate Value Mask */
+#define SERCOM_USART_BAUD_FRAC_BAUD_Pos       _UINT16_(0)                                          /* (SERCOM_USART_BAUD) Baud Value Position */
+#define SERCOM_USART_BAUD_FRAC_BAUD_Msk       (_UINT16_(0x1FFF) << SERCOM_USART_BAUD_FRAC_BAUD_Pos) /* (SERCOM_USART_BAUD) Baud Value Mask */
 #define SERCOM_USART_BAUD_FRAC_BAUD(value)    (SERCOM_USART_BAUD_FRAC_BAUD_Msk & (_UINT16_(value) << SERCOM_USART_BAUD_FRAC_BAUD_Pos))
 #define SERCOM_USART_BAUD_FRAC_FP_Pos         _UINT16_(13)                                         /* (SERCOM_USART_BAUD) Fractional Part Position */
 #define SERCOM_USART_BAUD_FRAC_FP_Msk         (_UINT16_(0x7) << SERCOM_USART_BAUD_FRAC_FP_Pos)     /* (SERCOM_USART_BAUD) Fractional Part Mask */
@@ -564,8 +573,8 @@
 #define SERCOM_USART_BAUD_FRAC_Msk            _UINT16_(0xFFFF)                                     /* (SERCOM_USART_BAUD_FRAC) Register Mask  */
 
 
-/* -------- SERCOM_USART_RXPL : (SERCOM Offset: 0x0E) (R/W 8) USART Receive Pulse Length Register -------- */
-#define SERCOM_USART_RXPL_RESETVALUE          _UINT8_(0x00)                                        /*  (SERCOM_USART_RXPL) USART Receive Pulse Length Register  Reset Value */
+/* -------- SERCOM_USART_RXPL : (SERCOM Offset: 0x0E) (R/W 8) USART Receive Pulse Length -------- */
+#define SERCOM_USART_RXPL_RESETVALUE          _UINT8_(0x00)                                        /*  (SERCOM_USART_RXPL) USART Receive Pulse Length  Reset Value */
 
 #define SERCOM_USART_RXPL_RXPL_Pos            _UINT8_(0)                                           /* (SERCOM_USART_RXPL) Receive Pulse Length Position */
 #define SERCOM_USART_RXPL_RXPL_Msk            (_UINT8_(0xFF) << SERCOM_USART_RXPL_RXPL_Pos)        /* (SERCOM_USART_RXPL) Receive Pulse Length Mask */
@@ -831,11 +840,11 @@
 #define SERCOM_I2CM_STATUS_BUSSTATE_Pos       _UINT16_(4)                                          /* (SERCOM_I2CM_STATUS) Bus State Position */
 #define SERCOM_I2CM_STATUS_BUSSTATE_Msk       (_UINT16_(0x3) << SERCOM_I2CM_STATUS_BUSSTATE_Pos)   /* (SERCOM_I2CM_STATUS) Bus State Mask */
 #define SERCOM_I2CM_STATUS_BUSSTATE(value)    (SERCOM_I2CM_STATUS_BUSSTATE_Msk & (_UINT16_(value) << SERCOM_I2CM_STATUS_BUSSTATE_Pos)) /* Assignment of value for BUSSTATE in the SERCOM_I2CM_STATUS register */
-#define   SERCOM_I2CM_STATUS_BUSSTATE_UNKNOWN_Val _UINT16_(0x0)                                        /* (SERCOM_I2CM_STATUS) The bus state is unknown to the I2C host and will wait for a stop condition to be detected or wait to be forced into an idle state by software  */
+#define   SERCOM_I2CM_STATUS_BUSSTATE_UNKNOWN_Val _UINT16_(0x0)                                        /* (SERCOM_I2CM_STATUS) The bus state is unknown to the I2C host, which will wait for a stop condition to be detected or for the bus to be forced into the IDLE state by software  */
 #define   SERCOM_I2CM_STATUS_BUSSTATE_IDLE_Val _UINT16_(0x1)                                        /* (SERCOM_I2CM_STATUS) The bus state is waiting for a transaction to be initialized  */
 #define   SERCOM_I2CM_STATUS_BUSSTATE_OWNER_Val _UINT16_(0x2)                                        /* (SERCOM_I2CM_STATUS) The I2C host is the current owner of the bus  */
 #define   SERCOM_I2CM_STATUS_BUSSTATE_BUSY_Val _UINT16_(0x3)                                        /* (SERCOM_I2CM_STATUS) Some other I2C host owns the bus  */
-#define SERCOM_I2CM_STATUS_BUSSTATE_UNKNOWN   (SERCOM_I2CM_STATUS_BUSSTATE_UNKNOWN_Val << SERCOM_I2CM_STATUS_BUSSTATE_Pos) /* (SERCOM_I2CM_STATUS) The bus state is unknown to the I2C host and will wait for a stop condition to be detected or wait to be forced into an idle state by software Position */
+#define SERCOM_I2CM_STATUS_BUSSTATE_UNKNOWN   (SERCOM_I2CM_STATUS_BUSSTATE_UNKNOWN_Val << SERCOM_I2CM_STATUS_BUSSTATE_Pos) /* (SERCOM_I2CM_STATUS) The bus state is unknown to the I2C host, which will wait for a stop condition to be detected or for the bus to be forced into the IDLE state by software Position */
 #define SERCOM_I2CM_STATUS_BUSSTATE_IDLE      (SERCOM_I2CM_STATUS_BUSSTATE_IDLE_Val << SERCOM_I2CM_STATUS_BUSSTATE_Pos) /* (SERCOM_I2CM_STATUS) The bus state is waiting for a transaction to be initialized Position */
 #define SERCOM_I2CM_STATUS_BUSSTATE_OWNER     (SERCOM_I2CM_STATUS_BUSSTATE_OWNER_Val << SERCOM_I2CM_STATUS_BUSSTATE_Pos) /* (SERCOM_I2CM_STATUS) The I2C host is the current owner of the bus Position */
 #define SERCOM_I2CM_STATUS_BUSSTATE_BUSY      (SERCOM_I2CM_STATUS_BUSSTATE_BUSY_Val << SERCOM_I2CM_STATUS_BUSSTATE_Pos) /* (SERCOM_I2CM_STATUS) Some other I2C host owns the bus Position */
@@ -983,9 +992,6 @@
 /* -------- SERCOM_I2CM_ADDR : (SERCOM Offset: 0x24) (R/W 32) I2CM Address -------- */
 #define SERCOM_I2CM_ADDR_RESETVALUE           _UINT32_(0x00)                                       /*  (SERCOM_I2CM_ADDR) I2CM Address  Reset Value */
 
-#define SERCOM_I2CM_ADDR_ADDR_Pos             _UINT32_(0)                                          /* (SERCOM_I2CM_ADDR) Address Position */
-#define SERCOM_I2CM_ADDR_ADDR_Msk             (_UINT32_(0x7FF) << SERCOM_I2CM_ADDR_ADDR_Pos)       /* (SERCOM_I2CM_ADDR) Address Mask */
-#define SERCOM_I2CM_ADDR_ADDR(value)          (SERCOM_I2CM_ADDR_ADDR_Msk & (_UINT32_(value) << SERCOM_I2CM_ADDR_ADDR_Pos)) /* Assignment of value for ADDR in the SERCOM_I2CM_ADDR register */
 #define SERCOM_I2CM_ADDR_LENEN_Pos            _UINT32_(13)                                         /* (SERCOM_I2CM_ADDR) Transfer Length Enable Position */
 #define SERCOM_I2CM_ADDR_LENEN_Msk            (_UINT32_(0x1) << SERCOM_I2CM_ADDR_LENEN_Pos)        /* (SERCOM_I2CM_ADDR) Transfer Length Enable Mask */
 #define SERCOM_I2CM_ADDR_LENEN(value)         (SERCOM_I2CM_ADDR_LENEN_Msk & (_UINT32_(value) << SERCOM_I2CM_ADDR_LENEN_Pos)) /* Assignment of value for LENEN in the SERCOM_I2CM_ADDR register */
@@ -995,7 +1001,19 @@
 #define SERCOM_I2CM_ADDR_LEN_Pos              _UINT32_(16)                                         /* (SERCOM_I2CM_ADDR) Transaction Length Position */
 #define SERCOM_I2CM_ADDR_LEN_Msk              (_UINT32_(0xFF) << SERCOM_I2CM_ADDR_LEN_Pos)         /* (SERCOM_I2CM_ADDR) Transaction Length Mask */
 #define SERCOM_I2CM_ADDR_LEN(value)           (SERCOM_I2CM_ADDR_LEN_Msk & (_UINT32_(value) << SERCOM_I2CM_ADDR_LEN_Pos)) /* Assignment of value for LEN in the SERCOM_I2CM_ADDR register */
-#define SERCOM_I2CM_ADDR_Msk                  _UINT32_(0x00FFA7FF)                                 /* (SERCOM_I2CM_ADDR) Register Mask  */
+#define SERCOM_I2CM_ADDR_Msk                  _UINT32_(0x00FFA000)                                 /* (SERCOM_I2CM_ADDR) Register Mask  */
+
+/* SEVENBIT mode */
+#define SERCOM_I2CM_ADDR_SEVENBIT_ADDR_Pos    _UINT32_(0)                                          /* (SERCOM_I2CM_ADDR) Address Position */
+#define SERCOM_I2CM_ADDR_SEVENBIT_ADDR_Msk    (_UINT32_(0x7F) << SERCOM_I2CM_ADDR_SEVENBIT_ADDR_Pos) /* (SERCOM_I2CM_ADDR) Address Mask */
+#define SERCOM_I2CM_ADDR_SEVENBIT_ADDR(value) (SERCOM_I2CM_ADDR_SEVENBIT_ADDR_Msk & (_UINT32_(value) << SERCOM_I2CM_ADDR_SEVENBIT_ADDR_Pos))
+#define SERCOM_I2CM_ADDR_SEVENBIT_Msk         _UINT32_(0x0000007F)                                 /* (SERCOM_I2CM_ADDR_SEVENBIT) Register Mask  */
+
+/* TENBIT mode */
+#define SERCOM_I2CM_ADDR_TENBIT_ADDR_Pos      _UINT32_(0)                                          /* (SERCOM_I2CM_ADDR) Address Position */
+#define SERCOM_I2CM_ADDR_TENBIT_ADDR_Msk      (_UINT32_(0x3FF) << SERCOM_I2CM_ADDR_TENBIT_ADDR_Pos) /* (SERCOM_I2CM_ADDR) Address Mask */
+#define SERCOM_I2CM_ADDR_TENBIT_ADDR(value)   (SERCOM_I2CM_ADDR_TENBIT_ADDR_Msk & (_UINT32_(value) << SERCOM_I2CM_ADDR_TENBIT_ADDR_Pos))
+#define SERCOM_I2CM_ADDR_TENBIT_Msk           _UINT32_(0x000003FF)                                 /* (SERCOM_I2CM_ADDR_TENBIT) Register Mask  */
 
 
 /* -------- SERCOM_I2CS_ADDR : (SERCOM Offset: 0x24) (R/W 32) I2CS Address -------- */
@@ -1004,13 +1022,28 @@
 #define SERCOM_I2CS_ADDR_GENCEN_Pos           _UINT32_(0)                                          /* (SERCOM_I2CS_ADDR) General Call Address Enable Position */
 #define SERCOM_I2CS_ADDR_GENCEN_Msk           (_UINT32_(0x1) << SERCOM_I2CS_ADDR_GENCEN_Pos)       /* (SERCOM_I2CS_ADDR) General Call Address Enable Mask */
 #define SERCOM_I2CS_ADDR_GENCEN(value)        (SERCOM_I2CS_ADDR_GENCEN_Msk & (_UINT32_(value) << SERCOM_I2CS_ADDR_GENCEN_Pos)) /* Assignment of value for GENCEN in the SERCOM_I2CS_ADDR register */
-#define SERCOM_I2CS_ADDR_ADDR_Pos             _UINT32_(1)                                          /* (SERCOM_I2CS_ADDR) Address Position */
-#define SERCOM_I2CS_ADDR_ADDR_Msk             (_UINT32_(0x7F) << SERCOM_I2CS_ADDR_ADDR_Pos)        /* (SERCOM_I2CS_ADDR) Address Mask */
-#define SERCOM_I2CS_ADDR_ADDR(value)          (SERCOM_I2CS_ADDR_ADDR_Msk & (_UINT32_(value) << SERCOM_I2CS_ADDR_ADDR_Pos)) /* Assignment of value for ADDR in the SERCOM_I2CS_ADDR register */
-#define SERCOM_I2CS_ADDR_ADDRMASK_Pos         _UINT32_(17)                                         /* (SERCOM_I2CS_ADDR) Address Mask Position */
-#define SERCOM_I2CS_ADDR_ADDRMASK_Msk         (_UINT32_(0x7F) << SERCOM_I2CS_ADDR_ADDRMASK_Pos)    /* (SERCOM_I2CS_ADDR) Address Mask Mask */
-#define SERCOM_I2CS_ADDR_ADDRMASK(value)      (SERCOM_I2CS_ADDR_ADDRMASK_Msk & (_UINT32_(value) << SERCOM_I2CS_ADDR_ADDRMASK_Pos)) /* Assignment of value for ADDRMASK in the SERCOM_I2CS_ADDR register */
-#define SERCOM_I2CS_ADDR_Msk                  _UINT32_(0x00FE00FF)                                 /* (SERCOM_I2CS_ADDR) Register Mask  */
+#define SERCOM_I2CS_ADDR_TENBITEN_Pos         _UINT32_(15)                                         /* (SERCOM_I2CS_ADDR) Ten Bit Addressing Enable Position */
+#define SERCOM_I2CS_ADDR_TENBITEN_Msk         (_UINT32_(0x1) << SERCOM_I2CS_ADDR_TENBITEN_Pos)     /* (SERCOM_I2CS_ADDR) Ten Bit Addressing Enable Mask */
+#define SERCOM_I2CS_ADDR_TENBITEN(value)      (SERCOM_I2CS_ADDR_TENBITEN_Msk & (_UINT32_(value) << SERCOM_I2CS_ADDR_TENBITEN_Pos)) /* Assignment of value for TENBITEN in the SERCOM_I2CS_ADDR register */
+#define SERCOM_I2CS_ADDR_Msk                  _UINT32_(0x00008001)                                 /* (SERCOM_I2CS_ADDR) Register Mask  */
+
+/* SEVENBIT mode */
+#define SERCOM_I2CS_ADDR_SEVENBIT_ADDR_Pos    _UINT32_(1)                                          /* (SERCOM_I2CS_ADDR) Address Position */
+#define SERCOM_I2CS_ADDR_SEVENBIT_ADDR_Msk    (_UINT32_(0x7F) << SERCOM_I2CS_ADDR_SEVENBIT_ADDR_Pos) /* (SERCOM_I2CS_ADDR) Address Mask */
+#define SERCOM_I2CS_ADDR_SEVENBIT_ADDR(value) (SERCOM_I2CS_ADDR_SEVENBIT_ADDR_Msk & (_UINT32_(value) << SERCOM_I2CS_ADDR_SEVENBIT_ADDR_Pos))
+#define SERCOM_I2CS_ADDR_SEVENBIT_ADDRMASK_Pos _UINT32_(17)                                         /* (SERCOM_I2CS_ADDR) Address Mask Position */
+#define SERCOM_I2CS_ADDR_SEVENBIT_ADDRMASK_Msk (_UINT32_(0x7F) << SERCOM_I2CS_ADDR_SEVENBIT_ADDRMASK_Pos) /* (SERCOM_I2CS_ADDR) Address Mask Mask */
+#define SERCOM_I2CS_ADDR_SEVENBIT_ADDRMASK(value) (SERCOM_I2CS_ADDR_SEVENBIT_ADDRMASK_Msk & (_UINT32_(value) << SERCOM_I2CS_ADDR_SEVENBIT_ADDRMASK_Pos))
+#define SERCOM_I2CS_ADDR_SEVENBIT_Msk         _UINT32_(0x00FE00FE)                                 /* (SERCOM_I2CS_ADDR_SEVENBIT) Register Mask  */
+
+/* TENBIT mode */
+#define SERCOM_I2CS_ADDR_TENBIT_ADDR_Pos      _UINT32_(1)                                          /* (SERCOM_I2CS_ADDR) Address Position */
+#define SERCOM_I2CS_ADDR_TENBIT_ADDR_Msk      (_UINT32_(0x3FF) << SERCOM_I2CS_ADDR_TENBIT_ADDR_Pos) /* (SERCOM_I2CS_ADDR) Address Mask */
+#define SERCOM_I2CS_ADDR_TENBIT_ADDR(value)   (SERCOM_I2CS_ADDR_TENBIT_ADDR_Msk & (_UINT32_(value) << SERCOM_I2CS_ADDR_TENBIT_ADDR_Pos))
+#define SERCOM_I2CS_ADDR_TENBIT_ADDRMASK_Pos  _UINT32_(17)                                         /* (SERCOM_I2CS_ADDR) Address Mask Position */
+#define SERCOM_I2CS_ADDR_TENBIT_ADDRMASK_Msk  (_UINT32_(0x3FF) << SERCOM_I2CS_ADDR_TENBIT_ADDRMASK_Pos) /* (SERCOM_I2CS_ADDR) Address Mask Mask */
+#define SERCOM_I2CS_ADDR_TENBIT_ADDRMASK(value) (SERCOM_I2CS_ADDR_TENBIT_ADDRMASK_Msk & (_UINT32_(value) << SERCOM_I2CS_ADDR_TENBIT_ADDRMASK_Pos))
+#define SERCOM_I2CS_ADDR_TENBIT_Msk           _UINT32_(0x07FE07FE)                                 /* (SERCOM_I2CS_ADDR_TENBIT) Register Mask  */
 
 
 /* -------- SERCOM_SPI_ADDR : (SERCOM Offset: 0x24) (R/W 32) SPI Address -------- */
@@ -1025,22 +1058,22 @@
 #define SERCOM_SPI_ADDR_Msk                   _UINT32_(0x00FF00FF)                                 /* (SERCOM_SPI_ADDR) Register Mask  */
 
 
-/* -------- SERCOM_I2CM_DATA : (SERCOM Offset: 0x28) (R/W 16) I2CM Data -------- */
-#define SERCOM_I2CM_DATA_RESETVALUE           _UINT16_(0x00)                                       /*  (SERCOM_I2CM_DATA) I2CM Data  Reset Value */
+/* -------- SERCOM_I2CM_DATA : (SERCOM Offset: 0x28) (R/W 8) I2CM Data -------- */
+#define SERCOM_I2CM_DATA_RESETVALUE           _UINT8_(0x00)                                        /*  (SERCOM_I2CM_DATA) I2CM Data  Reset Value */
 
-#define SERCOM_I2CM_DATA_DATA_Pos             _UINT16_(0)                                          /* (SERCOM_I2CM_DATA) Data Position */
-#define SERCOM_I2CM_DATA_DATA_Msk             (_UINT16_(0xFF) << SERCOM_I2CM_DATA_DATA_Pos)        /* (SERCOM_I2CM_DATA) Data Mask */
-#define SERCOM_I2CM_DATA_DATA(value)          (SERCOM_I2CM_DATA_DATA_Msk & (_UINT16_(value) << SERCOM_I2CM_DATA_DATA_Pos)) /* Assignment of value for DATA in the SERCOM_I2CM_DATA register */
-#define SERCOM_I2CM_DATA_Msk                  _UINT16_(0x00FF)                                     /* (SERCOM_I2CM_DATA) Register Mask  */
+#define SERCOM_I2CM_DATA_DATA_Pos             _UINT8_(0)                                           /* (SERCOM_I2CM_DATA) Data Position */
+#define SERCOM_I2CM_DATA_DATA_Msk             (_UINT8_(0xFF) << SERCOM_I2CM_DATA_DATA_Pos)         /* (SERCOM_I2CM_DATA) Data Mask */
+#define SERCOM_I2CM_DATA_DATA(value)          (SERCOM_I2CM_DATA_DATA_Msk & (_UINT8_(value) << SERCOM_I2CM_DATA_DATA_Pos)) /* Assignment of value for DATA in the SERCOM_I2CM_DATA register */
+#define SERCOM_I2CM_DATA_Msk                  _UINT8_(0xFF)                                        /* (SERCOM_I2CM_DATA) Register Mask  */
 
 
-/* -------- SERCOM_I2CS_DATA : (SERCOM Offset: 0x28) (R/W 16) I2CS Data -------- */
-#define SERCOM_I2CS_DATA_RESETVALUE           _UINT16_(0x00)                                       /*  (SERCOM_I2CS_DATA) I2CS Data  Reset Value */
+/* -------- SERCOM_I2CS_DATA : (SERCOM Offset: 0x28) (R/W 8) I2CS Data -------- */
+#define SERCOM_I2CS_DATA_RESETVALUE           _UINT8_(0x00)                                        /*  (SERCOM_I2CS_DATA) I2CS Data  Reset Value */
 
-#define SERCOM_I2CS_DATA_DATA_Pos             _UINT16_(0)                                          /* (SERCOM_I2CS_DATA) Data Position */
-#define SERCOM_I2CS_DATA_DATA_Msk             (_UINT16_(0xFF) << SERCOM_I2CS_DATA_DATA_Pos)        /* (SERCOM_I2CS_DATA) Data Mask */
-#define SERCOM_I2CS_DATA_DATA(value)          (SERCOM_I2CS_DATA_DATA_Msk & (_UINT16_(value) << SERCOM_I2CS_DATA_DATA_Pos)) /* Assignment of value for DATA in the SERCOM_I2CS_DATA register */
-#define SERCOM_I2CS_DATA_Msk                  _UINT16_(0x00FF)                                     /* (SERCOM_I2CS_DATA) Register Mask  */
+#define SERCOM_I2CS_DATA_DATA_Pos             _UINT8_(0)                                           /* (SERCOM_I2CS_DATA) Data Position */
+#define SERCOM_I2CS_DATA_DATA_Msk             (_UINT8_(0xFF) << SERCOM_I2CS_DATA_DATA_Pos)         /* (SERCOM_I2CS_DATA) Data Mask */
+#define SERCOM_I2CS_DATA_DATA(value)          (SERCOM_I2CS_DATA_DATA_Msk & (_UINT8_(value) << SERCOM_I2CS_DATA_DATA_Pos)) /* Assignment of value for DATA in the SERCOM_I2CS_DATA register */
+#define SERCOM_I2CS_DATA_Msk                  _UINT8_(0xFF)                                        /* (SERCOM_I2CS_DATA) Register Mask  */
 
 
 /* -------- SERCOM_SPI_DATA : (SERCOM Offset: 0x28) (R/W 16) SPI Data -------- */
@@ -1101,7 +1134,7 @@
 #define SERCOM_I2CM_BAUD_REG_OFST      _UINT32_(0x0C)      /* (SERCOM_I2CM_BAUD) I2CM Baud Rate Offset */
 #define SERCOM_SPI_BAUD_REG_OFST       _UINT32_(0x0C)      /* (SERCOM_SPI_BAUD) SPI Baud Rate Offset */
 #define SERCOM_USART_BAUD_REG_OFST     _UINT32_(0x0C)      /* (SERCOM_USART_BAUD) USART Baud Offset */
-#define SERCOM_USART_RXPL_REG_OFST     _UINT32_(0x0E)      /* (SERCOM_USART_RXPL) USART Receive Pulse Length Register Offset */
+#define SERCOM_USART_RXPL_REG_OFST     _UINT32_(0x0E)      /* (SERCOM_USART_RXPL) USART Receive Pulse Length Offset */
 #define SERCOM_I2CM_INTENCLR_REG_OFST  _UINT32_(0x14)      /* (SERCOM_I2CM_INTENCLR) I2CM Interrupt Enable Clear Offset */
 #define SERCOM_I2CS_INTENCLR_REG_OFST  _UINT32_(0x14)      /* (SERCOM_I2CS_INTENCLR) I2CS Interrupt Enable Clear Offset */
 #define SERCOM_SPI_INTENCLR_REG_OFST   _UINT32_(0x14)      /* (SERCOM_SPI_INTENCLR) SPI Interrupt Enable Clear Offset */
@@ -1152,8 +1185,8 @@ typedef struct
   __I   uint32_t                       SERCOM_SYNCBUSY;    /* Offset: 0x1C (R/   32) I2CM Synchronization Busy */
   __I   uint8_t                        Reserved6[0x04];
   __IO  uint32_t                       SERCOM_ADDR;        /* Offset: 0x24 (R/W  32) I2CM Address */
-  __IO  uint16_t                       SERCOM_DATA;        /* Offset: 0x28 (R/W  16) I2CM Data */
-  __I   uint8_t                        Reserved7[0x06];
+  __IO  uint8_t                        SERCOM_DATA;        /* Offset: 0x28 (R/W  8) I2CM Data */
+  __I   uint8_t                        Reserved7[0x07];
   __IO  uint8_t                        SERCOM_DBGCTRL;     /* Offset: 0x30 (R/W  8) I2CM Debug Control */
 } sercom_i2cm_registers_t;
 
@@ -1173,7 +1206,7 @@ typedef struct
   __I   uint32_t                       SERCOM_SYNCBUSY;    /* Offset: 0x1C (R/   32) I2CS Synchronization Busy */
   __I   uint8_t                        Reserved5[0x04];
   __IO  uint32_t                       SERCOM_ADDR;        /* Offset: 0x24 (R/W  32) I2CS Address */
-  __IO  uint16_t                       SERCOM_DATA;        /* Offset: 0x28 (R/W  16) I2CS Data */
+  __IO  uint8_t                        SERCOM_DATA;        /* Offset: 0x28 (R/W  8) I2CS Data */
 } sercom_i2cs_registers_t;
 
 /* SERCOM register API structure */
@@ -1206,7 +1239,7 @@ typedef struct
   __IO  uint32_t                       SERCOM_CTRLB;       /* Offset: 0x04 (R/W  32) USART Control B */
   __IO  uint32_t                       SERCOM_CTRLC;       /* Offset: 0x08 (R/W  32) USART Control C */
   __IO  uint16_t                       SERCOM_BAUD;        /* Offset: 0x0C (R/W  16) USART Baud */
-  __IO  uint8_t                        SERCOM_RXPL;        /* Offset: 0x0E (R/W  8) USART Receive Pulse Length Register */
+  __IO  uint8_t                        SERCOM_RXPL;        /* Offset: 0x0E (R/W  8) USART Receive Pulse Length */
   __I   uint8_t                        Reserved1[0x05];
   __IO  uint8_t                        SERCOM_INTENCLR;    /* Offset: 0x14 (R/W  8) USART Interrupt Enable Clear */
   __I   uint8_t                        Reserved2[0x01];
