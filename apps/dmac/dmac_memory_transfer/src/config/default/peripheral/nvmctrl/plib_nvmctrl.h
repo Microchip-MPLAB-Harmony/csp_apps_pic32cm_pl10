@@ -78,7 +78,7 @@
 /* NVMCTRL lock error */
 #define   NVMCTRL_ERROR_LOCK     ( 0x8U )
 
-typedef uint16_t NVMCTRL_ERROR;
+typedef uint32_t NVMCTRL_ERROR;
 
 
 typedef enum
@@ -96,13 +96,11 @@ typedef enum
 
 bool NVMCTRL_Read( uint32_t *data, uint32_t length, const uint32_t address );
 
-bool NVMCTRL_PageWrite( uint32_t *data, const uint32_t address );
+bool NVMCTRL_FlashWrite( uint32_t *data, const uint32_t address, uint32_t size );
 
 bool NVMCTRL_PageErase( uint32_t address );
 
-bool NVMCTRL_PagesErase( uint32_t start_address, uint8_t num_pages );
-
-bool NVMCTRL_WordWrite( uint32_t *data, const uint32_t address, uint32_t word_count );
+bool NVMCTRL_PagesErase( uint32_t address, FLASH_ERASE num_pages );
 
 bool NVMCTRL_IsBusy( void );
 
@@ -114,13 +112,13 @@ void NVMCTRL_WriteProtect_enable( void );
 
 void NVMCTRL_WriteProtect_disable( void );
 
+void NVMCTRL_WriteProtect_Writelock( void );
+
 void NVMCTRL_CMD_Clear( void );
 
-bool NVMCTRL_BOOTCFG_PageErase( uint32_t address );
+bool NVMCTRL_BOOTCFG_FlashErase( uint32_t address );
 
-bool NVMCTRL_BOOTCFG_PageWrite( uint32_t *data, const uint32_t address );
-
-bool NVMCTRL_BOOTCFG_WordWrite( uint32_t *data, const uint32_t address, uint32_t word_count );
+bool NVMCTRL_BOOTCFG_FlashWrite( uint32_t *data, const uint32_t address, uint32_t size );
 
 NVMCTRL_ERROR NVMCTRL_ErrorGet( void );
 
