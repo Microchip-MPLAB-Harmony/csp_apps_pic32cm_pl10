@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.24.0
+  version: v3.25.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -143,7 +143,7 @@ data:
       children:
       - children:
         - attributes:
-            value: ''
+            value: 'True'
           type: User
         type: Values
       type: String
@@ -165,7 +165,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x0'
+            value: '0x8'
           type: Dynamic
         type: Values
       type: String
@@ -209,7 +209,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x2'
+            value: '0x6'
           type: Dynamic
         type: Values
       type: String
@@ -246,4 +246,26 @@ data:
           type: Dynamic
         type: Values
       type: String
-  userData: {}
+    PIN_7_LAT:
+      attributes:
+        id: PIN_7_LAT
+      children:
+      - children:
+        - attributes:
+            value: High
+          type: User
+        type: Values
+      type: String
+  userData:
+    children:
+    - attributes:
+        canvasHeight: '0'
+        canvasWidth: '0'
+      type: GraphSettings
+    - children:
+      - attributes:
+          id: profile0
+          name: Main
+        type: Profile
+      type: PowerProfiles
+    type: UserData

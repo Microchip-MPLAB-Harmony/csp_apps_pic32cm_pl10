@@ -35,10 +35,10 @@
 #define PM_SLEEPCFG_SLEEPMODE_Pos             _UINT32_(0)                                          /* (PM_SLEEPCFG) Sleep Mode Position */
 #define PM_SLEEPCFG_SLEEPMODE_Msk             (_UINT32_(0x7) << PM_SLEEPCFG_SLEEPMODE_Pos)         /* (PM_SLEEPCFG) Sleep Mode Mask */
 #define PM_SLEEPCFG_SLEEPMODE(value)          (PM_SLEEPCFG_SLEEPMODE_Msk & (_UINT32_(value) << PM_SLEEPCFG_SLEEPMODE_Pos)) /* Assignment of value for SLEEPMODE in the PM_SLEEPCFG register */
-#define   PM_SLEEPCFG_SLEEPMODE_IDLE_Val      _UINT32_(0x2)                                        /* (PM_SLEEPCFG) APB clock are OFF  */
-#define   PM_SLEEPCFG_SLEEPMODE_STANDBY_Val   _UINT32_(0x4)                                        /* (PM_SLEEPCFG) All Clocks are OFF  */
-#define PM_SLEEPCFG_SLEEPMODE_IDLE            (PM_SLEEPCFG_SLEEPMODE_IDLE_Val << PM_SLEEPCFG_SLEEPMODE_Pos) /* (PM_SLEEPCFG) APB clock are OFF Position */
-#define PM_SLEEPCFG_SLEEPMODE_STANDBY         (PM_SLEEPCFG_SLEEPMODE_STANDBY_Val << PM_SLEEPCFG_SLEEPMODE_Pos) /* (PM_SLEEPCFG) All Clocks are OFF Position */
+#define   PM_SLEEPCFG_SLEEPMODE_IDLE_Val      _UINT32_(0x2)                                        /* (PM_SLEEPCFG) Idle sleep mode enabled  */
+#define   PM_SLEEPCFG_SLEEPMODE_STANDBY_Val   _UINT32_(0x4)                                        /* (PM_SLEEPCFG) Standby sleep mode enabled  */
+#define PM_SLEEPCFG_SLEEPMODE_IDLE            (PM_SLEEPCFG_SLEEPMODE_IDLE_Val << PM_SLEEPCFG_SLEEPMODE_Pos) /* (PM_SLEEPCFG) Idle sleep mode enabled Position */
+#define PM_SLEEPCFG_SLEEPMODE_STANDBY         (PM_SLEEPCFG_SLEEPMODE_STANDBY_Val << PM_SLEEPCFG_SLEEPMODE_Pos) /* (PM_SLEEPCFG) Standby sleep mode enabled Position */
 #define PM_SLEEPCFG_Msk                       _UINT32_(0x00000007)                                 /* (PM_SLEEPCFG) Register Mask  */
 
 
@@ -48,14 +48,14 @@
 #define PM_WPCTRL_WPEN_Pos                    _UINT32_(0)                                          /* (PM_WPCTRL) Write Protection Enable Position */
 #define PM_WPCTRL_WPEN_Msk                    (_UINT32_(0x1) << PM_WPCTRL_WPEN_Pos)                /* (PM_WPCTRL) Write Protection Enable Mask */
 #define PM_WPCTRL_WPEN(value)                 (PM_WPCTRL_WPEN_Msk & (_UINT32_(value) << PM_WPCTRL_WPEN_Pos)) /* Assignment of value for WPEN in the PM_WPCTRL register */
-#define PM_WPCTRL_WPLCK_Pos                   _UINT32_(1)                                          /* (PM_WPCTRL) WPCTRL Write Lock Position */
-#define PM_WPCTRL_WPLCK_Msk                   (_UINT32_(0x1) << PM_WPCTRL_WPLCK_Pos)               /* (PM_WPCTRL) WPCTRL Write Lock Mask */
+#define PM_WPCTRL_WPLCK_Pos                   _UINT32_(1)                                          /* (PM_WPCTRL) Write Protection Lock Position */
+#define PM_WPCTRL_WPLCK_Msk                   (_UINT32_(0x1) << PM_WPCTRL_WPLCK_Pos)               /* (PM_WPCTRL) Write Protection Lock Mask */
 #define PM_WPCTRL_WPLCK(value)                (PM_WPCTRL_WPLCK_Msk & (_UINT32_(value) << PM_WPCTRL_WPLCK_Pos)) /* Assignment of value for WPLCK in the PM_WPCTRL register */
 #define PM_WPCTRL_WPKEY_Pos                   _UINT32_(8)                                          /* (PM_WPCTRL) Write Protection Key Position */
 #define PM_WPCTRL_WPKEY_Msk                   (_UINT32_(0xFFFFFF) << PM_WPCTRL_WPKEY_Pos)          /* (PM_WPCTRL) Write Protection Key Mask */
 #define PM_WPCTRL_WPKEY(value)                (PM_WPCTRL_WPKEY_Msk & (_UINT32_(value) << PM_WPCTRL_WPKEY_Pos)) /* Assignment of value for WPKEY in the PM_WPCTRL register */
-#define   PM_WPCTRL_WPKEY_KEY_Val             _UINT32_(0x505752)                                   /* (PM_WPCTRL) Allow writes to the WPCTRL register.  */
-#define PM_WPCTRL_WPKEY_KEY                   (PM_WPCTRL_WPKEY_KEY_Val << PM_WPCTRL_WPKEY_Pos)     /* (PM_WPCTRL) Allow writes to the WPCTRL register. Position */
+#define   PM_WPCTRL_WPKEY_KEY_Val             _UINT32_(0x505752)                                   /* (PM_WPCTRL) Allow writes to the WPCTRL register  */
+#define PM_WPCTRL_WPKEY_KEY                   (PM_WPCTRL_WPKEY_KEY_Val << PM_WPCTRL_WPKEY_Pos)     /* (PM_WPCTRL) Allow writes to the WPCTRL register Position */
 #define PM_WPCTRL_Msk                         _UINT32_(0xFFFFFF03)                                 /* (PM_WPCTRL) Register Mask  */
 
 

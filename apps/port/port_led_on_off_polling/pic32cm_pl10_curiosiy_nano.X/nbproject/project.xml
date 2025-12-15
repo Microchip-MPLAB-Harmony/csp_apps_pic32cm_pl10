@@ -3,13 +3,13 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>port_len_on_off_polling_pic32cm_pl10_curiosiy_nano</name>
+            <name>port_led_on_off_polling_pic32cm_pl10_curiosiy_nano</name>
             <creation-uuid>23a24637-5fac-4d14-82ec-6d85bcd73cec</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>port_len_on_off_polling_pic32cm_pl10_curiosiy_nano_default</sourceRootElem>
+                <sourceRootElem>port_led_on_off_polling_pic32cm_pl10_curiosiy_nano_default</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

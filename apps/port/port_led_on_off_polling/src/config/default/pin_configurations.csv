@@ -5,7 +5,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,S
 4,PB00,,Available,,,,,,DISABLED
 5,PB01,,Available,,,,,,DISABLED
 6,PB02,LED,GPIO,Digital,Out,Low,,,DISABLED
-7,PB03,SWITCH,GPIO,Digital,In,n/a,No,No,DISABLED
+7,PB03,SWITCH,GPIO,Digital,In,n/a,Yes,No,DISABLED
 8,PB04,,Available,,,,,,DISABLED
 9,PB05,,Available,,,,,,DISABLED
 10,PA08,,Available,,,,,,DISABLED
