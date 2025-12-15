@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 componentName: core
-coreVersion: 5.8.2
+coreVersion: 5.8.3
 device: PIC32CM6408PL10048
 library: []
 dependency:
@@ -9,6 +9,7 @@ dependency:
   type: module
   version: ''
 - dependencyPackage: ''
+  devMode: true
   name: csp
   type: package
   version: v3.24.0
@@ -46,7 +47,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2730'
+            value: '2978'
           type: Dynamic
         type: Values
       type: Integer
@@ -114,7 +115,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2730'
+            value: '2978'
           type: Dynamic
         type: Values
       type: Integer
@@ -357,7 +358,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '12'
+            value: '11'
           type: Dynamic
         type: Values
       type: Integer
@@ -367,7 +368,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '12'
+            value: '11'
           type: User
         type: Values
       type: Integer
@@ -776,4 +777,71 @@ data:
           type: User
         type: Values
       type: String
-  userData: {}
+    AC_CLOCK_FREQUENCY:
+      attributes:
+        id: AC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    ADC0_CLOCK_FREQUENCY:
+      attributes:
+        id: ADC0_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    DMAC_CLOCK_FREQUENCY:
+      attributes:
+        id: DMAC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PTC_CLOCK_FREQUENCY:
+      attributes:
+        id: PTC_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    MCLK_APBC_INITIAL_VALUE:
+      attributes:
+        id: MCLK_APBC_INITIAL_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x800'
+          type: Dynamic
+        type: Values
+      type: String
+  userData:
+    children:
+    - attributes:
+        canvasHeight: '0'
+        canvasWidth: '0'
+      type: GraphSettings
+    - children:
+      - attributes:
+          id: profile0
+          name: Main
+        type: Profile
+      type: PowerProfiles
+    type: UserData
