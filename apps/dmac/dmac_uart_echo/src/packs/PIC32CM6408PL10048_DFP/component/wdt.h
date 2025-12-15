@@ -182,8 +182,8 @@
 #define WDT_CLEAR_CLEAR_Pos                   _UINT8_(0)                                           /* (WDT_CLEAR) Watchdog Clear Position */
 #define WDT_CLEAR_CLEAR_Msk                   (_UINT8_(0xFF) << WDT_CLEAR_CLEAR_Pos)               /* (WDT_CLEAR) Watchdog Clear Mask */
 #define WDT_CLEAR_CLEAR(value)                (WDT_CLEAR_CLEAR_Msk & (_UINT8_(value) << WDT_CLEAR_CLEAR_Pos)) /* Assignment of value for CLEAR in the WDT_CLEAR register */
-#define   WDT_CLEAR_CLEAR_KEY_Val             _UINT8_(0xA5)                                        /* (WDT_CLEAR) In Normal mode, written during the watchdog time-out period will clear the watchdog timer and restart the watchdog time-out period.(1) In Window mode, written during the open window will clear the watchdog timer and restart the watchdog time-out sequence.(2)  */
-#define WDT_CLEAR_CLEAR_KEY                   (WDT_CLEAR_CLEAR_KEY_Val << WDT_CLEAR_CLEAR_Pos)     /* (WDT_CLEAR) In Normal mode, written during the watchdog time-out period will clear the watchdog timer and restart the watchdog time-out period.(1) In Window mode, written during the open window will clear the watchdog timer and restart the watchdog time-out sequence.(2) Position */
+#define   WDT_CLEAR_CLEAR_KEY_Val             _UINT8_(0xA5)                                        /* (WDT_CLEAR) In Normal mode, writing during the WDT time-out period will clear the WDT and restart the WDT time-out period.(1) In Window mode, writing during the open window will clear the WDT and restart the WDT time-out sequence.(2)  */
+#define WDT_CLEAR_CLEAR_KEY                   (WDT_CLEAR_CLEAR_KEY_Val << WDT_CLEAR_CLEAR_Pos)     /* (WDT_CLEAR) In Normal mode, writing during the WDT time-out period will clear the WDT and restart the WDT time-out period.(1) In Window mode, writing during the open window will clear the WDT and restart the WDT time-out sequence.(2) Position */
 #define WDT_CLEAR_Msk                         _UINT8_(0xFF)                                        /* (WDT_CLEAR) Register Mask  */
 
 
