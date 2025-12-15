@@ -1,9 +1,8 @@
 configVersion: 1.0.0
-coreVersion: 5.8.2
+coreVersion: 5.8.3
 spaHostVersion: 1.0.0
 device: PIC32CM6408PL10048
-deviceLibrary:
-  className: null
+deviceLibrary: {}
 groupModules: []
 modules:
 - cmsis
@@ -25,15 +24,15 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\device_vectors.h
   hash: 47e84c70fd1c05b5bbddf6c684f5f9ab02aaee270f304f0e750f8dadde17016c
 - file: ..\src\config\default\exceptions.c
-  hash: 42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987
+  hash: d1567a190561858cc1cb7e796cf1a29720e52b9799bbd88b087993d8539e137f
 - file: ..\src\config\default\initialization.c
-  hash: 7a7a1caedcb6017cb381e335a154e6ec0de99fa8bc1a4e2c3ac328b57a38b6b2
+  hash: a7d2a9b5f7f8160b56a7b75efcf40da62b7e8ea627ba247ef5c97beecbbee9fb
 - file: ..\src\config\default\interrupts.c
-  hash: 8c88dd260d1156a732d44b2d810f3d9c5434a1307759e7cb588c0eb417538abe
+  hash: 0171c92a04f05c405f8ee29cbab21752e2a250feee2e2f55dde5c5ec27501b6e
 - file: ..\src\config\default\interrupts.h
   hash: 07a78f95f5dc58620dcf2dc5dcc85dde9ff43d937759566d2e469f23677963ba
 - file: ..\src\config\default\libc_syscalls.c
-  hash: 88bb2e34c939601b5b7ad076556e3ee0fcedf388436b8cddb6d6fd3e9d07472f
+  hash: c9afc1b1257829415a1a6746ce3744f0a768b339d59fff2ab3ca1fab58b2a916
 - file: ..\src\config\default\peripheral\clock\plib_clock.c
   hash: 3e8f62de8b4dcad9222be25e1eb7719f19b979f704e6ad43ad8d8f399f1e359f
 - file: ..\src\config\default\peripheral\clock\plib_clock.h
@@ -51,19 +50,19 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\peripheral\port\plib_port.h
   hash: b508490581659f8cb2dd9b5a03ed155e72f1f2fefec6b9ea9a7357cfd4b85952
 - file: ..\src\config\default\peripheral\rtc\plib_rtc.h
-  hash: e6f89abec43b14ce9cb8489236ca0c8fe88ab7da54ad0e935e9b4a908484b726
+  hash: bd44471c62aeabd0a6f543a2eba53c7eb9ca3fc862e5fdd484590b3aae56b5a2
 - file: ..\src\config\default\peripheral\rtc\plib_rtc_clock.c
-  hash: 621fee85e2b7a53b5f393b7314fb7040ea73bbe5af0bb995ab76a37ff17c9889
+  hash: 03ec0b76a0a37224bc21813d6259c088199351a83cd50f9fc3ba31072d4b73e0
 - file: ..\src\config\default\peripheral\sercom\usart\plib_sercom1_usart.c
-  hash: ae9f34dafed2bf5f239139ea35e43114c71ce4977567d9476bc9ee7d21f64bc9
+  hash: 5f29028c17559477545710804257fe8de9747eeee754b4464bd9b4811cc126a7
 - file: ..\src\config\default\peripheral\sercom\usart\plib_sercom1_usart.h
   hash: 131d024524629e67c95f5c2257aef054efb11266db35c6f1b5c020e0cb75d56a
 - file: ..\src\config\default\peripheral\sercom\usart\plib_sercom_usart_common.h
-  hash: 08bce2e8f3a48859d339490d40001714844ddd97ffb896303a270dbeb3334e80
+  hash: 8ce7e93172c9cde3c5940869cb66ab1646c706a4ea1605209085ea58382e8b1e
 - file: ..\src\config\default\pin_configurations.csv
   hash: 265696ed7e5b457de807388ed9232492ece29c812d08095e4e52013739551636
 - file: ..\src\config\default\startup_xc32.c
-  hash: e6227d89e36b74af1bc21e00e80b390502c97aaaa65796291f63b2d96cf0678e
+  hash: 3aa1360f333b564211c35f641c7327c2111e11aa633bd02ec5a0be9466b1df04
 - file: ..\src\config\default\stdio\xc32_monitor.c
   hash: 5b21c08cf1b699e41f3d722865c473d6e32c68356c05b13ce457a7faed279e97
 - file: ..\src\config\default\toolchain_specifics.h
@@ -91,57 +90,57 @@ generatedFileHashHistoryMap:
 - file: ..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h
   hash: de1b5eb9ed566527b66dc06f4ecb6a43ab6800f7dac47e87c9cb42984dca41bb
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\ac.h
-  hash: b8631b0904328a4351d378f84a29e49493eecc526c80b644690361aba208649f
+  hash: 5e6305d830cde377f85d72778fce142a6f350544977d34be3cf92b66f2b98c49
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\adc.h
-  hash: 493409c750ba31c65a264fd7f62c0d101dc06f295042ab029824f5faaefa6b86
+  hash: 98291bcf56d98309706a810b3d7897fb57e578003f044956ebd04f9a37b4c5c9
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\ccl.h
-  hash: a9fad7ff8df495bf989804143e95c4073dbb4999e661a85c9671b3aa3d925283
+  hash: 2f2690404e63ff7df6539b94beae5874295bbffe2cf8779d01a1d8fb56f4c1a3
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\dmac.h
-  hash: ba5ad5336a99c9db863e2cc425d56ad5b67d30bfe0b40d3ac7af813c13b6f54d
+  hash: 4dd7120f6d92a7ff58d73ae93d01be34fcfff4eb39e05db0c04869bde532cade
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\dsu.h
-  hash: cd8f9b6abd662d72cd7dc0aa0fc62506b5312a6bbcf180c1e3e0f036ac6c7c7b
+  hash: 0aefae03a9dd19227cdc087c573c0d523e25614dd2bdab491201d59dced715b7
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\eic.h
-  hash: 4da0426cc1ece3d0507714337f70c0b23239c3502fa37a046b75e6e321fa3fa6
+  hash: 03ca4a72415b8fd778d3a87b20871d92efd6da714b9a2f2ddc623cb70c879fa7
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\evsys.h
-  hash: 57147087c4ef6bb1db26fd6a2d65e287269cfa5f40986e32f7c28bb7992d5947
+  hash: da305f507c44c920c9030576a06f03867ed4ce92cd076e4cecb69b407b8718e2
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\fuses.h
-  hash: b291ffeacf6b18e0d16c9c8128c62f74fe98bd0c7f4620ad362a7e04436987e7
+  hash: b61b22c3ee58881c92398d8c78d4bdb6e43fd3335e26c666bbe97b1437a8581a
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\gclk.h
-  hash: 7451ba92d9055af3f42aa2059b2a733021fdaef9bb1f0674ff5f565c63805265
+  hash: ce5eb8c96d2294301761d5d318ff6918773d04904452f662decebc97f6d47fd3
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\hmatrixb.h
   hash: 7f231b816b60b6bc8f6b6c635c4c1c08c4fab1c820b929dd9829432c0a78e621
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\mclk.h
-  hash: 9ce268e5a1cb4554b524065bcea08b1930251f62c87ddf7be94f0763c997634f
+  hash: bd35ebcd4aa50fba4fc568bfe3619897d3af2eb31d70ca8deb2e12323c31f7da
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\mtb.h
   hash: 165fc63d1d03ca9dca73b5220f83bf63a4bac509ff89f0588bace79c1c280e42
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\nvmctrl.h
-  hash: 9299ef454a5b74b9e7ddc7aa4c1d21cb73a0e092cd3f2f62d8a4f324d8717527
+  hash: b603f93d2e63cba90149ebadd4f94ff0ddcdd5fa9c3a9e150e5dfe2b561615c8
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\osc32kctrl.h
-  hash: a3b40689919e3396d308074ac946a8feca2f814e49cba3c4702448fe14c96d16
+  hash: debb4a04df441bbf11a19180e90136519f311660f3009970a27e06a382f8a82d
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\oscctrl.h
-  hash: c3295f2400c988d9f416d7ccec7a27aa9c705689d132764bf36d8a465aa8995a
+  hash: eac0f115a131bc389b8dba3552fd14c8b5dee23f2d4da88ea4eaacadfbf11aaf
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\pac.h
-  hash: fc6e43c3335417850efe76d157c91a3f3b40c18fef2cfbe0a7b6d37f79b7f5d4
+  hash: 1563aa509c01e6fca8001f632bfeac786eda85c7d3abd298ddad83ee450fbcf3
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\pm.h
   hash: 86f1da84ee2c4718b967b0a324971ff5080e11fdebd2b482887a4c3295dfd94b
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\port.h
-  hash: c962fe135932582925c34175375806f7731c6c5dfc3557e94740de98375b323f
+  hash: aff3081a5bc3489a0d5323b1790303b526496091f4cf8abd6cceb9be71a18a4a
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\ptc.h
   hash: 3bf0498aa21bb4a98ef1c3e5776d56119cecec508ab545ba7acda93ba28c2b69
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\rstc.h
-  hash: c707ac717d976aba99ab41837d70464e689464c3301485876983250c1cb2367b
+  hash: bf2f460549497078d72b751d150bee999065f639ead1495b8a9db86e03cf6d1d
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\rtc.h
-  hash: d96bc221d292442a69dbc21d07389a3eb5de99b9a9c4aee0333b047aaddd85df
+  hash: 0fd72315a21102733ae69a3fa52c0dbdc1df8384edbe7862d76aa0412a303cab
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\sercom.h
-  hash: d18f73713900dd46b0e39ddeb4ee651aa164461cca123cb4ab267d6fd81ead84
+  hash: e324aa1c0c98aa65320661c2a460157e0ce04f1e0368386f51cb55433df6f017
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\supc.h
-  hash: c08c3fbe30652ae7d5a5fe7b108aad3fa7bde857d12e23f756e10bd0662f218e
+  hash: 7b98742322f290f14fc7bca8a703964f0a64b63804bc05b6b81cfd6b63e9f677
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\sysctrl.h
-  hash: 731a5835d577740281909d701062b067fcd217b5eacc83f7dc79f65618680619
+  hash: f46d07b8ae9b695a494ef47da3403cda79c318bc49c6c8e8eff137d29dfe8309
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\tc.h
-  hash: d5622aab97bb6e5f457ba4619d7bf8115d71914b9437adbb495ad9becf6088a8
+  hash: 0b6c2088b3c4c062a6a303f4f431fb474de9fd81daaf045b7af4260110731178
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\tcc.h
-  hash: 95ac9e688c02cd00c323ee88a84a589b69db3ac23094225ba5e1e08ae75b01e0
+  hash: 09939fa550f18d5d68c3a80d5a56944f91ff755c6884da24d94b2f50da870d81
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\component\wdt.h
   hash: 46ea1e1894e5162d2977dfd213bdc62ff8d412babb9656652d95a28ceea2ad92
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\instance\ac.h
@@ -185,7 +184,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\instance\rstc.h
   hash: bb7c50df7650b956d65088acf41123d098ad3eee3ca82f7dc176c5a422aae625
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\instance\rtc.h
-  hash: af7d39e6dea80d2b407997a73ff488432e216f14e8cea9f5d978b36d2a6b222f
+  hash: 0bc1c063e869905ac0f832f60b984fa76bf6eb310a666f29eab79e5169b4c7b1
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\instance\sercom0.h
   hash: a316f073ae00e87f6f3c1cd711fa93fa5f9334200f6c9c18a85889be4fb7223f
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\instance\sercom1.h
@@ -205,6 +204,6 @@ generatedFileHashHistoryMap:
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\instance\wdt.h
   hash: a2a4320e54a49cc78319554d0e76c3ba86a76b0e10715ffa190b200422c8de79
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\pic32cm6408pl10048.h
-  hash: 61791122d9527a769e087a384cebc55b1c9eee3760f03a94d3b5231851787d1c
+  hash: 5764586183a86f8ac385a57c21a778c2a8fcd683a1a75bd7b46546d929c46e96
 - file: ..\src\packs\PIC32CM6408PL10048_DFP\pio\pic32cm6408pl10048.h
   hash: 9b9af30c06b71de5b4828eaf07eb4341203697467774b37e4fd07f05eaf9a1ef

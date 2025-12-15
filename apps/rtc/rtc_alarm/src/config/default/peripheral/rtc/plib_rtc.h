@@ -48,6 +48,7 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdint.h>
+/* MISRAC-2023 Rule 21.10 deviation taken for using time.h header file */
 #include <time.h>
 
 // DOM-IGNORE-BEGIN
