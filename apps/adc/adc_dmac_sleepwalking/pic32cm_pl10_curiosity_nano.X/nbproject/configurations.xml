@@ -144,15 +144,15 @@
                      displayName="adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
-          <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/stdio.yml</itemPath>
+          <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/sercom1.yml</itemPath>
+          <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/cmsis.yml</itemPath>
           <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/core.yml</itemPath>
           <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/rtc.yml</itemPath>
-          <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/adc0.yml</itemPath>
-          <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/cmsis.yml</itemPath>
-          <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/sercom1.yml</itemPath>
-          <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/dfp.yml</itemPath>
           <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/pm.yml</itemPath>
           <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/evsys.yml</itemPath>
+          <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/stdio.yml</itemPath>
+          <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/adc0.yml</itemPath>
+          <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/components/dfp.yml</itemPath>
         </logicalFolder>
         <itemPath>adc_dmac_sleepwalking_pic32cm_pl10_curiosity_nano_default/mcc-config.mc4</itemPath>
       </logicalFolder>

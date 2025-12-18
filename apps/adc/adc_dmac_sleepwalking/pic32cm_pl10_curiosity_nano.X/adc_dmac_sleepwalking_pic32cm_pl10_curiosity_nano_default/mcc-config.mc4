@@ -1,8 +1,9 @@
 configVersion: 1.0.0
-coreVersion: 5.8.3
+coreVersion: 5.8.2
 spaHostVersion: 1.0.0
 device: PIC32CM6408PL10048
-deviceLibrary: {}
+deviceLibrary:
+  className: null
 groupModules: []
 modules:
 - adc0
@@ -28,7 +29,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\exceptions.c
   hash: d1567a190561858cc1cb7e796cf1a29720e52b9799bbd88b087993d8539e137f
 - file: ..\src\config\default\initialization.c
-  hash: 5d3bef8dd3c45e5805310a38abd2eb957468b1caccefbcc6ed4aaae2bc14602a
+  hash: 89d1d1a1ebaf3eb187e51475910adbdbf218d8550ffddfd0b390e4f4c75c8eda
 - file: ..\src\config\default\interrupts.c
   hash: 630a81c45de82c6b45db75c856c79903cff82b871bbcf94a087496b6865df46e
 - file: ..\src\config\default\interrupts.h
@@ -50,7 +51,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\peripheral\dmac\plib_dmac.h
   hash: 3a2c43fa53bb62d4f8703bceb0909b7785338653372b1e786bd980008f81a08f
 - file: ..\src\config\default\peripheral\evsys\plib_evsys.c
-  hash: 53f1973b194e827efe724047b746f23d0ed97f0e8a72b11e7011fe0ab4b874d6
+  hash: abf89075ca2c10df11ed1bd01cd02d8797abf0bacdf96761802215b0c45bcd07
 - file: ..\src\config\default\peripheral\evsys\plib_evsys.h
   hash: 7bf0ec7eb0763980ca2f91b2a2dbc7d090dad0294db9248c57698b77e3d2216e
 - file: ..\src\config\default\peripheral\nvic\plib_nvic.c
