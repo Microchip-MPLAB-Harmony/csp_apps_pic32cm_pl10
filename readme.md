@@ -1,7 +1,7 @@
 ﻿![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
 ![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
 
-# MPLAB® Harmony 3 replaceme
+# MPLAB® Harmony 3 application examples for PIC32CM-PL10 family
 
 MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded firmware solutions for Microchip 32-bit SAM and PIC® microcontroller and microprocessor devices.  Refer to the following links for more information.
 
@@ -11,34 +11,31 @@ MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded
 - [Microchip MPLAB® Harmony](https://www.microchip.com/mplab/mplab-harmony)
 - [Microchip MPLAB® Harmony Pages](https://microchip-mplab-harmony.github.io/)
 
-This repository contains the MPLAB® Harmony 3 replaceme solutions and example applications. Quickly incorporate connectivity to your designs with replaceme ICs, modules, software and development kits that make connecting effortless for your customers. Our comprehensive replaceme portfolio has the technology to meet your range, data rate, interoperability, frequency and topology needs. Refer to the following links for release notes, training materials, and interface reference information.
+This repository contains the MPLAB® Harmony 3 PIC32CM-PL10 solutions and example applications. Quickly incorporate connectivity to your designs with ICs, modules, software and development kits that make connecting effortless for your customers. Our comprehensive portfolio has the technology to meet your range, data rate, interoperability, frequency and topology needs. Refer to the following links for release notes, training materials, and interface reference information.
 
-- [Release Notes](./release_notes.md)
-- [MPLAB® Harmony License](./License.md)
-
-# Documentation
-
-Click [here](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=replaceme&redirect=true) to view the online documentation of code examples hosted in this repository.
-
-To view the documentation offline, follow these steps:
-
-- Download the publication as a zip file from [here](https://onlinedocs.microchip.com/download/GUID-replaceme?type=webhelp).
-- Extract the zip file into a folder.
-- Navigate to the folder and open **index.html** in a web browser of your choice.
+- [Release Notes](release_notes.md)
+- [License](License.md)
 
 # Contents Summary
 
 | Folder     | Description                                               |
 | ---        | ---                                                       |
-| apps       | Example applications for replaceme library components     |
-| config     | replaceme module configuration file                       |
-| drivers    | Driver/Firmware files for different products              |
+| apps       | Example applications for PIC32CM-PL10 family                   |
+
+## Code Examples
+
+Click [here](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=CSP_APPS_PIC32CM_PL10_INTRODUCTION&redirect=true) to view the online documentation of code examples hosted in this repository.
+
+To view the documentation offline, follow these steps:
+- Download the publication as a zip file from [here](https://onlinedocs.microchip.com/download/GUID-FC69148D-5542-4F34-9236-530EA9E19336?type=webhelp).
+- Extract the zip file into a folder.
+- Navigate to the folder and open **index.html** in a web browser of your choice.
 
 ____
 
-[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/replaceme/blob/master/License.md)
-[![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/replaceme.svg)](https://github.com/Microchip-MPLAB-Harmony/replaceme/graphs/commit-activity)
-[![Contributors](https://img.shields.io/github/contributors-anon/Microchip-MPLAB-Harmony/replaceme.svg)]()
+[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10/blob/master/License.md)
+[![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10/graphs/commit-activity)
+[![Contributors](https://img.shields.io/github/contributors-anon/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10.svg)]()
 
 ____
 
@@ -49,7 +46,7 @@ ____
 [![Follow us on Facebook](https://img.shields.io/badge/Facebook-Follow%20us%20on%20Facebook-blue.svg)](https://www.facebook.com/microchiptechnology/)
 [![Follow us on Twitter](https://img.shields.io/twitter/follow/MicrochipTech.svg?style=social)](https://twitter.com/MicrochipTech)
 
-[![](https://img.shields.io/github/stars/Microchip-MPLAB-Harmony/replaceme.svg?style=social)]()
-[![](https://img.shields.io/github/watchers/Microchip-MPLAB-Harmony/replaceme.svg?style=social)]()
+[![](https://img.shields.io/github/stars/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10.svg?style=social)]()
+[![](https://img.shields.io/github/watchers/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10.svg?style=social)]()
 
 
