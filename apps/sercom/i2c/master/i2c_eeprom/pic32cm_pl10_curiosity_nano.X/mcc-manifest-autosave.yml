@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: i2c_eeprom_pic32cm_pl10_curiosity_nano
-creation_date: 2025-12-15T05:14:06.342+00:00[UTC]
+creation_date: 2025-12-18T05:39:32.416+00:00[UTC]
 operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
@@ -18,5 +18,5 @@ device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name:
   version: Bundled}
 packs: {name: PIC32CM-PL_DFP, version: 1.0.313}
 modules:
-- {name: csp, type: HARMONY, version: v3.24.0}
+- {name: csp, type: HARMONY, version: v3.25.0}
 - {name: CMSIS_5, type: HARMONY, version: 5.9.0}

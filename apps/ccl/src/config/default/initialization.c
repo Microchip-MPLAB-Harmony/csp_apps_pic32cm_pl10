@@ -79,10 +79,6 @@
 #pragma config BOOT_GPIOSEL_POL = 0x0
 #pragma config BOOT_GPIOSEL_ODRAIN = 0x0
 #pragma config BOOT_GPIOSEL_SLEWLIM = 0x0
-#pragma config SERNUM0_SERNUM0 = 0xffffffffU
-#pragma config SERNUM1_SERNUM1 = 0xffffffffU
-#pragma config SERNUM2_SERNUM2 = 0xffffffffU
-#pragma config SERNUM3_SERNUM3 = 0xffffffffU
 
 
 
@@ -153,9 +149,9 @@ void SYS_Initialize ( void* data )
 
 
 
-    SERCOM0_SPI_Initialize();
-
     EVSYS_Initialize();
+
+    SERCOM0_SPI_Initialize();
 
 
     /* MISRAC 2023 deviation block start */

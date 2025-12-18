@@ -9,10 +9,9 @@ dependency:
   type: module
   version: ''
 - dependencyPackage: ''
-  devMode: true
   name: csp
   type: package
-  version: v3.24.0
+  version: v3.25.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}

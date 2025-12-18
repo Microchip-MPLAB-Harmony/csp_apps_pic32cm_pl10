@@ -26,7 +26,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\default\exceptions.c
   hash: d1567a190561858cc1cb7e796cf1a29720e52b9799bbd88b087993d8539e137f
 - file: ..\src\config\default\initialization.c
-  hash: a7d2a9b5f7f8160b56a7b75efcf40da62b7e8ea627ba247ef5c97beecbbee9fb
+  hash: 74949ae3d5acf57a619b87ee9419935e89eee73bc5111e9bdf18df8e67c8f6c0
 - file: ..\src\config\default\interrupts.c
   hash: 0171c92a04f05c405f8ee29cbab21752e2a250feee2e2f55dde5c5ec27501b6e
 - file: ..\src\config\default\interrupts.h
