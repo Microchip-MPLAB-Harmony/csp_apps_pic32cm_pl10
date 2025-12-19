@@ -1,10 +1,10 @@
 package:
   format-version: "1.0.0"
   name: "csp_apps_pic32cm_pl10"
+  version: "v1.0.0"
   type: "application"
   status: "production"
   required: false
-  version: "v1.0.0"
 
   dependencies:
     - name: "csp"

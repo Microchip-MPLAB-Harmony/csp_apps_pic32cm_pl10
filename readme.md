@@ -1,7 +1,6 @@
-﻿![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
-![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
+[![MCHP](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)](https://www.microchip.com)
 
-# MPLAB® Harmony 3 application examples for PIC32CM-PL10 family
+# Harmony 3 peripheral library application examples for PIC32CM PL10 family
 
 MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded firmware solutions for Microchip 32-bit SAM and PIC® microcontroller and microprocessor devices.  Refer to the following links for more information.
 
@@ -11,29 +10,34 @@ MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded
 - [Microchip MPLAB® Harmony](https://www.microchip.com/mplab/mplab-harmony)
 - [Microchip MPLAB® Harmony Pages](https://microchip-mplab-harmony.github.io/)
 
-This repository contains the MPLAB® Harmony 3 PIC32CM-PL10 solutions and example applications. Quickly incorporate connectivity to your designs with ICs, modules, software and development kits that make connecting effortless for your customers. Our comprehensive portfolio has the technology to meet your range, data rate, interoperability, frequency and topology needs. Refer to the following links for release notes, training materials, and interface reference information.
+This repository contains the MPLAB® Harmony 3 peripheral library application examples for PIC32CM PL10 family
 
 - [Release Notes](release_notes.md)
 - [License](License.md)
 
-# Contents Summary
+To clone or download these applications from Github, go to the [main page of this repository](https://github.com/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10) and then click **Clone** button to clone this repository or download as zip file.
+This content can also be downloaded using MCC content manager available as part of the MPLAB® X IDE.
 
-| Folder     | Description                                               |
-| ---        | ---                                                       |
-| apps       | Example applications for PIC32CM-PL10 family                   |
+## Contents Summary
+
+| Folder     | Description                             |
+|:----------:|:---------------------------------------:|
+| apps       | Contains peripheral library example applications |
 
 ## Code Examples
 
 Click [here](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=CSP_APPS_PIC32CM_PL10_INTRODUCTION&redirect=true) to view the online documentation of code examples hosted in this repository.
 
 To view the documentation offline, follow these steps:
-- Download the publication as a zip file from [here](https://onlinedocs.microchip.com/download/GUID-FC69148D-5542-4F34-9236-530EA9E19336?type=webhelp).
-- Extract the zip file into a folder.
-- Navigate to the folder and open **index.html** in a web browser of your choice.
+ - Download the publication as a zip file from [here](https://onlinedocs.microchip.com/download/GUID-FC69148D-5542-4F34-9236-530EA9E19336?type=webhelp).
+ - Extract the zip file into a folder.
+ - Navigate to the folder and open **index.html** in a web browser of your choice.
 
 ____
 
 [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10/blob/master/License.md)
+[![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10/releases/latest)
+[![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10/releases/latest)
 [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10.svg)](https://github.com/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10/graphs/commit-activity)
 [![Contributors](https://img.shields.io/github/contributors-anon/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10.svg)]()
 
@@ -48,5 +52,3 @@ ____
 
 [![](https://img.shields.io/github/stars/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10.svg?style=social)]()
 [![](https://img.shields.io/github/watchers/Microchip-MPLAB-Harmony/csp_apps_pic32cm_pl10.svg?style=social)]()
-
-

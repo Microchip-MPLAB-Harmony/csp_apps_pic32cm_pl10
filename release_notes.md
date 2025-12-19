@@ -1,9 +1,9 @@
-﻿![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
-![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
+[![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)](https://www.microchip.com)
+[![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)](https://www.microchip.com/en-us/tools-resources/configure/mplab-harmony)
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
-## Harmony 3 peripheral library application examples for PIC32CM-PL10 family v1.0.0
+## Harmony 3 peripheral library application examples for PIC32CM PL10 family v1.0.0
 
 ### Development kit and demo application support
 
@@ -11,7 +11,7 @@ Following table provides number of peripheral library examples available for dif
 
 | Development Kits  | MPLAB X applications |
 |:-----------------:|:-------------------:|
-| [PIC32CM PL10 Curiosity Nano Evaluation Kit]() | 27 |
+| PIC32CM PL10 Curiosity Nano Evaluation Kit | 27 |
 
 ### New Features
 
@@ -23,7 +23,7 @@ Following table provides number of peripheral library examples available for dif
 
 ### Development Tools
 
-- [MPLAB® X IDE v6.25](https://www.microchip.com/mplab/mplab-x-ide) or higher
-- [MPLAB® XC32 C/C++ Compiler v5.00](https://www.microchip.com/mplab/compilers) or higher
+- [MPLAB® X IDE 6.25](https://www.microchip.com/mplab/mplab-x-ide)
 - MPLAB® X IDE plug-ins:
-    - MPLAB® Code Configurator 5.6.3 or higher
+  - MPLAB® Code Configurator (MCC) 5.6.3
+- [MPLAB® XC32 C/C++ Compiler 5.00](https://www.microchip.com/mplab/compilers)
